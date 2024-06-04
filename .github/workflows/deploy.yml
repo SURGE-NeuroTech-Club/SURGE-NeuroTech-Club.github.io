@@ -23,7 +23,7 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: ${{ steps.github-release.outputs.version }}
+          version: ${{ steps.github-release.outputs.version }} 
 
       # - name: Install dependencies
       #   run: |
