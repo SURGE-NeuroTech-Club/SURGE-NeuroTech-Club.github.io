@@ -23,7 +23,7 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: ${{ steps.github-release.outputs.version }} 
+          version: ${{ steps.github-release.outputs.version }}
 
       # - name: Install dependencies
       #   run: |
@@ -34,8 +34,8 @@ jobs:
       - name: Render site
         uses: quarto-dev/quarto-actions/render@v2 
 
-      - name: Deploy to GitHub Pages 
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
