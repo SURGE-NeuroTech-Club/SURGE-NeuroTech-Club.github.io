@@ -1,0 +1,65 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "SURGE NeuroTech Club"
+  image: images/logo.png
+  favicon: images/logo.png
+  bread-crumbs: true
+  page-navigation: true
+  open-graph: true
+  search: 
+    show-item-context: true
+    location: navbar
+    type: overlay
+
+
+  navbar:
+    logo: images/logo.png
+    collapse-below: lg
+    right:
+      - icon: github
+        href: https://github.com/orgs/SURGE-NeuroTech-Club
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Get Started"
+        menu:
+          - posts/getting_setup.qmd
+      - text: "About Us"
+        href: about_us.qmd
+      - text: "GitHub"
+        icon: github
+        href: https://github.com/orgs/SURGE-NeuroTech-Club/repositories
+
+  # sidebar:
+  #   style: floating
+  #   search: true
+  #   contents: auto
+
+  page-footer:
+    left: 
+      - text: "Copyright 2024, SURGE Innovation" 
+    center:
+      - text: "About Site"
+        href: site_info.qmd
+      - text: "Contact Us"
+        href: contact_us.qmd
+    # right: 
+
+
+
+
+format:
+  html:
+    theme: Darkly
+    css: styles.css
+    # toc: true
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px
+
+
+

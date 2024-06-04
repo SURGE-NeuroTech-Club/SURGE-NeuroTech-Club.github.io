@@ -1,0 +1,19 @@
+---
+title: "SURGE NeuroTech Club"
+page-layout: full
+listing:
+  contents: posts
+#   sort: "date desc"
+  image-align: left
+  # categories: true
+  type: grid
+  # sort-ui: true
+  # filter-ui: true
+  fields: [image, title, description]
+---
+
+Welcome to the NeuroTech Club website! 
+
+If you're new to the club and don't know where to begin, you can click on [*Get Started*](posts/getting_setup.qmd) or, just ask one of the SURGE folks!
+
+<br> <br> <br> <br> <br> <br> 
