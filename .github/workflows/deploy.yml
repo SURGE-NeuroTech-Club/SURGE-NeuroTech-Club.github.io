@@ -34,7 +34,7 @@ jobs:
       - name: Render site
         uses: quarto-dev/quarto-actions/render@v2 
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages 
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PAT }}
