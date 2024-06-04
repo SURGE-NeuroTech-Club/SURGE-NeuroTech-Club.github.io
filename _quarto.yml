@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: _site
 
 website:
   title: "SURGE NeuroTech Club"
@@ -26,7 +26,7 @@ website:
         href: index.qmd
       - text: "Get Started"
         menu:
-          - posts/getting_setup.qmd
+          - docs/get-started/getting_setup.qmd
       - text: "About Us"
         href: about_us.qmd
       - text: "GitHub"

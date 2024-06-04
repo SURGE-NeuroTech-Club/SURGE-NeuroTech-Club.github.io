@@ -33,7 +33,7 @@ Once you've made and verified your account, head over to the [GitHub Student Dev
 
 If you signed up with your Dalhousie email address, it should automatically detect Dalhousie University as your school. Click `Select this School`, and then `Continue`. If you don't see this, enter your Dalhousie email address and verify it now.
 
-![](../images/github_student_app.PNG){fig-align="center"}
+![](images/github_student_app.PNG){fig-align="center"}
 
 On the next page, you will have to take a picture of your Dalhousie Student ID (I reccomend using your laptop webcam for simplicity), and upload it to the 
 
