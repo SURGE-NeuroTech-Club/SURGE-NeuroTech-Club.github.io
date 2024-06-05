@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Get latest pre-release from github
+      - name: Get Latest Pre-release from Github
         id: github-release
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -29,7 +29,7 @@ jobs:
         with:
           version: ${{ steps.github-release.outputs.version }}
 
-      - name: Render site
+      - name: Render Site
         uses: quarto-dev/quarto-actions/render@v2 
 
       - name: Deploy to GitHub Pages
