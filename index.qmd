@@ -12,8 +12,6 @@ listing:
   fields: [image, title, description]
 ---
 
-test
-
 Welcome to the NeuroTech Club website! 
 
 If you're new to the club and don't know where to begin, you can click on [*Get Started*](docs/get-started/getting_setup.qmd) or, just ask one of the SURGE folks!
