@@ -4,7 +4,6 @@ project:
 
 website:
   title: "SURGE NeuroTech Club"
-  theme: darkly
   image: images/logo.png
   favicon: images/logo.png
   bread-crumbs: true
@@ -54,8 +53,7 @@ website:
 
 format:
   html:
-    quarto:
-      theme: darkly
+    theme: Darkly
     css: styles.css
     # toc: true
     grid:
