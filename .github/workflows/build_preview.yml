@@ -11,6 +11,9 @@ on:
     branches:
       - main
 
+env:
+  PREVIEWS_FOLDER: preview
+
 permissions:
     contents: write
     pull-requests: write
@@ -24,7 +27,15 @@ jobs:
       - name: Print contexts
         uses: crazy-max/ghaction-dump-context@v1
 
+      - name: Checkout branch contents
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.head_ref }}
+        
+
       - name: Get latest pre-release from github
+        if: github.event.action != 'closed'
         id: github-release
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -32,27 +43,38 @@ jobs:
           echo version=$(gh api repos/quarto-dev/quarto-cli/releases | jq -r 'map(select(.prerelease)) | first | .tag_name | sub("^v";"")') >> "$GITHUB_OUTPUT"    
 
       - name: Set up Quarto
+        if: github.event.action != 'closed'
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: ${{ steps.github-release.outputs.version }}
 
-      - name: Render site
-        uses: quarto-dev/quarto-actions/render@v2 
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2
+      - name: Build preview
+        if: github.event.action != 'closed'
+        run: quarto render --site-dir "${{ env.PREVIEWS_FOLDER }}/pr-${{ github.event.number }}"
+        
+      - name: Commit preview to Pages branch
+        uses: rossjrw/pr-preview-action@v1
         with:
-          name: preview
-          path: _site
+          source-dir: _site
+          umbrella-dir: ${{ env.PREVIEWS_FOLDER }}
 
-      - name: Set Preview URL
-        uses: actions/github-script@v4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const fs = require('fs');
-            const path = require('path');
-            const content = fs.readFileSync(path.resolve(process.env.GITHUB_EVENT_PATH), 'utf8');
-            const { pull_request } = JSON.parse(content);
-            const previewUrl = `https://<YOUR_DOMAIN>/preview/${pull_request.head.sha}`;
-            console.log(`::set-output name=preview_url::${previewUrl}`);
+      # - name: Render site
+      #   uses: quarto-dev/quarto-actions/render@v2 
+
+      # - name: Upload Artifact
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: preview
+      #     path: _site
+
+      # - name: Set Preview URL
+      #   uses: actions/github-script@v4
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     script: |
+      #       const fs = require('fs');
+      #       const path = require('path');
+      #       const content = fs.readFileSync(path.resolve(process.env.GITHUB_EVENT_PATH), 'utf8');
+      #       const { pull_request } = JSON.parse(content);
+      #       const previewUrl = `https://<YOUR_DOMAIN>/preview/${pull_request.head.sha}`;
+      #       console.log(`::set-output name=preview_url::${previewUrl}`);
