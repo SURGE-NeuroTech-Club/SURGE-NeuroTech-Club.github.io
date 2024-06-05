@@ -1,5 +1,0 @@
----
-title: "Contact Us"
----
-
-Email us at: [bciclub@dal.ca](mailto:bciclub@dal.ca)
