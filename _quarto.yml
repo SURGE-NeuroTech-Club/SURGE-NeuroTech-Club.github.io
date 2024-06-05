@@ -52,7 +52,8 @@ website:
 format:
   html:
     toc: true
-    theme: darkly
+    theme: 
+      dark: darkly
       # light: [darkly, theme.scss]
     code-copy: true
     code-overflow: wrap
