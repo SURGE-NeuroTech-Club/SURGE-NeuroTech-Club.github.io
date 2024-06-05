@@ -50,7 +50,7 @@ jobs:
 
       - name: Build preview
         if: github.event.action != 'closed'
-        run: quarto render --to "${{ env.PREVIEWS_FOLDER }}/pr-${{ github.event.number }}"
+        run: quarto render "${{ env.PREVIEWS_FOLDER }}/pr-${{ github.event.number }}"
         
       - name: Commit preview to Pages branch
         uses: rossjrw/pr-preview-action@v1
