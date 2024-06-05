@@ -1,0 +1,52 @@
+name: Build Quarto Preview
+
+on:
+#   pull_request_target:
+#       types:
+#           - opened
+#           - reopened
+#           - synchronize
+#           - closed
+  pull_request:
+    branches:
+      - main
+
+permissions:
+    contents: write
+    pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+        # for debugging
+      - name: Print contexts
+        uses: crazy-max/ghaction-dump-context@v1
+
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Quarto CLI
+        run: npm install -g @quartoinc/quarto-cli
+
+      - name: Build Preview
+        run: quarto build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: preview
+          path: _site
+
+      - name: Set Preview URL
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const content = fs.readFileSync(path.resolve(process.env.GITHUB_EVENT_PATH), 'utf8');
+            const { pull_request } = JSON.parse(content);
+            const previewUrl = `https://<YOUR_DOMAIN>/preview/${pull_request.head.sha}`;
+            console.log(`::set-output name=preview_url::${previewUrl}`);
