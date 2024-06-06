@@ -8,8 +8,9 @@ body {
 .index_banner {
     position: relative;
     /* background-color: rgb(240,245,249); */
-    display: flex;
+    /* display: flex; */
     justify-content: center;
+    background-color: #222 ;
 }
 
 .index h1 {
