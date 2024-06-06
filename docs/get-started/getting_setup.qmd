@@ -17,7 +17,7 @@ Follow the steps in the dialog windows, and while it's installing head to step 2
 <details>
 <summary> <span style="color:green">Click to learn more about VS Code! </span> </summary>
 > Visual Studio Code (often referred to as VS Code) is a free, open-source code editor developed by Microsoft. It's lightweight, yet powerful, and supports development in multiple programming languages such as Python, JavaScript, Java, C++, and many more.
-VS Code features include syntax highlighting, intelligent code completion (IntelliSense), code refactoring, and debugging tools. It also supports Git for version control, has a built-in terminal for command-line operations, and a rich ecosystem of extensions for enhancing its functionality.It's designed to be highly customizable, allowing users to change the editor's theme, keyboard shortcuts, and preferences. VS Code is available for Windows, macOS, and Linux. It's widely used by developers across the globe for both small and large scale projects.
+VS Code features include syntax highlighting, intelligent code completion (IntelliSense), code refactoring, and debugging tools. It also supports Git for version control, has a built-in terminal for command-line operations, and a rich ecosystem of extensions for enhancing its functionality. It's designed to be highly customizable, allowing users to change the editor's theme, keyboard shortcuts, and preferences. VS Code is available for Windows, macOS, and Linux. It's widely used by developers across the globe for both small and large scale projects.
 </details>
 
 ## Step 2: Setting up GitHub
@@ -29,11 +29,11 @@ While VS Code is installing, head over to [GitHub.com](https://github.com/login)
 > GitHub is a web-based platform used for version control and collaboration. It allows multiple people to work on projects at once without overwriting each other's changes. GitHub is built on Git, a distributed version control system that tracks changes to files. With GitHub, you can manage and store revisions of projects, share your code with others, view and track changes, and even revert back to previous versions of your code. It's widely used by software developers for personal projects, open-source projects, and team-based enterprise software development.
 </details>
 
-Once you've made and verified your account, head over to the [GitHub Student Developer Pack Application.](https://education.github.com/discount_requests/application){target="_blank"} Make sure *Student* is selected, and then scroll down to the bottom of the page. 
+Once you've made and verified your account, head over to the [GitHub Student Developer Pack Application.](https://education.github.com/discount_requests/application){target="_blank"} Make sure *Student* is selected, and then scroll down to the bottom of the page.
 
 If you signed up with your Dalhousie email address, it should automatically detect Dalhousie University as your school. Click `Select this School`, and then `Continue`. If you don't see this, enter your Dalhousie email address and verify it now.
 
-![](images/github_student_app.PNG){fig-align="center"}
+![](images/github_student_app.PNG){width=560, height=315, fig-align="center"}
 
 On the next page, you will have to take a picture of your Dalhousie Student ID (I reccomend using your laptop webcam for simplicity), and upload it to the 
 

@@ -52,11 +52,11 @@ website:
 format:
   html:
     toc: true
-    theme: darkly
+    theme: [darkly, theme.scss]
     appearance: false
     # theme: 
     #   dark: darkly
-      # light: [darkly, theme.scss]
+    #   light: cosmo # [cosmo, theme.scss]
     code-copy: true
     code-overflow: wrap
     css: styles.css

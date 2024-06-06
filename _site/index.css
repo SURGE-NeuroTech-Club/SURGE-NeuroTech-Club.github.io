@@ -5,6 +5,19 @@ body {
     background-color: #222;
 }
 
+.index_banner {
+    position: relative;
+    /* background-color: rgb(240,245,249); */
+    display: flex;
+    justify-content: center;
+}
+
+.index h1 {
+    text-align: center;
+}
+
+.header {}
+
 h1, h2, h3, h4, h5, h6 {
     color: #FDF6F6;
 }

@@ -1,6 +1,9 @@
 ---
-title: "SURGE NeuroTech Club"
+pagetitle: "SURGE NeuroTech Club"
+toc: false
 page-layout: full
+css: index.css
+
 listing:
   contents: docs
 #   sort: "date desc"
@@ -11,6 +14,18 @@ listing:
   # filter-ui: true
   fields: [image, title, description]
 ---
+
+::: {.index_banner}
+
+::: {.index}
+
+# SURGE NeuroTech Club
+
+:::
+
+:::
+
+<br>
 
 Welcome to the NeuroTech Club website! 
 
