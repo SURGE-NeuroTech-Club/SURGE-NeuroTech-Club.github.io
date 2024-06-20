@@ -25,8 +25,10 @@ website:
       - text: "Home"
         href: index.qmd
       - text: "Get Started"
-        menu:
-          - docs/get-started/getting_setup.qmd
+        href: docs/get-started/index.qmd
+      # - text: "Get Started"
+      #   menu:
+      #     - docs/get-started/getting_setup.qmd
       # - text: Resources
       #   href: resources.qmd
       - text: "About Us"

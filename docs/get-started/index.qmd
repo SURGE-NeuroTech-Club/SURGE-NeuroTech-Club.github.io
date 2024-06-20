@@ -1,0 +1,29 @@
+---
+pagetitle: "SURGE NeuroTech Club"
+toc: false
+page-layout: full
+css: ../../../index.css
+
+listing:
+  contents: getting-setup
+#   contents: ../../../docs/get-started
+#   sort: "date desc"
+  image-align: left
+  # categories: true
+  type: grid
+  # sort-ui: true
+  # filter-ui: true
+  fields: [image, title, description]
+---
+
+::: {.index_banner}
+
+::: {.index}
+
+# Testing a landing page for "Get Started"
+
+<br> <br>
+
+:::
+
+::: 

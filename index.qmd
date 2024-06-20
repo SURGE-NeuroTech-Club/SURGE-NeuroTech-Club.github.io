@@ -4,15 +4,15 @@ toc: false
 page-layout: full
 css: index.css
 
-listing:
-  contents: docs
-#   sort: "date desc"
-  image-align: left
-  # categories: true
-  type: grid
-  # sort-ui: true
-  # filter-ui: true
-  fields: [image, title, description]
+# listing:
+#   contents: docs/
+# #   sort: "date desc"
+#   image-align: left
+#   # categories: true
+#   type: grid
+#   # sort-ui: true
+#   # filter-ui: true
+#   fields: [image, title, description]
 ---
 
 ::: {.index_banner}

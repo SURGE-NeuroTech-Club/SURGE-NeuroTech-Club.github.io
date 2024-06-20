@@ -26,7 +26,7 @@ While VS Code is installing, head over to [GitHub.com](https://github.com/login)
 
 <details>
 <summary> <span style="color:green">Click to learn more about GitHub! </span> </summary>
-> GitHub is a web-based platform used for version control and collaboration. It allows multiple people to work on projects at once without overwriting each other's changes. GitHub is built on Git, a distributed version control system that tracks changes to files. With GitHub, you can manage and store revisions of projects, share your code with others, view and track changes, and even revert back to previous versions of your code. It's widely used by software developers for personal projects, open-source projects, and team-based enterprise software development.
+> GitHub is a web-based platform used for version control and collaboration. It allows multiple people to work on projects at once without overwriting each other's changes. GitHub is built on Git, a distributed version control system that tracks changes to files. With GitHub, you can manage and store revisions of projects, share your code with others, view and track changes, and even revert back to previous versions of your code. It's widely used   by software developers for personal projects, open-source projects, and team-based enterprise software development.
 </details>
 
 Once you've made and verified your account, head over to the [GitHub Student Developer Pack Application.](https://education.github.com/discount_requests/application){target="_blank"} Make sure *Student* is selected, and then scroll down to the bottom of the page.
