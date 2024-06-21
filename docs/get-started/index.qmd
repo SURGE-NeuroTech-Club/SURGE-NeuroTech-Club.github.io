@@ -2,7 +2,7 @@
 pagetitle: "SURGE NeuroTech Club"
 toc: false
 page-layout: full
-css: ../../../index.css
+css: ../../../index.scss
 
 listing:
   contents: getting-setup
@@ -20,9 +20,13 @@ listing:
 
 ::: {.index}
 
-# Testing a landing page for "Get Started"
+# Welcome to the 'Get Started' Landing Page
 
-<br> <br>
+<br>
+
+If you're new and want to get your computer setup to start programming, head over to [Getting Setup.](getting-setup/getting_setup.qmd)
+
+To check out our tutorial (WIP) head over to [Tutorials]()
 
 :::
 

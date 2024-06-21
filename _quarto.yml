@@ -21,6 +21,7 @@ website:
     right:
       - icon: github
         href: https://github.com/orgs/SURGE-NeuroTech-Club
+        target: _blank
     left:
       - text: "Home"
         href: index.qmd
@@ -36,6 +37,7 @@ website:
       - text: "GitHub"
         icon: github
         href: https://github.com/orgs/SURGE-NeuroTech-Club/repositories
+        target: _blank
 
   # sidebar:
   #   style: floating
@@ -50,20 +52,20 @@ website:
         href: site_info.qmd
       - text: "Contact Us"
         href: contact_us.qmd
-    # right: 
+    right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/SURGE-NeuroTech-Club/SURGE-NeuroTech-Club.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 
 format:
   html:
     toc: true
-    theme: [darkly, theme.scss]
-    appearance: false
-    # theme: 
-    #   dark: darkly
-    #   light: cosmo # [cosmo, theme.scss]
+    # theme: darkly #[darkly, theme.scss]
+    # theme: styles.scss
+    theme: [darkly, styles.scss]
+    # mainfont: *insert font*
+    appearance: false 
     code-copy: true
     code-overflow: wrap
-    css: styles.css
+    # css: styles.scss
     grid:
       sidebar-width: 250px
       body-width: 900px
