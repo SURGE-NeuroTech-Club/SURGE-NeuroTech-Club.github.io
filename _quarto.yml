@@ -65,7 +65,7 @@ format:
     appearance: false 
     code-copy: true
     code-overflow: wrap
-    # css: styles.scss
+    css: styles.scss
     grid:
       sidebar-width: 250px
       body-width: 900px

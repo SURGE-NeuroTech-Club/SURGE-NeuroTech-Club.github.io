@@ -10,8 +10,9 @@ The club is completely free to attend, and runs once a week from **3-5pm on Thur
 ## Directions {#directions}
 
 From the main entrance: go down the stairs and continue past the tim hortons until you see doors leading outside on your right. Go through them and enter the building directly across. Continue straight down the hallway until you see the bathrooms on your left, or the SURGE A-frame sign - then it's the doors on your right! 
-<br> <br>
-![](/images/maps_location1.PNG){.centered}
+<br> 
+
+![](/images/maps_location1.PNG){fig-align="center"}
 
 
 <!-- ## Our Team
