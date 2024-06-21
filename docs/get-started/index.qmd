@@ -26,6 +26,7 @@ If you're brand new and want to get your computer setup to start working on prog
 
 To check out our tutorial (WIP) head over to [Tutorials]()
 
+<br>
 :::
 
 ::: 
