@@ -1,4 +1,4 @@
-# SURGE-NeuroTech-Club.github.io
+# [SURGE-NeuroTech-Club.github.io](https://surge-neurotech-club.github.io/)
 
 Website repository for SURGE/Dalhousie NeuroTech Club.
 
