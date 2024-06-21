@@ -1,9 +1,23 @@
-/* css styles */
+css styles
 body {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #FDF6F6;
     background-color: #222;
 }
+
+.index_banner {
+    position: relative;
+    /* background-color: rgb(240,245,249); */
+    /* display: flex; */
+    justify-content: center;
+    background-color: #222 ;
+}
+
+.index h1 {
+    text-align: center;
+}
+
+.header {}
 
 h1, h2, h3, h4, h5, h6 {
     color: #FDF6F6;
@@ -22,3 +36,5 @@ a:hover {
 p {
     line-height: 1.6;
 }
+
+

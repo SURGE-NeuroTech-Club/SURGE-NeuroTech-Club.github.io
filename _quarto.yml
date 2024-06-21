@@ -5,7 +5,7 @@ project:
 website:
   title: "SURGE NeuroTech Club"
   image: images/logo.png
-  favicon: images/logo.png
+  favicon: images/logos/logo_favicon.png
   bread-crumbs: true
   page-navigation: true
   open-graph: true
@@ -16,22 +16,28 @@ website:
 
 
   navbar:
-    logo: images/logo.png
+    logo: images/logos/logo_transparent.png
     collapse-below: lg
     right:
       - icon: github
         href: https://github.com/orgs/SURGE-NeuroTech-Club
+        target: _blank
     left:
-      - text: "Home"
-        href: index.qmd
+      # - text: "Home"
+      #   href: index.qmd
       - text: "Get Started"
-        menu:
-          - docs/get-started/getting_setup.qmd
-      - text: "About Us"
-        href: about_us.qmd
+        href: docs/get-started/index.qmd
+      # - text: "Get Started"
+      #   menu:
+      #     - docs/get-started/getting_setup.qmd
+      # - text: Resources
+      #   href: resources.qmd
+      - text: "Who We Are"
+        href: who_we_are.qmd
       - text: "GitHub"
         icon: github
         href: https://github.com/orgs/SURGE-NeuroTech-Club/repositories
+        target: _blank
 
   # sidebar:
   #   style: floating
@@ -46,34 +52,24 @@ website:
         href: site_info.qmd
       - text: "Contact Us"
         href: contact_us.qmd
-    # right: 
+    right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/SURGE-NeuroTech-Club/SURGE-NeuroTech-Club.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 
 format:
   html:
     toc: true
-    theme: darkly
-    appearance: false
-    # theme: 
-    #   dark: darkly
-      # light: [darkly, theme.scss]
+    # theme: darkly #[darkly, theme.scss]
+    # theme: styles.scss
+    theme: [darkly, styles.scss]
+    # mainfont: *insert font*
+    appearance: false 
     code-copy: true
     code-overflow: wrap
-    css: styles.css
+    # css: styles.scss
     grid:
       sidebar-width: 250px
       body-width: 900px
       margin-width: 300px
-
-# format:
-#   html:
-#     theme: darkly
-#     css: styles.css
-#     # toc: true
-#     grid:
-#       sidebar-width: 250px
-#       body-width: 900px
-#       margin-width: 300px
 
 
 

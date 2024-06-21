@@ -1,21 +1,39 @@
 ---
-title: "SURGE NeuroTech Club"
+pagetitle: "SURGE NeuroTech Club"
+toc: false
 page-layout: full
-listing:
-  contents: docs
-#   sort: "date desc"
-  image-align: left
-  # categories: true
-  type: grid
-  # sort-ui: true
-  # filter-ui: true
-  fields: [image, title, description]
+css: index.scss
+image: images/logos/logo_transparent.png
+about:
+    template: solana
+    image-width: 30em
+    image-shape: rounded
+
+
+# listing:
+#   contents: docs/
+# #   sort: "date desc"
+#   image-align: left
+#   # categories: true
+#   type: grid
+#   # sort-ui: true
+#   # filter-ui: true
+#   fields: [image, title, description]
 ---
 
-Welcome to the NeuroTech Club website! 
+<!-- ![](images/logos/new_logo_transparent.png){.banner-image} -->
 
-If you're new to the club and don't know where to begin, you can click on [*Get Started*](docs/get-started/getting_setup.qmd) or, just ask one of the SURGE folks!
-
+### Welcome to the NeuroTech Club Website! 
 We are a community of neuro-enthusiasts dedicated to exploring, understanding, and innovating in the field of neurotechnology. Join us as we delve into this exciting frontier!
+
+We meet every <span class='highlight1'>**Thursday 3-5 pm**</span> in the SURGE room ([LSC, Room O2660](who_we_are.qmd#directions)). If you can't make the full time, no worries - feel free to drop by and check it out!
+
+If you're new to the club and don't know where to begin, you can click on [*Get Started*](docs/get-started/index.qmd) or, just ask one of the SURGE folks!
+
+## Contact:
+
+For general inquiries, email us at: [bciclub@dal.ca](mailto:bciclub@dal.ca)
+
+For specific neurotech questions, please reach out to our programming specialists: [Brynn](mailto:brynn.hs@dal.ca) or [Max](mailto:mascini.max@dal.ca)
 
 <br> <br> <br> <br> <br> <br> 
