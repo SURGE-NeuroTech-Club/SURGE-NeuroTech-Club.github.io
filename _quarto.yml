@@ -5,7 +5,7 @@ project:
 website:
   title: "SURGE NeuroTech Club"
   image: images/logo.png
-  favicon: images/logo.png
+  favicon: images/logos/logo_favicon.png
   bread-crumbs: true
   page-navigation: true
   open-graph: true
@@ -16,15 +16,15 @@ website:
 
 
   navbar:
-    logo: images/logo.png
+    logo: images/logos/logo_transparent.png
     collapse-below: lg
     right:
       - icon: github
         href: https://github.com/orgs/SURGE-NeuroTech-Club
         target: _blank
     left:
-      - text: "Home"
-        href: index.qmd
+      # - text: "Home"
+      #   href: index.qmd
       - text: "Get Started"
         href: docs/get-started/index.qmd
       # - text: "Get Started"
@@ -32,8 +32,8 @@ website:
       #     - docs/get-started/getting_setup.qmd
       # - text: Resources
       #   href: resources.qmd
-      - text: "About Us"
-        href: about_us.qmd
+      - text: "Who We Are"
+        href: who_we_are.qmd
       - text: "GitHub"
         icon: github
         href: https://github.com/orgs/SURGE-NeuroTech-Club/repositories

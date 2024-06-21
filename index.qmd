@@ -3,8 +3,11 @@ pagetitle: "SURGE NeuroTech Club"
 toc: false
 page-layout: full
 css: index.scss
+image: images/logos/logo_transparent.png
 about:
-    template: jolla
+    template: solana
+    image-width: 30em
+    image-shape: rounded
 
 
 # listing:
@@ -18,25 +21,14 @@ about:
 #   fields: [image, title, description]
 ---
 
-<!-- ::: {.index_banner}
+<!-- ![](images/logos/new_logo_transparent.png){.banner-image} -->
 
-::: {.index} -->
+### Welcome to the NeuroTech Club Website! 
+We are a community of neuro-enthusiasts dedicated to exploring, understanding, and innovating in the field of neurotechnology. Join us as we delve into this exciting frontier!
 
-# SURGE NeuroTech Club
-
-<!-- :::
-
-::: -->
-
-<br>
-
-Welcome to the NeuroTech Club website! We are a community of neuro-enthusiasts dedicated to exploring, understanding, and innovating in the field of neurotechnology. Join us as we delve into this exciting frontier!
-
-The club runs weekly, **Thursdays 3-5 pm** in the SURGE room ([Life Sciences Building, Oceanography wing Room O2660](about_us.qmd#directions))
+We meet every <span class='highlight1'>**Thursday 3-5 pm**</span> in the SURGE room ([LSC, Room O2660](who_we_are.qmd#directions)). If you can't make the full time, no worries - feel free to drop by and check it out!
 
 If you're new to the club and don't know where to begin, you can click on [*Get Started*](docs/get-started/index.qmd) or, just ask one of the SURGE folks!
-
-<br>
 
 ## Contact:
 

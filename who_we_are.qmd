@@ -1,8 +1,8 @@
 ---
-title: "About us"
+title: "Who We Are"
 ---
 
-This is the website for the Dalhousie/SURGE NeuroTech Club! The goal of the club is to help students with any level of neuroscience or coding experience get engaged with NeuroTechnology! <br>
+We are the Dalhousie/SURGE NeuroTech Club! The goal of the club is to help students with any level of neuroscience or coding experience get engaged and excited about NeuroTechnology! <br>
 
 The club is completely free to attend, and runs once a week from **3-5pm on Thursdays** in the Life Sciences Building, Oceanography wing Room O2660 <br>
 
@@ -10,5 +10,18 @@ The club is completely free to attend, and runs once a week from **3-5pm on Thur
 ## Directions {#directions}
 
 From the main entrance: go down the stairs and continue past the tim hortons until you see doors leading outside on your right. Go through them and enter the building directly across. Continue straight down the hallway until you see the bathrooms on your left, or the SURGE A-frame sign - then it's the doors on your right! 
-<br>
-![](/images/maps_location1.PNG)
+<br> <br>
+![](/images/maps_location1.PNG){.centered}
+
+
+<!-- ## Our Team
+
+:::: {.columns}
+
+::: {.column width=50%}
+:::
+
+::: {.column width=50%}
+:::
+
+:::: -->

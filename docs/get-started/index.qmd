@@ -4,27 +4,25 @@ toc: false
 page-layout: full
 css: ../../../index.scss
 
-listing:
-  contents: getting-setup
-#   contents: ../../../docs/get-started
-#   sort: "date desc"
-  image-align: left
-  # categories: true
+listing: # https://quarto.org/docs/websites/website-listings.html
+  contents: getting-setup/*.qmd
   type: grid
+  image-align: left 
+  fields: [image, title, description]
+  # grid-item-align: center 
   # sort-ui: true
   # filter-ui: true
-  fields: [image, title, description]
 ---
 
 ::: {.index_banner}
 
 ::: {.index}
 
-# Welcome to the 'Get Started' Landing Page
+# Welcome to the Get Started Landing Page!
 
 <br>
 
-If you're new and want to get your computer setup to start programming, head over to [Getting Setup.](getting-setup/getting_setup.qmd)
+If you're brand new and want to get your computer setup to start working on programming projects, head over to [Getting Setup.](getting-setup/getting_setup.qmd)
 
 To check out our tutorial (WIP) head over to [Tutorials]()
 

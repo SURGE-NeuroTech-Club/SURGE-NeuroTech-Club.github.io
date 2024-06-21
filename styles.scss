@@ -25,7 +25,23 @@
 // $code-bg: $cream; // inline code background color
 // $code-color: $purple; // inline code text color
 
+.banner-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px; /* Adjust as needed */
+    height: auto; /* Adjust if you want a specific height, or leave as auto to maintain aspect ratio */
+}
 
+.highlight1 {
+    color: orange;
+}
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 body {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
