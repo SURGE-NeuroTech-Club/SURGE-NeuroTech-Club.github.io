@@ -18,16 +18,16 @@ jobs:
 
     steps:
         # for debugging
-      - name: Print contexts
+      - name: Print Contexts
         uses: crazy-max/ghaction-dump-context@v1
 
-      - name: Checkout branch contents
+      - name: Checkout Branch Contents
         uses: actions/checkout@v2
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
 
-      - name: Get latest pre-release from github
+      - name: Get Latest Pre-release from Github
         if: github.event.action != 'closed'
         id: github-release
         env: 
@@ -41,11 +41,11 @@ jobs:
         with:
           version: ${{ steps.github-release.outputs.version }}
 
-      - name: Build preview
+      - name: Build Preview
         if: github.event.action != 'closed'
         run: quarto render --output-dir="${{ env.PREVIEWS_FOLDER }}/pr-${{ github.event.number }}"
         
-      - name: Commit preview to Pages branch
+      - name: Commit Preview to Pages Branch
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: _site
