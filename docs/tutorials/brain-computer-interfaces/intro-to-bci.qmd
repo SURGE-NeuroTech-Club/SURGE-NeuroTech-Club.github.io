@@ -17,7 +17,7 @@ A Brain-Computer Interface (BCI) enables communication between the brain and an 
 The brain is composed of billions of neurons that communicate through electrical signals. BCIs detect and interpret these signals, often using electroencephalography (EEG), which measures electrical activity on the scalp.
 
 <details>
-<summary>Learn More about Neurons and Brain Signals</summary>
+<summary> <span style="color:green"> Learn More about Neurons and Brain Signals </span> </summary>
 <br>
 Neurons are specialized cells that transmit information throughout the nervous system. They communicate via electrical impulses and chemical signals. Each neuron consists of a cell body, dendrites, and an axon. Dendrites receive incoming signals, while the axon transmits signals to other neurons.
 
@@ -31,7 +31,7 @@ EEG measures the synchronous activity of neurons, primarily in the cortex. This 
 EEG signals result from synchronized activity of cortical pyramidal neurons. Their electric dipoles generate fields detectable by EEG electrodes. Machine learning algorithms translate these signals into commands for controlling devices.
 
 <details>
-<summary>Understanding Electric Dipoles and EEG Detection</summary>
+<summary> <span style="color:green"> Understanding Electric Dipoles and EEG Detection </span> </summary>
 <br>
 Pyramidal neurons in the cortex are key contributors to EEG signals. These neurons have long apical dendrites oriented perpendicularly to the cortical surface, forming electric dipoles when they fire.
 
@@ -45,7 +45,7 @@ Machine learning algorithms process the EEG data, identifying patterns associate
 BCI systems use machine learning to interpret brain signals into commands. This allows users to perform tasks like moving a cursor, playing a game, or controlling a robotic arm just by thinking.
 
 <details>
-<summary>Exploring Machine Learning in BCIs</summary>
+<summary> <span style="color:green"> Exploring Machine Learning in BCIs </span> </summary>
 <br>
 Machine learning algorithms in BCIs analyze EEG data to identify patterns corresponding to user intentions. These algorithms are trained on labeled datasets to distinguish between different mental states or actions.
 
@@ -61,7 +61,7 @@ By continuously adapting to user inputs, machine learning enhances the accuracy 
 ERPs are brain responses time-locked to specific events. They consist of components like the P300, which occur about 300 milliseconds after a stimulus. In ERP-based BCIs, users focus on stimuli, and the system detects responses to determine user intent.
 
 <details>
-<summary>Diving into ERP Components and Their Significance</summary>
+<summary> <span style="color:green"> Diving into ERP Components and Their Significance </span> </summary>
 <br>
 ERP components are labeled based on their polarity (positive or negative) and timing. Key components include:
 
@@ -77,7 +77,7 @@ ERPs provide insights into cognitive processes and brain responses, making them 
 SSVEPs are responses to flickering visual stimuli, causing brain waves at the same frequency. In SSVEP-based BCIs, users focus on a stimulus to synchronize brain activity with its frequency, allowing for command selection.
 
 <details>
-<summary>Delving into SSVEPs and Frequency Analysis</summary>
+<summary> <span style="color:green"> Delving into SSVEPs and Frequency Analysis </span> </summary>
 <br>
 SSVEPs are generated when the visual cortex responds to stimuli flickering at specific frequencies. The brain's response frequency matches the stimulus frequency, enabling reliable detection with EEG.
 
@@ -102,7 +102,7 @@ BCIs have transformative potential across fields:
 - **Research and Exploration:** Studying brain functions and developing neurological treatments.
 
 <details>
-<summary>Exploring BCI Applications in More Detail</summary>
+<summary> <span style="color:green"> Exploring BCI Applications in More Detail </span> </summary>
 <br>
 - **Medical Applications:** BCIs restore independence for individuals with mobility impairments, enabling them to control assistive devices through thought alone. For example, BCIs can be integrated with robotic prosthetics to facilitate movement for amputees or individuals with paralysis.
 - **Communication:** BCIs enable individuals with communication disorders to express themselves by converting brain signals into text or speech, enhancing social interaction and quality of life.
@@ -115,7 +115,7 @@ BCIs have transformative potential across fields:
 BCI technology is evolving rapidly, with ongoing research aiming to make systems more accessible and user-friendly, expanding their impact on how we interact with technology.
 
 <details>
-<summary>Innovations and Future Directions in BCIs</summary>
+<summary> <span style="color:green"> Innovations and Future Directions in BCIs </span> </summary>
 <br>
 - **Improved Accessibility:** Researchers are working on developing affordable and easy-to-use BCI systems, making them accessible to a wider population.
 - **Enhanced Signal Quality:** Advances in signal processing and electrode technology aim to improve the quality and reliability of EEG signals, enhancing BCI performance.
