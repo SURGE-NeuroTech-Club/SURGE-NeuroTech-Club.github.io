@@ -117,5 +117,33 @@
     "title": "Official Website of SURGE Innovation’s NeuroTech Club",
     "section": "",
     "text": "This is the official website of SURGE Innovation’s NeuroTech Club hosted by Dalhousie University\nWebsite made using Quarto & hosted via Github pages"
+  },
+  {
+    "objectID": "docs/tutorials/open-bci/open-bci-setup.html",
+    "href": "docs/tutorials/open-bci/open-bci-setup.html",
+    "title": "Getting Started with OpenBCI",
+    "section": "",
+    "text": "This tutorial will take you through the steps of getting you OpenBCI board up and streaming EEG signals!"
+  },
+  {
+    "objectID": "docs/tutorials/open-bci/open-bci-setup.html#installing-the-software",
+    "href": "docs/tutorials/open-bci/open-bci-setup.html#installing-the-software",
+    "title": "Getting Started with OpenBCI",
+    "section": "Installing The Software",
+    "text": "Installing The Software\nFirst, you will have to download the latest version of the OpenBCI GUI (graphical user interface) Make sure to download the correct version for your machine! (windows, mac, or linux).\nOne you have downloaded it, unzip it and move the folder somewhere you will remember! &gt; The GUI doesn’t ‘install’ so you will have to open the folder to start the program\nOnce you open the application OpenBCI_GUI, you should see something like this: \nIf you see the red bar at the bottom that reads ‘This Application is Not being run with Admin Access…’, close it and restart it as an administrator (right click &gt; Run As Administrator &gt; Yes)\nIf you run into trouble or errors not mentioned here, check out the official GUI documentation (or ask one of the SURGE folks!)"
+  },
+  {
+    "objectID": "docs/tutorials/open-bci/open-bci-setup.html#connecting-to-your-board",
+    "href": "docs/tutorials/open-bci/open-bci-setup.html#connecting-to-your-board",
+    "title": "Getting Started with OpenBCI",
+    "section": "Connecting To Your Board",
+    "text": "Connecting To Your Board\nIf at any point something doesn’t work or make sense - check out the official documentation on getting your cyton board setup!\nMake sure you have your Cyton Board, Dongle, and Battery Pack with 4 AA batteries. \nThere is a tiny switch on the side of the cyton board:  - make sure it is in the ‘off’ position (middle) before pluggin in the battery.\nOnce the switch is set to ‘off’, you may plug in the battery pack  and change the switch position to ‘PC’. If you do not see a blue light on the board once you switch it to ‘PC’, the batteries need to be replaced.\nNext, look for the switch on the USB dongle and **make sure the switch is on ‘GPIO 6’ - towards the plug-end before pluggin it into your computer."
+  },
+  {
+    "objectID": "docs/tutorials/open-bci/open-bci-setup.html#more-information-references",
+    "href": "docs/tutorials/open-bci/open-bci-setup.html#more-information-references",
+    "title": "Getting Started with OpenBCI",
+    "section": "More Information & References",
+    "text": "More Information & References\nOpenBCI GUI Reference"
   }
 ]
