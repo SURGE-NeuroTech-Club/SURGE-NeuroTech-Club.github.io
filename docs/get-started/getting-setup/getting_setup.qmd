@@ -12,7 +12,7 @@ This document will teach you how to setup your computer with GitHub, VSCode and 
 ## Step 1: Setting up Visual Studio Code
 
 <details>
-<summary> <span style="color:green">Click to learn more about VS Code! </span> </summary>
+<summary> <span class=dropdown1>Click to learn more about VS Code! </span> </summary>
 > Visual Studio Code (often referred to as VS Code) is a free, open-source code editor developed by Microsoft. It's lightweight, yet powerful, and supports development in multiple programming languages such as Python, JavaScript, Java, C++, and many more.
 VS Code features include syntax highlighting, intelligent code completion (IntelliSense), code refactoring, and debugging tools. It also supports Git for version control, has a built-in terminal for command-line operations, and a rich ecosystem of extensions for enhancing its functionality. It's designed to be highly customizable, allowing users to change the editor's theme, keyboard shortcuts, and preferences. VS Code is available for Windows, macOS, and Linux. It's widely used by developers across the globe for both small and large scale projects.
 </details>
@@ -33,7 +33,7 @@ For more information on how to use VSCode, see the [resources at the bottom of t
 ## Step 2: Setting up GitHub
 
 <details>
-<summary> <span style="color:green">Click to learn more about GitHub! </span> </summary>
+<summary> <span class=dropdown1>Click to learn more about GitHub! </span> </summary>
 > GitHub is a web-based platform used for version control and collaboration. It allows multiple people to work on projects at once without overwriting each other's changes. GitHub is built on Git, a distributed version control system that tracks changes to files. With GitHub, you can manage and store revisions of projects, share your code with others, view and track changes, and even revert back to previous versions of your code. It's widely used   by software developers for personal projects, open-source projects, and team-based enterprise software development.
 </details>
 
@@ -67,7 +67,7 @@ Once this is done we highly reccomend you check out some further tutorials on wh
 ## Step 3: Setting up a Virtual Environment
 
 <details>
-<summary> <span style="color:green">Click to learn more about Virtual Environments & Miniforge! </span> </summary>
+<summary> <span class=dropdown1>Click to learn more about Virtual Environments & Miniforge! </span> </summary>
 > Virtual environments are isolated spaces for installing and managing packages and dependencies for specific projects without affecting the global Python environment. They offer isolation, precise dependency management, portability, and a cleaner global environment. Virtual environments can be created using tools like venv or virtualenv in Python or Conda's environment management features. By activating a virtual environment, users can install packages specific to that project, ensuring consistency and avoiding conflicts with other projects. This approach is essential for maintaining project-specific dependencies and ensuring reproducible and stable development environments.
 
 > Miniforge3 is a minimalistic distribution of Conda, an open-source package and environment management system widely used in data science and software development. It provides a lightweight, cross-platform tool that supports multiple CPU architectures, making it versatile for different hardware and operating systems. Miniforge3 allows users to install packages from sources like conda-forge, ensuring access to a broad range of up-to-date software. Its primary strength lies in environment management, enabling the creation of isolated environments with specific dependencies, thereby avoiding conflicts and ensuring project stability.
