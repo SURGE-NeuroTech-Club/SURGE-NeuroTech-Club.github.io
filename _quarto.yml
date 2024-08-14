@@ -24,7 +24,7 @@ website:
         target: _blank
     left:
       - text: "Get Started"
-        href: docs/get-started/index.qmd
+        href: docs/tutorials/index.qmd
       # - text: "Get Started"
       #   menu:
       #     - docs/get-started/getting_setup.qmd
