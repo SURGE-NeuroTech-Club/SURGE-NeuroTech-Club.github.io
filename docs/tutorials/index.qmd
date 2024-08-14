@@ -24,7 +24,7 @@ listing: # https://quarto.org/docs/websites/website-listings.html
 
 <br>
 
-If you're brand new and want to get your computer setup to start working on projects, head over to [Getting Setup.](/tutorials/get-started/getting_setup.qmd)
+If you're brand new and want to get your computer setup to start working on projects, head over to [Getting Setup.](get-started/getting_setup.qmd)
 
 <br>
 :::
