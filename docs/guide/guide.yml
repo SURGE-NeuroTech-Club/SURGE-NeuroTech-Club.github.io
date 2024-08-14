@@ -1,0 +1,15 @@
+
+# # Basic setup for a tutorials-list page
+# # - https://quarto.org/docs/guide/
+# # - https://github.com/quarto-dev/quarto-web/blob/main/docs/guide/guide.yml
+
+# - title: Brain-Computer Interfaces
+#   subtitle: 
+
+# - title: Hardware
+#   subtitle: Tutorial for working with our EEG hardware!
+#   links: 
+#     - text: sss
+#       href: 
+
+# - 

@@ -3,6 +3,8 @@
     "listing": "/docs/get-started/index.html",
     "items": [
       "/docs/get-started/getting-setup/getting_setup.html",
+      "/docs/tutorials/open-bci/open_bci_setup.html",
+      "/docs/tutorials/brain-computer-interfaces/intro_to_bci.html",
       "/docs/get-started/getting-setup/github_intro.html"
     ]
   }

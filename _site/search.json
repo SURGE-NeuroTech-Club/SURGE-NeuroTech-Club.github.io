@@ -91,46 +91,11 @@
     "text": "References"
   },
   {
-    "objectID": "docs/get-started/getting-setup/github_intro.html",
-    "href": "docs/get-started/getting-setup/github_intro.html",
-    "title": "Introduction to GitHub",
+    "objectID": "docs/get-started/index.html",
+    "href": "docs/get-started/index.html",
+    "title": "Welcome to the Get Started Landing Page!",
     "section": "",
-    "text": "This guide will give you a basic introduction to GitHub and how to effectively use it! Before you get started here, make sure you already have a GitHub account setup. If you don’t head over to Getting Setup for instructions!"
-  },
-  {
-    "objectID": "docs/get-started/getting-setup/github_intro.html#what-is-github",
-    "href": "docs/get-started/getting-setup/github_intro.html#what-is-github",
-    "title": "Introduction to GitHub",
-    "section": "What is GitHub?",
-    "text": "What is GitHub?\nGitHub is a web-based platform for version control and collaboration that allows developers to host and manage their code. It uses Git, a distributed version control system, to track changes in source code during software development. GitHub provides a range of features including issue tracking, project management, and code review tools."
-  },
-  {
-    "objectID": "docs/get-started/getting-setup/github_intro.html#key-features-of-github",
-    "href": "docs/get-started/getting-setup/github_intro.html#key-features-of-github",
-    "title": "Introduction to GitHub",
-    "section": "Key Features of GitHub",
-    "text": "Key Features of GitHub\n\nRepositories: Storage spaces where your project files and their revision history are kept.\nCommits: Saved changes to files in a repository, allowing you to track modifications.\nBranches: Separate lines of development within a repository, useful for working on different features simultaneously.\nPull Requests: Proposals to merge changes from one branch to another, often used for code reviews and collaboration.\nIssues: Tools for tracking tasks, enhancements, and bugs in your projects."
-  },
-  {
-    "objectID": "docs/get-started/getting-setup/github_intro.html#getting-started-with-github",
-    "href": "docs/get-started/getting-setup/github_intro.html#getting-started-with-github",
-    "title": "Introduction to GitHub",
-    "section": "Getting Started with GitHub",
-    "text": "Getting Started with GitHub\n\n1. Installing GitHub Desktop\n\nDownload GitHub Desktop from desktop.github.com if you don’t already have it installed.\nInstall GitHub Desktop following the instructions for your operating system.\n\n\n\n2. Cloning a Repository\nTo work on your project locally, clone the repository to your computer using GitHub Desktop.\n\nOpen GitHub Desktop.\nClick File &gt; Clone repository.\nSelect the repository you want to clone from the list or enter the URL of the repository.\nChoose the local path where you want to save the repository and click Clone.\n\nExplanation: Cloning a repository means creating a local copy of the repository on your computer, allowing you to work on it offline and sync your changes with the remote repository later.\n\n\n3. Creating a Branch\n99% of the time, you’ll want to work on a Branch. This effectively copies the code from main and allows you to work on it separately. This is great for a few reasons: - It avoids conflicts with overwriting which can happen when multiple people work on the same code in the same branch. - If you seriously break something and can’t figure out how to get it back - you can just pull from main!\nTo create a branch:\n\nSelect the repository you want to make a branch of.\nClick Current Branch &gt; New Branch.\nName the branch whatever you want (make sure to remember it!).\nSelect where you want the code to copy from (Main is the default branch, but you can copy the code from someone else’s branch too).\nClick Create Branch.\nMake sure the branch you just made is selected under Current Branch.\n\nExplanation: Branches allow you to develop features, fix bugs, or safely experiment with new ideas in isolation from the main codebase.\n\n\n4. Making Changes and Committing\n\nOpen the cloned repository in your preferred code editor and make changes to your files.\nGo back to GitHub Desktop. You will see your changes listed under Changes.\nAdd a summary and description for your commit in the Summary and Description fields.\nClick Commit to main (or your branch name if you are using a different one).\n\nExplanation: Committing saves your changes to the local repository, with a message describing what you did. This helps in keeping track of different versions of your code.\n\n\n5. Pushing Changes to GitHub\n\nAfter committing your changes, click Push origin at the top of GitHub Desktop to upload your commits to GitHub.\n\nExplanation: Pushing sends your committed changes to the remote repository on GitHub, making them available to others.\n\n\n6. Creating a Pull Request\nA pull request is a proposal to merge changes from one branch to another. It’s used for code review and collaboration before integrating changes into the main branch. Once you feel like you’ve implemented what you intended, you can make a pull request to merge your changes with the main (or another) branch.\n\nNavigate to your repository on GitHub.\nClick on the Pull requests tab.\nClick New pull request.\nSelect the branch you want to merge from and to.\nAdd a title and description for your pull request.\nClick Create pull request.\n\nExplanation: Pull requests facilitate discussion about your changes before they are merged into the main branch, ensuring code quality and collaboration."
-  },
-  {
-    "objectID": "docs/get-started/getting-setup/github_intro.html#conclusion",
-    "href": "docs/get-started/getting-setup/github_intro.html#conclusion",
-    "title": "Introduction to GitHub",
-    "section": "Conclusion",
-    "text": "Conclusion\nGitHub is a powerful platform for version control and collaboration, enabling developers to work together on projects effectively. By creating repositories, making commits, and managing pull requests with GitHub Desktop, you can maintain a smooth and organized workflow.\nAnother great resource to check out is the NCIL Handbook’s section on GitHub"
-  },
-  {
-    "objectID": "contact_us.html",
-    "href": "contact_us.html",
-    "title": "Contact Us",
-    "section": "",
-    "text": "Email us at: bciclub@dal.ca"
+    "text": "Welcome to the Get Started Landing Page!\n\nIf you’re brand new and want to get your computer setup to start working on projects, head over to Getting Setup.\nTo check out our tutorial (WIP) head over to Tutorials\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Setup\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with OpenBCI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Brain-Computer Interfaces\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "docs/get-started/getting-setup/getting_setup.html",
@@ -168,11 +133,46 @@
     "text": "Additional Resources\nThe NCIL Lab Handbook has many great resources - Data Science Tools\nVSCode:\n\nIntroduction to VSCode\n\nGitHub:\n\nIntroduction to GitHub\nNCIL Introduction to GitHub"
   },
   {
-    "objectID": "docs/get-started/index.html",
-    "href": "docs/get-started/index.html",
-    "title": "Welcome to the Get Started Landing Page!",
+    "objectID": "contact_us.html",
+    "href": "contact_us.html",
+    "title": "Contact Us",
     "section": "",
-    "text": "Welcome to the Get Started Landing Page!\n\nIf you’re brand new and want to get your computer setup to start working on programming projects, head over to Getting Setup.\nTo check out our tutorial (WIP) head over to Tutorials\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Setup\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Email us at: bciclub@dal.ca"
+  },
+  {
+    "objectID": "docs/get-started/getting-setup/github_intro.html",
+    "href": "docs/get-started/getting-setup/github_intro.html",
+    "title": "Introduction to GitHub",
+    "section": "",
+    "text": "This guide will give you a basic introduction to GitHub and how to effectively use it! Before you get started here, make sure you already have a GitHub account setup. If you don’t head over to Getting Setup for instructions!"
+  },
+  {
+    "objectID": "docs/get-started/getting-setup/github_intro.html#what-is-github",
+    "href": "docs/get-started/getting-setup/github_intro.html#what-is-github",
+    "title": "Introduction to GitHub",
+    "section": "What is GitHub?",
+    "text": "What is GitHub?\nGitHub is a web-based platform for version control and collaboration that allows developers to host and manage their code. It uses Git, a distributed version control system, to track changes in source code during software development. GitHub provides a range of features including issue tracking, project management, and code review tools."
+  },
+  {
+    "objectID": "docs/get-started/getting-setup/github_intro.html#key-features-of-github",
+    "href": "docs/get-started/getting-setup/github_intro.html#key-features-of-github",
+    "title": "Introduction to GitHub",
+    "section": "Key Features of GitHub",
+    "text": "Key Features of GitHub\n\nRepositories: Storage spaces where your project files and their revision history are kept.\nCommits: Saved changes to files in a repository, allowing you to track modifications.\nBranches: Separate lines of development within a repository, useful for working on different features simultaneously.\nPull Requests: Proposals to merge changes from one branch to another, often used for code reviews and collaboration.\nIssues: Tools for tracking tasks, enhancements, and bugs in your projects."
+  },
+  {
+    "objectID": "docs/get-started/getting-setup/github_intro.html#getting-started-with-github",
+    "href": "docs/get-started/getting-setup/github_intro.html#getting-started-with-github",
+    "title": "Introduction to GitHub",
+    "section": "Getting Started with GitHub",
+    "text": "Getting Started with GitHub\n\n1. Installing GitHub Desktop\n\nDownload GitHub Desktop from desktop.github.com if you don’t already have it installed.\nInstall GitHub Desktop following the instructions for your operating system.\n\n\n\n2. Cloning a Repository\nTo work on your project locally, clone the repository to your computer using GitHub Desktop.\n\nOpen GitHub Desktop.\nClick File &gt; Clone repository.\nSelect the repository you want to clone from the list or enter the URL of the repository.\nChoose the local path where you want to save the repository and click Clone.\n\nExplanation: Cloning a repository means creating a local copy of the repository on your computer, allowing you to work on it offline and sync your changes with the remote repository later.\n\n\n3. Creating a Branch\n99% of the time, you’ll want to work on a Branch. This effectively copies the code from main and allows you to work on it separately. This is great for a few reasons: - It avoids conflicts with overwriting which can happen when multiple people work on the same code in the same branch. - If you seriously break something and can’t figure out how to get it back - you can just pull from main!\nTo create a branch:\n\nSelect the repository you want to make a branch of.\nClick Current Branch &gt; New Branch.\nName the branch whatever you want (make sure to remember it!).\nSelect where you want the code to copy from (Main is the default branch, but you can copy the code from someone else’s branch too).\nClick Create Branch.\nMake sure the branch you just made is selected under Current Branch.\n\nExplanation: Branches allow you to develop features, fix bugs, or safely experiment with new ideas in isolation from the main codebase.\n\n\n4. Making Changes and Committing\n\nOpen the cloned repository in your preferred code editor and make changes to your files.\nGo back to GitHub Desktop. You will see your changes listed under Changes.\nAdd a summary and description for your commit in the Summary and Description fields.\nClick Commit to main (or your branch name if you are using a different one).\n\nExplanation: Committing saves your changes to the local repository, with a message describing what you did. This helps in keeping track of different versions of your code.\n\n\n5. Pushing Changes to GitHub\n\nAfter committing your changes, click Push origin at the top of GitHub Desktop to upload your commits to GitHub.\n\nExplanation: Pushing sends your committed changes to the remote repository on GitHub, making them available to others.\n\n\n6. Creating a Pull Request\nA pull request is a proposal to merge changes from one branch to another. It’s used for code review and collaboration before integrating changes into the main branch. Once you feel like you’ve implemented what you intended, you can make a pull request to merge your changes with the main (or another) branch.\n\nNavigate to your repository on GitHub.\nClick on the Pull requests tab.\nClick New pull request.\nSelect the branch you want to merge from and to.\nAdd a title and description for your pull request.\nClick Create pull request.\n\nExplanation: Pull requests facilitate discussion about your changes before they are merged into the main branch, ensuring code quality and collaboration."
+  },
+  {
+    "objectID": "docs/get-started/getting-setup/github_intro.html#conclusion",
+    "href": "docs/get-started/getting-setup/github_intro.html#conclusion",
+    "title": "Introduction to GitHub",
+    "section": "Conclusion",
+    "text": "Conclusion\nGitHub is a powerful platform for version control and collaboration, enabling developers to work together on projects effectively. By creating repositories, making commits, and managing pull requests with GitHub Desktop, you can maintain a smooth and organized workflow.\nAnother great resource to check out is the NCIL Handbook’s section on GitHub"
   },
   {
     "objectID": "docs/tutorials/open-bci/open_bci_setup.html",
