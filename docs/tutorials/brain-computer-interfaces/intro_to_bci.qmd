@@ -1,5 +1,6 @@
 ---
 title: "Introduction to Brain-Computer Interfaces"
+image: images/intro_to_bci.webp
 format: 
     html:
         toc: true
