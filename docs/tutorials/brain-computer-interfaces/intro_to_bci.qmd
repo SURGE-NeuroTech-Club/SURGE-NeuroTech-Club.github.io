@@ -19,6 +19,7 @@ The brain is composed of billions of neurons that communicate through electrical
 <details>
 <summary> <span class=dropdown1> Learn More about Neurons and Brain Signals </span> </summary>
 <br>
+
 Neurons are specialized cells that transmit information throughout the nervous system. They communicate via electrical impulses and chemical signals. Each neuron consists of a cell body, dendrites, and an axon. Dendrites receive incoming signals, while the axon transmits signals to other neurons.
 
 Neurons generate action potentials, which are brief electrical impulses resulting from changes in membrane potential. These action potentials travel along the axon to the synapse, where neurotransmitters are released to signal adjacent neurons.
@@ -33,6 +34,7 @@ EEG signals arise from the synchronized activity of cortical pyramidal neurons w
 <details>
 <summary> <span class=dropdown1> Understanding Electric Dipoles and EEG Detection </span> </summary>
 <br>
+
 Pyramidal neurons in the cortex are key contributors to EEG signals. These neurons have long apical dendrites oriented perpendicularly to the cortical surface, forming electric dipoles when they fire.
 
 The combined electric fields of many neurons create measurable potentials on the scalp. EEG electrodes placed on the scalp detect these potentials, recording voltage fluctuations over time.

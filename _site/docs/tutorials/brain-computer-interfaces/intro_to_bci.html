@@ -146,6 +146,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#event-related-potentials-erps" id="toc-event-related-potentials-erps" class="nav-link" data-scroll-target="#event-related-potentials-erps">Event-Related Potentials (ERPs)</a></li>
   <li><a href="#steady-state-visual-evoked-potentials-ssveps" id="toc-steady-state-visual-evoked-potentials-ssveps" class="nav-link" data-scroll-target="#steady-state-visual-evoked-potentials-ssveps">Steady-State Visual Evoked Potentials (SSVEPs)</a></li>
   <li><a href="#comparison-and-considerations" id="toc-comparison-and-considerations" class="nav-link" data-scroll-target="#comparison-and-considerations">Comparison and Considerations</a></li>
+  <li><a href="#note-on-hybrid-bcis" id="toc-note-on-hybrid-bcis" class="nav-link" data-scroll-target="#note-on-hybrid-bcis">Note on Hybrid BCIs</a></li>
   </ul></li>
   <li><a href="#applications-of-bcis" id="toc-applications-of-bcis" class="nav-link" data-scroll-target="#applications-of-bcis">Applications of BCIs</a></li>
   <li><a href="#the-future-of-bcis" id="toc-the-future-of-bcis" class="nav-link" data-scroll-target="#the-future-of-bcis">The Future of BCIs</a></li>
@@ -190,7 +191,8 @@ ul.task-list li input[type="checkbox"] {
 <summary>
 <span class="dropdown1"> Learn More about Neurons and Brain Signals </span>
 </summary>
-<p><br> Neurons are specialized cells that transmit information throughout the nervous system. They communicate via electrical impulses and chemical signals. Each neuron consists of a cell body, dendrites, and an axon. Dendrites receive incoming signals, while the axon transmits signals to other neurons.</p>
+<p><br></p>
+<p>Neurons are specialized cells that transmit information throughout the nervous system. They communicate via electrical impulses and chemical signals. Each neuron consists of a cell body, dendrites, and an axon. Dendrites receive incoming signals, while the axon transmits signals to other neurons.</p>
 <p>Neurons generate action potentials, which are brief electrical impulses resulting from changes in membrane potential. These action potentials travel along the axon to the synapse, where neurotransmitters are released to signal adjacent neurons.</p>
 EEG measures the synchronous activity of neurons, primarily in the cortex. This activity results in detectable electrical signals on the scalp, representing the brain’s response to stimuli and cognitive processes.
 </details>
@@ -202,7 +204,8 @@ EEG measures the synchronous activity of neurons, primarily in the cortex. This 
 <summary>
 <span class="dropdown1"> Understanding Electric Dipoles and EEG Detection </span>
 </summary>
-<p><br> Pyramidal neurons in the cortex are key contributors to EEG signals. These neurons have long apical dendrites oriented perpendicularly to the cortical surface, forming electric dipoles when they fire.</p>
+<p><br></p>
+<p>Pyramidal neurons in the cortex are key contributors to EEG signals. These neurons have long apical dendrites oriented perpendicularly to the cortical surface, forming electric dipoles when they fire.</p>
 <p>The combined electric fields of many neurons create measurable potentials on the scalp. EEG electrodes placed on the scalp detect these potentials, recording voltage fluctuations over time.</p>
 Machine learning algorithms process the EEG data, identifying patterns associated with specific mental states or intentions - such as those arising from attending to a specific stimulus. This enables translation of brain activity into actionable commands for BCIs.
 </details>
@@ -224,7 +227,7 @@ By continuously adapting to user inputs, machine learning enhances the accuracy 
 <h2 class="anchored" data-anchor-id="two-common-neural-responses-used-for-bci">Two Common Neural Responses Used for BCI</h2>
 <section id="event-related-potentials-erps" class="level3">
 <h3 class="anchored" data-anchor-id="event-related-potentials-erps">Event-Related Potentials (ERPs)</h3>
-<p>ERPs are brain responses time-locked to specific events. They consist of components like the P300, which occur about 300 milliseconds after a stimulus. In ERP-based BCIs, users focus on stimuli, and the system detects responses to determine user intent.</p>
+<p>ERPs are brain responses time-locked to specific events. They consist of components like the commonly-used P300, which occur about 300 milliseconds after an infrequent or important stimulus. In ERP-based BCIs, users focus on stimuli, and the system detects the P300 responses to determine which stimulus the user is looking at, and therefore which command to execute.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/ERPs_1.png" class="img-fluid figure-img" alt="By Original: Choms Vector: Mononomic - Own work based on: Constudevent.gif, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=5543904" width="300"></p>
@@ -237,22 +240,22 @@ By continuously adapting to user inputs, machine learning enhances the accuracy 
 </summary>
 <p><br> ERP components are labeled based on their polarity (positive or negative) and timing. Key components include:</p>
 <ul>
-<li><strong>P300:</strong> A positive deflection occurring around 300 milliseconds after an infrequent or significant stimulus, often used in BCIs for detecting user focus.</li>
-<li><strong>N200:</strong> A negative deflection associated with response inhibition and conflict detection.</li>
-<li><strong>N400:</strong> Related to language processing and semantic incongruence.</li>
+<li><strong>P300:</strong> A positive deflection occurring around 300 milliseconds after an infrequent or significant stimulus. In BCIs, the P300 is used to detect when a user is focusing on a particular stimulus, such as a specific letter in a matrix. The system then translates this detection into a command, enabling the user to select that letter or perform an action.</li>
+<li><strong>N200:</strong> A negative deflection associated with response inhibition and conflict detection. In BCIs, the N200 can be used to monitor error detection or user responses to conflicting stimuli, which can be integrated into more sophisticated control systems.</li>
+<li><strong>N400:</strong> Related to language processing and semantic incongruence. While less commonly used in BCIs, the N400 could assist in applications involving language or communication tasks by detecting how users process and respond to language-based stimuli.</li>
 </ul>
 ERPs provide insights into cognitive processes and brain responses, making them valuable for understanding attention, perception, and decision-making.
 </details>
 </section>
 <section id="steady-state-visual-evoked-potentials-ssveps" class="level3">
 <h3 class="anchored" data-anchor-id="steady-state-visual-evoked-potentials-ssveps">Steady-State Visual Evoked Potentials (SSVEPs)</h3>
-<p>SSVEPs are responses to flickering visual stimuli, causing brain waves at the same frequency. In SSVEP-based BCIs, users focus on a stimulus to synchronize brain activity with its frequency, allowing for command selection.</p>
+<p>SSVEPs are responses to flickering visual stimuli, causing detectible brain waves at the same frequency. In SSVEP-based BCIs, users focus on a flickering stimulus to synchronize brain activity with its frequency, allowing for the machine learning algorithm to determine which stimulus the user is focused on, and then execute the corresponding command.</p>
 <details>
 <summary>
 <span class="dropdown1"> Delving into SSVEPs and Frequency Analysis </span>
 </summary>
 <p><br> SSVEPs are generated when the visual cortex responds to stimuli flickering at specific frequencies. The brain’s response frequency matches the stimulus frequency, enabling reliable detection with EEG.</p>
-<p>In SSVEP-based BCIs, users focus on one of several flickering stimuli, each associated with a distinct command. The system identifies the frequency of the brain’s response to determine user intent.</p>
+<p>In SSVEP-based BCIs, users focus on one of several flickering stimuli, each associated with a distinct command. The system identifies the frequency of the brain’s response to determine user intent. (For example, if the user attends to a stimulus flickering at 10 Hz, the resulting EEG signals would show a 10 Hz oscillation, and the machine learning algorithm would perform the command corresponding to the stimulus flickering at 10 Hz)</p>
 Frequency analysis involves decomposing EEG signals into their frequency components. Techniques such as Fourier Transform and Wavelet Transform help isolate SSVEP frequencies for accurate interpretation.
 </details>
 </section>
@@ -263,6 +266,19 @@ Frequency analysis involves decomposing EEG signals into their frequency compone
 <li><strong>User Comfort:</strong> ERP-based systems may be less visually demanding, as SSVEPs require focus on flickering stimuli, which can cause fatigue.</li>
 <li><strong>Signal Processing:</strong> Both require advanced techniques to interpret user intentions from EEG data.</li>
 </ul>
+</section>
+<section id="note-on-hybrid-bcis" class="level3">
+<h3 class="anchored" data-anchor-id="note-on-hybrid-bcis">Note on Hybrid BCIs</h3>
+<p>Hybrid BCIs combine multiple neural responses, such as ERPs and SSVEPs, to enhance the performance and versatility of the system. By leveraging the strengths of different neural signals, hybrid BCIs can provide more robust and reliable control, especially in complex or dynamic environments.</p>
+<p><strong>How Hybrid BCIs Work:</strong> - <strong>Integration of Multiple Signals:</strong> Hybrid BCIs simultaneously monitor different types of brain signals, such as combining the time-locked precision of ERPs with the continuous frequency information from SSVEPs. This integration allows the system to cross-validate user intentions, improving accuracy. - <strong>Increased Command Options:</strong> By using both ERPs and SSVEPs, hybrid BCIs can offer a wider range of commands or actions. For example, an ERP might be used to select a menu item, while an SSVEP could determine how to interact with it. - <strong>Enhanced Adaptability:</strong> Hybrid BCIs can adapt to varying user states or environmental conditions. If one signal type becomes less reliable (e.g., if a user becomes fatigued and SSVEP detection declines), the system can rely more heavily on the other signal type.</p>
+<details>
+<summary>
+<span class="dropdown1"> Advantages and Applications of Hybrid BCIs </span>
+</summary>
+<p><br></p>
+<strong>Advantages:</strong> - <strong>Improved Accuracy:</strong> The combination of multiple neural signals reduces the likelihood of errors by cross-referencing different types of brain activity. - <strong>Greater Flexibility:</strong> Users can perform a broader range of actions, as the system can interpret more diverse types of commands. - <strong>Resilience:</strong> Hybrid BCIs can maintain functionality even if one type of signal is compromised, making them more reliable in real-world applications.
+</details>
+<p>Hybrid BCIs represent an exciting frontier in brain-computer interface technology, combining the best of multiple approaches to create more effective and user-friendly systems. As research and development continue, hybrid BCIs are likely to become increasingly prominent in both clinical and non-clinical applications.</p>
 </section>
 </section>
 <section id="applications-of-bcis" class="level2">
