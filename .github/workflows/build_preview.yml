@@ -9,24 +9,26 @@ env:
   PREVIEWS_FOLDER: preview
 
 permissions:
-    contents: write
-    pull-requests: write
+  contents: write
+  pull-requests: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-        # for debugging
+      # Debugging step to print context information
       - name: Print Contexts
         uses: crazy-max/ghaction-dump-context@v1
 
+      # Checkout the pull request's branch contents
       - name: Checkout Branch Contents
         uses: actions/checkout@v2
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
 
+      # Get the latest pre-release of Quarto from GitHub
       - name: Get Latest Pre-release from Github
         if: github.event.action != 'closed'
         id: github-release
@@ -35,16 +37,19 @@ jobs:
         run: |
           echo version=$(gh api repos/quarto-dev/quarto-cli/releases | jq -r 'map(select(.prerelease)) | first | .tag_name | sub("^v";"")') >> "$GITHUB_OUTPUT"    
 
+      # Set up Quarto CLI with the pre-release version
       - name: Set up Quarto
         if: github.event.action != 'closed'
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: ${{ steps.github-release.outputs.version }}
 
+      # Render the site with Quarto, ensuring that it respects the custom order in your .qmd files
       - name: Build Preview
         if: github.event.action != 'closed'
         run: quarto render --output-dir="${{ env.PREVIEWS_FOLDER }}/pr-${{ github.event.number }}"
-        
+
+      # Commit the preview to a dedicated Pages branch
       - name: Commit Preview to Pages Branch
         uses: rossjrw/pr-preview-action@v1
         with:
