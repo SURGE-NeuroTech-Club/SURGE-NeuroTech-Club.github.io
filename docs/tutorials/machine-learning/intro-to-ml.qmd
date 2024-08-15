@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Machine Learning"
-image: images/intro_to_bci.webp
+image: images/intro_to_ml.webp
 format: 
     html:
         toc: true
