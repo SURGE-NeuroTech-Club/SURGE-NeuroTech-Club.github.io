@@ -1,0 +1,429 @@
+[
+  {
+    "objectID": "who_we_are.html",
+    "href": "who_we_are.html",
+    "title": "Who We Are",
+    "section": "",
+    "text": "We are the Dalhousie/SURGE NeuroTech Club! The goal of the club is to help students with any level of neuroscience or coding experience get engaged and excited about NeuroTechnology!\nThe club is drop-in and completely free to attend! It runs once a week from 3-5pm on Thursdays in the LSC, Oceanography - Room O2660"
+  },
+  {
+    "objectID": "who_we_are.html#directions",
+    "href": "who_we_are.html#directions",
+    "title": "Who We Are",
+    "section": "Directions",
+    "text": "Directions\nLife Sciences Building, Oceanography wing - Room O2660\nFrom the main entrance: go down the stairs and continue past the tim hortons until you see doors leading outside on your right. Go through them and enter the building directly across. Continue straight down the hallway until you see the bathrooms on your left, or the SURGE A-frame sign - then it’s the doors on your right!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SURGE NeuroTech Club",
+    "section": "",
+    "text": "We are a community of neuro-enthusiasts dedicated to exploring, understanding, and innovating in the field of neurotechnology. Join us as we delve into this exciting frontier!\nWe meet every Thursday 3-5 pm in the SURGE room (LSC, Room O2660). If you can’t make the full time, no worries - feel free to drop by and check it out!\nIf you’re new to the club and don’t know where to begin, you can click on Get Started or, just ask one of the SURGE folks!"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "SURGE NeuroTech Club",
+    "section": "Contact:",
+    "text": "Contact:\nFor general inquiries, email us at: bciclub@dal.ca\nFor specific neurotech questions, please reach out to our programming specialists: Brynn or Max"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html",
+    "title": "Introduction to Machine Learning",
+    "section": "",
+    "text": "A type of artificial intelligence where computers learn to make predictions by recognizing patterns in data. It improves over time by continuously learning from new data and experiences."
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#what-is-machine-learning",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#what-is-machine-learning",
+    "title": "Introduction to Machine Learning",
+    "section": "",
+    "text": "A type of artificial intelligence where computers learn to make predictions by recognizing patterns in data. It improves over time by continuously learning from new data and experiences."
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#a-decision-process",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#a-decision-process",
+    "title": "Introduction to Machine Learning",
+    "section": "1. A Decision Process:",
+    "text": "1. A Decision Process:\n \nIn general, machine learning algorithms are used to make a prediction or classification. Based on some input data. The algorithm will produce an estimate about a pattern in the data.\n\n\nUC Berkeley School of Information"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#an-error-function",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#an-error-function",
+    "title": "Introduction to Machine Learning",
+    "section": "2. An Error Function:",
+    "text": "2. An Error Function:\n \nAn error function evaluates the prediction of the model. If there are known examples, an error function can make a comparison to assess the performance of the model.\n\n\nUC Berkeley School of Information"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#a-model-optimization-process",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#a-model-optimization-process",
+    "title": "Introduction to Machine Learning",
+    "section": "3. A Model Optimization Process:",
+    "text": "3. A Model Optimization Process:\n \nWhen the model does a good job of matching the training data, it tweaks its settings to get better at classifying the actual data. This process of “evaluate and optimize” happens over and over again, allowing the model to adjust itself automatically.\n\n\nUC Berkeley School of Information"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#major-types-of-ml",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#major-types-of-ml",
+    "title": "Introduction to Machine Learning",
+    "section": "(Major) Types of ML",
+    "text": "(Major) Types of ML\n\n\n\n\nSupervised Learning\n\nUses labelled training data\nMajority of machine learning applications\n\n\n\n\nUnsupervised Learning\n\nUses unlabelled training data\nRelatively uncommon\nMost often used for content personalization"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#labelled-unlabelled-data",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#labelled-unlabelled-data",
+    "title": "Introduction to Machine Learning",
+    "section": "Labelled & Unlabelled Data",
+    "text": "Labelled & Unlabelled Data\n\nLabelled data is tagged with the target (dependent) measure - It comes with the answer"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#supervised-machine-learning",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#supervised-machine-learning",
+    "title": "Introduction to Machine Learning",
+    "section": "Supervised Machine Learning",
+    "text": "Supervised Machine Learning\n\n\n\nPros\n\nHigh accuracy\n\nAbility to learn from known examples\n\nExcellent predictive power\n\nClassifying new data based on historical data\n\n\n\n\n\nCons\n\nRequires labelled data\n\nTime consuming & expensive\n\nOverfitting\n\nModel can become too specific to trainig data\n\n\n\n\n\nCommon Algorithms: Linear/Logistic Regression, Support Vector Machines, Decision Trees, K-nearest neighbours"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#unsupervised-machine-learning",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#unsupervised-machine-learning",
+    "title": "Introduction to Machine Learning",
+    "section": "Unsupervised Machine Learning",
+    "text": "Unsupervised Machine Learning\n\n\n\nPros\n\nData exploration\n\nDiscovering hidden patterns in data\n\nDimensionality reduction\n\nSimplifying complex datasets\n\n\n\n\n\nCons\n\nWorse interpretability\n\nNo guidance for understanding patterns\n\nModel evaluation\n\nAssessing quality without labels or metrics\n\n\n\n\n\nCommon Algorithms: Principle component analysis, K-means clustering, t-Distributed Stochastic Neighbor Embedding"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#human-classification-exercise",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#human-classification-exercise",
+    "title": "Introduction to Machine Learning",
+    "section": "Human Classification Exercise",
+    "text": "Human Classification Exercise\nFun Fact: You can find wild irises in NS!\n\n\n\nIrises Found at Duncan’s Cove"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#what-do-you-think",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#what-do-you-think",
+    "title": "Introduction to Machine Learning",
+    "section": "What do you think?",
+    "text": "What do you think?\n\n\n\n\n\n\n\n\n\n\nMy Picture from Duncan’s Cove\n\n\n\n\n\n\n\n“Northern Blue Flag” - Versicolor\n\n\n\n\n\n\n\n“Beach-Head” - Setosa"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#real-world-example",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#real-world-example",
+    "title": "Introduction to Machine Learning",
+    "section": "Real-world Example",
+    "text": "Real-world Example\n\n\n\n\n\nSeek is an app that uses image recognition to predict species of animals, plants, fungi, insects - you name it!"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#misclassification",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#misclassification",
+    "title": "Introduction to Machine Learning",
+    "section": "Misclassification?",
+    "text": "Misclassification?\nThe Seek App determined that the iris I found was Versicolor, but two experts claimed it was a Setosa"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#choosing-the-right-features-is-important",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#choosing-the-right-features-is-important",
+    "title": "Introduction to Machine Learning",
+    "section": "Choosing (the right) Features is Important!",
+    "text": "Choosing (the right) Features is Important!\n\nFeature: “An individual measurable property or characteristic of a phenomenon”1\n\n\nUsing informative, discriminating and independent features is a crucial element of effective classification algorithms."
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#the-iris-dataset",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#the-iris-dataset",
+    "title": "Introduction to Machine Learning",
+    "section": "The Iris Dataset",
+    "text": "The Iris Dataset\nThree types of iris: Setosa, Versicolor, & Virginica\n\n\n\n\n\nThe type can be determined by combination of Petal & Sepal Width & Length"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#taking-another-look",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#taking-another-look",
+    "title": "Introduction to Machine Learning",
+    "section": "Taking Another Look",
+    "text": "Taking Another Look\nDo you think that the Seek AI may have used some other feature, causing it to make an incorrect classification?\n\n\n\n\n\n\n\n\n\nDuncan’s Cove\n\n\n\n\n\n\n\n“Northern Blue Flag” - Versicolor\n\n\n\n\n\n\n\n“Beach-Head” - Setosa"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#lets-look-at-the-dataset",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#lets-look-at-the-dataset",
+    "title": "Introduction to Machine Learning",
+    "section": "Let’s Look At The Dataset!",
+    "text": "Let’s Look At The Dataset!\n\n\n\n\n\n\n\n\n\n\n\nVariables\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n4\nspecies\n\n\n5\n# Observations: 150\n\n\n\n\n\n\n\n\n\n\n4 Features (Independent Variables)\n150 Total Observations\n\n50 of each Iris Type\n\nExcellent sample to demonstrate machine learning!"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#visualizing-the-raw-data",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#visualizing-the-raw-data",
+    "title": "Introduction to Machine Learning",
+    "section": "Visualizing the Raw Data",
+    "text": "Visualizing the Raw Data\n\n# sns.set(style=\"ticks\", context=\"talk\")\nplt.style.use(\"dark_background\")\n\n# Making a correlation plot of all variables except 'Id'\ncorr_plot = sns.pairplot(data.iloc[:, 0:5], kind=\"scatter\", hue=\"species\", markers=[\"o\", \"s\", \"D\"], palette=\"Set2\", plot_kws={'alpha': 0.7})\n\nsns.move_legend(corr_plot, \"lower center\",\n    bbox_to_anchor=(0.5, 1), ncol=3, title=None, frameon=False\n)\n\n# Resize to fit\ncorr_plot.fig.set_size_inches(12, 5.5)\n\n# Show the plot\ncorr_plot"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#reducing-dimentionality",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#reducing-dimentionality",
+    "title": "Introduction to Machine Learning",
+    "section": "Reducing Dimentionality",
+    "text": "Reducing Dimentionality\nWe can use principle component analysis (PCA) to take our 4 dimensional data and translate it into two dimensions for better visualization!\n\nplt.figure(figsize=(12, 6))\n\ndf = px.data.iris()\nX = df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']]\n\npca = PCA(n_components=2)\ncomponents = pca.fit_transform(X)\n\n# Create a DataFrame with the PCA results\npca_df = pd.DataFrame(data=components, columns=['PCA1', 'PCA2'])\npca_df['species'] = df['species']\n\n# Plot the PCA results\npca2d = sns.scatterplot(data=pca_df, x='PCA1', y='PCA2', hue='species', palette=\"Set2\")"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#seperating-our-dependent-and-independent-variables",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#seperating-our-dependent-and-independent-variables",
+    "title": "Introduction to Machine Learning",
+    "section": "Seperating Our Dependent and Independent Variables",
+    "text": "Seperating Our Dependent and Independent Variables\n\n\n\nX = data.drop(['species_id', 'species'], axis=1)\ny = data['species']\n\n\n\n\n\nThe feature (X/independent) variables are of shape: (150, 4)\nThe target (y/dependent) variables are of shape: (150,)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndependent Vars\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n16\nsetosa\n\n\n13\nsetosa\n\n\n79\nversicolor\n\n\n31\nsetosa"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#train-test-split",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#train-test-split",
+    "title": "Introduction to Machine Learning",
+    "section": "Train-Test Split",
+    "text": "Train-Test Split\nThe classifier’s performance can become inflated if it trains on the same data it is tested with. This is called data-leakage.\n\nWe must split the data into training and testing sets.\n\n\n\n\n\nThis allows us to test how good the model is at classifying data it hasn’t seen before."
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#making-the-train-test-split",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#making-the-train-test-split",
+    "title": "Introduction to Machine Learning",
+    "section": "Making the Train-Test Split",
+    "text": "Making the Train-Test Split\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, \n                                                        test_size=0.3,\n                                                        stratify=y,\n                                                        random_state=42)\n\n\n\nTest size: 30% is kept to validate the trained model\nStratify: Preserves the class ratios (33% of each iris species)\n\n\n\n\n\n\n\nX_train shape is: (105, 4)\ny_train shape is: (105,) \n\nX_test shape is: (45, 4)\ny_test shape is: (45,)"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#why-is-stratification-important",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#why-is-stratification-important",
+    "title": "Introduction to Machine Learning",
+    "section": "Why is Stratification Important?",
+    "text": "Why is Stratification Important?\nIf data is not stratified, the model may focus on more prevalent classes, leading to biased performance and poor accuracy on underrepresented classes."
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#training-the-models",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#training-the-models",
+    "title": "Introduction to Machine Learning",
+    "section": "Training the Models!",
+    "text": "Training the Models!\n\n# Instantiate the classifiers\nclassifiers = [\n    SVC(kernel='linear', random_state=42),\n    SVC(kernel='rbf', random_state=42),\n    DecisionTreeClassifier(random_state=42),\n    RandomForestClassifier(random_state=42),\n    KNeighborsClassifier(),\n    LogisticRegression(random_state=42, max_iter=1000)\n]\n\n# Train the classifiers\nfor clf in classifiers:\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    print(f\"Accuracy of {clf.__class__.__name__}: {accuracy:.2f}\")\n\nAccuracy of SVC: 1.00\nAccuracy of SVC: 0.96\nAccuracy of DecisionTreeClassifier: 0.93\nAccuracy of RandomForestClassifier: 0.89\nAccuracy of KNeighborsClassifier: 0.98\nAccuracy of LogisticRegression: 0.93"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#visualizing-machine-learning",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#visualizing-machine-learning",
+    "title": "Introduction to Machine Learning",
+    "section": "Visualizing Machine Learning!",
+    "text": "Visualizing Machine Learning!"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#evaluating-model-performance",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#evaluating-model-performance",
+    "title": "Introduction to Machine Learning",
+    "section": "Evaluating Model Performance",
+    "text": "Evaluating Model Performance\n\nThere are many potential evaluation metrics, but Accuracy is the most common.\n\n\\[\n\\text{Accuracy} = \\frac{\\text{Number of Correct Predictions}}{\\text{Total Number of Predictions}}\n\\]\nAccuracy is usually fine - there are some casses when it’s not great."
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#evaluating-model-performance-1",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#evaluating-model-performance-1",
+    "title": "Introduction to Machine Learning",
+    "section": "Evaluating Model Performance",
+    "text": "Evaluating Model Performance\n\n\\[\n\\scriptsize{\\text{Accuracy} = \\frac{\\text{Number of Correct Predictions}}{\\text{Total Number of Predictions}}}\n\\]\n\n\n\n\n\n45 Correct Predictions / 45 Total Prediction = 1.00\n\n\n\n\n\n\n43 Correct Predictions / 45 Total Prediction = 0.95"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#when-is-accuracy-sub-optimal",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#when-is-accuracy-sub-optimal",
+    "title": "Introduction to Machine Learning",
+    "section": "When is Accuracy Sub-optimal?",
+    "text": "When is Accuracy Sub-optimal?\n\nIf you have an imbalanced classes in your data, accuracy can be misleading.\n\n\n\n\n\n\n\n\nSay there are 100 observations: 80 Setosa, and 20 Versicolor.\n\nIf the classifier predicted ‘Setosa’ for all 100 observations, what would the accuracy be?\n\\[\n\\scriptsize{\\text{Accuracy} = \\frac{\\text{Number of Correct Predictions}}{\\text{Total Number of Predictions}}}\n\\]\n\n\n80 Correct Predictions / 100 Total Predictions = 0.80\n\nMetrics like F1 score, Precision, & Recall(sensitivity) can give a more informative picture"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#summary",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#summary",
+    "title": "Introduction to Machine Learning",
+    "section": "Summary:",
+    "text": "Summary:\n\n\n\nLabelled data (used in supervised ML) is particularly powerful for classification tasks\nChoosing informative features is critical\nTrain-test-split is important to avoid data-leakage\nStratification of classes avoids inflated performance\nAccuracy is great unless you have unbalanced classes"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#thanks-for-listening",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#thanks-for-listening",
+    "title": "Introduction to Machine Learning",
+    "section": "Thanks for Listening",
+    "text": "Thanks for Listening"
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#footnotes",
+    "href": "docs/tutorials/machine-learning/intro-to-ml.html#footnotes",
+    "title": "Introduction to Machine Learning",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nBishop, Christopher (2006). Pattern recognition and machine learning↩︎"
+  },
+  {
+    "objectID": "docs/tutorials/get-started/github_intro.html",
+    "href": "docs/tutorials/get-started/github_intro.html",
+    "title": "Introduction to GitHub",
+    "section": "",
+    "text": "This guide will give you a basic introduction to GitHub and how to effectively use it! Before you get started here, make sure you already have a GitHub account setup. If you don’t head over to Getting Setup for instructions!"
+  },
+  {
+    "objectID": "docs/tutorials/get-started/github_intro.html#what-is-github",
+    "href": "docs/tutorials/get-started/github_intro.html#what-is-github",
+    "title": "Introduction to GitHub",
+    "section": "What is GitHub?",
+    "text": "What is GitHub?\nGitHub is a web-based platform for version control and collaboration that allows developers to host and manage their code. It uses Git, a distributed version control system, to track changes in source code during software development. GitHub provides a range of features including issue tracking, project management, and code review tools."
+  },
+  {
+    "objectID": "docs/tutorials/get-started/github_intro.html#key-features-of-github",
+    "href": "docs/tutorials/get-started/github_intro.html#key-features-of-github",
+    "title": "Introduction to GitHub",
+    "section": "Key Features of GitHub",
+    "text": "Key Features of GitHub\n\nRepositories: Storage spaces where your project files and their revision history are kept.\nCommits: Saved changes to files in a repository, allowing you to track modifications.\nBranches: Separate lines of development within a repository, useful for working on different features simultaneously.\nPull Requests: Proposals to merge changes from one branch to another, often used for code reviews and collaboration.\nIssues: Tools for tracking tasks, enhancements, and bugs in your projects."
+  },
+  {
+    "objectID": "docs/tutorials/get-started/github_intro.html#getting-started-with-github",
+    "href": "docs/tutorials/get-started/github_intro.html#getting-started-with-github",
+    "title": "Introduction to GitHub",
+    "section": "Getting Started with GitHub",
+    "text": "Getting Started with GitHub\n\n1. Installing GitHub Desktop\n\nDownload GitHub Desktop from desktop.github.com if you don’t already have it installed.\nInstall GitHub Desktop following the instructions for your operating system.\n\n\n\n2. Cloning a Repository\nTo work on your project locally, clone the repository to your computer using GitHub Desktop.\n\nOpen GitHub Desktop.\nClick File &gt; Clone repository.\nSelect the repository you want to clone from the list or enter the URL of the repository.\nChoose the local path where you want to save the repository and click Clone.\n\nExplanation: Cloning a repository means creating a local copy of the repository on your computer, allowing you to work on it offline and sync your changes with the remote repository later.\n\n\n3. Creating a Branch\n99% of the time, you’ll want to work on a Branch. This effectively copies the code from main and allows you to work on it separately. This is great for a few reasons: - It avoids conflicts with overwriting which can happen when multiple people work on the same code in the same branch. - If you seriously break something and can’t figure out how to get it back - you can just pull from main!\nTo create a branch:\n\nSelect the repository you want to make a branch of.\nClick Current Branch &gt; New Branch.\nName the branch whatever you want (make sure to remember it!).\nSelect where you want the code to copy from (Main is the default branch, but you can copy the code from someone else’s branch too).\nClick Create Branch.\nMake sure the branch you just made is selected under Current Branch.\n\nExplanation: Branches allow you to develop features, fix bugs, or safely experiment with new ideas in isolation from the main codebase.\n\n\n4. Making Changes and Committing\n\nOpen the cloned repository in your preferred code editor and make changes to your files.\nGo back to GitHub Desktop. You will see your changes listed under Changes.\nAdd a summary and description for your commit in the Summary and Description fields.\nClick Commit to main (or your branch name if you are using a different one).\n\nExplanation: Committing saves your changes to the local repository, with a message describing what you did. This helps in keeping track of different versions of your code.\n\n\n5. Pushing Changes to GitHub\n\nAfter committing your changes, click Push origin at the top of GitHub Desktop to upload your commits to GitHub.\n\nExplanation: Pushing sends your committed changes to the remote repository on GitHub, making them available to others.\n\n\n6. Creating a Pull Request\nA pull request is a proposal to merge changes from one branch to another. It’s used for code review and collaboration before integrating changes into the main branch. Once you feel like you’ve implemented what you intended, you can make a pull request to merge your changes with the main (or another) branch.\n\nNavigate to your repository on GitHub.\nClick on the Pull requests tab.\nClick New pull request.\nSelect the branch you want to merge from and to.\nAdd a title and description for your pull request.\nClick Create pull request.\n\nExplanation: Pull requests facilitate discussion about your changes before they are merged into the main branch, ensuring code quality and collaboration."
+  },
+  {
+    "objectID": "docs/tutorials/get-started/github_intro.html#conclusion",
+    "href": "docs/tutorials/get-started/github_intro.html#conclusion",
+    "title": "Introduction to GitHub",
+    "section": "Conclusion",
+    "text": "Conclusion\nGitHub is a powerful platform for version control and collaboration, enabling developers to work together on projects effectively. By creating repositories, making commits, and managing pull requests with GitHub Desktop, you can maintain a smooth and organized workflow.\nAnother great resource to check out is the NCIL Handbook’s section on GitHub"
+  },
+  {
+    "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html",
+    "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html",
+    "title": "Introduction to Brain-Computer Interfaces",
+    "section": "",
+    "text": "A Brain-Computer Interface (BCI) enables communication between the brain and an external device, such as a computer or robotic arm, without physical movement. BCIs allow users to control devices using their thoughts."
+  },
+  {
+    "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#what-is-a-brain-computer-interface-bci",
+    "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#what-is-a-brain-computer-interface-bci",
+    "title": "Introduction to Brain-Computer Interfaces",
+    "section": "",
+    "text": "A Brain-Computer Interface (BCI) enables communication between the brain and an external device, such as a computer or robotic arm, without physical movement. BCIs allow users to control devices using their thoughts."
+  },
+  {
+    "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#how-does-a-bci-work",
+    "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#how-does-a-bci-work",
+    "title": "Introduction to Brain-Computer Interfaces",
+    "section": "How Does a BCI Work?",
+    "text": "How Does a BCI Work?\n\nThe Brain and Its Signals\nThe brain is composed of billions of neurons that communicate through electrical signals. BCIs detect and interpret these signals, often using electroencephalography (EEG), which measures electrical activity through the scalp.\n\n\n Learn More about Neurons and Brain Signals \n\n\nNeurons are specialized cells that transmit information throughout the nervous system. They communicate via electrical impulses and chemical signals. Each neuron consists of a cell body, dendrites, and an axon. Dendrites receive incoming signals, while the axon transmits signals to other neurons.\nNeurons generate action potentials, which are brief electrical impulses resulting from changes in membrane potential. These action potentials travel along the axon to the synapse, where neurotransmitters are released to signal adjacent neurons.\nEEG measures the synchronous activity of neurons, primarily in the cortex. This activity results in detectable electrical signals on the scalp, representing the brain’s response to stimuli and cognitive processes.\n\n\n\nProducing and Reading Brain Signals\nEEG signals arise from the synchronized activity of cortical pyramidal neurons when users focus on specific stimuli. BCI systems use machine learning algorithms to learn and interpret brain signals into commands.\n\n\n Understanding Electric Dipoles and EEG Detection \n\n\nPyramidal neurons in the cortex are key contributors to EEG signals. These neurons have long apical dendrites oriented perpendicularly to the cortical surface, forming electric dipoles when they fire.\nThe combined electric fields of many neurons create measurable potentials on the scalp. EEG electrodes placed on the scalp detect these potentials, recording voltage fluctuations over time.\nMachine learning algorithms process the EEG data, identifying patterns associated with specific mental states or intentions - such as those arising from attending to a specific stimulus. This enables translation of brain activity into actionable commands for BCIs.\n\n\n\nTranslating Thoughts into Action\nMachine learning algorithms distinguish brain signals generated by focusing on specific stimuli from background noise, translating them into commands for device control. This enables users to perform tasks like moving a cursor, playing a game, or controlling a robotic arm solely through thought.\n\n\n Exploring Machine Learning in BCIs \n\n Machine learning algorithms in BCIs analyze EEG data to identify patterns (like event-related potentials or steady-state visually-evoked potentials) corresponding to user intentions (such as attending to a certain stimulus). These algorithms are trained on labeled datasets to distinguish between when random noise and when the user is attending a stimulus.\nThe most common technique is supervised learning, where models learn from labeled examples. Other techniques can be successfully used such as unsupervised learning, which identifies hidden patterns without explicit labels, and deep learning, a subset of machine learning, employs neural networks to extract complex features from EEG signals.\nBy continuously adapting to user inputs, machine learning enhances the accuracy and responsiveness of BCIs, enabling seamless interaction between the brain and external devices."
+  },
+  {
+    "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#two-common-neural-responses-used-for-bci",
+    "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#two-common-neural-responses-used-for-bci",
+    "title": "Introduction to Brain-Computer Interfaces",
+    "section": "Two Common Neural Responses Used for BCI",
+    "text": "Two Common Neural Responses Used for BCI\n\nEvent-Related Potentials (ERPs)\nERPs are brain responses time-locked to specific events. They consist of components like the commonly-used P300, which occur about 300 milliseconds after an infrequent or important stimulus. In ERP-based BCIs, users focus on stimuli, and the system detects the P300 responses to determine which stimulus the user is looking at, and therefore which command to execute.\n\n\n\nExample Event-Related Potentials\n\n\n\n\n Diving into ERP Components and Their Significance \n\n ERP components are labeled based on their polarity (positive or negative) and timing. Key components include:\n\nP300: A positive deflection occurring around 300 milliseconds after an infrequent or significant stimulus. In BCIs, the P300 is used to detect when a user is focusing on a particular stimulus, such as a specific letter in a matrix. The system then translates this detection into a command, enabling the user to select that letter or perform an action.\nN200: A negative deflection associated with response inhibition and conflict detection. In BCIs, the N200 can be used to monitor error detection or user responses to conflicting stimuli, which can be integrated into more sophisticated control systems.\nN400: Related to language processing and semantic incongruence. While less commonly used in BCIs, the N400 could assist in applications involving language or communication tasks by detecting how users process and respond to language-based stimuli.\n\nERPs provide insights into cognitive processes and brain responses, making them valuable for understanding attention, perception, and decision-making.\n\n\n\nSteady-State Visual Evoked Potentials (SSVEPs)\nSSVEPs are responses to flickering visual stimuli, causing detectible brain waves at the same frequency. In SSVEP-based BCIs, users focus on a flickering stimulus to synchronize brain activity with its frequency, allowing for the machine learning algorithm to determine which stimulus the user is focused on, and then execute the corresponding command.\n\n\n Delving into SSVEPs and Frequency Analysis \n\n SSVEPs are generated when the visual cortex responds to stimuli flickering at specific frequencies. The brain’s response frequency matches the stimulus frequency, enabling reliable detection with EEG.\nIn SSVEP-based BCIs, users focus on one of several flickering stimuli, each associated with a distinct command. The system identifies the frequency of the brain’s response to determine user intent. (For example, if the user attends to a stimulus flickering at 10 Hz, the resulting EEG signals would show a 10 Hz oscillation, and the machine learning algorithm would perform the command corresponding to the stimulus flickering at 10 Hz)\nFrequency analysis involves decomposing EEG signals into their frequency components. Techniques such as Fourier Transform and Wavelet Transform help isolate SSVEP frequencies for accurate interpretation.\n\n\n\nComparison and Considerations\n\nSpeed and Accuracy: SSVEP-based BCIs generally offer faster and more accurate responses due to direct frequency matching.\nUser Comfort: ERP-based systems may be less visually demanding, as SSVEPs require focus on flickering stimuli, which can cause fatigue.\nSignal Processing: Both require advanced techniques to interpret user intentions from EEG data.\n\n\n\nNote on Hybrid BCIs\nHybrid BCIs combine multiple neural responses, such as ERPs and SSVEPs, to enhance the performance and versatility of the system. By leveraging the strengths of different neural signals, hybrid BCIs can provide more robust and reliable control, especially in complex or dynamic environments.\nHow Hybrid BCIs Work: - Integration of Multiple Signals: Hybrid BCIs simultaneously monitor different types of brain signals, such as combining the time-locked precision of ERPs with the continuous frequency information from SSVEPs. This integration allows the system to cross-validate user intentions, improving accuracy. - Increased Command Options: By using both ERPs and SSVEPs, hybrid BCIs can offer a wider range of commands or actions. For example, an ERP might be used to select a menu item, while an SSVEP could determine how to interact with it. - Enhanced Adaptability: Hybrid BCIs can adapt to varying user states or environmental conditions. If one signal type becomes less reliable (e.g., if a user becomes fatigued and SSVEP detection declines), the system can rely more heavily on the other signal type.\n\n\n Advantages and Applications of Hybrid BCIs \n\n\nAdvantages: - Improved Accuracy: The combination of multiple neural signals reduces the likelihood of errors by cross-referencing different types of brain activity. - Greater Flexibility: Users can perform a broader range of actions, as the system can interpret more diverse types of commands. - Resilience: Hybrid BCIs can maintain functionality even if one type of signal is compromised, making them more reliable in real-world applications.\n\nHybrid BCIs represent an exciting frontier in brain-computer interface technology, combining the best of multiple approaches to create more effective and user-friendly systems. As research and development continue, hybrid BCIs are likely to become increasingly prominent in both clinical and non-clinical applications."
+  },
+  {
+    "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#applications-of-bcis",
+    "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#applications-of-bcis",
+    "title": "Introduction to Brain-Computer Interfaces",
+    "section": "Applications of BCIs",
+    "text": "Applications of BCIs\nBCIs have transformative potential across fields:\n\nMedical: Helping individuals with disabilities control wheelchairs or prosthetic limbs.\nCommunication: Allowing those unable to speak to convert thoughts into text or speech.\nGaming and Entertainment: Creating immersive experiences controlled by thought.\nResearch and Exploration: Studying brain functions and developing neurological treatments.\n\n\n\n Exploring BCI Applications in More Detail \n\n\n\nMedical Applications: BCIs restore independence for individuals with mobility impairments, enabling them to control assistive devices through thought alone. For example, BCIs can be integrated with robotic prosthetics to facilitate movement for amputees or individuals with paralysis.\nCommunication: BCIs enable individuals with communication disorders to express themselves by converting brain signals into text or speech, enhancing social interaction and quality of life.\nGaming and Entertainment: BCIs offer unique gaming experiences, where players control in-game actions using their thoughts, creating a more immersive and interactive environment.\nResearch: BCIs facilitate research into brain function and cognitive processes, providing insights into neural mechanisms underlying behavior and aiding the development of treatments for neurological disorders."
+  },
+  {
+    "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#the-future-of-bcis",
+    "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#the-future-of-bcis",
+    "title": "Introduction to Brain-Computer Interfaces",
+    "section": "The Future of BCIs",
+    "text": "The Future of BCIs\nBCI technology is evolving rapidly, with ongoing research aiming to make systems more accessible and user-friendly, expanding their impact on how we interact with technology.\n\n\n Innovations and Future Directions in BCIs \n\n\n\nImproved Accessibility: Researchers are working on developing affordable and easy-to-use BCI systems, making them accessible to a wider population.\nEnhanced Signal Quality: Advances in signal processing and electrode technology aim to improve the quality and reliability of EEG signals, enhancing BCI performance.\nIntegration with AI: Combining BCIs with artificial intelligence allows for more sophisticated interpretation of brain signals, improving the accuracy and speed of communication and control.\nWearable BCIs: Future BCIs may be integrated into wearable devices, offering seamless and unobtrusive interaction with technology in everyday life."
+  },
+  {
+    "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#conclusion",
+    "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#conclusion",
+    "title": "Introduction to Brain-Computer Interfaces",
+    "section": "Conclusion",
+    "text": "Conclusion\nBrain-Computer Interfaces merge neuroscience and technology, enabling direct communication between the brain and devices. They have the potential to revolutionize various fields, making the world more inclusive and innovative."
+  },
+  {
+    "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#further-reading",
+    "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#further-reading",
+    "title": "Introduction to Brain-Computer Interfaces",
+    "section": "Further Reading",
+    "text": "Further Reading\nGeneral Neuroscience:\n\nResearch Methods in Cognitive Neuroscience [Book] - Dr. Aaron Newman\n\nGeneral BCI:\n\nProgress in Brain Computer Interface: Challenges and Opportunities - Saha et al., 2017\nCurrent Status, Challenges, and Possible Solutions of EEG-Based Brain-Computer Interface: A Comprehensive Review - Rashid et al., 2020\nData Analytics in Steady-State Visual Evoked Potential-Based Brain–Computer Interface: A Review - Zhang et al., 2021\nHybrid brain–computer interface spellers: A walkthrough recent advances in signal processing methods and challenges. International Journal of Human–Computer Interaction - Chugh, N. & Aggarwal, S., 2022"
+  },
+  {
+    "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#references",
+    "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#references",
+    "title": "Introduction to Brain-Computer Interfaces",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "contact_us.html",
+    "href": "contact_us.html",
+    "title": "Contact Us",
+    "section": "",
+    "text": "Email us at: bciclub@dal.ca"
+  },
+  {
+    "objectID": "docs/tutorials/get-started/getting_setup.html",
+    "href": "docs/tutorials/get-started/getting_setup.html",
+    "title": "Getting Setup",
+    "section": "",
+    "text": "This document will teach you how to setup your computer with GitHub, VSCode and a Virtual Environment so you can start working on python projects!"
+  },
+  {
+    "objectID": "docs/tutorials/get-started/getting_setup.html#step-1-setting-up-visual-studio-code",
+    "href": "docs/tutorials/get-started/getting_setup.html#step-1-setting-up-visual-studio-code",
+    "title": "Getting Setup",
+    "section": "Step 1: Setting up Visual Studio Code",
+    "text": "Step 1: Setting up Visual Studio Code\n\n\nClick to learn more about VS Code! \n\n\nVisual Studio Code (often referred to as VS Code) is a free, open-source code editor developed by Microsoft. It’s lightweight, yet powerful, and supports development in multiple programming languages such as Python, JavaScript, Java, C++, and many more. VS Code features include syntax highlighting, intelligent code completion (IntelliSense), code refactoring, and debugging tools. It also supports Git for version control, has a built-in terminal for command-line operations, and a rich ecosystem of extensions for enhancing its functionality. It’s designed to be highly customizable, allowing users to change the editor’s theme, keyboard shortcuts, and preferences. VS Code is available for Windows, macOS, and Linux. It’s widely used by developers across the globe for both small and large scale projects.\n\n\n\nInstalling VSCode & Extensions\nFirst, you’ll want to download and install the latest version of Visual Studio Code. Make sure you download the correct version for your computer (Windows, Mac, Linux).\nFollow the steps in the dialog windows, and once installed, you next need to download some essential extensions. On the left side of the window, there will be a bar with some icons. Select the extensions icon:  From there, search for and install the following: (Or just click the links below and hit ‘install’)\n\nGitHub Copilot & GitHub Copilot Chat\nPython\nJupyter\nAny others that seem interesting or useful :)\n\nFor more information on how to use VSCode, see the resources at the bottom of this page"
+  },
+  {
+    "objectID": "docs/tutorials/get-started/getting_setup.html#step-2-setting-up-github",
+    "href": "docs/tutorials/get-started/getting_setup.html#step-2-setting-up-github",
+    "title": "Getting Setup",
+    "section": "Step 2: Setting up GitHub",
+    "text": "Step 2: Setting up GitHub\n\n\nClick to learn more about GitHub! \n\n\nGitHub is a web-based platform used for version control and collaboration. It allows multiple people to work on projects at once without overwriting each other’s changes. GitHub is built on Git, a distributed version control system that tracks changes to files. With GitHub, you can manage and store revisions of projects, share your code with others, view and track changes, and even revert back to previous versions of your code. It’s widely used by software developers for personal projects, open-source projects, and team-based enterprise software development.\n\n\n\nMaking Your Account\nHead over to GitHub.com and make an account if you don’t already have one. Make sure you use your Dalhousie email when signing up as this will allow you to sign up for the student developer pack which gives you access to AI tools like GitHub Copilot!\n\n\nGetting Student Perks\nOnce you’ve made and verified your account, head over to the GitHub Student Developer Pack Application. Make sure Student is selected, and then scroll down to the bottom of the page.\nIf you signed up with your Dalhousie email address, it should automatically detect Dalhousie University as your school. Click Select this School, and then Continue. If you don’t see this, enter your Dalhousie email address and verify it now. Note: Your browser may prompt you to share your location, this is required and you will not be allowed to continue until you agree.\n\n\n\n\n\nOn the next page, you will have to take a picture of your Dalhousie Student ID (I reccomend using your laptop webcam for simplicity), and upload it. Note: The website says you need to have an expiration date on your card, but since Dal student ID’s don’t have one you should be fine. If it keeps giving you errors, ask someone for assistance :)\n\n\n\n\n\n\nThis step can be a bit tricky and students sometimes get errors saying they require 2FA (2-factor authentication), in which case you will need to add your phone number or some other 2FA to your github account. If you have tried to troubleshoot on your own and keep getting stuck, just swing by the club and ask one of the SURGE folks - we’re happy to assist :)\n\nAfter you have completed the GitHub setup, you will get an email in a few hours/days saying that your application has been accepted. Once you receive this, you can open VSCode up, find the GitHub Copilot extensions and log into them. Now you have access to a powerful AI that can help you understand and write code!\n\n\nInstalling GitHub Desktop\nFinally, you will need to install GitHub Desktop. This application provides a friendly user-interface to work on GitHub repositories without having to learn the git bash (command line). Install that and log into your GitHub account.\nOnce this is done we highly reccomend you check out some further tutorials on what GitHub is, and how to effectively use it! There is a mini introduction to GitHub here, as well as other great resources at the bottom of this page"
+  },
+  {
+    "objectID": "docs/tutorials/get-started/getting_setup.html#step-3-setting-up-a-virtual-environment",
+    "href": "docs/tutorials/get-started/getting_setup.html#step-3-setting-up-a-virtual-environment",
+    "title": "Getting Setup",
+    "section": "Step 3: Setting up a Virtual Environment",
+    "text": "Step 3: Setting up a Virtual Environment\n\n\nClick to learn more about Virtual Environments & Miniforge! \n\n\nVirtual environments are isolated spaces for installing and managing packages and dependencies for specific projects without affecting the global Python environment. They offer isolation, precise dependency management, portability, and a cleaner global environment. Virtual environments can be created using tools like venv or virtualenv in Python or Conda’s environment management features. By activating a virtual environment, users can install packages specific to that project, ensuring consistency and avoiding conflicts with other projects. This approach is essential for maintaining project-specific dependencies and ensuring reproducible and stable development environments.\n\n\nMiniforge3 is a minimalistic distribution of Conda, an open-source package and environment management system widely used in data science and software development. It provides a lightweight, cross-platform tool that supports multiple CPU architectures, making it versatile for different hardware and operating systems. Miniforge3 allows users to install packages from sources like conda-forge, ensuring access to a broad range of up-to-date software. Its primary strength lies in environment management, enabling the creation of isolated environments with specific dependencies, thereby avoiding conflicts and ensuring project stability.\n\n\n\nInstalling Miniforge3\nNext we need to get a python virtual environment setup so you can start coding! A virtual environment is an isolated workspace on a computer that allows projects to have their own dependencies and configurations, preventing conflicts and ensuring consistent and reproducible development and deployment. It is essential for managing multiple projects with different requirements on the same machine.\nTo start, head over to the conda/miniforge website and scroll down to download the version that matches your machine (windows, mac, linux, etc.)\nNext, open the installer and follow the steps. It isn’t necessary, but I reccomend selecting Install for all Users. Once the installation is complete you should be able to find a program called “Miniforge Prompt” or “Miniforge3” on your desktop or by searching for it.\n\n\nSetting Up Your Environment\nThe next step involved you cloning a repository to your computer so make sure you have your GitHub account & GitHub Desktop setup. In the GitHub Desktop App, in the top left, click on Current Repository &gt; Add &gt; Clone Existing Repository. Now either find the repository called “SURGE-NeuroTech-Club/virtual-environments” or if you can’t find it, click on URL and paste in: SURGE-NeuroTech-Club/virtual-environments. Before clicking Clone, copy the location of the folder it will clone to - you’ll need it soon.\nNext, you’ll want to open your Miniforge3 Prompt and use the cd command to change to the directory to where you cloned the repository. For example, type: cd \"the location to the repository you coppied\". If you aren’t sure where you cloned the repository, you can click on this button  in the GitHub desktop app and copy the path.\nYou will know you’re in the right directory when it reads something along the lines of: (base) C:\\..\\..\\virtual-environments. Once you see this, type in: mamba env create -f ncil.yml. This will read the list of libraries and packages within the ncil.yml file and begin to download and install them into a virtual environment for you. You may be prompted to answer Yes/No (Y/N) at some points during the installation process.\nOnce the install is complete, you can check that it worked by typing in: mamba activate ncil. This should change from (base) C:\\etc... to (ncil) C:\\etc....\n\n\nUsing Your Virtual Environment in VSCode\nNow that you have installed your virtual environment, you can use it in VSCode! To do this, all you have to do is open up VSCode and hit ctrl+shift+p (command+shift+p on mac), and type: Python: Select Interpreter. Then from the drop-down menu you should be able to see “Python 3.12.2 (‘ncil’)” and tada you can now execute python scripts using your brand-new virtual environment!"
+  },
+  {
+    "objectID": "docs/tutorials/get-started/getting_setup.html#additional-resources",
+    "href": "docs/tutorials/get-started/getting_setup.html#additional-resources",
+    "title": "Getting Setup",
+    "section": "Additional Resources",
+    "text": "Additional Resources\nThe NCIL Lab Handbook has many great resources - Data Science Tools\nVSCode:\n\nIntroduction to VSCode\n\nGitHub:\n\nIntroduction to GitHub\nNCIL Introduction to GitHub"
+  },
+  {
+    "objectID": "docs/tutorials/index.html",
+    "href": "docs/tutorials/index.html",
+    "title": "Welcome to the Get Started Landing Page!",
+    "section": "",
+    "text": "Welcome to the Get Started Landing Page!\n\nIf you’re brand new and want to get your computer setup to start working on projects, head over to Getting Setup.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Setup\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with OpenBCI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Brain-Computer Interfaces\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Machine Learning\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "docs/tutorials/open-bci/open_bci_setup.html",
+    "href": "docs/tutorials/open-bci/open_bci_setup.html",
+    "title": "Getting Started with OpenBCI",
+    "section": "",
+    "text": "This tutorial will take you through the steps of getting you OpenBCI board up and streaming EEG signals!"
+  },
+  {
+    "objectID": "docs/tutorials/open-bci/open_bci_setup.html#installing-the-software",
+    "href": "docs/tutorials/open-bci/open_bci_setup.html#installing-the-software",
+    "title": "Getting Started with OpenBCI",
+    "section": "Installing The Software",
+    "text": "Installing The Software\nFirst, you will have to download the latest version of the OpenBCI GUI (graphical user interface) Make sure to download the correct version for your machine! (windows, mac, or linux).\nOne you have downloaded it, unzip it and move the folder somewhere you will remember! &gt; The GUI doesn’t ‘install’ so you will have to open the folder to start the program\nOnce you open the application OpenBCI_GUI, you should see something like this: \nIf you see the red bar at the bottom that reads ‘This Application is Not being run with Admin Access…’, close it and restart it as an administrator (right click &gt; Run As Administrator &gt; Yes)\nIf you run into trouble or errors not mentioned here, check out the official GUI documentation (or ask one of the SURGE folks!)"
+  },
+  {
+    "objectID": "docs/tutorials/open-bci/open_bci_setup.html#connecting-to-your-board",
+    "href": "docs/tutorials/open-bci/open_bci_setup.html#connecting-to-your-board",
+    "title": "Getting Started with OpenBCI",
+    "section": "Connecting To Your Board",
+    "text": "Connecting To Your Board\nIf at any point something doesn’t work or make sense - check out the official documentation on getting your cyton board setup!\nMake sure you have your Cyton Board, Dongle, and Battery Pack with 4 AA batteries. \nThere is a tiny switch on the side of the cyton board:  - make sure it is in the ‘off’ position (middle) before pluggin in the battery.\nOnce the switch is set to ‘off’, you may plug in the battery pack  and change the switch position to ‘PC’. If you do not see a blue light on the board once you switch it to ‘PC’, the batteries need to be replaced.\nNext, look for the switch on the USB dongle and **make sure the switch is on ‘GPIO 6’ - towards the plug-end before pluggin it into your computer."
+  },
+  {
+    "objectID": "docs/tutorials/open-bci/open_bci_setup.html#more-information-references",
+    "href": "docs/tutorials/open-bci/open_bci_setup.html#more-information-references",
+    "title": "Getting Started with OpenBCI",
+    "section": "More Information & References",
+    "text": "More Information & References\nOpenBCI GUI Reference"
+  },
+  {
+    "objectID": "site_info.html",
+    "href": "site_info.html",
+    "title": "Official Website of SURGE Innovation’s NeuroTech Club",
+    "section": "",
+    "text": "This is the official website of SURGE Innovation’s NeuroTech Club hosted by Dalhousie University\nWebsite made using Quarto & hosted via Github pages"
+  }
+]
