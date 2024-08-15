@@ -5,7 +5,8 @@ project:
 website:
   title: "SURGE NeuroTech Club"
   image: images/logo.png
-  favicon: images/logos/logo_favicon.png
+  favicon: images/logos/logo_favicon_transparent.png
+  # favicon: images/logos/new_favicon.webp
   bread-crumbs: true
   page-navigation: true
   open-graph: true
@@ -13,7 +14,6 @@ website:
     show-item-context: true
     location: navbar
     type: overlay
-
 
   navbar:
     logo: images/logos/logo_transparent.png
@@ -23,10 +23,8 @@ website:
         href: https://github.com/orgs/SURGE-NeuroTech-Club
         target: _blank
     left:
-      # - text: "Home"
-      #   href: index.qmd
       - text: "Get Started"
-        href: docs/get-started/index.qmd
+        href: docs/tutorials/index.qmd
       # - text: "Get Started"
       #   menu:
       #     - docs/get-started/getting_setup.qmd
@@ -45,6 +43,7 @@ website:
   #   contents: auto
 
   page-footer:
+    background: dark 
     left: 
       - text: "Copyright 2024, SURGE Innovation" 
     center:

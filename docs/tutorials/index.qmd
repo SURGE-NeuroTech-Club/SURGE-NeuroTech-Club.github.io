@@ -1,0 +1,32 @@
+---
+pagetitle: "SURGE NeuroTech Club"
+toc: false
+page-layout: full
+css: ../../../index.scss
+
+listing: # https://quarto.org/docs/websites/website-listings.html
+  contents: 
+    # - getting-setup/*.qmd
+    - ../tutorials/*/*.qmd
+  type: grid
+  image-align: left 
+  fields: [image, title, description]
+  # grid-item-align: center 
+  # sort-ui: true
+  # filter-ui: true
+---
+
+::: {.index_banner}
+
+::: {.index}
+
+# Welcome to the Get Started Landing Page!
+
+<br>
+
+If you're brand new and want to get your computer setup to start working on projects, head over to [Getting Setup.](get-started/getting_setup.qmd)
+
+<br>
+:::
+
+::: 

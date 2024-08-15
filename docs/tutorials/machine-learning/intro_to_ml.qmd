@@ -1,0 +1,594 @@
+---
+title: "Introduction to Machine Learning"
+image: images/intro-to-ml.webp
+format: 
+    html:
+        toc: true
+        link-external-newwindow: true
+---
+
+This introductory tutorial will take you through some of the basics of what machine learning is and how it works!
+
+```{python}
+#| label: Python Setup
+#| include: false
+#| warning: false
+#| messages: false
+
+# Data manipulation and visualization libraries
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import plotly.express as px
+
+# Color map for plots
+from matplotlib.colors import ListedColormap
+
+# ML and data handling
+from sklearn.datasets import load_iris
+from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
+from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier
+from sklearn.gaussian_process import GaussianProcessClassifier
+from sklearn.gaussian_process.kernels import RBF
+from sklearn.decomposition import PCA
+from sklearn.inspection import DecisionBoundaryDisplay
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neural_network import MLPClassifier
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# Additional plotting functionality
+from mlxtend.plotting import plot_decision_regions
+
+```
+
+## What is Machine Learning? {.center-h2}
+
+<br> <br>
+
+::: {.fragment .fade-in}
+A type of artificial intelligence where computers learn to [make predictions by recognizing patterns]{.highlight1} in data. It improves over time by continuously learning from new data and experiences.
+:::
+
+# How Does Machine Learning Work? {style="text-align: center"}
+
+## 1. A Decision Process:
+
+<br> <br>
+
+In general, machine learning algorithms are used to make a [prediction or classification]{.highlight1}. Based on some input data. The algorithm will produce an [estimate about a pattern]{.highlight1} in the data.
+
+::: aside
+[UC Berkeley School of Information](https://ischoolonline.berkeley.edu/blog/what-is-machine-learning/)
+:::
+
+## 2. An Error Function:
+
+<br> <br>
+
+An error function [evaluates the prediction]{.highlight1} of the model. If there are known examples, an error function can make a comparison to assess the performance of the model.
+
+::: aside
+[UC Berkeley School of Information](https://ischoolonline.berkeley.edu/blog/what-is-machine-learning/)
+:::
+
+## 3. A Model Optimization Process:
+
+<br> <br>
+
+When the model does a good job of matching the training data, it tweaks its settings to get better at classifying the actual data. This process of [“evaluate and optimize”]{.highlight1} happens over and over again, allowing the model to adjust itself automatically.
+
+::: aside
+[UC Berkeley School of Information](https://ischoolonline.berkeley.edu/blog/what-is-machine-learning/)
+:::
+
+## (Major) Types of ML {.center-h2}
+
+<br>
+
+::::: columns
+::: {.column .fragment .fade-in width="50%"}
+### Supervised Learning {style="text-align: center"}
+
+-   Uses [labelled]{.highlight1} training data
+-   Majority of machine learning applications
+:::
+
+::: {.column .fragment .fade-in width="50%"}
+### Unsupervised Learning {style="text-align: center"}
+
+-   Uses [unlabelled]{.highlight1} training data
+-   Relatively uncommon
+-   Most often used for content personalization
+:::
+:::::
+
+## Labelled & Unlabelled Data
+
+<br>
+
+Labelled data is tagged with the target (dependent) measure - [It comes with the answer]{.highlight1}
+
+![](/images/labelled-unlabeled.png){fig-align="center"}
+
+## Supervised Machine Learning {.center-h2}
+
+::::: columns
+::: {.column width="50%"}
+### Pros {style="text-align: center"}
+
+-   High accuracy
+    -   Ability to learn from known examples
+-   Excellent predictive power
+    -   Classifying new data based on historical data
+:::
+
+::: {.column width="50%"}
+### Cons {style="text-align: center"}
+
+-   Requires labelled data
+    -   Time consuming & expensive
+-   Overfitting
+    -   Model can become too specific to trainig data
+:::
+:::::
+
+[Common Algorithms: Linear/Logistic Regression, Support Vector Machines, Decision Trees, K-nearest neighbours]{.footer-font}
+
+## Unsupervised Machine Learning {.center-h2}
+
+::::: columns
+::: {.column width="50%"}
+### Pros {style="text-align: center"}
+
+-   Data exploration
+    -   Discovering hidden patterns in data
+-   Dimensionality reduction
+    -   Simplifying complex datasets
+:::
+
+::: {.column width="50%"}
+### Cons {style="text-align: center"}
+
+-   Worse interpretability
+    -   No guidance for understanding patterns
+-   Model evaluation
+    -   Assessing quality without labels or metrics
+:::
+:::::
+
+[Common Algorithms: Principle component analysis, K-means clustering, t-Distributed Stochastic Neighbor Embedding]{.footer-font}
+
+# Mini Tutorial with the Iris Dataset!
+
+## Human Classification Exercise
+
+Fun Fact: You can find wild irises in NS!
+
+![Irises Found at Duncan's Cove](images/duncans_iris.jpg){fig-align="center"}
+
+## What do you think?
+
+<br>
+
+::::: {layout="[1,1,1]"}
+![My Picture from Duncan's Cove](images/duncans_iris_zoom.jpg)
+
+::: {.fragment .fade-in}
+!["Northern Blue Flag" - Versicolor](images/northern%20blue%20flag%20(Iris%20versicolor)_files2.jpg)
+:::
+
+::: {.fragment .fade-in}
+!["Beach-Head" - Setosa](images/Beach-head%20Iris%20(iris%20setosa)2.jpeg)
+:::
+:::::
+
+## Real-world Example
+
+![](images/seek_inaturalist.png){fig-align="center"}
+
+Seek is an app that uses image recognition to predict species of animals, plants, fungi, insects - you name it!
+
+## Misclassification?
+
+The Seek App determined that the iris I found was Versicolor, but two experts claimed it was a Setosa
+
+![](images/inaturalist_pic.PNG){fig-align="center"}
+
+## Choosing (the right) Features is Important!
+
+<br>
+
+[Feature:]{.highlight1} "An individual measurable property or characteristic of a phenomenon"[^1]
+
+[^1]: [Bishop, Christopher (2006). *Pattern recognition and machine learning*](https://en.wikipedia.org/wiki/Feature_(machine_learning)#cite_note-ml-1)
+
+<br>
+
+::: {.fragment .fade-in}
+Using informative, discriminating and independent features is a crucial element of effective classification algorithms.
+:::
+
+## The Iris Dataset
+
+Three types of iris: Setosa, Versicolor, & Virginica
+
+![](images/iris_ex.png){fig-align="center"}
+
+The type can be determined by combination of [Petal & Sepal Width & Length]{.highlight1}
+
+## Taking Another Look
+
+Do you think that the Seek AI may have used some other feature, causing it to make an incorrect classification?
+
+::: {layout="[1,1,1]"}
+![Duncan's Cove](images/duncans_iris_zoom.jpg)
+
+!["Northern Blue Flag" - Versicolor](images/northern%20blue%20flag%20(Iris%20versicolor)_files2.jpg)
+
+!["Beach-Head" - Setosa](images/Beach-head%20Iris%20(iris%20setosa)2.jpeg)
+:::
+
+## Let's Look At The Dataset!
+
+:::::: columns
+::: {.column width="50%"}
+```{python}
+#| label: Iris-dataset
+#| echo: false
+
+data = px.data.iris()
+columns_df = pd.DataFrame(data.iloc[:, 0:5].columns, columns=['Variables'])
+
+columns_df = pd.concat([columns_df, pd.DataFrame({'Variables': [f'# Observations: {len(data)}']})], ignore_index=True)
+
+columns_df
+```
+:::
+
+:::: {.column width="50%"}
+::: {style="font-size: 30px;"}
+-   4 Features (Independent Variables)
+-   150 Total Observations
+    -   50 of each Iris Type
+-   Excellent sample to demonstrate machine learning!
+:::
+
+![](images/sepal-petal.png){width="45%" fig-align="center"}
+::::
+::::::
+
+## Visualizing the Raw Data
+
+```{python}
+#| label: CorrPlot
+#| fig-align: 'center'
+
+# sns.set(style="ticks", context="talk")
+plt.style.use("dark_background")
+
+# Making a correlation plot of all variables except 'Id'
+corr_plot = sns.pairplot(data.iloc[:, 0:5], kind="scatter", hue="species", markers=["o", "s", "D"], palette="Set2", plot_kws={'alpha': 0.7})
+
+sns.move_legend(corr_plot, "lower center",
+    bbox_to_anchor=(0.5, 1), ncol=3, title=None, frameon=False
+)
+
+# Resize to fit
+corr_plot.fig.set_size_inches(12, 5.5)
+
+# Show the plot
+corr_plot
+```
+
+## Reducing Dimentionality {.smaller}
+
+We can use principle component analysis (PCA) to take our 4 dimensional data and translate it into two dimensions for better visualization!
+
+```{python}
+#| fig-align: center
+
+plt.figure(figsize=(12, 6))
+
+df = px.data.iris()
+X = df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']]
+
+pca = PCA(n_components=2)
+components = pca.fit_transform(X)
+
+# Create a DataFrame with the PCA results
+pca_df = pd.DataFrame(data=components, columns=['PCA1', 'PCA2'])
+pca_df['species'] = df['species']
+
+# Plot the PCA results
+pca2d = sns.scatterplot(data=pca_df, x='PCA1', y='PCA2', hue='species', palette="Set2")
+```
+
+## Seperating Our Dependent and Independent Variables
+
+```{python}
+#| label: Ind-Dep1
+#| panel: center
+#| echo: true
+#| class: output-style
+#| code-line-numbers: "1,2"
+
+X = data.drop(['species_id', 'species'], axis=1)
+y = data['species']
+```
+
+```{python}
+#| label: Ind-Dep2
+#| echo: false
+#| class: output-style3
+
+print(f'The feature (X/independent) variables are of shape: {X.shape}')
+print(f'The target (y/dependent) variables are of shape: {y.shape}')
+```
+
+:::::: {.fragment .fade-in}
+::::: columns
+::: {.column width="50%"}
+```{python}
+#| label: Ind-Dep3
+#| panel: center
+#| echo: false
+#| class: output-style2
+
+columns_df2 = pd.DataFrame(X.columns, columns=['Independent Vars'])
+
+# columns_df2 = pd.concat([columns_df, pd.DataFrame({'Variables': [f'# Observations: {len(data)}']})], ignore_index=True)
+
+columns_df2
+```
+:::
+
+::: {.column width="50%"}
+```{python}
+#| label: Ind-Dep4
+#| panel: center
+#| echo: false
+#| class: output-style2
+
+y_sample = pd.DataFrame(y.sample(4))
+
+y_sample
+```
+:::
+:::::
+::::::
+
+## Train-Test Split
+
+The classifier's performance can become inflated if it trains on the same data it is tested with. This is called [data-leakage.]{.highlight1}
+
+::: {.fragment .fade-in}
+We must split the data into [training and testing sets.]{.highlight1}
+
+![](images/train-test-split-1.png){fig-align="center"}
+
+This allows us to test how good the model is at classifying [data it hasn't seen before.]{.highlight1}
+:::
+
+## Making the Train-Test Split
+
+```{python}
+#| label: Train-test-split1
+#| echo: true
+#| code-line-numbers: "1|2|3-4"
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, 
+                                                        test_size=0.3,
+                                                        stratify=y,
+                                                        random_state=42)
+```
+
+::: {.fragment .fade-in}
+-   **Test size**: 30% is kept to validate the trained model
+-   **Stratify**: Preserves the class ratios (33% of each iris species)
+:::
+
+::: {.fragment .fade-in}
+```{python}
+#| label: Train-test-split2
+#| panel: center
+#| echo: false
+#| class: output-style3
+
+print(f'X_train shape is: {X_train.shape}')
+print(f'y_train shape is: {y_train.shape} \n')
+
+print(f'X_test shape is: {X_test.shape}')
+print(f'y_test shape is: {y_test.shape}')
+```
+:::
+
+## Why is Stratification Important? {.smaller}
+
+If data is not stratified, the model may focus on more prevalent classes, leading to [biased performance and poor accuracy on underrepresented classes.]{.highlight1}
+
+```{python}
+#| label: Stratifcation
+#| echo: false
+#| panel: center
+
+
+# Load the Iris dataset
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Perform a standard train-test split (non-stratified)
+X_train_ns, X_test_ns, y_train_ns, y_test_ns = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Perform a stratified train-test split
+X_train_s, X_test_s, y_train_s, y_test_s = train_test_split(X, y, test_size=0.3, stratify=y, random_state=42)
+
+def plot_combined_distribution(y_train_ns, y_test_ns, y_train_s, y_test_s):
+    fig, axs = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
+    
+    # Plot for Non-Stratified Split
+    labels, counts = np.unique(y_train_ns, return_counts=True)
+    axs[0].bar(labels, counts, width=0.4, align='center', label='Train', color='skyblue')
+    labels, counts = np.unique(y_test_ns, return_counts=True)
+    axs[0].bar(labels + 0.4, counts, width=0.4, align='center', label='Test', color='orange')
+    axs[0].set_title('Non-Stratified Split')
+    axs[0].set_xlabel('Class')
+    axs[0].set_ylabel('Count')
+    axs[0].set_xticks(labels + 0.2)
+    axs[0].set_xticklabels(iris.target_names)
+    axs[0].legend()
+
+    # Plot for Stratified Split
+    labels, counts = np.unique(y_train_s, return_counts=True)
+    axs[1].bar(labels, counts, width=0.4, align='center', label='Train', color='skyblue')
+    labels, counts = np.unique(y_test_s, return_counts=True)
+    axs[1].bar(labels + 0.4, counts, width=0.4, align='center', label='Test', color='orange')
+    axs[1].set_title('Stratified Split')
+    axs[1].set_xlabel('Class')
+    axs[1].set_xticks(labels + 0.2)
+    axs[1].set_xticklabels(iris.target_names)
+    axs[1].legend()
+
+    plt.tight_layout()
+    plt.show()
+
+# Call the function to plot the combined distribution
+plot_combined_distribution(y_train_ns, y_test_ns, y_train_s, y_test_s)
+```
+
+## Training the Models!
+
+```{python}
+#| label: load-data-again 
+#| echo: false
+#| warning: false
+#| messages: false
+ 
+iris = load_iris()
+X = iris.data
+y = iris.target
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, stratify=y, random_state=42)
+```
+
+```{python}
+#| label: model-training
+#| echo: true
+#| code-line-numbers: "2-9|13|14|15"
+
+# Instantiate the classifiers
+classifiers = [
+    SVC(kernel='linear', random_state=42),
+    SVC(kernel='rbf', random_state=42),
+    DecisionTreeClassifier(random_state=42),
+    RandomForestClassifier(random_state=42),
+    KNeighborsClassifier(),
+    LogisticRegression(random_state=42, max_iter=1000)
+]
+
+# Train the classifiers
+for clf in classifiers:
+    clf.fit(X_train, y_train)
+    y_pred = clf.predict(X_test)
+    accuracy = accuracy_score(y_test, y_pred)
+    print(f"Accuracy of {clf.__class__.__name__}: {accuracy:.2f}")
+```
+
+## Visualizing Machine Learning!
+
+![](images/combined_PCA_decision_boundaries_with_accuracy2.png){fig-align="center"}
+
+## Evaluating Model Performance
+
+<br>
+
+There are many potential evaluation metrics, but [Accuracy]{.highlight1} is the most common.
+
+::: {.fragment .fade-in}
+$$
+\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}
+$$
+
+Accuracy is usually fine - there are some casses when it's not great.
+:::
+
+## Evaluating Model Performance {.smaller}
+
+::: {.fragment .fade-in}
+$$
+\scriptsize{\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}}
+$$
+:::
+
+:::::::: columns
+:::: {.column width="50%"}
+![](images/Linear_SVM_CM.png)
+
+::: {.fragment .fade-in}
+45 Correct Predictions / 45 Total Prediction = 1.00
+:::
+::::
+
+::::: {.column width="50%"}
+::: {.fragment .fade-in}
+![](images/DecisionTree_CM.png)
+:::
+
+::: {.fragment .fade-in}
+43 Correct Predictions / 45 Total Prediction = 0.95
+:::
+:::::
+::::::::
+
+## When is Accuracy Sub-optimal? {.smaller}
+
+<br>
+
+If you have an [imbalanced classes]{.highlight1} in your data, accuracy can be misleading.
+
+::::::: columns
+::: {.column width="50%"}
+![](images/imbalanced-dataset2.png){fig-align="center"}
+:::
+
+::::: {.column width="50%"}
+Say there are 100 observations: 80 Setosa, and 20 Versicolor.
+
+::: {.fragment .fade-in}
+If the classifier predicted 'Setosa' for all 100 observations, what would the accuracy be?
+
+$$
+\scriptsize{\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}}
+$$
+:::
+
+::: {.fragment .fade-in}
+80 Correct Predictions / 100 Total Predictions = 0.80
+
+-   Metrics like F1 score, Precision, & Recall(sensitivity) can give a more informative picture
+:::
+:::::
+:::::::
+
+## Summary:
+
+<br>
+
+::: incremental
+-   Labelled data (used in supervised ML) is particularly powerful for classification tasks
+-   Choosing informative features is critical
+-   Train-test-split is important to avoid data-leakage
+-   Stratification of classes avoids inflated performance
+-   Accuracy is great unless you have unbalanced classes
+:::
+
+## Thanks for Listening {.center-h2}
+
+![](https://gifdb.com/images/high/thank-you-emoji-giving-two-thumbs-ups-6ud8p4up69m7w8tz.gif){fig-align="center"}
