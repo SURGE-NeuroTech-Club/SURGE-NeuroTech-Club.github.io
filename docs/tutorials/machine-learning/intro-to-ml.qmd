@@ -3,7 +3,7 @@ title: "Introduction to Machine Learning"
 image: images/intro_to_ml.webp
 format: 
     html:
-        toc: trueuarto
+        toc: true
         link-external-newwindow: true
 ---
 
