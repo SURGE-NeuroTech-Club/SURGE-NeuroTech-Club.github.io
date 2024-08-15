@@ -32,14 +32,14 @@
     "href": "docs/tutorials/machine-learning/intro-to-ml.html",
     "title": "Introduction to Machine Learning",
     "section": "",
-    "text": "A type of artificial intelligence where computers learn to make predictions by recognizing patterns in data. It improves over time by continuously learning from new data and experiences."
+    "text": "This introductory tutorial will take you through some of the basics of what machine learning is and how it works!"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#what-is-machine-learning",
     "href": "docs/tutorials/machine-learning/intro-to-ml.html#what-is-machine-learning",
     "title": "Introduction to Machine Learning",
-    "section": "",
-    "text": "A type of artificial intelligence where computers learn to make predictions by recognizing patterns in data. It improves over time by continuously learning from new data and experiences."
+    "section": "What is Machine Learning?",
+    "text": "What is Machine Learning?\n \n\nA type of artificial intelligence where computers learn to make predictions by recognizing patterns in data. It improves over time by continuously learning from new data and experiences."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#a-decision-process",
@@ -165,7 +165,7 @@
     "href": "docs/tutorials/machine-learning/intro-to-ml.html#seperating-our-dependent-and-independent-variables",
     "title": "Introduction to Machine Learning",
     "section": "Seperating Our Dependent and Independent Variables",
-    "text": "Seperating Our Dependent and Independent Variables\n\n\n\nX = data.drop(['species_id', 'species'], axis=1)\ny = data['species']\n\n\n\n\n\nThe feature (X/independent) variables are of shape: (150, 4)\nThe target (y/dependent) variables are of shape: (150,)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndependent Vars\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n16\nsetosa\n\n\n13\nsetosa\n\n\n79\nversicolor\n\n\n31\nsetosa"
+    "text": "Seperating Our Dependent and Independent Variables\n\n\n\nX = data.drop(['species_id', 'species'], axis=1)\ny = data['species']\n\n\n\n\n\nThe feature (X/independent) variables are of shape: (150, 4)\nThe target (y/dependent) variables are of shape: (150,)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndependent Vars\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n105\nvirginica\n\n\n62\nversicolor\n\n\n118\nvirginica\n\n\n131\nvirginica"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#train-test-split",
@@ -284,14 +284,14 @@
     "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html",
     "title": "Introduction to Brain-Computer Interfaces",
     "section": "",
-    "text": "A Brain-Computer Interface (BCI) enables communication between the brain and an external device, such as a computer or robotic arm, without physical movement. BCIs allow users to control devices using their thoughts."
+    "text": "This tutorial will teach you about the basics of what Brain-Computer Interfaces are, and how they work!"
   },
   {
     "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#what-is-a-brain-computer-interface-bci",
     "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#what-is-a-brain-computer-interface-bci",
     "title": "Introduction to Brain-Computer Interfaces",
-    "section": "",
-    "text": "A Brain-Computer Interface (BCI) enables communication between the brain and an external device, such as a computer or robotic arm, without physical movement. BCIs allow users to control devices using their thoughts."
+    "section": "What is a Brain-Computer Interface (BCI)?",
+    "text": "What is a Brain-Computer Interface (BCI)?\nA Brain-Computer Interface (BCI) enables communication between the brain and an external device, such as a computer or robotic arm, without physical movement. BCIs allow users to control devices using their thoughts."
   },
   {
     "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#how-does-a-bci-work",

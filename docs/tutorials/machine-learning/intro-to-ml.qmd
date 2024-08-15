@@ -3,9 +3,11 @@ title: "Introduction to Machine Learning"
 image: images/intro_to_ml.webp
 format: 
     html:
-        toc: true
+        toc: trueuarto
         link-external-newwindow: true
 ---
+
+This introductory tutorial will take you through some of the basics of what machine learning is and how it works!
 
 ```{python}
 #| label: Python Setup

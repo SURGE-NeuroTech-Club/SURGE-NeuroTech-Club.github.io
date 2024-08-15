@@ -7,6 +7,8 @@ format:
         link-external-newwindow: true
 ---
 
+This tutorial will teach you about the basics of what Brain-Computer Interfaces are, and how they work!
+
 ## What is a Brain-Computer Interface (BCI)?
 
 A Brain-Computer Interface (BCI) enables communication between the brain and an external device, such as a computer or robotic arm, without physical movement. BCIs allow users to control devices using their thoughts.
