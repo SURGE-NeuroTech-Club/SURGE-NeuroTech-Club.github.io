@@ -298,7 +298,7 @@
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#seperating-our-dependent-and-independent-variables",
     "title": "Introduction to Machine Learning",
     "section": "Seperating Our Dependent and Independent Variables",
-    "text": "Seperating Our Dependent and Independent Variables\n\n\n\nX = data.drop(['species_id', 'species'], axis=1)\ny = data['species']\n\n\n\n\n\nThe feature (X/independent) variables are of shape: (150, 4)\nThe target (y/dependent) variables are of shape: (150,)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndependent Vars\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n89\nversicolor\n\n\n28\nsetosa\n\n\n103\nvirginica\n\n\n74\nversicolor"
+    "text": "Seperating Our Dependent and Independent Variables\n\n\n\nX = data.drop(['species_id', 'species'], axis=1)\ny = data['species']\n\n\n\n\n\nThe feature (X/independent) variables are of shape: (150, 4)\nThe target (y/dependent) variables are of shape: (150,)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndependent Vars\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n35\nsetosa\n\n\n105\nvirginica\n\n\n103\nvirginica\n\n\n16\nsetosa"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#train-test-split",
