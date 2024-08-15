@@ -57,9 +57,13 @@ jobs:
       - name: Build Preview
         if: github.event.action != 'closed'
         run: quarto render --output-dir="${{ env.PREVIEWS_FOLDER }}/pr-${{ github.event.number }}"
-        
+
       - name: Commit Preview to Pages Branch
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: _site
-          umbrella-dir: ${{ env.PREVIEWS_FOLDER }}"
+          umbrella-dir: ${{ env.PREVIEWS_FOLDER }}
+
+      - name: Output Preview URL
+        run: |
+          echo "url=https://SURGE-NeuroTech-Club.github.io/${{ env.PREVIEWS_FOLDER }}/pr-${{ github.event.number }}/" >> $GITHUB_OUTPUT
