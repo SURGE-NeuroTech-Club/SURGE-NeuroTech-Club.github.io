@@ -8,7 +8,6 @@ format:
 ---
 
 This guide will give you a basic introduction to GitHub and how to effectively use it!
-Before you get started here, make sure you already have a GitHub account setup. If you don't head over to [*Getting Setup*](getting_setup.qmd) for instructions!
 
 ## What is GitHub?
 
@@ -23,6 +22,8 @@ GitHub is a web-based platform for version control and collaboration that allows
 - <span class='highlight1'>**Issues**</span>: Tools for tracking tasks, enhancements, and bugs in your projects.
 
 ## Getting Started with GitHub
+
+**Before you get started here, make sure you already have a GitHub account setup.** If you don't head over to [*Getting Setup*](getting_setup.qmd) for instructions!
 
 ### 1. Installing GitHub Desktop
 
