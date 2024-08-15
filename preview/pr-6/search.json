@@ -28,218 +28,218 @@
     "text": "Contact:\nFor general inquiries, email us at: bciclub@dal.ca\nFor specific neurotech questions, please reach out to our programming specialists: Brynn or Max"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html",
     "title": "Introduction to Machine Learning",
     "section": "",
     "text": "This introductory tutorial will take you through some of the basics of what machine learning is and how it works!"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#what-is-machine-learning",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#what-is-machine-learning",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#what-is-machine-learning",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#what-is-machine-learning",
     "title": "Introduction to Machine Learning",
     "section": "What is Machine Learning?",
     "text": "What is Machine Learning?\n \n\nA type of artificial intelligence where computers learn to make predictions by recognizing patterns in data. It improves over time by continuously learning from new data and experiences."
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#a-decision-process",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#a-decision-process",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#a-decision-process",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#a-decision-process",
     "title": "Introduction to Machine Learning",
     "section": "1. A Decision Process:",
     "text": "1. A Decision Process:\n \nIn general, machine learning algorithms are used to make a prediction or classification. Based on some input data. The algorithm will produce an estimate about a pattern in the data.\n\n\nUC Berkeley School of Information"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#an-error-function",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#an-error-function",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#an-error-function",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#an-error-function",
     "title": "Introduction to Machine Learning",
     "section": "2. An Error Function:",
     "text": "2. An Error Function:\n \nAn error function evaluates the prediction of the model. If there are known examples, an error function can make a comparison to assess the performance of the model.\n\n\nUC Berkeley School of Information"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#a-model-optimization-process",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#a-model-optimization-process",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#a-model-optimization-process",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#a-model-optimization-process",
     "title": "Introduction to Machine Learning",
     "section": "3. A Model Optimization Process:",
     "text": "3. A Model Optimization Process:\n \nWhen the model does a good job of matching the training data, it tweaks its settings to get better at classifying the actual data. This process of “evaluate and optimize” happens over and over again, allowing the model to adjust itself automatically.\n\n\nUC Berkeley School of Information"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#major-types-of-ml",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#major-types-of-ml",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#major-types-of-ml",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#major-types-of-ml",
     "title": "Introduction to Machine Learning",
     "section": "(Major) Types of ML",
     "text": "(Major) Types of ML\n\n\n\n\nSupervised Learning\n\nUses labelled training data\nMajority of machine learning applications\n\n\n\n\nUnsupervised Learning\n\nUses unlabelled training data\nRelatively uncommon\nMost often used for content personalization"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#labelled-unlabelled-data",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#labelled-unlabelled-data",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#labelled-unlabelled-data",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#labelled-unlabelled-data",
     "title": "Introduction to Machine Learning",
     "section": "Labelled & Unlabelled Data",
     "text": "Labelled & Unlabelled Data\n\nLabelled data is tagged with the target (dependent) measure - It comes with the answer"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#supervised-machine-learning",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#supervised-machine-learning",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#supervised-machine-learning",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#supervised-machine-learning",
     "title": "Introduction to Machine Learning",
     "section": "Supervised Machine Learning",
     "text": "Supervised Machine Learning\n\n\n\nPros\n\nHigh accuracy\n\nAbility to learn from known examples\n\nExcellent predictive power\n\nClassifying new data based on historical data\n\n\n\n\n\nCons\n\nRequires labelled data\n\nTime consuming & expensive\n\nOverfitting\n\nModel can become too specific to trainig data\n\n\n\n\n\nCommon Algorithms: Linear/Logistic Regression, Support Vector Machines, Decision Trees, K-nearest neighbours"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#unsupervised-machine-learning",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#unsupervised-machine-learning",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#unsupervised-machine-learning",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#unsupervised-machine-learning",
     "title": "Introduction to Machine Learning",
     "section": "Unsupervised Machine Learning",
     "text": "Unsupervised Machine Learning\n\n\n\nPros\n\nData exploration\n\nDiscovering hidden patterns in data\n\nDimensionality reduction\n\nSimplifying complex datasets\n\n\n\n\n\nCons\n\nWorse interpretability\n\nNo guidance for understanding patterns\n\nModel evaluation\n\nAssessing quality without labels or metrics\n\n\n\n\n\nCommon Algorithms: Principle component analysis, K-means clustering, t-Distributed Stochastic Neighbor Embedding"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#human-classification-exercise",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#human-classification-exercise",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#human-classification-exercise",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#human-classification-exercise",
     "title": "Introduction to Machine Learning",
     "section": "Human Classification Exercise",
     "text": "Human Classification Exercise\nFun Fact: You can find wild irises in NS!\n\n\n\nIrises Found at Duncan’s Cove"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#what-do-you-think",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#what-do-you-think",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#what-do-you-think",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#what-do-you-think",
     "title": "Introduction to Machine Learning",
     "section": "What do you think?",
     "text": "What do you think?\n\n\n\n\n\n\n\n\n\n\nMy Picture from Duncan’s Cove\n\n\n\n\n\n\n\n“Northern Blue Flag” - Versicolor\n\n\n\n\n\n\n\n“Beach-Head” - Setosa"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#real-world-example",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#real-world-example",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#real-world-example",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#real-world-example",
     "title": "Introduction to Machine Learning",
     "section": "Real-world Example",
     "text": "Real-world Example\n\n\n\n\n\nSeek is an app that uses image recognition to predict species of animals, plants, fungi, insects - you name it!"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#misclassification",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#misclassification",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#misclassification",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#misclassification",
     "title": "Introduction to Machine Learning",
     "section": "Misclassification?",
     "text": "Misclassification?\nThe Seek App determined that the iris I found was Versicolor, but two experts claimed it was a Setosa"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#choosing-the-right-features-is-important",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#choosing-the-right-features-is-important",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#choosing-the-right-features-is-important",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#choosing-the-right-features-is-important",
     "title": "Introduction to Machine Learning",
     "section": "Choosing (the right) Features is Important!",
     "text": "Choosing (the right) Features is Important!\n\nFeature: “An individual measurable property or characteristic of a phenomenon”1\n\n\nUsing informative, discriminating and independent features is a crucial element of effective classification algorithms."
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#the-iris-dataset",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#the-iris-dataset",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#the-iris-dataset",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#the-iris-dataset",
     "title": "Introduction to Machine Learning",
     "section": "The Iris Dataset",
     "text": "The Iris Dataset\nThree types of iris: Setosa, Versicolor, & Virginica\n\n\n\n\n\nThe type can be determined by combination of Petal & Sepal Width & Length"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#taking-another-look",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#taking-another-look",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#taking-another-look",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#taking-another-look",
     "title": "Introduction to Machine Learning",
     "section": "Taking Another Look",
     "text": "Taking Another Look\nDo you think that the Seek AI may have used some other feature, causing it to make an incorrect classification?\n\n\n\n\n\n\n\n\n\nDuncan’s Cove\n\n\n\n\n\n\n\n“Northern Blue Flag” - Versicolor\n\n\n\n\n\n\n\n“Beach-Head” - Setosa"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#lets-look-at-the-dataset",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#lets-look-at-the-dataset",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#lets-look-at-the-dataset",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#lets-look-at-the-dataset",
     "title": "Introduction to Machine Learning",
     "section": "Let’s Look At The Dataset!",
     "text": "Let’s Look At The Dataset!\n\n\n\n\n\n\n\n\n\n\n\nVariables\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n4\nspecies\n\n\n5\n# Observations: 150\n\n\n\n\n\n\n\n\n\n\n4 Features (Independent Variables)\n150 Total Observations\n\n50 of each Iris Type\n\nExcellent sample to demonstrate machine learning!"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#visualizing-the-raw-data",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#visualizing-the-raw-data",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#visualizing-the-raw-data",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#visualizing-the-raw-data",
     "title": "Introduction to Machine Learning",
     "section": "Visualizing the Raw Data",
     "text": "Visualizing the Raw Data\n\n# sns.set(style=\"ticks\", context=\"talk\")\nplt.style.use(\"dark_background\")\n\n# Making a correlation plot of all variables except 'Id'\ncorr_plot = sns.pairplot(data.iloc[:, 0:5], kind=\"scatter\", hue=\"species\", markers=[\"o\", \"s\", \"D\"], palette=\"Set2\", plot_kws={'alpha': 0.7})\n\nsns.move_legend(corr_plot, \"lower center\",\n    bbox_to_anchor=(0.5, 1), ncol=3, title=None, frameon=False\n)\n\n# Resize to fit\ncorr_plot.fig.set_size_inches(12, 5.5)\n\n# Show the plot\ncorr_plot"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#reducing-dimentionality",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#reducing-dimentionality",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#reducing-dimentionality",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#reducing-dimentionality",
     "title": "Introduction to Machine Learning",
     "section": "Reducing Dimentionality",
     "text": "Reducing Dimentionality\nWe can use principle component analysis (PCA) to take our 4 dimensional data and translate it into two dimensions for better visualization!\n\nplt.figure(figsize=(12, 6))\n\ndf = px.data.iris()\nX = df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']]\n\npca = PCA(n_components=2)\ncomponents = pca.fit_transform(X)\n\n# Create a DataFrame with the PCA results\npca_df = pd.DataFrame(data=components, columns=['PCA1', 'PCA2'])\npca_df['species'] = df['species']\n\n# Plot the PCA results\npca2d = sns.scatterplot(data=pca_df, x='PCA1', y='PCA2', hue='species', palette=\"Set2\")"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#seperating-our-dependent-and-independent-variables",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#seperating-our-dependent-and-independent-variables",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#seperating-our-dependent-and-independent-variables",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#seperating-our-dependent-and-independent-variables",
     "title": "Introduction to Machine Learning",
     "section": "Seperating Our Dependent and Independent Variables",
-    "text": "Seperating Our Dependent and Independent Variables\n\n\n\nX = data.drop(['species_id', 'species'], axis=1)\ny = data['species']\n\n\n\n\n\nThe feature (X/independent) variables are of shape: (150, 4)\nThe target (y/dependent) variables are of shape: (150,)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndependent Vars\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n105\nvirginica\n\n\n62\nversicolor\n\n\n118\nvirginica\n\n\n131\nvirginica"
+    "text": "Seperating Our Dependent and Independent Variables\n\n\n\nX = data.drop(['species_id', 'species'], axis=1)\ny = data['species']\n\n\n\n\n\nThe feature (X/independent) variables are of shape: (150, 4)\nThe target (y/dependent) variables are of shape: (150,)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndependent Vars\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n147\nvirginica\n\n\n91\nversicolor\n\n\n40\nsetosa\n\n\n3\nsetosa"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#train-test-split",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#train-test-split",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#train-test-split",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#train-test-split",
     "title": "Introduction to Machine Learning",
     "section": "Train-Test Split",
     "text": "Train-Test Split\nThe classifier’s performance can become inflated if it trains on the same data it is tested with. This is called data-leakage.\n\nWe must split the data into training and testing sets.\n\n\n\n\n\nThis allows us to test how good the model is at classifying data it hasn’t seen before."
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#making-the-train-test-split",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#making-the-train-test-split",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#making-the-train-test-split",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#making-the-train-test-split",
     "title": "Introduction to Machine Learning",
     "section": "Making the Train-Test Split",
     "text": "Making the Train-Test Split\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, \n                                                        test_size=0.3,\n                                                        stratify=y,\n                                                        random_state=42)\n\n\n\nTest size: 30% is kept to validate the trained model\nStratify: Preserves the class ratios (33% of each iris species)\n\n\n\n\n\n\n\nX_train shape is: (105, 4)\ny_train shape is: (105,) \n\nX_test shape is: (45, 4)\ny_test shape is: (45,)"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#why-is-stratification-important",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#why-is-stratification-important",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#why-is-stratification-important",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#why-is-stratification-important",
     "title": "Introduction to Machine Learning",
     "section": "Why is Stratification Important?",
     "text": "Why is Stratification Important?\nIf data is not stratified, the model may focus on more prevalent classes, leading to biased performance and poor accuracy on underrepresented classes."
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#training-the-models",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#training-the-models",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#training-the-models",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#training-the-models",
     "title": "Introduction to Machine Learning",
     "section": "Training the Models!",
     "text": "Training the Models!\n\n# Instantiate the classifiers\nclassifiers = [\n    SVC(kernel='linear', random_state=42),\n    SVC(kernel='rbf', random_state=42),\n    DecisionTreeClassifier(random_state=42),\n    RandomForestClassifier(random_state=42),\n    KNeighborsClassifier(),\n    LogisticRegression(random_state=42, max_iter=1000)\n]\n\n# Train the classifiers\nfor clf in classifiers:\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    print(f\"Accuracy of {clf.__class__.__name__}: {accuracy:.2f}\")\n\nAccuracy of SVC: 1.00\nAccuracy of SVC: 0.96\nAccuracy of DecisionTreeClassifier: 0.93\nAccuracy of RandomForestClassifier: 0.89\nAccuracy of KNeighborsClassifier: 0.98\nAccuracy of LogisticRegression: 0.93"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#visualizing-machine-learning",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#visualizing-machine-learning",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#visualizing-machine-learning",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#visualizing-machine-learning",
     "title": "Introduction to Machine Learning",
     "section": "Visualizing Machine Learning!",
     "text": "Visualizing Machine Learning!"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#evaluating-model-performance",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#evaluating-model-performance",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#evaluating-model-performance",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#evaluating-model-performance",
     "title": "Introduction to Machine Learning",
     "section": "Evaluating Model Performance",
     "text": "Evaluating Model Performance\n\nThere are many potential evaluation metrics, but Accuracy is the most common.\n\n\\[\n\\text{Accuracy} = \\frac{\\text{Number of Correct Predictions}}{\\text{Total Number of Predictions}}\n\\]\nAccuracy is usually fine - there are some casses when it’s not great."
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#evaluating-model-performance-1",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#evaluating-model-performance-1",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#evaluating-model-performance-1",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#evaluating-model-performance-1",
     "title": "Introduction to Machine Learning",
     "section": "Evaluating Model Performance",
     "text": "Evaluating Model Performance\n\n\\[\n\\scriptsize{\\text{Accuracy} = \\frac{\\text{Number of Correct Predictions}}{\\text{Total Number of Predictions}}}\n\\]\n\n\n\n\n\n45 Correct Predictions / 45 Total Prediction = 1.00\n\n\n\n\n\n\n43 Correct Predictions / 45 Total Prediction = 0.95"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#when-is-accuracy-sub-optimal",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#when-is-accuracy-sub-optimal",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#when-is-accuracy-sub-optimal",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#when-is-accuracy-sub-optimal",
     "title": "Introduction to Machine Learning",
     "section": "When is Accuracy Sub-optimal?",
     "text": "When is Accuracy Sub-optimal?\n\nIf you have an imbalanced classes in your data, accuracy can be misleading.\n\n\n\n\n\n\n\n\nSay there are 100 observations: 80 Setosa, and 20 Versicolor.\n\nIf the classifier predicted ‘Setosa’ for all 100 observations, what would the accuracy be?\n\\[\n\\scriptsize{\\text{Accuracy} = \\frac{\\text{Number of Correct Predictions}}{\\text{Total Number of Predictions}}}\n\\]\n\n\n80 Correct Predictions / 100 Total Predictions = 0.80\n\nMetrics like F1 score, Precision, & Recall(sensitivity) can give a more informative picture"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#summary",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#summary",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#summary",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#summary",
     "title": "Introduction to Machine Learning",
     "section": "Summary:",
     "text": "Summary:\n\n\n\nLabelled data (used in supervised ML) is particularly powerful for classification tasks\nChoosing informative features is critical\nTrain-test-split is important to avoid data-leakage\nStratification of classes avoids inflated performance\nAccuracy is great unless you have unbalanced classes"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#thanks-for-listening",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#thanks-for-listening",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#thanks-for-listening",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#thanks-for-listening",
     "title": "Introduction to Machine Learning",
     "section": "Thanks for Listening",
     "text": "Thanks for Listening"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro-to-ml.html#footnotes",
-    "href": "docs/tutorials/machine-learning/intro-to-ml.html#footnotes",
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#footnotes",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#footnotes",
     "title": "Introduction to Machine Learning",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nBishop, Christopher (2006). Pattern recognition and machine learning↩︎"
@@ -249,7 +249,7 @@
     "href": "docs/tutorials/get-started/github_intro.html",
     "title": "Introduction to GitHub",
     "section": "",
-    "text": "This guide will give you a basic introduction to GitHub and how to effectively use it! Before you get started here, make sure you already have a GitHub account setup. If you don’t head over to Getting Setup for instructions!"
+    "text": "This guide will give you a basic introduction to GitHub and how to effectively use it!"
   },
   {
     "objectID": "docs/tutorials/get-started/github_intro.html#what-is-github",
@@ -270,7 +270,7 @@
     "href": "docs/tutorials/get-started/github_intro.html#getting-started-with-github",
     "title": "Introduction to GitHub",
     "section": "Getting Started with GitHub",
-    "text": "Getting Started with GitHub\n\n1. Installing GitHub Desktop\n\nDownload GitHub Desktop from desktop.github.com if you don’t already have it installed.\nInstall GitHub Desktop following the instructions for your operating system.\n\n\n\n2. Cloning a Repository\nTo work on your project locally, clone the repository to your computer using GitHub Desktop.\n\nOpen GitHub Desktop.\nClick File &gt; Clone repository.\nSelect the repository you want to clone from the list or enter the URL of the repository.\nChoose the local path where you want to save the repository and click Clone.\n\nExplanation: Cloning a repository means creating a local copy of the repository on your computer, allowing you to work on it offline and sync your changes with the remote repository later.\n\n\n3. Creating a Branch\n99% of the time, you’ll want to work on a Branch. This effectively copies the code from main and allows you to work on it separately. This is great for a few reasons: - It avoids conflicts with overwriting which can happen when multiple people work on the same code in the same branch. - If you seriously break something and can’t figure out how to get it back - you can just pull from main!\nTo create a branch:\n\nSelect the repository you want to make a branch of.\nClick Current Branch &gt; New Branch.\nName the branch whatever you want (make sure to remember it!).\nSelect where you want the code to copy from (Main is the default branch, but you can copy the code from someone else’s branch too).\nClick Create Branch.\nMake sure the branch you just made is selected under Current Branch.\n\nExplanation: Branches allow you to develop features, fix bugs, or safely experiment with new ideas in isolation from the main codebase.\n\n\n4. Making Changes and Committing\n\nOpen the cloned repository in your preferred code editor and make changes to your files.\nGo back to GitHub Desktop. You will see your changes listed under Changes.\nAdd a summary and description for your commit in the Summary and Description fields.\nClick Commit to main (or your branch name if you are using a different one).\n\nExplanation: Committing saves your changes to the local repository, with a message describing what you did. This helps in keeping track of different versions of your code.\n\n\n5. Pushing Changes to GitHub\n\nAfter committing your changes, click Push origin at the top of GitHub Desktop to upload your commits to GitHub.\n\nExplanation: Pushing sends your committed changes to the remote repository on GitHub, making them available to others.\n\n\n6. Creating a Pull Request\nA pull request is a proposal to merge changes from one branch to another. It’s used for code review and collaboration before integrating changes into the main branch. Once you feel like you’ve implemented what you intended, you can make a pull request to merge your changes with the main (or another) branch.\n\nNavigate to your repository on GitHub.\nClick on the Pull requests tab.\nClick New pull request.\nSelect the branch you want to merge from and to.\nAdd a title and description for your pull request.\nClick Create pull request.\n\nExplanation: Pull requests facilitate discussion about your changes before they are merged into the main branch, ensuring code quality and collaboration."
+    "text": "Getting Started with GitHub\nBefore you get started here, make sure you already have a GitHub account setup. If you don’t head over to Getting Setup for instructions!\n\n1. Installing GitHub Desktop\n\nDownload GitHub Desktop from desktop.github.com if you don’t already have it installed.\nInstall GitHub Desktop following the instructions for your operating system.\n\n\n\n2. Cloning a Repository\nTo work on your project locally, clone the repository to your computer using GitHub Desktop.\n\nOpen GitHub Desktop.\nClick File &gt; Clone repository.\nSelect the repository you want to clone from the list or enter the URL of the repository.\nChoose the local path where you want to save the repository and click Clone.\n\nExplanation: Cloning a repository means creating a local copy of the repository on your computer, allowing you to work on it offline and sync your changes with the remote repository later.\n\n\n3. Creating a Branch\n99% of the time, you’ll want to work on a Branch. This effectively copies the code from main and allows you to work on it separately. This is great for a few reasons: - It avoids conflicts with overwriting which can happen when multiple people work on the same code in the same branch. - If you seriously break something and can’t figure out how to get it back - you can just pull from main!\nTo create a branch:\n\nSelect the repository you want to make a branch of.\nClick Current Branch &gt; New Branch.\nName the branch whatever you want (make sure to remember it!).\nSelect where you want the code to copy from (Main is the default branch, but you can copy the code from someone else’s branch too).\nClick Create Branch.\nMake sure the branch you just made is selected under Current Branch.\n\nExplanation: Branches allow you to develop features, fix bugs, or safely experiment with new ideas in isolation from the main codebase.\n\n\n4. Making Changes and Committing\n\nOpen the cloned repository in your preferred code editor and make changes to your files.\nGo back to GitHub Desktop. You will see your changes listed under Changes.\nAdd a summary and description for your commit in the Summary and Description fields.\nClick Commit to main (or your branch name if you are using a different one).\n\nExplanation: Committing saves your changes to the local repository, with a message describing what you did. This helps in keeping track of different versions of your code.\n\n\n5. Pushing Changes to GitHub\n\nAfter committing your changes, click Push origin at the top of GitHub Desktop to upload your commits to GitHub.\n\nExplanation: Pushing sends your committed changes to the remote repository on GitHub, making them available to others.\n\n\n6. Creating a Pull Request\nA pull request is a proposal to merge changes from one branch to another. It’s used for code review and collaboration before integrating changes into the main branch. Once you feel like you’ve implemented what you intended, you can make a pull request to merge your changes with the main (or another) branch.\n\nNavigate to your repository on GitHub.\nClick on the Pull requests tab.\nClick New pull request.\nSelect the branch you want to merge from and to.\nAdd a title and description for your pull request.\nClick Create pull request.\n\nExplanation: Pull requests facilitate discussion about your changes before they are merged into the main branch, ensuring code quality and collaboration."
   },
   {
     "objectID": "docs/tutorials/get-started/github_intro.html#conclusion",
