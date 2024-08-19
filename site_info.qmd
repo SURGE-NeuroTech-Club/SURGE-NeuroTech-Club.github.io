@@ -5,4 +5,4 @@ subtitle: "Copyright 2024, SURGE Innovation"
 
 This is the official website of [SURGE Innovation's](https://www.surgeinnovation.ca/) NeuroTech Club hosted by [Dalhousie University](https://www.dal.ca/)
 
-Website made using Quarto & hosted via Github pages
+Website made using [Quarto](https://quarto.org/) & hosted via [Github pages](https://pages.github.com/)

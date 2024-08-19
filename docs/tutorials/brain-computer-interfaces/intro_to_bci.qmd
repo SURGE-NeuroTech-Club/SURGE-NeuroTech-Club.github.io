@@ -1,13 +1,12 @@
 ---
 title: "Introduction to Brain-Computer Interfaces"
+abstract: "This tutorial will teach you about the basics of what Brain-Computer Interfaces are, and how they work!"
 image: images/intro_to_bci.webp
 format: 
     html:
         toc: true
         link-external-newwindow: true
 ---
-
-This tutorial will teach you about the basics of what Brain-Computer Interfaces are, and how they work!
 
 ## What is a Brain-Computer Interface (BCI)?
 

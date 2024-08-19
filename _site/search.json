@@ -30,217 +30,182 @@
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "",
-    "text": "This introductory tutorial will take you through some of the basics of what machine learning is and how it works!"
+    "text": "Machine learning is a subset of artificial intelligence where computers use data to identify patterns and make predictions. These models improve over time by learning from new data and experiences.\nMachine learning algorithms work by identifying patterns in the data, specifically between the independent variables (features, often represented as X) and the dependent variables (targets, often represented as Y). These patterns enable the model to make predictions or classifications based on new, unseen data."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#what-is-machine-learning",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#what-is-machine-learning",
-    "title": "Introduction to Machine Learning",
-    "section": "What is Machine Learning?",
-    "text": "What is Machine Learning?\n \n\nA type of artificial intelligence where computers learn to make predictions by recognizing patterns in data. It improves over time by continuously learning from new data and experiences."
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
+    "section": "",
+    "text": "Machine learning is a subset of artificial intelligence where computers use data to identify patterns and make predictions. These models improve over time by learning from new data and experiences.\nMachine learning algorithms work by identifying patterns in the data, specifically between the independent variables (features, often represented as X) and the dependent variables (targets, often represented as Y). These patterns enable the model to make predictions or classifications based on new, unseen data."
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#labeled-unlabeled-data",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#labeled-unlabeled-data",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
+    "section": "Labeled & Unlabeled Data",
+    "text": "Labeled & Unlabeled Data\nBefore we get into machine learning, we need to talk about data. Data is the foundation of all machine learning—without it, we wouldn’t be able to train the models! There are two broad categories of data used in machine learning: labeled and unlabeled data.\nLabeled data contains both the input and the corresponding correct output/target or dependent measure. In this example, we can see two types of labeled data—one labeled with “cat/dog” and another labeled with “weight.” In each case, the model would be trained to predict whether the input was a cat or a dog, or to estimate the weight, depending on the label provided. Unlabeled data only contains the input, leaving the model to identify patterns without guidance."
+  },
+  {
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#two-category-of-machine-learning",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#two-category-of-machine-learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
+    "section": "Two Category of Machine Learning",
+    "text": "Two Category of Machine Learning\nMachine learning can be broadly divided into two primary categories: supervised and unsupervised learning. Each approach has its own strengths and limitations, making them suitable for different types of tasks.\n\n\n\nSupervised Learning\n\n\nUses labeled training data\nMajority of machine learning applications\nCommonly used for tasks like classification and regression\n\n\n\nUnsupervised Learning\n\n\nUses unlabeled training data\nLess common but powerful for exploratory analysis\nOften used for clustering, content personalization, and dimensionality reduction\n\n\n\n\nSupervised Machine Learning\n\nSupervised machine learning involves training models on labeled data, where the goal is often to make predictions or classifications based on new, unseen data.\n\n\n\nPros\n\n\nHigh accuracy\n\nAbility to learn from known examples\n\nExcellent predictive power\n\nEffective at classifying new data based on historical patterns\n\n\n\n\nCons\n\n\nRequires labeled data\n\nTime-consuming and expensive to obtain\n\nRisk of overfitting\n\nModels may become too tailored to the training data\n\n\n\n\nCommon Algorithms: Linear/Logistic Regression, Support Vector Machines, Decision Trees, K-nearest neighbours\n\nUnsupervised Machine Learning\n\nUnsupervised learning involves using algorithms to analyze and cluster unlabeled data, discovering hidden patterns without predefined labels.\n\n\n\nPros\n\n\nPowerful for data exploration\n\nUncovers hidden structures and patterns in data\n\nUseful for dimensionality reduction\n\nSimplifies complex datasets, making them easier to visualize and interpret\n\n\n\n\nCons\n\n\nLower interpretability\n\nPatterns and structures are harder to understand without labels\n\nChallenging model evaluation\n\nDifficult to assess model quality without clear metrics\n\n\n\n\nCommon Algorithms: Principal Component Analysis (PCA), K-Means Clustering, t-Distributed Stochastic Neighbor Embedding (t-SNE)"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#a-decision-process",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#a-decision-process",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "1. A Decision Process:",
-    "text": "1. A Decision Process:\n \nIn general, machine learning algorithms are used to make a prediction or classification. Based on some input data. The algorithm will produce an estimate about a pattern in the data.\n\n\nUC Berkeley School of Information"
+    "text": "1. A Decision Process:\nIn general, machine learning algorithms are used to make a prediction or classification. Based on some input data. The algorithm will produce an estimate about a pattern in the data."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#an-error-function",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#an-error-function",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "2. An Error Function:",
-    "text": "2. An Error Function:\n \nAn error function evaluates the prediction of the model. If there are known examples, an error function can make a comparison to assess the performance of the model.\n\n\nUC Berkeley School of Information"
+    "text": "2. An Error Function:\nAn error function evaluates the prediction of the model. If there are known examples, an error function can make a comparison to assess the performance of the model."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#a-model-optimization-process",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#a-model-optimization-process",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "3. A Model Optimization Process:",
-    "text": "3. A Model Optimization Process:\n \nWhen the model does a good job of matching the training data, it tweaks its settings to get better at classifying the actual data. This process of “evaluate and optimize” happens over and over again, allowing the model to adjust itself automatically.\n\n\nUC Berkeley School of Information"
-  },
-  {
-    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#major-types-of-ml",
-    "href": "docs/tutorials/machine-learning/intro_to_ml.html#major-types-of-ml",
-    "title": "Introduction to Machine Learning",
-    "section": "(Major) Types of ML",
-    "text": "(Major) Types of ML\n\n\n\n\nSupervised Learning\n\nUses labelled training data\nMajority of machine learning applications\n\n\n\n\nUnsupervised Learning\n\nUses unlabelled training data\nRelatively uncommon\nMost often used for content personalization"
-  },
-  {
-    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#labelled-unlabelled-data",
-    "href": "docs/tutorials/machine-learning/intro_to_ml.html#labelled-unlabelled-data",
-    "title": "Introduction to Machine Learning",
-    "section": "Labelled & Unlabelled Data",
-    "text": "Labelled & Unlabelled Data\n\nLabelled data is tagged with the target (dependent) measure - It comes with the answer"
-  },
-  {
-    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#supervised-machine-learning",
-    "href": "docs/tutorials/machine-learning/intro_to_ml.html#supervised-machine-learning",
-    "title": "Introduction to Machine Learning",
-    "section": "Supervised Machine Learning",
-    "text": "Supervised Machine Learning\n\n\n\nPros\n\nHigh accuracy\n\nAbility to learn from known examples\n\nExcellent predictive power\n\nClassifying new data based on historical data\n\n\n\n\n\nCons\n\nRequires labelled data\n\nTime consuming & expensive\n\nOverfitting\n\nModel can become too specific to trainig data\n\n\n\n\n\nCommon Algorithms: Linear/Logistic Regression, Support Vector Machines, Decision Trees, K-nearest neighbours"
-  },
-  {
-    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#unsupervised-machine-learning",
-    "href": "docs/tutorials/machine-learning/intro_to_ml.html#unsupervised-machine-learning",
-    "title": "Introduction to Machine Learning",
-    "section": "Unsupervised Machine Learning",
-    "text": "Unsupervised Machine Learning\n\n\n\nPros\n\nData exploration\n\nDiscovering hidden patterns in data\n\nDimensionality reduction\n\nSimplifying complex datasets\n\n\n\n\n\nCons\n\nWorse interpretability\n\nNo guidance for understanding patterns\n\nModel evaluation\n\nAssessing quality without labels or metrics\n\n\n\n\n\nCommon Algorithms: Principle component analysis, K-means clustering, t-Distributed Stochastic Neighbor Embedding"
+    "text": "3. A Model Optimization Process:\nWhen the model does a good job of matching the training data, it tweaks its settings to get better at classifying the actual data. This process of “evaluate and optimize” happens over and over again, allowing the model to adjust itself automatically."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#human-classification-exercise",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#human-classification-exercise",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Human Classification Exercise",
-    "text": "Human Classification Exercise\nFun Fact: You can find wild irises in NS!\n\n\n\nIrises Found at Duncan’s Cove"
-  },
-  {
-    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#what-do-you-think",
-    "href": "docs/tutorials/machine-learning/intro_to_ml.html#what-do-you-think",
-    "title": "Introduction to Machine Learning",
-    "section": "What do you think?",
-    "text": "What do you think?\n\n\n\n\n\n\n\n\n\n\nMy Picture from Duncan’s Cove\n\n\n\n\n\n\n\n“Northern Blue Flag” - Versicolor\n\n\n\n\n\n\n\n“Beach-Head” - Setosa"
-  },
-  {
-    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#real-world-example",
-    "href": "docs/tutorials/machine-learning/intro_to_ml.html#real-world-example",
-    "title": "Introduction to Machine Learning",
-    "section": "Real-world Example",
-    "text": "Real-world Example\n\n\n\n\n\nSeek is an app that uses image recognition to predict species of animals, plants, fungi, insects - you name it!"
-  },
-  {
-    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#misclassification",
-    "href": "docs/tutorials/machine-learning/intro_to_ml.html#misclassification",
-    "title": "Introduction to Machine Learning",
-    "section": "Misclassification?",
-    "text": "Misclassification?\nThe Seek App determined that the iris I found was Versicolor, but two experts claimed it was a Setosa"
+    "text": "Human Classification Exercise\nBefore we get into the technical details, let’s start with a quick exercise. A while ago, I was hiking in Duncan’s Cove and came across some irises. I used an app called “Seek,” which leverages machine learning to identify species using your phone’s camera. Curious to see how well it worked, I tested it on an iris I found. But before I reveal the app’s result, I want you to take a look for yourself!\n\nWhat do you think?\nTake a moment to compare the iris on the left with the Northern Blue Flag iris (middle) and the Beach Head iris (right). Which one do you think it resembles more? Consider what influenced your decision—was it the shape, color, or perhaps some other feature?\n\n\n\n\n\n\n\n\n\nMy Picture from Duncan’s Cove\n\n\n\n\n\n\n\n“Northern Blue Flag” - Versicolor\n\n\n\n\n\n\n\n“Beach-Head” - Setosa\n\n\n\n\n\n\n\nMisclassification?\nInterestingly, the Seek App identified the iris I found as a Versicolor, but two experts later claimed it was a Setosa. This discrepancy highlights a critical aspect of machine learning: the selection of features."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#choosing-the-right-features-is-important",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#choosing-the-right-features-is-important",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Choosing (the right) Features is Important!",
-    "text": "Choosing (the right) Features is Important!\n\nFeature: “An individual measurable property or characteristic of a phenomenon”1\n\n\nUsing informative, discriminating and independent features is a crucial element of effective classification algorithms."
+    "text": "Choosing (the right) Features is Important!\nA Feature is “an individual measurable property or characteristic of a phenomenon”.1 In the context of machine learning, selecting the right features is critical to the success of your model.\nUsing informative, discriminative, and independent features is essential for building effective classification algorithms. The features you choose can significantly influence the model’s ability to learn accurately from the data and make reliable predictions. In the case of our iris example, perhaps the app’s algorithm relied on certain features that led it to misclassify the species."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#the-iris-dataset",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#the-iris-dataset",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "The Iris Dataset",
-    "text": "The Iris Dataset\nThree types of iris: Setosa, Versicolor, & Virginica\n\n\n\n\n\nThe type can be determined by combination of Petal & Sepal Width & Length"
+    "text": "The Iris Dataset\nThe Iris dataset is a classic example used in machine learning, containing three types of iris flowers: Setosa, Versicolor, and Virginica.\n\n\n\n\n\nThe species of each iris can be determined by a combination of features, specifically the petal and sepal width and length."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#taking-another-look",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#taking-another-look",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Taking Another Look",
-    "text": "Taking Another Look\nDo you think that the Seek AI may have used some other feature, causing it to make an incorrect classification?\n\n\n\n\n\n\n\n\n\nDuncan’s Cove\n\n\n\n\n\n\n\n“Northern Blue Flag” - Versicolor\n\n\n\n\n\n\n\n“Beach-Head” - Setosa"
+    "text": "Taking Another Look\nGiven the features we’ve discussed, do you think the Seek AI might have relied on different features or interpreted them differently, leading to the incorrect classification?\n\n\n\n\n\n\n\n\n\nMy Picture from Duncan’s Cove\n\n\n\n\n\n\n\n“Northern Blue Flag” - Versicolor\n\n\n\n\n\n\n\n“Beach-Head” - Setosa"
   },
   {
-    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#lets-look-at-the-dataset",
-    "href": "docs/tutorials/machine-learning/intro_to_ml.html#lets-look-at-the-dataset",
-    "title": "Introduction to Machine Learning",
-    "section": "Let’s Look At The Dataset!",
-    "text": "Let’s Look At The Dataset!\n\n\n\n\n\n\n\n\n\n\n\nVariables\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n4\nspecies\n\n\n5\n# Observations: 150\n\n\n\n\n\n\n\n\n\n\n4 Features (Independent Variables)\n150 Total Observations\n\n50 of each Iris Type\n\nExcellent sample to demonstrate machine learning!"
+    "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#lets-explore-the-dataset",
+    "href": "docs/tutorials/machine-learning/intro_to_ml.html#lets-explore-the-dataset",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
+    "section": "Let’s Explore the Dataset!",
+    "text": "Let’s Explore the Dataset!\nTo better understand how machine learning models work, let’s take a closer look at the Iris dataset.\n\n\n\n\n\n\n\n\n\n\n\nVariables\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n4\nspecies\n\n\n5\n# Observations: 150\n\n\n\n\n\n\n\n\n\n\n4 Features (Independent Variables)\n150 Total Observations\n\n50 of each Iris Type\n\nExcellent sample to demonstrate machine learning!"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#visualizing-the-raw-data",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#visualizing-the-raw-data",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Visualizing the Raw Data",
-    "text": "Visualizing the Raw Data\n\n# sns.set(style=\"ticks\", context=\"talk\")\nplt.style.use(\"dark_background\")\n\n# Making a correlation plot of all variables except 'Id'\ncorr_plot = sns.pairplot(data.iloc[:, 0:5], kind=\"scatter\", hue=\"species\", markers=[\"o\", \"s\", \"D\"], palette=\"Set2\", plot_kws={'alpha': 0.7})\n\nsns.move_legend(corr_plot, \"lower center\",\n    bbox_to_anchor=(0.5, 1), ncol=3, title=None, frameon=False\n)\n\n# Resize to fit\ncorr_plot.fig.set_size_inches(12, 5.5)\n\n# Show the plot\ncorr_plot"
+    "text": "Visualizing the Raw Data\nTo start, let’s visualize the raw data from the Iris dataset to better understand the relationships between different features.\n\n\nShow the code\nplt.style.use(\"dark_background\")\n\n# Making a correlation plot of all variables except 'Id'\ncorr_plot = sns.pairplot(data.iloc[:, 0:5], kind=\"scatter\", hue=\"species\", markers=[\"o\", \"s\", \"D\"], palette=\"Set2\", plot_kws={'alpha': 0.7})\n\nsns.move_legend(corr_plot, \"lower center\",\n    bbox_to_anchor=(0.5, 1), ncol=3, title=None, frameon=False\n)\n\n# Resize to fit\n# corr_plot.fig.set_size_inches(12, 5.5)\n\n# Show the plot\ncorr_plot\n\n\n\n\n\n\n\n\n\nThis plot offers a clear visualization of how different features are interrelated across the three iris species. Notice how, in various panels, each species tends to form its own distinct grouping, highlighting the separability of the data based on the selected features."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#reducing-dimentionality",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#reducing-dimentionality",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Reducing Dimentionality",
-    "text": "Reducing Dimentionality\nWe can use principle component analysis (PCA) to take our 4 dimensional data and translate it into two dimensions for better visualization!\n\nplt.figure(figsize=(12, 6))\n\ndf = px.data.iris()\nX = df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']]\n\npca = PCA(n_components=2)\ncomponents = pca.fit_transform(X)\n\n# Create a DataFrame with the PCA results\npca_df = pd.DataFrame(data=components, columns=['PCA1', 'PCA2'])\npca_df['species'] = df['species']\n\n# Plot the PCA results\npca2d = sns.scatterplot(data=pca_df, x='PCA1', y='PCA2', hue='species', palette=\"Set2\")"
+    "text": "Reducing Dimentionality\nDimensionality reduction techniques, like Principal Component Analysis (PCA), help us simplify complex datasets. By translating our 4-dimensional data into two dimensions, we can better visualize the differences between species.\n\nplt.figure(figsize=(12, 6))\n\ndf = px.data.iris()\nX = df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']]\n\npca = PCA(n_components=2)\ncomponents = pca.fit_transform(X)\n\n# Create a DataFrame with the PCA results\npca_df = pd.DataFrame(data=components, columns=['PCA1', 'PCA2'])\npca_df['species'] = df['species']\n\n# Plot the PCA results\npca2d = sns.scatterplot(data=pca_df, x='PCA1', y='PCA2', hue='species', palette=\"Set2\")"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#seperating-our-dependent-and-independent-variables",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#seperating-our-dependent-and-independent-variables",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Seperating Our Dependent and Independent Variables",
-    "text": "Seperating Our Dependent and Independent Variables\n\n\n\nX = data.drop(['species_id', 'species'], axis=1)\ny = data['species']\n\n\n\n\n\nThe feature (X/independent) variables are of shape: (150, 4)\nThe target (y/dependent) variables are of shape: (150,)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndependent Vars\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n147\nvirginica\n\n\n91\nversicolor\n\n\n40\nsetosa\n\n\n3\nsetosa"
+    "text": "Seperating Our Dependent and Independent Variables\nNext, let’s separate our dataset into independent (X) and dependent (y) variables. This is a crucial step before training our model.\n\n\n\nX = data.drop(['species_id', 'species'], axis=1)\ny = data['species']\n\n\n\n\n\nThe feature (X/independent) variables are of shape: (150, 4)\nThe target (y/dependent) variables are of shape: (150,)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndependent Vars\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n30\nsetosa\n\n\n59\nversicolor\n\n\n56\nversicolor\n\n\n21\nsetosa"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#train-test-split",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#train-test-split",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Train-Test Split",
-    "text": "Train-Test Split\nThe classifier’s performance can become inflated if it trains on the same data it is tested with. This is called data-leakage.\n\nWe must split the data into training and testing sets.\n\n\n\n\n\nThis allows us to test how good the model is at classifying data it hasn’t seen before."
+    "text": "Train-Test Split\nThe classifier’s performance can become inflated if it trains on the same data it is tested with. This is called data-leakage.\nTo evaluate model performance accurately, it’s essential to split the data into training and testing sets. We must split the data into training and testing sets.\nThis step helps us test how well the model generalizes to unseen data."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#making-the-train-test-split",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#making-the-train-test-split",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Making the Train-Test Split",
-    "text": "Making the Train-Test Split\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, \n                                                        test_size=0.3,\n                                                        stratify=y,\n                                                        random_state=42)\n\n\n\nTest size: 30% is kept to validate the trained model\nStratify: Preserves the class ratios (33% of each iris species)\n\n\n\n\n\n\n\nX_train shape is: (105, 4)\ny_train shape is: (105,) \n\nX_test shape is: (45, 4)\ny_test shape is: (45,)"
+    "text": "Making the Train-Test Split\nLet’s proceed with the train-test split, keeping 30% of the data for testing and ensuring the class distribution remains consistent through stratification.\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, \n                                                        test_size=0.3,\n                                                        stratify=y,\n                                                        random_state=42)\n\n\nTest size: 30% of the data is reserved for testing the model.\nStratify: Preserves the class ratios (33% of each iris species).\n\n\n\n\n\nX_train shape is: (105, 4)\ny_train shape is: (105,) \n\nX_test shape is: (45, 4)\ny_test shape is: (45,)"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#why-is-stratification-important",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#why-is-stratification-important",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Why is Stratification Important?",
-    "text": "Why is Stratification Important?\nIf data is not stratified, the model may focus on more prevalent classes, leading to biased performance and poor accuracy on underrepresented classes."
+    "text": "Why is Stratification Important?\nStratification is crucial because it ensures that each class is proportionally represented in both the training and testing sets.\nWithout stratification, the model might over-focus on more prevalent classes, leading to biased performance and poor accuracy on underrepresented classes."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#training-the-models",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#training-the-models",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Training the Models!",
-    "text": "Training the Models!\n\n# Instantiate the classifiers\nclassifiers = [\n    SVC(kernel='linear', random_state=42),\n    SVC(kernel='rbf', random_state=42),\n    DecisionTreeClassifier(random_state=42),\n    RandomForestClassifier(random_state=42),\n    KNeighborsClassifier(),\n    LogisticRegression(random_state=42, max_iter=1000)\n]\n\n# Train the classifiers\nfor clf in classifiers:\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    print(f\"Accuracy of {clf.__class__.__name__}: {accuracy:.2f}\")\n\nAccuracy of SVC: 1.00\nAccuracy of SVC: 0.96\nAccuracy of DecisionTreeClassifier: 0.93\nAccuracy of RandomForestClassifier: 0.89\nAccuracy of KNeighborsClassifier: 0.98\nAccuracy of LogisticRegression: 0.93"
+    "text": "Training the Models!\nNow that our data is ready, let’s train several machine learning models and evaluate their performance.\n\n# Instantiate the classifiers\nclassifiers = [\n    SVC(kernel='linear', random_state=42),\n    SVC(kernel='rbf', random_state=42),\n    DecisionTreeClassifier(random_state=42),\n    RandomForestClassifier(random_state=42),\n    KNeighborsClassifier(),\n    LogisticRegression(random_state=42, max_iter=1000)\n]\n\n# Train the classifiers\nfor clf in classifiers:\n    clf.fit(X_train, y_train)\n    y_pred = clf.predict(X_test)\n    accuracy = accuracy_score(y_test, y_pred)\n    print(f\"Accuracy of {clf.__class__.__name__}: {accuracy:.2f}\")\n\nAccuracy of SVC: 1.00\nAccuracy of SVC: 0.96\nAccuracy of DecisionTreeClassifier: 0.93\nAccuracy of RandomForestClassifier: 0.89\nAccuracy of KNeighborsClassifier: 0.98\nAccuracy of LogisticRegression: 0.93"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#visualizing-machine-learning",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#visualizing-machine-learning",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Visualizing Machine Learning!",
-    "text": "Visualizing Machine Learning!"
+    "text": "Visualizing Machine Learning!\nLet’s visualize the decision boundaries for the trained models to see how well they differentiate between the different species."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#evaluating-model-performance",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#evaluating-model-performance",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Evaluating Model Performance",
-    "text": "Evaluating Model Performance\n\nThere are many potential evaluation metrics, but Accuracy is the most common.\n\n\\[\n\\text{Accuracy} = \\frac{\\text{Number of Correct Predictions}}{\\text{Total Number of Predictions}}\n\\]\nAccuracy is usually fine - there are some casses when it’s not great."
+    "text": "Evaluating Model Performance\nEvaluation metrics are crucial for understanding how well your model is performing. The most commonly used metric is Accuracy.\n\\[\n\\text{Accuracy} = \\frac{\\text{Number of Correct Predictions}}{\\text{Total Number of Predictions}}\n\\]\nWhile accuracy is useful, it’s not always the best metric, especially in cases of imbalanced classes."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#evaluating-model-performance-1",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#evaluating-model-performance-1",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Evaluating Model Performance",
-    "text": "Evaluating Model Performance\n\n\\[\n\\scriptsize{\\text{Accuracy} = \\frac{\\text{Number of Correct Predictions}}{\\text{Total Number of Predictions}}}\n\\]\n\n\n\n\n\n45 Correct Predictions / 45 Total Prediction = 1.00\n\n\n\n\n\n\n43 Correct Predictions / 45 Total Prediction = 0.95"
+    "text": "Evaluating Model Performance\n\\[\n\\scriptsize{\\text{Accuracy} = \\frac{\\text{Number of Correct Predictions}}{\\text{Total Number of Predictions}}}\n\\]\n\n\n\n\n45 Correct Predictions / 45 Total Prediction = 1.00\n\n\n\n\n\n\n43 Correct Predictions / 45 Total Prediction = 0.95"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#when-is-accuracy-sub-optimal",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#when-is-accuracy-sub-optimal",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "When is Accuracy Sub-optimal?",
-    "text": "When is Accuracy Sub-optimal?\n\nIf you have an imbalanced classes in your data, accuracy can be misleading.\n\n\n\n\n\n\n\n\nSay there are 100 observations: 80 Setosa, and 20 Versicolor.\n\nIf the classifier predicted ‘Setosa’ for all 100 observations, what would the accuracy be?\n\\[\n\\scriptsize{\\text{Accuracy} = \\frac{\\text{Number of Correct Predictions}}{\\text{Total Number of Predictions}}}\n\\]\n\n\n80 Correct Predictions / 100 Total Predictions = 0.80\n\nMetrics like F1 score, Precision, & Recall(sensitivity) can give a more informative picture"
+    "text": "When is Accuracy Sub-optimal?\nIn cases of imbalanced classes, accuracy can be misleading. Let’s explore why this is the case.\n\n\n\n\n\n\n\n\nSay there are 100 observations: 80 Setosa, and 20 Versicolor.\n\nIf the classifier predicted ‘Setosa’ for all 100 observations, what would the accuracy be?\n\\[\n\\scriptsize{\\text{Accuracy} = \\frac{\\text{Number of Correct Predictions}}{\\text{Total Number of Predictions}}}\n\\]\n\n\n80 Correct Predictions / 100 Total Predictions = 0.80\n\nMetrics like F1 score, Precision, and Recall (Sensitivity) can provide a more complete picture."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#summary",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#summary",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Summary:",
-    "text": "Summary:\n\n\n\nLabelled data (used in supervised ML) is particularly powerful for classification tasks\nChoosing informative features is critical\nTrain-test-split is important to avoid data-leakage\nStratification of classes avoids inflated performance\nAccuracy is great unless you have unbalanced classes"
+    "text": "Summary:\n\n\n\nLabelled data (used in supervised ML) is particularly powerful for classification tasks.\nChoosing informative features is critical to model success.\nTrain-test-split is crucial to avoid data-leakage.\nStratification ensures balanced class representation and avoids inflated performance metrics.\nAccuracy is useful but not always sufficient, especially with imbalanced classes."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#thanks-for-listening",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#thanks-for-listening",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Thanks for Listening",
     "text": "Thanks for Listening"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#footnotes",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#footnotes",
-    "title": "Introduction to Machine Learning",
+    "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nBishop, Christopher (2006). Pattern recognition and machine learning↩︎"
   },
@@ -249,14 +214,14 @@
     "href": "docs/tutorials/get-started/github_intro.html",
     "title": "Introduction to GitHub",
     "section": "",
-    "text": "This guide will give you a basic introduction to GitHub and how to effectively use it!"
+    "text": "GitHub is a web-based platform for version control and collaboration that allows developers to host and manage their code. It uses Git, a distributed version control system, to track changes in source code during software development. GitHub provides a range of features including issue tracking, project management, and code review tools."
   },
   {
     "objectID": "docs/tutorials/get-started/github_intro.html#what-is-github",
     "href": "docs/tutorials/get-started/github_intro.html#what-is-github",
     "title": "Introduction to GitHub",
-    "section": "What is GitHub?",
-    "text": "What is GitHub?\nGitHub is a web-based platform for version control and collaboration that allows developers to host and manage their code. It uses Git, a distributed version control system, to track changes in source code during software development. GitHub provides a range of features including issue tracking, project management, and code review tools."
+    "section": "",
+    "text": "GitHub is a web-based platform for version control and collaboration that allows developers to host and manage their code. It uses Git, a distributed version control system, to track changes in source code during software development. GitHub provides a range of features including issue tracking, project management, and code review tools."
   },
   {
     "objectID": "docs/tutorials/get-started/github_intro.html#key-features-of-github",
@@ -284,14 +249,14 @@
     "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html",
     "title": "Introduction to Brain-Computer Interfaces",
     "section": "",
-    "text": "This tutorial will teach you about the basics of what Brain-Computer Interfaces are, and how they work!"
+    "text": "A Brain-Computer Interface (BCI) enables communication between the brain and an external device, such as a computer or robotic arm, without physical movement. BCIs allow users to control devices using their thoughts."
   },
   {
     "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#what-is-a-brain-computer-interface-bci",
     "href": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#what-is-a-brain-computer-interface-bci",
     "title": "Introduction to Brain-Computer Interfaces",
-    "section": "What is a Brain-Computer Interface (BCI)?",
-    "text": "What is a Brain-Computer Interface (BCI)?\nA Brain-Computer Interface (BCI) enables communication between the brain and an external device, such as a computer or robotic arm, without physical movement. BCIs allow users to control devices using their thoughts."
+    "section": "",
+    "text": "A Brain-Computer Interface (BCI) enables communication between the brain and an external device, such as a computer or robotic arm, without physical movement. BCIs allow users to control devices using their thoughts."
   },
   {
     "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html#how-does-a-bci-work",
@@ -354,14 +319,14 @@
     "href": "docs/tutorials/get-started/getting_setup.html",
     "title": "Getting Setup",
     "section": "",
-    "text": "This document will teach you how to setup your computer with GitHub, VSCode and a Virtual Environment so you can start working on python projects!"
+    "text": "Click to learn more about VS Code! \n\n\nVisual Studio Code (often referred to as VS Code) is a free, open-source code editor developed by Microsoft. It’s lightweight, yet powerful, and supports development in multiple programming languages such as Python, JavaScript, Java, C++, and many more. VS Code features include syntax highlighting, intelligent code completion (IntelliSense), code refactoring, and debugging tools. It also supports Git for version control, has a built-in terminal for command-line operations, and a rich ecosystem of extensions for enhancing its functionality. It’s designed to be highly customizable, allowing users to change the editor’s theme, keyboard shortcuts, and preferences. VS Code is available for Windows, macOS, and Linux. It’s widely used by developers across the globe for both small and large scale projects.\n\n\n\n\nFirst, you’ll want to download and install the latest version of Visual Studio Code. Make sure you download the correct version for your computer (Windows, Mac, Linux).\nFollow the steps in the dialog windows, and once installed, you next need to download some essential extensions. On the left side of the window, there will be a bar with some icons. Select the extensions icon:  From there, search for and install the following: (Or just click the links below and hit ‘install’)\n\nGitHub Copilot & GitHub Copilot Chat\nPython\nJupyter\nAny others that seem interesting or useful :)\n\nFor more information on how to use VSCode, see the resources at the bottom of this page"
   },
   {
     "objectID": "docs/tutorials/get-started/getting_setup.html#step-1-setting-up-visual-studio-code",
     "href": "docs/tutorials/get-started/getting_setup.html#step-1-setting-up-visual-studio-code",
     "title": "Getting Setup",
-    "section": "Step 1: Setting up Visual Studio Code",
-    "text": "Step 1: Setting up Visual Studio Code\n\n\nClick to learn more about VS Code! \n\n\nVisual Studio Code (often referred to as VS Code) is a free, open-source code editor developed by Microsoft. It’s lightweight, yet powerful, and supports development in multiple programming languages such as Python, JavaScript, Java, C++, and many more. VS Code features include syntax highlighting, intelligent code completion (IntelliSense), code refactoring, and debugging tools. It also supports Git for version control, has a built-in terminal for command-line operations, and a rich ecosystem of extensions for enhancing its functionality. It’s designed to be highly customizable, allowing users to change the editor’s theme, keyboard shortcuts, and preferences. VS Code is available for Windows, macOS, and Linux. It’s widely used by developers across the globe for both small and large scale projects.\n\n\n\nInstalling VSCode & Extensions\nFirst, you’ll want to download and install the latest version of Visual Studio Code. Make sure you download the correct version for your computer (Windows, Mac, Linux).\nFollow the steps in the dialog windows, and once installed, you next need to download some essential extensions. On the left side of the window, there will be a bar with some icons. Select the extensions icon:  From there, search for and install the following: (Or just click the links below and hit ‘install’)\n\nGitHub Copilot & GitHub Copilot Chat\nPython\nJupyter\nAny others that seem interesting or useful :)\n\nFor more information on how to use VSCode, see the resources at the bottom of this page"
+    "section": "",
+    "text": "Click to learn more about VS Code! \n\n\nVisual Studio Code (often referred to as VS Code) is a free, open-source code editor developed by Microsoft. It’s lightweight, yet powerful, and supports development in multiple programming languages such as Python, JavaScript, Java, C++, and many more. VS Code features include syntax highlighting, intelligent code completion (IntelliSense), code refactoring, and debugging tools. It also supports Git for version control, has a built-in terminal for command-line operations, and a rich ecosystem of extensions for enhancing its functionality. It’s designed to be highly customizable, allowing users to change the editor’s theme, keyboard shortcuts, and preferences. VS Code is available for Windows, macOS, and Linux. It’s widely used by developers across the globe for both small and large scale projects.\n\n\n\n\nFirst, you’ll want to download and install the latest version of Visual Studio Code. Make sure you download the correct version for your computer (Windows, Mac, Linux).\nFollow the steps in the dialog windows, and once installed, you next need to download some essential extensions. On the left side of the window, there will be a bar with some icons. Select the extensions icon:  From there, search for and install the following: (Or just click the links below and hit ‘install’)\n\nGitHub Copilot & GitHub Copilot Chat\nPython\nJupyter\nAny others that seem interesting or useful :)\n\nFor more information on how to use VSCode, see the resources at the bottom of this page"
   },
   {
     "objectID": "docs/tutorials/get-started/getting_setup.html#step-2-setting-up-github",
@@ -389,7 +354,7 @@
     "href": "docs/tutorials/index.html",
     "title": "Welcome to the Get Started Landing Page!",
     "section": "",
-    "text": "Welcome to the Get Started Landing Page!\n\nIf you’re brand new and want to get your computer setup to start working on projects, head over to Getting Setup.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Setup\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with OpenBCI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Brain-Computer Interfaces\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Machine Learning\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to the Get Started Landing Page!\n\nIf you’re brand new and want to get your computer setup to start working on projects, head over to Getting Setup.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Beginner’s Guide to Machine Learning Concepts and Applications\n\n\nThis tutorial introduces the fundamentals of machine learning, covering key concepts such as supervised and unsupervised learning, data labeling, and model evaluation.\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Setup\n\n\nThis document will teach you how to setup your computer with GitHub, VSCode and a Virtual Environment so you can start working on python projects!\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with OpenBCI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Brain-Computer Interfaces\n\n\nThis tutorial will teach you about the basics of what Brain-Computer Interfaces are, and how they work!\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub\n\n\nThis guide will give you a basic introduction to GitHub and how to effectively use it!\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "docs/tutorials/open-bci/open_bci_setup.html",

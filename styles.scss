@@ -37,15 +37,30 @@
     color: green;
 }
 
+// .quarto-toggle-button-title {
+//     color: green;  /* Change this to your desired color */
+//     font-weight: bold;  /* Optional: Make the text bold */
+//   }
+
+.centered h1,
+.centered h2,
+.centered h3,
+.centered h4 {
+  text-align: center;
+//   text-decoration: underline;
+  margin: 0; // Optional: Adjusts the margin if necessary
+}
+
+
 .highlight1 {
     color: orange;
 }
 
-.centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+// .centered {
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
 
 body {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
