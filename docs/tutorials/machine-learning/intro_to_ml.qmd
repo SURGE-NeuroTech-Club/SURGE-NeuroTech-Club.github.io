@@ -272,7 +272,7 @@ sns.move_legend(corr_plot, "lower center",
 )
 
 # Resize to fit
-# corr_plot.fig.set_size_inches(12, 5.5)
+corr_plot.fig.set_size_inches(12, 5.5)
 
 # Show the plot
 corr_plot
@@ -286,6 +286,8 @@ Dimensionality reduction techniques, like Principal Component Analysis (PCA), he
 
 ```{python}
 #| fig-align: center
+#| code-fold: true
+#| code-summary: "Show the code"
 
 plt.figure(figsize=(12, 6))
 
@@ -311,8 +313,8 @@ Next, let’s separate our dataset into independent (X) and dependent (y) variab
 #| label: Ind-Dep1
 #| panel: center
 #| echo: true
-#| class: output-style
-#| code-line-numbers: "1,2"
+#| code-fold: true
+#| code-summary: "Show the code"
 
 X = data.drop(['species_id', 'species'], axis=1)
 y = data['species']
@@ -407,6 +409,8 @@ Without stratification, the model might over-focus on more prevalent classes, le
 #| label: Stratifcation
 #| echo: false
 #| panel: center
+#| code-fold: true
+#| code-summary: "Show the code"
 
 
 # Load the Iris dataset
