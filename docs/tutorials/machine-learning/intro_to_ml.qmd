@@ -4,8 +4,11 @@ abstract: "This tutorial introduces the fundamentals of machine learning, coveri
 image: images/intro-to-ml.webp
 format: 
     html:
+        code-line-numbers: true
         toc: true
         link-external-newwindow: true
+execute: 
+    freeze: auto
 ---
 
 ```{python}
@@ -250,29 +253,32 @@ columns_df
 ::::
 ::::::
 
-## Visualizing the Raw Data
+### Visualizing the Raw Data
 
 To start, let’s visualize the raw data from the Iris dataset to better understand the relationships between different features.
 
 ```{python}
 #| label: CorrPlot
 #| fig-align: 'center'
-#| fig-width: 6
-#| fig-height: 4
 #| code-fold: true
 #| code-summary: "Show the code"
 
 plt.style.use("dark_background")
 
 # Making a correlation plot of all variables except 'Id'
-corr_plot = sns.pairplot(data.iloc[:, 0:5], kind="scatter", hue="species", markers=["o", "s", "D"], palette="Set2", plot_kws={'alpha': 0.7})
+corr_plot = sns.pairplot(data.iloc[:, 0:5], 
+                         kind="scatter", 
+                         hue="species", 
+                         markers=["o", "s", "D"], 
+                         palette="Set2", 
+                         plot_kws={'alpha': 0.7})
 
 sns.move_legend(corr_plot, "lower center",
     bbox_to_anchor=(0.5, 1), ncol=3, title=None, frameon=False
 )
 
 # Resize to fit
-corr_plot.fig.set_size_inches(12, 5.5)
+corr_plot.fig.set_size_inches(10, 5.5)
 
 # Show the plot
 corr_plot
@@ -280,16 +286,18 @@ corr_plot
 
 This plot offers a clear visualization of how different features are interrelated across the three iris species. Notice how, in various panels, each species tends to form its own distinct grouping, highlighting the separability of the data based on the selected features.
 
-## Reducing Dimentionality {.smaller}
+### Reducing Dimentionality
 
 Dimensionality reduction techniques, like Principal Component Analysis (PCA), help us simplify complex datasets. By translating our 4-dimensional data into two dimensions, we can better visualize the differences between species.
+
+Here, we can see how each species is relatively clustered when visualized with PCA.
 
 ```{python}
 #| fig-align: center
 #| code-fold: true
 #| code-summary: "Show the code"
 
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(10, 5.5))
 
 df = px.data.iris()
 X = df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']]
@@ -307,7 +315,9 @@ pca2d = sns.scatterplot(data=pca_df, x='PCA1', y='PCA2', hue='species', palette=
 
 ## Seperating Our Dependent and Independent Variables
 
-Next, let’s separate our dataset into independent (X) and dependent (y) variables. This is a crucial step before training our model.
+Next, let’s separate our dataset into independent (X/Input) and dependent (y/Output) variables. This is a crucial step before training our model, as it ensures that the model learns the relationships between the input features and the output labels without being biased by the answers themselves. We don’t want our model to use the labels (answers) during training, as that would defeat the purpose of learning from the data.
+
+Here, we take our original dataset of 150 observations, each with 4 features (petal & sepal length and width), and split them into independent variables (X), which the model will use to make predictions, and dependent variables (y), which represent the correct species classification for each observation (labels). This separation is essential for supervised learning because it allows the model to understand how different combinations of features correspond to specific outcomes.
 
 ```{python}
 #| label: Ind-Dep1
@@ -361,30 +371,36 @@ y_sample
 
 ## Train-Test Split
 
-The classifier's performance can become inflated if it trains on the same data it is tested with. This is called [data-leakage.]{.highlight1}
+The classifier's performance can become inflated if it trains on the same data it is tested with, a problem known as [data leakage]{.highlight1}. Data leakage occurs when the model has access to information it shouldn't have during training, leading to overly optimistic performance metrics.
 
-To evaluate model performance accurately, it's essential to split the data into training and testing sets. We must split the data into [training and testing sets.]{.highlight1}
+To evaluate model performance accurately and avoid this issue, it's essential to split the data into [training and testing sets]{.highlight1}. The training set is used to teach the model, while the testing set is used to evaluate how well the model generalizes to [unseen data]{.highlight1}.
 
-This step helps us test how well the model generalizes to [unseen data]{.highlight1}.
+This step is crucial because it helps us understand how the model will perform in real-world scenarios, where it will encounter data it has never seen before.
 
 ![](images/train-test-split-1.png){fig-align="center"}
 
-## Making the Train-Test Split
+### Making the Train-Test Split
 
-Let’s proceed with the train-test split, keeping 30% of the data for testing and ensuring the class distribution remains consistent through stratification.
+Let’s proceed with the train-test split, keeping 30% of the data for testing and ensuring the class distribution remains consistent through [stratification]{.highlight1}.
+-   **Test size**: 30% of the data is reserved for testing the model.
+-   **Stratify**: Preserves the class ratios (33% of each iris species).
 
 ```{python}
 #| label: Train-test-split1
 #| echo: true
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, 
-                                                        test_size=0.3,
-                                                        stratify=y,
-                                                        random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, # Input our seperated X and y data
+                                                    test_size=0.3, # Select the test size of 30%
+                                                    stratify=y, # Stratify the split by y (species/dependent)
+                                                    random_state=42) # Select a random state for reproducability
 ```
 
--   **Test size**: 30% of the data is reserved for testing the model.
--   **Stratify**: Preserves the class ratios (33% of each iris species).
+This outputs:
+
+- `X_train`: 70% of our independent data (petal & sepal length and width)
+- `y_train`: 70% of our dependent data (species)
+- `X_test`: 30% of our independent data (petal & sepal length and width)
+- `y_test`: 30% of our dependent data (species)
 
 ```{python}
 #| label: Train-test-split2
@@ -399,7 +415,7 @@ print(f'X_test shape is: {X_test.shape}')
 print(f'y_test shape is: {y_test.shape}')
 ```
 
-## Why is Stratification Important? {.smaller}
+## Why is Stratification Important?
 
 Stratification is crucial because it ensures that each class is proportionally represented in both the training and testing sets.
 
@@ -411,7 +427,6 @@ Without stratification, the model might over-focus on more prevalent classes, le
 #| panel: center
 #| code-fold: true
 #| code-summary: "Show the code"
-
 
 # Load the Iris dataset
 iris = load_iris()
@@ -425,8 +440,7 @@ X_train_ns, X_test_ns, y_train_ns, y_test_ns = train_test_split(X, y, test_size=
 X_train_s, X_test_s, y_train_s, y_test_s = train_test_split(X, y, test_size=0.3, stratify=y, random_state=42)
 
 def plot_combined_distribution(y_train_ns, y_test_ns, y_train_s, y_test_s):
-    fig, axs = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
-    
+    fig, axs = plt.subplots(1, 2, figsize=(7.75, 4), sharey=True)
     # Plot for Non-Stratified Split
     labels, counts = np.unique(y_train_ns, return_counts=True)
     axs[0].bar(labels, counts, width=0.4, align='center', label='Train', color='skyblue')
@@ -455,11 +469,14 @@ def plot_combined_distribution(y_train_ns, y_test_ns, y_train_s, y_test_s):
 
 # Call the function to plot the combined distribution
 plot_combined_distribution(y_train_ns, y_test_ns, y_train_s, y_test_s)
+
 ```
+
+Here, we can visualize the difference between an unstratified and a stratified train-test split. If we were to train our model on the unstratified data, it would have less data on Iris Setosa to train with and more to test with, leading to an imbalance. This imbalance could cause the model to perform well on certain classes while underperforming on others, resulting in biased predictions. By using stratification, we ensure that each class is adequately represented in both the training and testing sets, leading to a more balanced and fair evaluation of the model’s performance.
 
 ## Training the Models!
 
-Now that our data is ready, let’s train several machine learning models and evaluate their performance.
+Now that our data is ready, let’s train several supervised machine learning models and evaluate their performance. We'll be using the [scikit-learn Python library](https://scikit-learn.org/stable/index.html), which provides a wide range of tools for building and evaluating models. For a complete list of all the supervised models that scikit-learn supports, [click here](https://scikit-learn.org/stable/supervised_learning.html).
 
 ```{python}
 #| label: load-data-again 
@@ -476,66 +493,114 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, stratif
 ```{python}
 #| label: model-training
 #| echo: true
-#| code-line-numbers: "2-9|13|14|15"
 
 # Instantiate the classifiers
-classifiers = [
-    SVC(kernel='linear', random_state=42),
-    SVC(kernel='rbf', random_state=42),
-    DecisionTreeClassifier(random_state=42),
-    RandomForestClassifier(random_state=42),
-    KNeighborsClassifier(),
-    LogisticRegression(random_state=42, max_iter=1000)
+classifiers = [                                     # Makes a list of classifier objects:
+    SVC(kernel='linear', random_state=42),             # Linear Support-Vector Machine (SVM)
+    SVC(kernel='rbf', random_state=42),                # RBF Support-Vector Machine (SVM)
+    DecisionTreeClassifier(random_state=42),           # Decision Tree 
+    RandomForestClassifier(random_state=42),           # Random Forest 
+    KNeighborsClassifier(),                            # K-nearest Neighbours 
+    LogisticRegression(random_state=42, max_iter=1000) # Logistic Regression
 ]
 
 # Train the classifiers
-for clf in classifiers:
-    clf.fit(X_train, y_train)
-    y_pred = clf.predict(X_test)
-    accuracy = accuracy_score(y_test, y_pred)
-    print(f"Accuracy of {clf.__class__.__name__}: {accuracy:.2f}")
+for clf in classifiers:          # Loop iterates through the list of classifiers
+    clf.fit(X_train, y_train)    # Trains with the X (input) and Y (output) training data
+    y_pred = clf.predict(X_test) # Fits the X test data; trained model returns predictions
+    accuracy = accuracy_score(y_test, y_pred) # Calculates accuracy of the model
+    print(f"Accuracy of {clf.__class__.__name__}: {accuracy:.2f}") # Prints the accuracy score
 ```
+
+Here, we get accuracy scores ranging from around 0.90 to 1.00 for each classifier. But what does this mean? That’s a great question! We’ll dive into the significance of these accuracy scores and how to properly evaluate the performance of machine learning models in the next section.
 
 ## Visualizing Machine Learning!
 
-Let’s visualize the decision boundaries for the trained models to see how well they differentiate between the different species.
+Let’s take a closer look at how well the trained models differentiate between the different iris species by visualizing their decision boundaries.
+
+To make this possible, I applied Principal Component Analysis (PCA) to reduce our 4-dimensional data into 2 dimensions before training the models. This dimensionality reduction allows us to clearly visualize the decision boundaries each model establishes.
+
+In the visualization, you can observe how each model draws boundaries that separate the iris species into distinct regions. For instance, if a new data point —say, an Iris Setosa— falls within the blue region, the model predicts that this iris is indeed an Iris Setosa. This approach helps us understand how the models make predictions based on the learned patterns in the data. However, if an Iris Virginica were incorrectly placed in another region, it would result in a misclassification. Such errors could prompt the machine learning model to adjust and refine its decision boundaries to improve accuracy.
 
 ![](images/combined_PCA_decision_boundaries_with_accuracy2.png){fig-align="center"}
 
+
 ## Evaluating Model Performance
 
-Evaluation metrics are crucial for understanding how well your model is performing. The most commonly used metric is [Accuracy]{.highlight1}.
+### Accuracy Score
 
+Evaluation metrics are crucial for understanding how well your model is performing. The most commonly used metric is [Accuracy]{.highlight1}, which is defined as the number of correct predictions over the total number of predictions:
 $$
 \text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}
 $$
 
-While accuracy is useful, it’s not always the best metric, especially in cases of imbalanced classes.
+Do you recall the accuracy scores of the models we trained earlier? Since we tested each trained model on 45 unseen cases (the testing set), we can evaluate how well each model performed!
 
-## Evaluating Model Performance {.smaller}
+<details>
+<summary> <span class=dropdown1> Click here to see them! </span> </summary>
+
+```{python}
+#| label: print-accuracy-scores
+#| echo: false
+#| warning: false
+ 
+# Train the classifiers
+for clf in classifiers:          # Loop iterates through the list of classifiers
+    clf.fit(X_train, y_train)    # Trains with the X (input) and Y (output) training data
+    y_pred = clf.predict(X_test) # Fits the X test data; trained model returns predictions
+    accuracy = accuracy_score(y_test, y_pred) # Calculates accuracy of the model
+    print(f"Accuracy of {clf.__class__.__name__}: {accuracy:.2f}") # Prints the accuracy score
+```
+</details>
+
+For example, the Support Vector Classifier (SVC) had an accuracy of 1.00, meaning it correctly classified all 45 test inputs. On the other hand, the Random Forest Classifier had an accuracy score of 0.89. If we do some math, we can calculate the exact number of correctly classified cases for the Random Forest model:
 $$
-\scriptsize{\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}}
+\text{Number of Correct Predictions} = \text{Accuracy} \times \text{Total Number of Test Cases}
 $$
+
+$$
+\text{Number of Correct Predictions} = 0.89 \times 45 \approx 40
+$$
+
+This means that out of 45 test cases, the Random Forest Classifier correctly classified 40 of them, with the remaining 5 cases being misclassified—which is still quite good!
+
+### Confusion Matrices
+
+A [confusion matrix]{.highlight1} is an excellent tool for visualizing your model's performance by providing a detailed breakdown of its predictions. Each row of the matrix represents the actual class, while each column represents the predicted class. The diagonal elements show correct predictions, while off-diagonal elements indicate misclassifications. Unlike accuracy alone, a confusion matrix shows how well your model distinguishes between different classes by displaying the counts of true positives, true negatives, false positives, and false negatives.
+
+<details>
+<summary> <span class=dropdown1> Click Here for a Breakdown of Error Types </span> </summary>
+
+- **True Positives (TP):** These are cases where the model correctly predicted the positive class. For example, if the model predicts "Iris Setosa" and it’s actually "Iris Setosa," that’s a true positive.
+- **True Negatives (TN):** These are cases where the model correctly predicted the negative class. For example, if the model predicts "Not Iris Setosa" and it’s indeed not "Iris Setosa," that’s a true negative.
+- **False Positives (FP):** Also known as Type I errors, these occur when the model incorrectly predicts the positive class. For instance, if the model predicts "Iris Setosa" when it’s actually a different species, that’s a false positive.
+- **False Negatives (FN):** Also known as Type II errors, these occur when the model incorrectly predicts the negative class. For example, if the model fails to predict "Iris Setosa" and instead predicts another species when it is actually "Iris Setosa," that’s a false negative.
+
+This detailed breakdown is crucial for understanding the types of errors your model is making. In the context of a BCI-controlled wheelchair, false negatives could mean failing to detect the user's command to move, which might be more critical than a false positive. For example, if the system fails to recognize a user's intention to move the wheelchair forward, it could leave the user stranded or unable to navigate effectively. On the other hand, a false positive might cause the wheelchair to move unintentionally, which could be disorienting or even dangerous, depending on the situation.
+</details>
 
 :::::::: columns
 :::: {.column width="50%"}
 ![](images/Linear_SVM_CM.png)
 
-::: {.fragment .fade-in}
 45 Correct Predictions / 45 Total Prediction = 1.00
-:::
 ::::
 
 ::::: {.column width="50%"}
-::: {.fragment .fade-in}
 ![](images/DecisionTree_CM.png)
-:::
 
-::: {.fragment .fade-in}
 43 Correct Predictions / 45 Total Prediction = 0.95
-:::
+
 :::::
 ::::::::
+
+For example, in the case of the Iris dataset, the confusion matrix reveals not just the overall accuracy but also whether your model is prone to specific errors, such as predicting one species of iris when it’s actually another (false positives) or failing to correctly identify a species when it’s present (false negatives). This detailed view helps you understand how well your model distinguishes between the three iris species—Setosa, Versicolor, and Virginica.
+
+This level of detail is particularly valuable when dealing with imbalanced datasets, where one class may be much more prevalent than the other. In such cases, a high accuracy might be misleading, while the confusion matrix reveals the true performance of your model across all classes.
+
+By analyzing the confusion matrix, you can gain deeper insights into the strengths and weaknesses of your model, guiding you toward improvements, such as tweaking the model, adjusting thresholds, or selecting different metrics like Precision, Recall, or F1 Score for a more comprehensive evaluation.
+
+Overall, accuracy is a valuable metric for evaluating how well your model predicts or classifies data. It can also provide guidance on which model may work best for your specific dataset. However, while accuracy is useful, it’s not always the best metric, especially in cases where the classes are imbalanced.
 
 ## When is Accuracy Sub-optimal? {.smaller}
 
@@ -576,7 +641,3 @@ $$
 -   Stratification ensures balanced class representation and avoids inflated performance metrics.
 -   Accuracy is useful but not always sufficient, especially with imbalanced classes.
 :::
-
-## Thanks for Listening {.center-h2}
-
-![](https://gifdb.com/images/high/thank-you-emoji-giving-two-thumbs-ups-6ud8p4up69m7w8tz.gif){fig-align="center"}
