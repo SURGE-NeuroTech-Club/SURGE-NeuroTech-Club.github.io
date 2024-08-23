@@ -188,13 +188,13 @@ Take a moment to compare the iris on the left with the Northern Blue Flag iris (
 
 ### Misclassification?
 
-Interestingly, the Seek App identified the iris I found as a Versicolor, but two experts later claimed it was a Setosa. This discrepancy highlights a critical aspect of machine learning: the selection of features.
+Interestingly, the Seek App identified the iris I found as a Versicolor, but two experts later claimed it was a Setosa. This discrepancy highlights a critical aspect of machine learning: the [selection of features]{.highlight1}.
 
 ![](images/inaturalist_pic.PNG){width="60%" fig-align="center"}
 
 ## Choosing (the right) Features is Important!
 
-A [Feature]{.highlight1} is "an individual measurable property or characteristic of a phenomenon".[^1] In the context of machine learning, selecting the right features is critical to the success of your model.
+A [feature]{.highlight1} is "an individual measurable property or characteristic of a phenomenon".[^1] In the context of machine learning, selecting the right features is critical to the success of your model.
 
 Using informative, discriminative, and independent features is essential for building effective classification algorithms. The features you choose can significantly influence the model’s ability to learn accurately from the data and make reliable predictions. In the case of our iris example, perhaps the app's algorithm relied on certain features that led it to misclassify the species.
 
@@ -537,7 +537,7 @@ $$
 Do you recall the accuracy scores of the models we trained earlier? Since we tested each trained model on 45 unseen cases (the testing set), we can evaluate how well each model performed!
 
 <details>
-<summary> <span class=dropdown1> Click here to see them! </span> </summary>
+<summary> <span class=dropdown1> Click Here if You Forgot! </span> </summary>
 
 ```{python}
 #| label: print-accuracy-scores
@@ -602,42 +602,41 @@ By analyzing the confusion matrix, you can gain deeper insights into the strengt
 
 Overall, accuracy is a valuable metric for evaluating how well your model predicts or classifies data. It can also provide guidance on which model may work best for your specific dataset. However, while accuracy is useful, it’s not always the best metric, especially in cases where the classes are imbalanced.
 
-## When is Accuracy Sub-optimal? {.smaller}
+## When is Accuracy Sub-optimal?
 
 In cases of [imbalanced classes]{.highlight1}, accuracy can be misleading. Let’s explore why this is the case.
 
+Imagine we have a trained model that we want to test with new data. Suppose this new dataset has 100 observations: 80 are of Iris Setosa, and 20 are of Iris Versicolor.
+
 ::::::: columns
-::: {.column width="50%"}
+::: {.column width="45%"}
 ![](images/imbalanced-dataset2.png){fig-align="center"}
 :::
 
-::::: {.column width="50%"}
-Say there are 100 observations: 80 Setosa, and 20 Versicolor.
+::: {.column width="5%"}
+:::
 
-::: {.fragment .fade-in}
+::::: {.column width="50%"}
+
 If the classifier predicted 'Setosa' for all 100 observations, what would the accuracy be?
 
 $$
 \scriptsize{\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}}
 $$
-:::
 
-::: {.fragment .fade-in}
 80 Correct Predictions / 100 Total Predictions = 0.80
 
--   Metrics like F1 score, Precision, and Recall (Sensitivity) can provide a more complete picture.
-:::
+So, even though the accuracy score is a respectable 80%, the model isn’t actually distinguishing between the two classes at all!
+
 :::::
 :::::::
 
-## Summary:
+In situations where there is an imbalance of classes, accuracy does not provide a fully informative picture of the model's performance, as illustrated in the example above. Metrics like F1 Score, Precision, and Recall (Sensitivity) can offer a more comprehensive assessment by considering the balance between different types of errors.
 
-<br>
+## Summary
 
-::: incremental
--   Labelled data (used in supervised ML) is particularly powerful for classification tasks.
--   Choosing informative features is critical to model success.
--   Train-test-split is crucial to avoid data-leakage.
--   Stratification ensures balanced class representation and avoids inflated performance metrics.
--   Accuracy is useful but not always sufficient, especially with imbalanced classes.
-:::
+- **Labeled Data:** Supervised machine learning relies on labeled data, which is particularly effective for classification tasks, allowing models to learn and make accurate predictions.
+- **Feature Selection:** Choosing the right features is crucial for model success. Informative and discriminative features help the model make reliable predictions.
+- **Train-Test Split:** Splitting your data into training and testing sets is essential to prevent data leakage and ensure that your model's performance is evaluated on unseen data.
+- **Stratification:** Stratifying your data during the train-test split ensures that each class is proportionally represented, leading to more balanced and accurate model evaluations.
+- **Accuracy as a Metric:** While accuracy is a valuable metric, it may not always be sufficient, particularly in cases of imbalanced classes. Complementary metrics like F1 Score, Precision, and Recall provide a more comprehensive assessment of model performance.
