@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Machine Learning – SURGE NeuroTech Club</title>
+<title>A Beginner’s Guide to Machine Learning Concepts and Applications – SURGE NeuroTech Club</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,7 +105,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
+
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -138,8 +141,8 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../../styles.scss">
-<meta property="og:title" content="SURGE NeuroTech Club - Introduction to Machine Learning">
-<meta property="og:description" content="">
+<meta property="og:title" content="SURGE NeuroTech Club - A Beginner’s Guide to Machine Learning Concepts and Applications">
+<meta property="og:description" content="This tutorial introduces the fundamentals of machine learning, covering key concepts such as supervised and unsupervised learning, data labeling, and model evaluation.">
 <meta property="og:image" content="images/intro-to-ml.webp">
 <meta property="og:site_name" content="SURGE NeuroTech Club">
 </head>
@@ -201,49 +204,58 @@ window.Quarto = {
    
   <ul>
   <li><a href="#what-is-machine-learning" id="toc-what-is-machine-learning" class="nav-link active" data-scroll-target="#what-is-machine-learning">What is Machine Learning?</a></li>
+  <li><a href="#labeled-unlabeled-data" id="toc-labeled-unlabeled-data" class="nav-link" data-scroll-target="#labeled-unlabeled-data">Labeled &amp; Unlabeled Data</a></li>
+  <li><a href="#two-category-of-machine-learning" id="toc-two-category-of-machine-learning" class="nav-link" data-scroll-target="#two-category-of-machine-learning">Two Category of Machine Learning</a>
+  <ul class="collapse">
+  <li><a href="#supervised-machine-learning" id="toc-supervised-machine-learning" class="nav-link" data-scroll-target="#supervised-machine-learning">Supervised Machine Learning</a></li>
+  <li><a href="#unsupervised-machine-learning" id="toc-unsupervised-machine-learning" class="nav-link" data-scroll-target="#unsupervised-machine-learning">Unsupervised Machine Learning</a></li>
+  </ul></li>
   <li><a href="#how-does-machine-learning-work" id="toc-how-does-machine-learning-work" class="nav-link" data-scroll-target="#how-does-machine-learning-work">How Does Machine Learning Work?</a>
   <ul class="collapse">
   <li><a href="#a-decision-process" id="toc-a-decision-process" class="nav-link" data-scroll-target="#a-decision-process">1. A Decision Process:</a></li>
   <li><a href="#an-error-function" id="toc-an-error-function" class="nav-link" data-scroll-target="#an-error-function">2. An Error Function:</a></li>
   <li><a href="#a-model-optimization-process" id="toc-a-model-optimization-process" class="nav-link" data-scroll-target="#a-model-optimization-process">3. A Model Optimization Process:</a></li>
-  <li><a href="#major-types-of-ml" id="toc-major-types-of-ml" class="nav-link" data-scroll-target="#major-types-of-ml">(Major) Types of ML</a></li>
-  <li><a href="#labelled-unlabelled-data" id="toc-labelled-unlabelled-data" class="nav-link" data-scroll-target="#labelled-unlabelled-data">Labelled &amp; Unlabelled Data</a></li>
-  <li><a href="#supervised-machine-learning" id="toc-supervised-machine-learning" class="nav-link" data-scroll-target="#supervised-machine-learning">Supervised Machine Learning</a></li>
-  <li><a href="#unsupervised-machine-learning" id="toc-unsupervised-machine-learning" class="nav-link" data-scroll-target="#unsupervised-machine-learning">Unsupervised Machine Learning</a></li>
   </ul></li>
   <li><a href="#mini-tutorial-with-the-iris-dataset" id="toc-mini-tutorial-with-the-iris-dataset" class="nav-link" data-scroll-target="#mini-tutorial-with-the-iris-dataset">Mini Tutorial with the Iris Dataset!</a>
   <ul class="collapse">
-  <li><a href="#human-classification-exercise" id="toc-human-classification-exercise" class="nav-link" data-scroll-target="#human-classification-exercise">Human Classification Exercise</a></li>
+  <li><a href="#human-classification-exercise" id="toc-human-classification-exercise" class="nav-link" data-scroll-target="#human-classification-exercise">Human Classification Exercise</a>
+  <ul class="collapse">
   <li><a href="#what-do-you-think" id="toc-what-do-you-think" class="nav-link" data-scroll-target="#what-do-you-think">What do you think?</a></li>
-  <li><a href="#real-world-example" id="toc-real-world-example" class="nav-link" data-scroll-target="#real-world-example">Real-world Example</a></li>
   <li><a href="#misclassification" id="toc-misclassification" class="nav-link" data-scroll-target="#misclassification">Misclassification?</a></li>
+  </ul></li>
   <li><a href="#choosing-the-right-features-is-important" id="toc-choosing-the-right-features-is-important" class="nav-link" data-scroll-target="#choosing-the-right-features-is-important">Choosing (the right) Features is Important!</a></li>
   <li><a href="#the-iris-dataset" id="toc-the-iris-dataset" class="nav-link" data-scroll-target="#the-iris-dataset">The Iris Dataset</a></li>
   <li><a href="#taking-another-look" id="toc-taking-another-look" class="nav-link" data-scroll-target="#taking-another-look">Taking Another Look</a></li>
-  <li><a href="#lets-look-at-the-dataset" id="toc-lets-look-at-the-dataset" class="nav-link" data-scroll-target="#lets-look-at-the-dataset">Let’s Look At The Dataset!</a></li>
+  <li><a href="#lets-explore-the-dataset" id="toc-lets-explore-the-dataset" class="nav-link" data-scroll-target="#lets-explore-the-dataset">Let’s Explore the Dataset!</a>
+  <ul class="collapse">
   <li><a href="#visualizing-the-raw-data" id="toc-visualizing-the-raw-data" class="nav-link" data-scroll-target="#visualizing-the-raw-data">Visualizing the Raw Data</a></li>
   <li><a href="#reducing-dimentionality" id="toc-reducing-dimentionality" class="nav-link" data-scroll-target="#reducing-dimentionality">Reducing Dimentionality</a></li>
+  </ul></li>
   <li><a href="#seperating-our-dependent-and-independent-variables" id="toc-seperating-our-dependent-and-independent-variables" class="nav-link" data-scroll-target="#seperating-our-dependent-and-independent-variables">Seperating Our Dependent and Independent Variables</a></li>
-  <li><a href="#train-test-split" id="toc-train-test-split" class="nav-link" data-scroll-target="#train-test-split">Train-Test Split</a></li>
+  <li><a href="#train-test-split" id="toc-train-test-split" class="nav-link" data-scroll-target="#train-test-split">Train-Test Split</a>
+  <ul class="collapse">
   <li><a href="#making-the-train-test-split" id="toc-making-the-train-test-split" class="nav-link" data-scroll-target="#making-the-train-test-split">Making the Train-Test Split</a></li>
+  </ul></li>
   <li><a href="#why-is-stratification-important" id="toc-why-is-stratification-important" class="nav-link" data-scroll-target="#why-is-stratification-important">Why is Stratification Important?</a></li>
   <li><a href="#training-the-models" id="toc-training-the-models" class="nav-link" data-scroll-target="#training-the-models">Training the Models!</a></li>
   <li><a href="#visualizing-machine-learning" id="toc-visualizing-machine-learning" class="nav-link" data-scroll-target="#visualizing-machine-learning">Visualizing Machine Learning!</a></li>
-  <li><a href="#evaluating-model-performance" id="toc-evaluating-model-performance" class="nav-link" data-scroll-target="#evaluating-model-performance">Evaluating Model Performance</a></li>
-  <li><a href="#evaluating-model-performance-1" id="toc-evaluating-model-performance-1" class="nav-link" data-scroll-target="#evaluating-model-performance-1">Evaluating Model Performance</a></li>
+  <li><a href="#evaluating-model-performance" id="toc-evaluating-model-performance" class="nav-link" data-scroll-target="#evaluating-model-performance">Evaluating Model Performance</a>
+  <ul class="collapse">
+  <li><a href="#accuracy-score" id="toc-accuracy-score" class="nav-link" data-scroll-target="#accuracy-score">Accuracy Score</a></li>
+  <li><a href="#confusion-matrices" id="toc-confusion-matrices" class="nav-link" data-scroll-target="#confusion-matrices">Confusion Matrices</a></li>
+  </ul></li>
   <li><a href="#when-is-accuracy-sub-optimal" id="toc-when-is-accuracy-sub-optimal" class="nav-link" data-scroll-target="#when-is-accuracy-sub-optimal">When is Accuracy Sub-optimal?</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary:</a></li>
-  <li><a href="#thanks-for-listening" id="toc-thanks-for-listening" class="nav-link" data-scroll-target="#thanks-for-listening">Thanks for Listening</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introduction to Machine Learning</h1>
+<h1 class="title">A Beginner’s Guide to Machine Learning Concepts and Applications</h1>
 </div>
 
 
@@ -255,85 +267,65 @@ window.Quarto = {
     
   </div>
   
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    This tutorial introduces the fundamentals of machine learning, covering key concepts such as supervised and unsupervised learning, data labeling, and model evaluation.
+  </div>
+</div>
 
 
 </header>
 
 
-<p>This introductory tutorial will take you through some of the basics of what machine learning is and how it works!</p>
-<section id="what-is-machine-learning" class="level2 center-h2">
-<h2 class="center-h2 anchored" data-anchor-id="what-is-machine-learning">What is Machine Learning?</h2>
-<p><br> <br></p>
-<div class="fragment fade-in">
-<p>A type of artificial intelligence where computers learn to <span class="highlight1">make predictions by recognizing patterns</span> in data. It improves over time by continuously learning from new data and experiences.</p>
-</div>
+<section id="what-is-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-machine-learning">What is Machine Learning?</h2>
+<p>Machine learning is a subset of artificial intelligence where computers use data to identify patterns and make predictions. These models improve over time by learning from new data and experiences.</p>
+<p>Machine learning algorithms work by identifying patterns in the data, specifically between the independent variables (features, often represented as X) and the dependent variables (targets, often represented as Y). These patterns enable the model to make predictions or classifications based on new, unseen data.</p>
 </section>
-<section id="how-does-machine-learning-work" class="level1 page-columns page-full" style="text-align: center">
-<h1 style="text-align: center">How Does Machine Learning Work?</h1>
-<section id="a-decision-process" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="a-decision-process">1. A Decision Process:</h2>
-<p><br> <br></p>
-<p>In general, machine learning algorithms are used to make a <span class="highlight1">prediction or classification</span>. Based on some input data. The algorithm will produce an <span class="highlight1">estimate about a pattern</span> in the data.</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p><a href="https://ischoolonline.berkeley.edu/blog/what-is-machine-learning/">UC Berkeley School of Information</a></p>
-</div></div></section>
-<section id="an-error-function" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="an-error-function">2. An Error Function:</h2>
-<p><br> <br></p>
-<p>An error function <span class="highlight1">evaluates the prediction</span> of the model. If there are known examples, an error function can make a comparison to assess the performance of the model.</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p><a href="https://ischoolonline.berkeley.edu/blog/what-is-machine-learning/">UC Berkeley School of Information</a></p>
-</div></div></section>
-<section id="a-model-optimization-process" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="a-model-optimization-process">3. A Model Optimization Process:</h2>
-<p><br> <br></p>
-<p>When the model does a good job of matching the training data, it tweaks its settings to get better at classifying the actual data. This process of <span class="highlight1">“evaluate and optimize”</span> happens over and over again, allowing the model to adjust itself automatically.</p>
-
-<div class="no-row-height column-margin column-container"><div class="margin-aside">
-<p><a href="https://ischoolonline.berkeley.edu/blog/what-is-machine-learning/">UC Berkeley School of Information</a></p>
-</div></div></section>
-<section id="major-types-of-ml" class="level2 center-h2">
-<h2 class="center-h2 anchored" data-anchor-id="major-types-of-ml">(Major) Types of ML</h2>
-<p><br></p>
-<div class="columns">
-<div class="column fragment fade-in" style="width:50%;">
-<section id="supervised-learning" class="level3" style="text-align: center">
-<h3 style="text-align: center" class="anchored" data-anchor-id="supervised-learning">Supervised Learning</h3>
-<ul>
-<li>Uses <span class="highlight1">labelled</span> training data</li>
-<li>Majority of machine learning applications</li>
-</ul>
-</section>
-</div><div class="column fragment fade-in" style="width:50%;">
-<section id="unsupervised-learning" class="level3" style="text-align: center">
-<h3 style="text-align: center" class="anchored" data-anchor-id="unsupervised-learning">Unsupervised Learning</h3>
-<ul>
-<li>Uses <span class="highlight1">unlabelled</span> training data</li>
-<li>Relatively uncommon</li>
-<li>Most often used for content personalization</li>
-</ul>
-</section>
-</div>
-</div>
-</section>
-<section id="labelled-unlabelled-data" class="level2">
-<h2 class="anchored" data-anchor-id="labelled-unlabelled-data">Labelled &amp; Unlabelled Data</h2>
-<p><br></p>
-<p>Labelled data is tagged with the target (dependent) measure - <span class="highlight1">It comes with the answer</span></p>
+<section id="labeled-unlabeled-data" class="level2">
+<h2 class="anchored" data-anchor-id="labeled-unlabeled-data">Labeled &amp; Unlabeled Data</h2>
+<p>Before we get into machine learning, we need to talk about data. Data is the foundation of all machine learning—without it, we wouldn’t be able to train the models! There are two broad categories of data used in machine learning: labeled and unlabeled data.</p>
+<p>Labeled data contains both the input and the corresponding correct output/target or dependent measure. In this example, we can see two types of labeled data—one labeled with “cat/dog” and another labeled with “weight.” In each case, the model would be trained to predict whether the input was a cat or a dog, or to estimate the weight, depending on the label provided. Unlabeled data only contains the input, leaving the model to identify patterns without guidance.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../..\images/labelled-unlabeled.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/labelled-unlabeled.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
 </figure>
 </div>
 </section>
-<section id="supervised-machine-learning" class="level2 center-h2">
-<h2 class="center-h2 anchored" data-anchor-id="supervised-machine-learning">Supervised Machine Learning</h2>
+<section id="two-category-of-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="two-category-of-machine-learning">Two Category of Machine Learning</h2>
+<p>Machine learning can be broadly divided into two primary categories: supervised and unsupervised learning. Each approach has its own strengths and limitations, making them suitable for different types of tasks.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<section id="pros" class="level3" style="text-align: center">
-<h3 style="text-align: center" class="anchored" data-anchor-id="pros">Pros</h3>
+<section id="supervised-learning" class="level4" style="text-align: center;">
+<h4 class="anchored" data-anchor-id="supervised-learning">Supervised Learning</h4>
+</section>
+<ul>
+<li>Uses <span class="highlight1">labeled</span> training data</li>
+<li>Majority of machine learning applications</li>
+<li>Commonly used for tasks like <span class="highligh1">classification</span> and regression</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<section id="unsupervised-learning" class="level4" style="text-align: center;">
+<h4 class="anchored" data-anchor-id="unsupervised-learning">Unsupervised Learning</h4>
+</section>
+<ul>
+<li>Uses <span class="highlight1">unlabeled</span> training data</li>
+<li>Less common but powerful for exploratory analysis</li>
+<li>Often used for clustering, content personalization, and dimensionality reduction</li>
+</ul>
+</div>
+</div>
+<section id="supervised-machine-learning" class="level3" style="text-align: center; text-decoration: underline;">
+<h3 class="anchored" data-anchor-id="supervised-machine-learning">Supervised Machine Learning</h3>
+</section>
+<p>Supervised machine learning involves training models on labeled data, where the goal is often to make predictions or classifications based on new, unseen data.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="pros" class="level4" style="text-align: center;">
+<h4 class="anchored" data-anchor-id="pros">Pros</h4>
+</section>
 <ul>
 <li>High accuracy
 <ul>
@@ -341,79 +333,88 @@ window.Quarto = {
 </ul></li>
 <li>Excellent predictive power
 <ul>
-<li>Classifying new data based on historical data</li>
+<li>Effective at classifying new data based on historical patterns</li>
 </ul></li>
 </ul>
-</section>
 </div><div class="column" style="width:50%;">
-<section id="cons" class="level3" style="text-align: center">
-<h3 style="text-align: center" class="anchored" data-anchor-id="cons">Cons</h3>
+<section id="cons" class="level4" style="text-align: center;">
+<h4 class="anchored" data-anchor-id="cons">Cons</h4>
+</section>
 <ul>
-<li>Requires labelled data
+<li>Requires labeled data
 <ul>
-<li>Time consuming &amp; expensive</li>
+<li>Time-consuming and expensive to obtain</li>
 </ul></li>
-<li>Overfitting
+<li>Risk of overfitting
 <ul>
-<li>Model can become too specific to trainig data</li>
+<li>Models may become too tailored to the training data</li>
 </ul></li>
 </ul>
-</section>
 </div>
 </div>
 <p><span class="footer-font">Common Algorithms: Linear/Logistic Regression, Support Vector Machines, Decision Trees, K-nearest neighbours</span></p>
+<section id="unsupervised-machine-learning" class="level3" style="text-align: center; text-decoration: underline;">
+<h3 class="anchored" data-anchor-id="unsupervised-machine-learning">Unsupervised Machine Learning</h3>
 </section>
-<section id="unsupervised-machine-learning" class="level2 center-h2">
-<h2 class="center-h2 anchored" data-anchor-id="unsupervised-machine-learning">Unsupervised Machine Learning</h2>
+<p>Unsupervised learning involves using algorithms to analyze and cluster unlabeled data, discovering hidden patterns without predefined labels.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<section id="pros-1" class="level3" style="text-align: center">
-<h3 style="text-align: center" class="anchored" data-anchor-id="pros-1">Pros</h3>
+<section id="pros-1" class="level4" style="text-align: center;">
+<h4 class="anchored" data-anchor-id="pros-1">Pros</h4>
+</section>
 <ul>
-<li>Data exploration
+<li>Powerful for data exploration
 <ul>
-<li>Discovering hidden patterns in data</li>
+<li>Uncovers hidden structures and patterns in data</li>
 </ul></li>
-<li>Dimensionality reduction
+<li>Useful for dimensionality reduction
 <ul>
-<li>Simplifying complex datasets</li>
+<li>Simplifies complex datasets, making them easier to visualize and interpret</li>
 </ul></li>
 </ul>
-</section>
 </div><div class="column" style="width:50%;">
-<section id="cons-1" class="level3" style="text-align: center">
-<h3 style="text-align: center" class="anchored" data-anchor-id="cons-1">Cons</h3>
+<section id="cons-1" class="level4" style="text-align: center;">
+<h4 class="anchored" data-anchor-id="cons-1">Cons</h4>
+</section>
 <ul>
-<li>Worse interpretability
+<li>Lower interpretability
 <ul>
-<li>No guidance for understanding patterns</li>
+<li>Patterns and structures are harder to understand without labels</li>
 </ul></li>
-<li>Model evaluation
+<li>Challenging model evaluation
 <ul>
-<li>Assessing quality without labels or metrics</li>
+<li>Difficult to assess model quality without clear metrics</li>
 </ul></li>
 </ul>
+</div>
+</div>
+<p><span class="footer-font">Common Algorithms: Principal Component Analysis (PCA), K-Means Clustering, t-Distributed Stochastic Neighbor Embedding (t-SNE)</span></p>
 </section>
-</div>
-</div>
-<p><span class="footer-font">Common Algorithms: Principle component analysis, K-means clustering, t-Distributed Stochastic Neighbor Embedding</span></p>
+<section id="how-does-machine-learning-work" class="level1">
+<h1>How Does Machine Learning Work?</h1>
+<p>The <a href="https://ischoolonline.berkeley.edu/blog/what-is-machine-learning/">UC Berkeley School of Information</a> has defined 3 components of most supervised machine learning algorithms.</p>
+<section id="a-decision-process" class="level2">
+<h2 class="anchored" data-anchor-id="a-decision-process">1. A Decision Process:</h2>
+<p>In general, machine learning algorithms are used to make a <span class="highlight1">prediction or classification</span>. Based on some input data. The algorithm will produce an <span class="highlight1">estimate about a pattern</span> in the data.</p>
+</section>
+<section id="an-error-function" class="level2">
+<h2 class="anchored" data-anchor-id="an-error-function">2. An Error Function:</h2>
+<p>An error function <span class="highlight1">evaluates the prediction</span> of the model. If there are known examples, an error function can make a comparison to assess the performance of the model.</p>
+</section>
+<section id="a-model-optimization-process" class="level2">
+<h2 class="anchored" data-anchor-id="a-model-optimization-process">3. A Model Optimization Process:</h2>
+<p>When the model does a good job of matching the training data, it tweaks its settings to get better at classifying the actual data. This process of <span class="highlight1">“evaluate and optimize”</span> happens over and over again, allowing the model to adjust itself automatically.</p>
 </section>
 </section>
 <section id="mini-tutorial-with-the-iris-dataset" class="level1">
 <h1>Mini Tutorial with the Iris Dataset!</h1>
+<p>Let’s dive into a hands-on example using the famous Iris dataset. This classic dataset is perfect for illustrating basic machine learning concepts.</p>
 <section id="human-classification-exercise" class="level2">
 <h2 class="anchored" data-anchor-id="human-classification-exercise">Human Classification Exercise</h2>
-<p>Fun Fact: You can find wild irises in NS!</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/duncans_iris.jpg" class="img-fluid figure-img"></p>
-<figcaption>Irises Found at Duncan’s Cove</figcaption>
-</figure>
-</div>
-</section>
-<section id="what-do-you-think" class="level2">
-<h2 class="anchored" data-anchor-id="what-do-you-think">What do you think?</h2>
-<p><br></p>
+<p>Before we get into the technical details, let’s start with a quick exercise. A while ago, I was hiking in Duncan’s Cove and came across some irises. I used an app called “Seek,” which leverages machine learning to identify species using your phone’s camera. Curious to see how well it worked, I tested it on an iris I found. But before I reveal the app’s result, I want you to take a look for yourself!</p>
+<section id="what-do-you-think" class="level3">
+<h3 class="anchored" data-anchor-id="what-do-you-think">What do you think?</h3>
+<p>Take a moment to compare the iris on the left with the Northern Blue Flag iris (middle) and the Beach Head iris (right). Which one do you think it resembles more? Consider what influenced your decision—was it the shape, color, or perhaps some other feature?</p>
 <div>
 
 </div>
@@ -422,23 +423,23 @@ window.Quarto = {
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/duncans_iris_zoom.jpg" class="img-fluid figure-img"></p>
+<p><img src="images/duncans_iris_zoom.jpg" width="300" height="250" class="figure-img"></p>
 <figcaption>My Picture from Duncan’s Cove</figcaption>
 </figure>
 </div>
 </div>
-<div class="fragment fade-in quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/northern blue flag (Iris versicolor)_files2.jpg" class="img-fluid figure-img"></p>
+<p><img src="images/northern blue flag (Iris versicolor)_files2.jpg" width="300" height="250" class="figure-img"></p>
 <figcaption>“Northern Blue Flag” - Versicolor</figcaption>
 </figure>
 </div>
 </div>
-<div class="fragment fade-in quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Beach-head Iris (iris setosa)2.jpeg" class="img-fluid figure-img"></p>
+<p><img src="images/Beach-head Iris (iris setosa)2.jpeg" width="300" height="250" class="figure-img"></p>
 <figcaption>“Beach-Head” - Setosa</figcaption>
 </figure>
 </div>
@@ -446,46 +447,34 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="real-world-example" class="level2">
-<h2 class="anchored" data-anchor-id="real-world-example">Real-world Example</h2>
+<section id="misclassification" class="level3">
+<h3 class="anchored" data-anchor-id="misclassification">Misclassification?</h3>
+<p>Interestingly, the Seek App identified the iris I found as a Versicolor, but two experts later claimed it was a Setosa. This discrepancy highlights a critical aspect of machine learning: the <span class="highlight1">selection of features</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/seek_inaturalist.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/inaturalist_pic.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
 </figure>
 </div>
-<p>Seek is an app that uses image recognition to predict species of animals, plants, fungi, insects - you name it!</p>
 </section>
-<section id="misclassification" class="level2">
-<h2 class="anchored" data-anchor-id="misclassification">Misclassification?</h2>
-<p>The Seek App determined that the iris I found was Versicolor, but two experts claimed it was a Setosa</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/inaturalist_pic.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
 </section>
 <section id="choosing-the-right-features-is-important" class="level2">
 <h2 class="anchored" data-anchor-id="choosing-the-right-features-is-important">Choosing (the right) Features is Important!</h2>
-<p><br></p>
-<p><span class="highlight1">Feature:</span> “An individual measurable property or characteristic of a phenomenon”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p><br></p>
-<div class="fragment fade-in">
-<p>Using informative, discriminating and independent features is a crucial element of effective classification algorithms.</p>
-</div>
+<p>A <span class="highlight1">feature</span> is “an individual measurable property or characteristic of a phenomenon”.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> In the context of machine learning, selecting the right features is critical to the success of your model.</p>
+<p>Using informative, discriminative, and independent features is essential for building effective classification algorithms. The features you choose can significantly influence the model’s ability to learn accurately from the data and make reliable predictions. In the case of our iris example, perhaps the app’s algorithm relied on certain features that led it to misclassify the species.</p>
 </section>
 <section id="the-iris-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="the-iris-dataset">The Iris Dataset</h2>
-<p>Three types of iris: Setosa, Versicolor, &amp; Virginica</p>
+<p>The Iris dataset is a classic example used in machine learning, containing three types of iris flowers: Setosa, Versicolor, and Virginica.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/iris_ex.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/iris_ex.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></p>
 </figure>
 </div>
-<p>The type can be determined by combination of <span class="highlight1">Petal &amp; Sepal Width &amp; Length</span></p>
+<p>The species of each iris can be determined by a combination of features, specifically the <span class="highlight1">petal and sepal width and length</span>.</p>
 </section>
 <section id="taking-another-look" class="level2">
 <h2 class="anchored" data-anchor-id="taking-another-look">Taking Another Look</h2>
-<p>Do you think that the Seek AI may have used some other feature, causing it to make an incorrect classification?</p>
+<p>Given the features we’ve discussed, do you think the Seek AI might have relied on different features or interpreted them differently, leading to the incorrect classification?</p>
 <div>
 
 </div>
@@ -494,15 +483,15 @@ window.Quarto = {
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/duncans_iris_zoom.jpg" class="img-fluid figure-img"></p>
-<figcaption>Duncan’s Cove</figcaption>
+<p><img src="images/duncans_iris_zoom.jpg" width="300" height="250" class="figure-img"></p>
+<figcaption>My Picture from Duncan’s Cove</figcaption>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/northern blue flag (Iris versicolor)_files2.jpg" class="img-fluid figure-img"></p>
+<p><img src="images/northern blue flag (Iris versicolor)_files2.jpg" width="300" height="250" class="figure-img"></p>
 <figcaption>“Northern Blue Flag” - Versicolor</figcaption>
 </figure>
 </div>
@@ -510,7 +499,7 @@ window.Quarto = {
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Beach-head Iris (iris setosa)2.jpeg" class="img-fluid figure-img"></p>
+<p><img src="images/Beach-head Iris (iris setosa)2.jpeg" width="300" height="250" class="figure-img"></p>
 <figcaption>“Beach-Head” - Setosa</figcaption>
 </figure>
 </div>
@@ -518,8 +507,9 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="lets-look-at-the-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="lets-look-at-the-dataset">Let’s Look At The Dataset!</h2>
+<section id="lets-explore-the-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="lets-explore-the-dataset">Let’s Explore the Dataset!</h2>
+<p>To better understand how machine learning models work, let’s take a closer look at the Iris dataset.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div id="cell-Iris-dataset" class="cell" data-execution_count="2">
@@ -583,68 +573,86 @@ window.Quarto = {
 </div>
 </div>
 </div>
-</section>
-<section id="visualizing-the-raw-data" class="level2">
-<h2 class="anchored" data-anchor-id="visualizing-the-raw-data">Visualizing the Raw Data</h2>
+<section id="visualizing-the-raw-data" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-the-raw-data">Visualizing the Raw Data</h3>
+<p>To start, let’s visualize the raw data from the Iris dataset to better understand the relationships between different features.</p>
 <div id="cell-CorrPlot" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sns.set(style="ticks", context="talk")</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">"dark_background"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Making a correlation plot of all variables except 'Id'</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>corr_plot <span class="op">=</span> sns.pairplot(data.iloc[:, <span class="dv">0</span>:<span class="dv">5</span>], kind<span class="op">=</span><span class="st">"scatter"</span>, hue<span class="op">=</span><span class="st">"species"</span>, markers<span class="op">=</span>[<span class="st">"o"</span>, <span class="st">"s"</span>, <span class="st">"D"</span>], palette<span class="op">=</span><span class="st">"Set2"</span>, plot_kws<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.7</span>})</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>sns.move_legend(corr_plot, <span class="st">"lower center"</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    bbox_to_anchor<span class="op">=</span>(<span class="fl">0.5</span>, <span class="dv">1</span>), ncol<span class="op">=</span><span class="dv">3</span>, title<span class="op">=</span><span class="va">None</span>, frameon<span class="op">=</span><span class="va">False</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Resize to fit</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>corr_plot.fig.set_size_inches(<span class="dv">12</span>, <span class="fl">5.5</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>corr_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>plt.style.use(<span class="st">"dark_background"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># Making a correlation plot of all variables except 'Id'</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>corr_plot <span class="op">=</span> sns.pairplot(data.iloc[:, <span class="dv">0</span>:<span class="dv">5</span>], </span>
+<span id="cb1-5"><a href="#cb1-5"></a>                         kind<span class="op">=</span><span class="st">"scatter"</span>, </span>
+<span id="cb1-6"><a href="#cb1-6"></a>                         hue<span class="op">=</span><span class="st">"species"</span>, </span>
+<span id="cb1-7"><a href="#cb1-7"></a>                         markers<span class="op">=</span>[<span class="st">"o"</span>, <span class="st">"s"</span>, <span class="st">"D"</span>], </span>
+<span id="cb1-8"><a href="#cb1-8"></a>                         palette<span class="op">=</span><span class="st">"Set2"</span>, </span>
+<span id="cb1-9"><a href="#cb1-9"></a>                         plot_kws<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.7</span>})</span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a>sns.move_legend(corr_plot, <span class="st">"lower center"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    bbox_to_anchor<span class="op">=</span>(<span class="fl">0.5</span>, <span class="dv">1</span>), ncol<span class="op">=</span><span class="dv">3</span>, title<span class="op">=</span><span class="va">None</span>, frameon<span class="op">=</span><span class="va">False</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="co"># Resize to fit</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>corr_plot.fig.set_size_inches(<span class="dv">10</span>, <span class="fl">5.5</span>)</span>
+<span id="cb1-17"><a href="#cb1-17"></a></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co"># Show the plot</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>corr_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="intro_to_ml_files/figure-html/corrplot-output-1.png" id="corrplot" class="quarto-figure quarto-figure-center anchored figure-img" width="994" height="586"></p>
+<p><img src="intro_to_ml_files/figure-html/corrplot-output-1.png" id="corrplot" class="quarto-figure quarto-figure-center anchored figure-img" width="838" height="586"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This plot offers a clear visualization of how different features are interrelated across the three iris species. Notice how, in various panels, each species tends to form its own distinct grouping, highlighting the separability of the data based on the selected features.</p>
+</section>
+<section id="reducing-dimentionality" class="level3">
+<h3 class="anchored" data-anchor-id="reducing-dimentionality">Reducing Dimentionality</h3>
+<p>Dimensionality reduction techniques, like Principal Component Analysis (PCA), help us simplify complex datasets. By translating our 4-dimensional data into two dimensions, we can better visualize the differences between species.</p>
+<p>Here, we can see how each species is relatively clustered when visualized with PCA.</p>
+<div id="bcf17861" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="fl">5.5</span>))</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a>df <span class="op">=</span> px.data.iris()</span>
+<span id="cb2-4"><a href="#cb2-4"></a>X <span class="op">=</span> df[[<span class="st">'sepal_length'</span>, <span class="st">'sepal_width'</span>, <span class="st">'petal_length'</span>, <span class="st">'petal_width'</span>]]</span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb2-7"><a href="#cb2-7"></a>components <span class="op">=</span> pca.fit_transform(X)</span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co"># Create a DataFrame with the PCA results</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>pca_df <span class="op">=</span> pd.DataFrame(data<span class="op">=</span>components, columns<span class="op">=</span>[<span class="st">'PCA1'</span>, <span class="st">'PCA2'</span>])</span>
+<span id="cb2-11"><a href="#cb2-11"></a>pca_df[<span class="st">'species'</span>] <span class="op">=</span> df[<span class="st">'species'</span>]</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="co"># Plot the PCA results</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>pca2d <span class="op">=</span> sns.scatterplot(data<span class="op">=</span>pca_df, x<span class="op">=</span><span class="st">'PCA1'</span>, y<span class="op">=</span><span class="st">'PCA2'</span>, hue<span class="op">=</span><span class="st">'species'</span>, palette<span class="op">=</span><span class="st">"Set2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="intro_to_ml_files/figure-html/cell-5-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="823" height="471"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="reducing-dimentionality" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="reducing-dimentionality">Reducing Dimentionality</h2>
-<p>We can use principle component analysis (PCA) to take our 4 dimensional data and translate it into two dimensions for better visualization!</p>
-<div id="5c77ead3" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> px.data.iris()</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df[[<span class="st">'sepal_length'</span>, <span class="st">'sepal_width'</span>, <span class="st">'petal_length'</span>, <span class="st">'petal_width'</span>]]</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>components <span class="op">=</span> pca.fit_transform(X)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DataFrame with the PCA results</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>pca_df <span class="op">=</span> pd.DataFrame(data<span class="op">=</span>components, columns<span class="op">=</span>[<span class="st">'PCA1'</span>, <span class="st">'PCA2'</span>])</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>pca_df[<span class="st">'species'</span>] <span class="op">=</span> df[<span class="st">'species'</span>]</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the PCA results</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>pca2d <span class="op">=</span> sns.scatterplot(data<span class="op">=</span>pca_df, x<span class="op">=</span><span class="st">'PCA1'</span>, y<span class="op">=</span><span class="st">'PCA2'</span>, hue<span class="op">=</span><span class="st">'species'</span>, palette<span class="op">=</span><span class="st">"Set2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="intro_to_ml_files/figure-html/cell-5-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="972" height="508"></p>
-</figure>
-</div>
-</div>
-</div>
 </section>
 <section id="seperating-our-dependent-and-independent-variables" class="level2">
 <h2 class="anchored" data-anchor-id="seperating-our-dependent-and-independent-variables">Seperating Our Dependent and Independent Variables</h2>
+<p>Next, let’s separate our dataset into independent (X/Input) and dependent (y/Output) variables. This is a crucial step before training our model, as it ensures that the model learns the relationships between the input features and the output labels without being biased by the answers themselves. We don’t want our model to use the labels (answers) during training, as that would defeat the purpose of learning from the data.</p>
+<p>Here, we take our original dataset of 150 observations, each with 4 features (petal &amp; sepal length and width), and split them into independent variables (X), which the model will use to make predictions, and dependent variables (y), which represent the correct species classification for each observation (labels). This separation is essential for supervised learning because it allows the model to understand how different combinations of features correspond to specific outcomes.</p>
 <div class="panel-center panel-grid">
 <div class="g-col-24 g-col-lg-20 g-start-lg-2">
-<div id="ind-dep1" class="cell panel-center output-style" data-execution_count="5">
+<div id="ind-dep1" class="cell panel-center" data-execution_count="5">
+<details class="code-fold">
+<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>X <span class="op">=</span> data.drop([<span class="st">'species_id'</span>, <span class="st">'species'</span>], axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb3-2"><a href="#cb3-2"></a>y <span class="op">=</span> data[<span class="st">'species'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </div>
 </div>
@@ -654,7 +662,6 @@ window.Quarto = {
 The target (y/dependent) variables are of shape: (150,)</code></pre>
 </div>
 </div>
-<div class="fragment fade-in">
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="panel-center panel-grid">
@@ -713,19 +720,19 @@ The target (y/dependent) variables are of shape: (150,)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">147</td>
+<td data-quarto-table-cell-role="th">111</td>
 <td>virginica</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">91</td>
+<td data-quarto-table-cell-role="th">74</td>
 <td>versicolor</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">40</td>
+<td data-quarto-table-cell-role="th">25</td>
 <td>setosa</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<td data-quarto-table-cell-role="th">43</td>
 <td>setosa</td>
 </tr>
 </tbody>
@@ -738,36 +745,33 @@ The target (y/dependent) variables are of shape: (150,)</code></pre>
 </div>
 </div>
 </div>
-</div>
 </section>
 <section id="train-test-split" class="level2">
 <h2 class="anchored" data-anchor-id="train-test-split">Train-Test Split</h2>
-<p>The classifier’s performance can become inflated if it trains on the same data it is tested with. This is called <span class="highlight1">data-leakage.</span></p>
-<div class="fragment fade-in">
-<p>We must split the data into <span class="highlight1">training and testing sets.</span></p>
+<p>The classifier’s performance can become inflated if it trains on the same data it is tested with, a problem known as <span class="highlight1">data leakage</span>. Data leakage occurs when the model has access to information it shouldn’t have during training, leading to overly optimistic performance metrics.</p>
+<p>To evaluate model performance accurately and avoid this issue, it’s essential to split the data into <span class="highlight1">training and testing sets</span>. The training set is used to teach the model, while the testing set is used to evaluate how well the model generalizes to <span class="highlight1">unseen data</span>.</p>
+<p>This step is crucial because it helps us understand how the model will perform in real-world scenarios, where it will encounter data it has never seen before.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/train-test-split-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<p>This allows us to test how good the model is at classifying <span class="highlight1">data it hasn’t seen before.</span></p>
-</div>
-</section>
-<section id="making-the-train-test-split" class="level2">
-<h2 class="anchored" data-anchor-id="making-the-train-test-split">Making the Train-Test Split</h2>
+<section id="making-the-train-test-split" class="level3">
+<h3 class="anchored" data-anchor-id="making-the-train-test-split">Making the Train-Test Split</h3>
+<p>Let’s proceed with the train-test split, keeping 30% of the data for testing and ensuring the class distribution remains consistent through <span class="highlight1">stratification</span>. - <strong>Test size</strong>: 30% of the data is reserved for testing the model. - <strong>Stratify</strong>: Preserves the class ratios (33% of each iris species).</p>
 <div id="train-test-split1" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, </span>
-<span id="cb5-2"><a href="#cb5-2"></a>                                                        test_size<span class="op">=</span><span class="fl">0.3</span>,</span>
-<span id="cb5-3"><a href="#cb5-3"></a>                                                        stratify<span class="op">=</span>y,</span>
-<span id="cb5-4"><a href="#cb5-4"></a>                                                        random_state<span class="op">=</span><span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, <span class="co"># Input our seperated X and y data</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>                                                    test_size<span class="op">=</span><span class="fl">0.3</span>, <span class="co"># Select the test size of 30%</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>                                                    stratify<span class="op">=</span>y, <span class="co"># Stratify the split by y (species/dependent)</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>                                                    random_state<span class="op">=</span><span class="dv">42</span>) <span class="co"># Select a random state for reproducability</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="fragment fade-in">
+<p>This outputs:</p>
 <ul>
-<li><strong>Test size</strong>: 30% is kept to validate the trained model</li>
-<li><strong>Stratify</strong>: Preserves the class ratios (33% of each iris species)</li>
+<li><code>X_train</code>: 70% of our independent data (petal &amp; sepal length and width)</li>
+<li><code>y_train</code>: 70% of our dependent data (species)</li>
+<li><code>X_test</code>: 30% of our independent data (petal &amp; sepal length and width)</li>
+<li><code>y_test</code>: 30% of our dependent data (species)</li>
 </ul>
-</div>
-<div class="fragment fade-in">
 <div class="panel-center panel-grid">
 <div class="g-col-24 g-col-lg-20 g-start-lg-2">
 <div id="train-test-split2" class="cell panel-center output-style3" data-execution_count="10">
@@ -781,44 +785,47 @@ y_test shape is: (45,)</code></pre>
 </div>
 </div>
 </div>
-</div>
 </section>
-<section id="why-is-stratification-important" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="why-is-stratification-important">Why is Stratification Important?</h2>
-<p>If data is not stratified, the model may focus on more prevalent classes, leading to <span class="highlight1">biased performance and poor accuracy on underrepresented classes.</span></p>
+</section>
+<section id="why-is-stratification-important" class="level2">
+<h2 class="anchored" data-anchor-id="why-is-stratification-important">Why is Stratification Important?</h2>
+<p>Stratification is crucial because it ensures that each class is proportionally represented in both the training and testing sets.</p>
+<p>Without stratification, the model might over-focus on more prevalent classes, leading to <span class="highlight1">biased performance and poor accuracy on underrepresented classes</span>.</p>
 <div class="panel-center panel-grid">
 <div class="g-col-24 g-col-lg-20 g-start-lg-2">
 <div id="cell-Stratifcation" class="cell panel-center" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="intro_to_ml_files/figure-html/stratifcation-output-1.png" id="stratifcation" width="1141" height="468" class="figure-img"></p>
+<p><img src="intro_to_ml_files/figure-html/stratifcation-output-1.png" id="stratifcation" width="733" height="372" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
 </div>
+<p>Here, we can visualize the difference between an unstratified and a stratified train-test split. If we were to train our model on the unstratified data, it would have less data on Iris Setosa to train with and more to test with, leading to an imbalance. This imbalance could cause the model to perform well on certain classes while underperforming on others, resulting in biased predictions. By using stratification, we ensure that each class is adequately represented in both the training and testing sets, leading to a more balanced and fair evaluation of the model’s performance.</p>
 </section>
 <section id="training-the-models" class="level2">
 <h2 class="anchored" data-anchor-id="training-the-models">Training the Models!</h2>
+<p>Now that our data is ready, let’s train several supervised machine learning models and evaluate their performance. We’ll be using the <a href="https://scikit-learn.org/stable/index.html">scikit-learn Python library</a>, which provides a wide range of tools for building and evaluating models. For a complete list of all the supervised models that scikit-learn supports, <a href="https://scikit-learn.org/stable/supervised_learning.html">click here</a>.</p>
 <div id="model-training" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Instantiate the classifiers</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>classifiers <span class="op">=</span> [</span>
-<span id="cb7-3"><a href="#cb7-3"></a>    SVC(kernel<span class="op">=</span><span class="st">'linear'</span>, random_state<span class="op">=</span><span class="dv">42</span>),</span>
-<span id="cb7-4"><a href="#cb7-4"></a>    SVC(kernel<span class="op">=</span><span class="st">'rbf'</span>, random_state<span class="op">=</span><span class="dv">42</span>),</span>
-<span id="cb7-5"><a href="#cb7-5"></a>    DecisionTreeClassifier(random_state<span class="op">=</span><span class="dv">42</span>),</span>
-<span id="cb7-6"><a href="#cb7-6"></a>    RandomForestClassifier(random_state<span class="op">=</span><span class="dv">42</span>),</span>
-<span id="cb7-7"><a href="#cb7-7"></a>    KNeighborsClassifier(),</span>
-<span id="cb7-8"><a href="#cb7-8"></a>    LogisticRegression(random_state<span class="op">=</span><span class="dv">42</span>, max_iter<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb7-2"><a href="#cb7-2"></a>classifiers <span class="op">=</span> [                                     <span class="co"># Makes a list of classifier objects:</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>    SVC(kernel<span class="op">=</span><span class="st">'linear'</span>, random_state<span class="op">=</span><span class="dv">42</span>),             <span class="co"># Linear Support-Vector Machine (SVM)</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>    SVC(kernel<span class="op">=</span><span class="st">'rbf'</span>, random_state<span class="op">=</span><span class="dv">42</span>),                <span class="co"># RBF Support-Vector Machine (SVM)</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>    DecisionTreeClassifier(random_state<span class="op">=</span><span class="dv">42</span>),           <span class="co"># Decision Tree </span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>    RandomForestClassifier(random_state<span class="op">=</span><span class="dv">42</span>),           <span class="co"># Random Forest </span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>    KNeighborsClassifier(),                            <span class="co"># K-nearest Neighbours </span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>    LogisticRegression(random_state<span class="op">=</span><span class="dv">42</span>, max_iter<span class="op">=</span><span class="dv">1000</span>) <span class="co"># Logistic Regression</span></span>
 <span id="cb7-9"><a href="#cb7-9"></a>]</span>
 <span id="cb7-10"><a href="#cb7-10"></a></span>
 <span id="cb7-11"><a href="#cb7-11"></a><span class="co"># Train the classifiers</span></span>
-<span id="cb7-12"><a href="#cb7-12"></a><span class="cf">for</span> clf <span class="kw">in</span> classifiers:</span>
-<span id="cb7-13"><a href="#cb7-13"></a>    clf.fit(X_train, y_train)</span>
-<span id="cb7-14"><a href="#cb7-14"></a>    y_pred <span class="op">=</span> clf.predict(X_test)</span>
-<span id="cb7-15"><a href="#cb7-15"></a>    accuracy <span class="op">=</span> accuracy_score(y_test, y_pred)</span>
-<span id="cb7-16"><a href="#cb7-16"></a>    <span class="bu">print</span>(<span class="ss">f"Accuracy of </span><span class="sc">{</span>clf<span class="sc">.</span>__class__<span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>accuracy<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="cf">for</span> clf <span class="kw">in</span> classifiers:          <span class="co"># Loop iterates through the list of classifiers</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a>    clf.fit(X_train, y_train)    <span class="co"># Trains with the X (input) and Y (output) training data</span></span>
+<span id="cb7-14"><a href="#cb7-14"></a>    y_pred <span class="op">=</span> clf.predict(X_test) <span class="co"># Fits the X test data; trained model returns predictions</span></span>
+<span id="cb7-15"><a href="#cb7-15"></a>    accuracy <span class="op">=</span> accuracy_score(y_test, y_pred) <span class="co"># Calculates accuracy of the model</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a>    <span class="bu">print</span>(<span class="ss">f"Accuracy of </span><span class="sc">{</span>clf<span class="sc">.</span>__class__<span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>accuracy<span class="sc">:.2f}</span><span class="ss">"</span>) <span class="co"># Prints the accuracy score</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy of SVC: 1.00
 Accuracy of SVC: 0.96
@@ -828,9 +835,13 @@ Accuracy of KNeighborsClassifier: 0.98
 Accuracy of LogisticRegression: 0.93</code></pre>
 </div>
 </div>
+<p>Here, we get accuracy scores ranging from around 0.90 to 1.00 for each classifier. But what does this mean? That’s a great question! We’ll dive into the significance of these accuracy scores and how to properly evaluate the performance of machine learning models in the next section.</p>
 </section>
 <section id="visualizing-machine-learning" class="level2">
 <h2 class="anchored" data-anchor-id="visualizing-machine-learning">Visualizing Machine Learning!</h2>
+<p>Let’s take a closer look at how well the trained models differentiate between the different iris species by visualizing their decision boundaries.</p>
+<p>To make this possible, I applied Principal Component Analysis (PCA) to reduce our 4-dimensional data into 2 dimensions before training the models. This dimensionality reduction allows us to clearly visualize the decision boundaries each model establishes.</p>
+<p>In the visualization, you can observe how each model draws boundaries that separate the iris species into distinct regions. For instance, if a new data point —say, an Iris Setosa— falls within the blue region, the model predicts that this iris is indeed an Iris Setosa. This approach helps us understand how the models make predictions based on the learned patterns in the data. However, if an Iris Virginica were incorrectly placed in another region, it would result in a misclassification. Such errors could prompt the machine learning model to adjust and refine its decision boundaries to improve accuracy.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/combined_PCA_decision_boundaries_with_accuracy2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
@@ -839,86 +850,98 @@ Accuracy of LogisticRegression: 0.93</code></pre>
 </section>
 <section id="evaluating-model-performance" class="level2">
 <h2 class="anchored" data-anchor-id="evaluating-model-performance">Evaluating Model Performance</h2>
-<p><br></p>
-<p>There are many potential evaluation metrics, but <span class="highlight1">Accuracy</span> is the most common.</p>
-<div class="fragment fade-in">
-<p><span class="math display">\[
+<section id="accuracy-score" class="level3">
+<h3 class="anchored" data-anchor-id="accuracy-score">Accuracy Score</h3>
+<p>Evaluation metrics are crucial for understanding how well your model is performing. The most commonly used metric is <span class="highlight1">Accuracy</span>, which is defined as the number of correct predictions over the total number of predictions: <span class="math display">\[
 \text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}
 \]</span></p>
-<p>Accuracy is usually fine - there are some casses when it’s not great.</p>
+<p>Do you recall the accuracy scores of the models we trained earlier? Since we tested each trained model on 45 unseen cases (the testing set), we can evaluate how well each model performed!</p>
+<details>
+<summary>
+<span class="dropdown1"> Click Here if You Forgot! </span>
+</summary>
+<div id="print-accuracy-scores" class="cell" data-execution_count="14">
+<div class="cell-output cell-output-stdout">
+<pre><code>Accuracy of SVC: 1.00
+Accuracy of SVC: 0.96
+Accuracy of DecisionTreeClassifier: 0.93
+Accuracy of RandomForestClassifier: 0.89
+Accuracy of KNeighborsClassifier: 0.98
+Accuracy of LogisticRegression: 0.93</code></pre>
 </div>
-</section>
-<section id="evaluating-model-performance-1" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="evaluating-model-performance-1">Evaluating Model Performance</h2>
-<div class="fragment fade-in">
-<p><span class="math display">\[
-\scriptsize{\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}}
+</div>
+</details>
+<p>For example, the Support Vector Classifier (SVC) had an accuracy of 1.00, meaning it correctly classified all 45 test inputs. On the other hand, the Random Forest Classifier had an accuracy score of 0.89. If we do some math, we can calculate the exact number of correctly classified cases for the Random Forest model: <span class="math display">\[
+\text{Number of Correct Predictions} = \text{Accuracy} \times \text{Total Number of Test Cases}
 \]</span></p>
-</div>
+<p><span class="math display">\[
+\text{Number of Correct Predictions} = 0.89 \times 45 \approx 40
+\]</span></p>
+<p>This means that out of 45 test cases, the Random Forest Classifier correctly classified 40 of them, with the remaining 5 cases being misclassified—which is still quite good!</p>
+</section>
+<section id="confusion-matrices" class="level3">
+<h3 class="anchored" data-anchor-id="confusion-matrices">Confusion Matrices</h3>
+<p>A <span class="highlight1">confusion matrix</span> is an excellent tool for visualizing your model’s performance by providing a detailed breakdown of its predictions. Each row of the matrix represents the actual class, while each column represents the predicted class. The diagonal elements show correct predictions, while off-diagonal elements indicate misclassifications. Unlike accuracy alone, a confusion matrix shows how well your model distinguishes between different classes by displaying the counts of true positives, true negatives, false positives, and false negatives.</p>
+<details>
+<summary>
+<span class="dropdown1"> Click Here for a Breakdown of Error Types </span>
+</summary>
+<ul>
+<li><strong>True Positives (TP):</strong> These are cases where the model correctly predicted the positive class. For example, if the model predicts “Iris Setosa” and it’s actually “Iris Setosa,” that’s a true positive.</li>
+<li><strong>True Negatives (TN):</strong> These are cases where the model correctly predicted the negative class. For example, if the model predicts “Not Iris Setosa” and it’s indeed not “Iris Setosa,” that’s a true negative.</li>
+<li><strong>False Positives (FP):</strong> Also known as Type I errors, these occur when the model incorrectly predicts the positive class. For instance, if the model predicts “Iris Setosa” when it’s actually a different species, that’s a false positive.</li>
+<li><strong>False Negatives (FN):</strong> Also known as Type II errors, these occur when the model incorrectly predicts the negative class. For example, if the model fails to predict “Iris Setosa” and instead predicts another species when it is actually “Iris Setosa,” that’s a false negative.</li>
+</ul>
+This detailed breakdown is crucial for understanding the types of errors your model is making. In the context of a BCI-controlled wheelchair, false negatives could mean failing to detect the user’s command to move, which might be more critical than a false positive. For example, if the system fails to recognize a user’s intention to move the wheelchair forward, it could leave the user stranded or unable to navigate effectively. On the other hand, a false positive might cause the wheelchair to move unintentionally, which could be disorienting or even dangerous, depending on the situation.
+</details>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img src="images/Linear_SVM_CM.png" class="img-fluid"></p>
-<div class="fragment fade-in">
 <p>45 Correct Predictions / 45 Total Prediction = 1.00</p>
-</div>
 </div><div class="column" style="width:50%;">
-<div class="fragment fade-in">
 <p><img src="images/DecisionTree_CM.png" class="img-fluid"></p>
-</div>
-<div class="fragment fade-in">
 <p>43 Correct Predictions / 45 Total Prediction = 0.95</p>
 </div>
 </div>
-</div>
+<p>For example, in the case of the Iris dataset, the confusion matrix reveals not just the overall accuracy but also whether your model is prone to specific errors, such as predicting one species of iris when it’s actually another (false positives) or failing to correctly identify a species when it’s present (false negatives). This detailed view helps you understand how well your model distinguishes between the three iris species—Setosa, Versicolor, and Virginica.</p>
+<p>This level of detail is particularly valuable when dealing with imbalanced datasets, where one class may be much more prevalent than the other. In such cases, a high accuracy might be misleading, while the confusion matrix reveals the true performance of your model across all classes.</p>
+<p>By analyzing the confusion matrix, you can gain deeper insights into the strengths and weaknesses of your model, guiding you toward improvements, such as tweaking the model, adjusting thresholds, or selecting different metrics like Precision, Recall, or F1 Score for a more comprehensive evaluation.</p>
+<p>Overall, accuracy is a valuable metric for evaluating how well your model predicts or classifies data. It can also provide guidance on which model may work best for your specific dataset. However, while accuracy is useful, it’s not always the best metric, especially in cases where the classes are imbalanced.</p>
 </section>
-<section id="when-is-accuracy-sub-optimal" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="when-is-accuracy-sub-optimal">When is Accuracy Sub-optimal?</h2>
-<p><br></p>
-<p>If you have an <span class="highlight1">imbalanced classes</span> in your data, accuracy can be misleading.</p>
+</section>
+<section id="when-is-accuracy-sub-optimal" class="level2">
+<h2 class="anchored" data-anchor-id="when-is-accuracy-sub-optimal">When is Accuracy Sub-optimal?</h2>
+<p>In cases of <span class="highlight1">imbalanced classes</span>, accuracy can be misleading. Let’s explore why this is the case.</p>
+<p>Imagine we have a trained model that we want to test with new data. Suppose this new dataset has 100 observations: 80 are of Iris Setosa, and 20 are of Iris Versicolor.</p>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/imbalanced-dataset2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
+</div><div class="column" style="width:5%;">
+
 </div><div class="column" style="width:50%;">
-<p>Say there are 100 observations: 80 Setosa, and 20 Versicolor.</p>
-<div class="fragment fade-in">
 <p>If the classifier predicted ‘Setosa’ for all 100 observations, what would the accuracy be?</p>
 <p><span class="math display">\[
 \scriptsize{\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}}
 \]</span></p>
-</div>
-<div class="fragment fade-in">
 <p>80 Correct Predictions / 100 Total Predictions = 0.80</p>
-<ul>
-<li>Metrics like F1 score, Precision, &amp; Recall(sensitivity) can give a more informative picture</li>
-</ul>
+<p>So, even though the accuracy score is a respectable 80%, the model isn’t actually distinguishing between the two classes at all!</p>
 </div>
 </div>
-</div>
+<p>In situations where there is an imbalance of classes, accuracy does not provide a fully informative picture of the model’s performance, as illustrated in the example above. Metrics like F1 Score, Precision, and Recall (Sensitivity) can offer a more comprehensive assessment by considering the balance between different types of errors.</p>
 </section>
 <section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary:</h2>
-<p><br></p>
-<div class="incremental">
-<ul class="incremental">
-<li>Labelled data (used in supervised ML) is particularly powerful for classification tasks</li>
-<li>Choosing informative features is critical</li>
-<li>Train-test-split is important to avoid data-leakage</li>
-<li>Stratification of classes avoids inflated performance</li>
-<li>Accuracy is great unless you have unbalanced classes</li>
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li><strong>Labeled Data:</strong> Supervised machine learning relies on labeled data, which is particularly effective for classification tasks, allowing models to learn and make accurate predictions.</li>
+<li><strong>Feature Selection:</strong> Choosing the right features is crucial for model success. Informative and discriminative features help the model make reliable predictions.</li>
+<li><strong>Train-Test Split:</strong> Splitting your data into training and testing sets is essential to prevent data leakage and ensure that your model’s performance is evaluated on unseen data.</li>
+<li><strong>Stratification:</strong> Stratifying your data during the train-test split ensures that each class is proportionally represented, leading to more balanced and accurate model evaluations.</li>
+<li><strong>Accuracy as a Metric:</strong> While accuracy is a valuable metric, it may not always be sufficient, particularly in cases of imbalanced classes. Complementary metrics like F1 Score, Precision, and Recall provide a more comprehensive assessment of model performance.</li>
 </ul>
-</div>
-</section>
-<section id="thanks-for-listening" class="level2 center-h2">
-<h2 class="center-h2 anchored" data-anchor-id="thanks-for-listening">Thanks for Listening</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://gifdb.com/images/high/thank-you-emoji-giving-two-thumbs-ups-6ud8p4up69m7w8tz.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
 
 
 </section>

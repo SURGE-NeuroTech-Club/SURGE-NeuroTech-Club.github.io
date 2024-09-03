@@ -1,13 +1,12 @@
 ---
 title: "Introduction to GitHub"
+abstract: "This guide will give you a basic introduction to GitHub and how to effectively use it!"
 image: images/intro-to-git.webp
 format: 
     html:
         toc: true
         link-external-newwindow: true
 ---
-
-This guide will give you a basic introduction to GitHub and how to effectively use it!
 
 ## What is GitHub?
 

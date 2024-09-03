@@ -1,13 +1,15 @@
 ---
-title: "Introduction to Machine Learning"
+title: "A Beginner's Guide to Machine Learning Concepts and Applications"
+abstract: "This tutorial introduces the fundamentals of machine learning, covering key concepts such as supervised and unsupervised learning, data labeling, and model evaluation."
 image: images/intro-to-ml.webp
 format: 
     html:
+        code-line-numbers: true
         toc: true
         link-external-newwindow: true
+execute: 
+    freeze: auto
 ---
-
-This introductory tutorial will take you through some of the basics of what machine learning is and how it works!
 
 ```{python}
 #| label: Python Setup
@@ -49,200 +51,186 @@ from mlxtend.plotting import plot_decision_regions
 
 ```
 
-## What is Machine Learning? {.center-h2}
+## What is Machine Learning?
 
-<br> <br>
+Machine learning is a subset of artificial intelligence where computers use data to identify patterns and make predictions. These models improve over time by learning from new data and experiences.
 
-::: {.fragment .fade-in}
-A type of artificial intelligence where computers learn to [make predictions by recognizing patterns]{.highlight1} in data. It improves over time by continuously learning from new data and experiences.
+Machine learning algorithms work by identifying patterns in the data, specifically between the independent variables (features, often represented as X) and the dependent variables (targets, often represented as Y). These patterns enable the model to make predictions or classifications based on new, unseen data.
+
+## Labeled & Unlabeled Data
+
+Before we get into machine learning, we need to talk about data. Data is the foundation of all machine learning—without it, we wouldn't be able to train the models! There are two broad categories of data used in machine learning: labeled and unlabeled data.
+
+Labeled data contains both the input and the corresponding correct output/target or dependent measure. In this example, we can see two types of labeled data—one labeled with "cat/dog" and another labeled with "weight." In each case, the model would be trained to predict whether the input was a cat or a dog, or to estimate the weight, depending on the label provided. Unlabeled data only contains the input, leaving the model to identify patterns without guidance.
+
+![](images/labelled-unlabeled.png){width="60%" fig-align="center"}
+
+## Two Category of Machine Learning
+
+Machine learning can be broadly divided into two primary categories: supervised and unsupervised learning. Each approach has its own strengths and limitations, making them suitable for different types of tasks.
+
+::::::: columns
+:::: {.column width="50%"}
+::: {style="text-align: center;"}
+#### Supervised Learning
 :::
-
-# How Does Machine Learning Work? {style="text-align: center"}
-
-## 1. A Decision Process:
-
-<br> <br>
-
-In general, machine learning algorithms are used to make a [prediction or classification]{.highlight1}. Based on some input data. The algorithm will produce an [estimate about a pattern]{.highlight1} in the data.
-
-::: aside
-[UC Berkeley School of Information](https://ischoolonline.berkeley.edu/blog/what-is-machine-learning/)
-:::
-
-## 2. An Error Function:
-
-<br> <br>
-
-An error function [evaluates the prediction]{.highlight1} of the model. If there are known examples, an error function can make a comparison to assess the performance of the model.
-
-::: aside
-[UC Berkeley School of Information](https://ischoolonline.berkeley.edu/blog/what-is-machine-learning/)
-:::
-
-## 3. A Model Optimization Process:
-
-<br> <br>
-
-When the model does a good job of matching the training data, it tweaks its settings to get better at classifying the actual data. This process of [“evaluate and optimize”]{.highlight1} happens over and over again, allowing the model to adjust itself automatically.
-
-::: aside
-[UC Berkeley School of Information](https://ischoolonline.berkeley.edu/blog/what-is-machine-learning/)
-:::
-
-## (Major) Types of ML {.center-h2}
-
-<br>
-
-::::: columns
-::: {.column .fragment .fade-in width="50%"}
-### Supervised Learning {style="text-align: center"}
-
--   Uses [labelled]{.highlight1} training data
+-   Uses [labeled]{.highlight1} training data
 -   Majority of machine learning applications
+-   Commonly used for tasks like [classification]{.highligh1} and regression
+::::
+
+:::: {.column width="50%"}
+::: {style="text-align: center;"}
+#### Unsupervised Learning
+:::
+-   Uses [unlabeled]{.highlight1} training data
+-   Less common but powerful for exploratory analysis
+-   Often used for clustering, content personalization, and dimensionality reduction
+::::
+:::::::
+
+::: {style="text-align: center; text-decoration: underline;"}
+### Supervised Machine Learning 
 :::
 
-::: {.column .fragment .fade-in width="50%"}
-### Unsupervised Learning {style="text-align: center"}
+Supervised machine learning involves training models on labeled data, where the goal is often to make predictions or classifications based on new, unseen data.
 
--   Uses [unlabelled]{.highlight1} training data
--   Relatively uncommon
--   Most often used for content personalization
+::::::: columns
+:::: {.column width="50%"}
+::: {style="text-align: center;"}
+#### Pros
 :::
-:::::
-
-## Labelled & Unlabelled Data
-
-<br>
-
-Labelled data is tagged with the target (dependent) measure - [It comes with the answer]{.highlight1}
-
-![](/images/labelled-unlabeled.png){fig-align="center"}
-
-## Supervised Machine Learning {.center-h2}
-
-::::: columns
-::: {.column width="50%"}
-### Pros {style="text-align: center"}
-
 -   High accuracy
     -   Ability to learn from known examples
 -   Excellent predictive power
-    -   Classifying new data based on historical data
-:::
+    -   Effective at classifying new data based on historical patterns
+::::
 
-::: {.column width="50%"}
-### Cons {style="text-align: center"}
-
--   Requires labelled data
-    -   Time consuming & expensive
--   Overfitting
-    -   Model can become too specific to trainig data
+:::: {.column width="50%"}
+::: {style="text-align: center;"}
+#### Cons
 :::
-:::::
+-   Requires labeled data
+    -   Time-consuming and expensive to obtain
+-   Risk of overfitting
+    -   Models may become too tailored to the training data
+::::
+:::::::
 
 [Common Algorithms: Linear/Logistic Regression, Support Vector Machines, Decision Trees, K-nearest neighbours]{.footer-font}
 
-## Unsupervised Machine Learning {.center-h2}
-
-::::: columns
-::: {.column width="50%"}
-### Pros {style="text-align: center"}
-
--   Data exploration
-    -   Discovering hidden patterns in data
--   Dimensionality reduction
-    -   Simplifying complex datasets
+::: {style="text-align: center; text-decoration: underline;"}
+### Unsupervised Machine Learning
 :::
 
-::: {.column width="50%"}
-### Cons {style="text-align: center"}
+Unsupervised learning involves using algorithms to analyze and cluster unlabeled data, discovering hidden patterns without predefined labels.
 
--   Worse interpretability
-    -   No guidance for understanding patterns
--   Model evaluation
-    -   Assessing quality without labels or metrics
+::::::: columns
+:::: {.column width="50%"}
+::: {style="text-align: center;"}
+#### Pros
 :::
-:::::
+- Powerful for data exploration
+  - Uncovers hidden structures and patterns in data
+- Useful for dimensionality reduction
+  - Simplifies complex datasets, making them easier to visualize and interpret
+::::
 
-[Common Algorithms: Principle component analysis, K-means clustering, t-Distributed Stochastic Neighbor Embedding]{.footer-font}
+:::: {.column width="50%"}
+::: {style="text-align: center;"}
+#### Cons
+:::
+- Lower interpretability
+  - Patterns and structures are harder to understand without labels
+- Challenging model evaluation
+  - Difficult to assess model quality without clear metrics
+::::
+:::::::
+
+[Common Algorithms: Principal Component Analysis (PCA), K-Means Clustering, t-Distributed Stochastic Neighbor Embedding (t-SNE)]{.footer-font}
+
+# How Does Machine Learning Work?
+
+The [UC Berkeley School of Information](https://ischoolonline.berkeley.edu/blog/what-is-machine-learning/) has defined 3 components of most supervised machine learning algorithms.
+
+## 1. A Decision Process:
+
+In general, machine learning algorithms are used to make a [prediction or classification]{.highlight1}. Based on some input data. The algorithm will produce an [estimate about a pattern]{.highlight1} in the data.
+
+## 2. An Error Function:
+
+An error function [evaluates the prediction]{.highlight1} of the model. If there are known examples, an error function can make a comparison to assess the performance of the model.
+
+## 3. A Model Optimization Process:
+
+When the model does a good job of matching the training data, it tweaks its settings to get better at classifying the actual data. This process of [“evaluate and optimize”]{.highlight1} happens over and over again, allowing the model to adjust itself automatically.
 
 # Mini Tutorial with the Iris Dataset!
 
+Let's dive into a hands-on example using the famous Iris dataset. This classic dataset is perfect for illustrating basic machine learning concepts.
+
 ## Human Classification Exercise
 
-Fun Fact: You can find wild irises in NS!
+Before we get into the technical details, let's start with a quick exercise. A while ago, I was hiking in Duncan's Cove and came across some irises. I used an app called "Seek," which leverages machine learning to identify species using your phone's camera. Curious to see how well it worked, I tested it on an iris I found. But before I reveal the app's result, I want you to take a look for yourself!
 
-![Irises Found at Duncan's Cove](images/duncans_iris.jpg){fig-align="center"}
+### What do you think?
 
-## What do you think?
-
-<br>
+Take a moment to compare the iris on the left with the Northern Blue Flag iris (middle) and the Beach Head iris (right). Which one do you think it resembles more? Consider what influenced your decision—was it the shape, color, or perhaps some other feature?
 
 ::::: {layout="[1,1,1]"}
-![My Picture from Duncan's Cove](images/duncans_iris_zoom.jpg)
+![My Picture from Duncan's Cove](images/duncans_iris_zoom.jpg){width=300 height=250}
 
-::: {.fragment .fade-in}
-!["Northern Blue Flag" - Versicolor](images/northern%20blue%20flag%20(Iris%20versicolor)_files2.jpg)
-:::
+!["Northern Blue Flag" - Versicolor](images/northern%20blue%20flag%20(Iris%20versicolor)_files2.jpg){width=300 height=250}
 
-::: {.fragment .fade-in}
-!["Beach-Head" - Setosa](images/Beach-head%20Iris%20(iris%20setosa)2.jpeg)
-:::
+!["Beach-Head" - Setosa](images/Beach-head%20Iris%20(iris%20setosa)2.jpeg){width=300 height=250}
 :::::
 
-## Real-world Example
 
-![](images/seek_inaturalist.png){fig-align="center"}
+### Misclassification?
 
-Seek is an app that uses image recognition to predict species of animals, plants, fungi, insects - you name it!
+Interestingly, the Seek App identified the iris I found as a Versicolor, but two experts later claimed it was a Setosa. This discrepancy highlights a critical aspect of machine learning: the [selection of features]{.highlight1}.
 
-## Misclassification?
-
-The Seek App determined that the iris I found was Versicolor, but two experts claimed it was a Setosa
-
-![](images/inaturalist_pic.PNG){fig-align="center"}
+![](images/inaturalist_pic.PNG){width="60%" fig-align="center"}
 
 ## Choosing (the right) Features is Important!
 
-<br>
+A [feature]{.highlight1} is "an individual measurable property or characteristic of a phenomenon".[^1] In the context of machine learning, selecting the right features is critical to the success of your model.
 
-[Feature:]{.highlight1} "An individual measurable property or characteristic of a phenomenon"[^1]
+Using informative, discriminative, and independent features is essential for building effective classification algorithms. The features you choose can significantly influence the model’s ability to learn accurately from the data and make reliable predictions. In the case of our iris example, perhaps the app's algorithm relied on certain features that led it to misclassify the species.
 
 [^1]: [Bishop, Christopher (2006). *Pattern recognition and machine learning*](https://en.wikipedia.org/wiki/Feature_(machine_learning)#cite_note-ml-1)
 
-<br>
-
-::: {.fragment .fade-in}
-Using informative, discriminating and independent features is a crucial element of effective classification algorithms.
-:::
-
 ## The Iris Dataset
 
-Three types of iris: Setosa, Versicolor, & Virginica
+The Iris dataset is a classic example used in machine learning, containing three types of iris flowers: Setosa, Versicolor, and Virginica.
 
-![](images/iris_ex.png){fig-align="center"}
+![](images/iris_ex.png){width="85%" fig-align="center"}
 
-The type can be determined by combination of [Petal & Sepal Width & Length]{.highlight1}
+The species of each iris can be determined by a combination of features, specifically the [petal and sepal width and length]{.highlight1}.
 
 ## Taking Another Look
 
-Do you think that the Seek AI may have used some other feature, causing it to make an incorrect classification?
+Given the features we’ve discussed, do you think the Seek AI might have relied on different features or interpreted them differently, leading to the incorrect classification?
 
-::: {layout="[1,1,1]"}
-![Duncan's Cove](images/duncans_iris_zoom.jpg)
+::::: {layout="[1,1,1]"}
+![My Picture from Duncan's Cove](images/duncans_iris_zoom.jpg){width=300 height=250}
 
-!["Northern Blue Flag" - Versicolor](images/northern%20blue%20flag%20(Iris%20versicolor)_files2.jpg)
+!["Northern Blue Flag" - Versicolor](images/northern%20blue%20flag%20(Iris%20versicolor)_files2.jpg){width=300 height=250}
 
-!["Beach-Head" - Setosa](images/Beach-head%20Iris%20(iris%20setosa)2.jpeg)
-:::
+!["Beach-Head" - Setosa](images/Beach-head%20Iris%20(iris%20setosa)2.jpeg){width=300 height=250}
+:::::
 
-## Let's Look At The Dataset!
+## Let's Explore the Dataset!
+
+To better understand how machine learning models work, let’s take a closer look at the Iris dataset.
 
 :::::: columns
 ::: {.column width="50%"}
 ```{python}
 #| label: Iris-dataset
 #| echo: false
+#| code-fold: true
+#| code-summary: "Show the code"
 
 data = px.data.iris()
 columns_df = pd.DataFrame(data.iloc[:, 0:5].columns, columns=['Variables'])
@@ -265,37 +253,51 @@ columns_df
 ::::
 ::::::
 
-## Visualizing the Raw Data
+### Visualizing the Raw Data
+
+To start, let’s visualize the raw data from the Iris dataset to better understand the relationships between different features.
 
 ```{python}
 #| label: CorrPlot
 #| fig-align: 'center'
+#| code-fold: true
+#| code-summary: "Show the code"
 
-# sns.set(style="ticks", context="talk")
 plt.style.use("dark_background")
 
 # Making a correlation plot of all variables except 'Id'
-corr_plot = sns.pairplot(data.iloc[:, 0:5], kind="scatter", hue="species", markers=["o", "s", "D"], palette="Set2", plot_kws={'alpha': 0.7})
+corr_plot = sns.pairplot(data.iloc[:, 0:5], 
+                         kind="scatter", 
+                         hue="species", 
+                         markers=["o", "s", "D"], 
+                         palette="Set2", 
+                         plot_kws={'alpha': 0.7})
 
 sns.move_legend(corr_plot, "lower center",
     bbox_to_anchor=(0.5, 1), ncol=3, title=None, frameon=False
 )
 
 # Resize to fit
-corr_plot.fig.set_size_inches(12, 5.5)
+corr_plot.fig.set_size_inches(10, 5.5)
 
 # Show the plot
 corr_plot
 ```
 
-## Reducing Dimentionality {.smaller}
+This plot offers a clear visualization of how different features are interrelated across the three iris species. Notice how, in various panels, each species tends to form its own distinct grouping, highlighting the separability of the data based on the selected features.
 
-We can use principle component analysis (PCA) to take our 4 dimensional data and translate it into two dimensions for better visualization!
+### Reducing Dimentionality
+
+Dimensionality reduction techniques, like Principal Component Analysis (PCA), help us simplify complex datasets. By translating our 4-dimensional data into two dimensions, we can better visualize the differences between species.
+
+Here, we can see how each species is relatively clustered when visualized with PCA.
 
 ```{python}
 #| fig-align: center
+#| code-fold: true
+#| code-summary: "Show the code"
 
-plt.figure(figsize=(12, 6))
+plt.figure(figsize=(10, 5.5))
 
 df = px.data.iris()
 X = df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']]
@@ -313,12 +315,16 @@ pca2d = sns.scatterplot(data=pca_df, x='PCA1', y='PCA2', hue='species', palette=
 
 ## Seperating Our Dependent and Independent Variables
 
+Next, let’s separate our dataset into independent (X/Input) and dependent (y/Output) variables. This is a crucial step before training our model, as it ensures that the model learns the relationships between the input features and the output labels without being biased by the answers themselves. We don’t want our model to use the labels (answers) during training, as that would defeat the purpose of learning from the data.
+
+Here, we take our original dataset of 150 observations, each with 4 features (petal & sepal length and width), and split them into independent variables (X), which the model will use to make predictions, and dependent variables (y), which represent the correct species classification for each observation (labels). This separation is essential for supervised learning because it allows the model to understand how different combinations of features correspond to specific outcomes.
+
 ```{python}
 #| label: Ind-Dep1
 #| panel: center
 #| echo: true
-#| class: output-style
-#| code-line-numbers: "1,2"
+#| code-fold: true
+#| code-summary: "Show the code"
 
 X = data.drop(['species_id', 'species'], axis=1)
 y = data['species']
@@ -333,7 +339,6 @@ print(f'The feature (X/independent) variables are of shape: {X.shape}')
 print(f'The target (y/dependent) variables are of shape: {y.shape}')
 ```
 
-:::::: {.fragment .fade-in}
 ::::: columns
 ::: {.column width="50%"}
 ```{python}
@@ -363,39 +368,40 @@ y_sample
 ```
 :::
 :::::
-::::::
 
 ## Train-Test Split
 
-The classifier's performance can become inflated if it trains on the same data it is tested with. This is called [data-leakage.]{.highlight1}
+The classifier's performance can become inflated if it trains on the same data it is tested with, a problem known as [data leakage]{.highlight1}. Data leakage occurs when the model has access to information it shouldn't have during training, leading to overly optimistic performance metrics.
 
-::: {.fragment .fade-in}
-We must split the data into [training and testing sets.]{.highlight1}
+To evaluate model performance accurately and avoid this issue, it's essential to split the data into [training and testing sets]{.highlight1}. The training set is used to teach the model, while the testing set is used to evaluate how well the model generalizes to [unseen data]{.highlight1}.
+
+This step is crucial because it helps us understand how the model will perform in real-world scenarios, where it will encounter data it has never seen before.
 
 ![](images/train-test-split-1.png){fig-align="center"}
 
-This allows us to test how good the model is at classifying [data it hasn't seen before.]{.highlight1}
-:::
+### Making the Train-Test Split
 
-## Making the Train-Test Split
+Let’s proceed with the train-test split, keeping 30% of the data for testing and ensuring the class distribution remains consistent through [stratification]{.highlight1}.
+-   **Test size**: 30% of the data is reserved for testing the model.
+-   **Stratify**: Preserves the class ratios (33% of each iris species).
 
 ```{python}
 #| label: Train-test-split1
 #| echo: true
-#| code-line-numbers: "1|2|3-4"
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, 
-                                                        test_size=0.3,
-                                                        stratify=y,
-                                                        random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, # Input our seperated X and y data
+                                                    test_size=0.3, # Select the test size of 30%
+                                                    stratify=y, # Stratify the split by y (species/dependent)
+                                                    random_state=42) # Select a random state for reproducability
 ```
 
-::: {.fragment .fade-in}
--   **Test size**: 30% is kept to validate the trained model
--   **Stratify**: Preserves the class ratios (33% of each iris species)
-:::
+This outputs:
 
-::: {.fragment .fade-in}
+- `X_train`: 70% of our independent data (petal & sepal length and width)
+- `y_train`: 70% of our dependent data (species)
+- `X_test`: 30% of our independent data (petal & sepal length and width)
+- `y_test`: 30% of our dependent data (species)
+
 ```{python}
 #| label: Train-test-split2
 #| panel: center
@@ -408,17 +414,19 @@ print(f'y_train shape is: {y_train.shape} \n')
 print(f'X_test shape is: {X_test.shape}')
 print(f'y_test shape is: {y_test.shape}')
 ```
-:::
 
-## Why is Stratification Important? {.smaller}
+## Why is Stratification Important?
 
-If data is not stratified, the model may focus on more prevalent classes, leading to [biased performance and poor accuracy on underrepresented classes.]{.highlight1}
+Stratification is crucial because it ensures that each class is proportionally represented in both the training and testing sets.
+
+Without stratification, the model might over-focus on more prevalent classes, leading to [biased performance and poor accuracy on underrepresented classes]{.highlight1}.
 
 ```{python}
 #| label: Stratifcation
 #| echo: false
 #| panel: center
-
+#| code-fold: true
+#| code-summary: "Show the code"
 
 # Load the Iris dataset
 iris = load_iris()
@@ -432,8 +440,7 @@ X_train_ns, X_test_ns, y_train_ns, y_test_ns = train_test_split(X, y, test_size=
 X_train_s, X_test_s, y_train_s, y_test_s = train_test_split(X, y, test_size=0.3, stratify=y, random_state=42)
 
 def plot_combined_distribution(y_train_ns, y_test_ns, y_train_s, y_test_s):
-    fig, axs = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
-    
+    fig, axs = plt.subplots(1, 2, figsize=(7.75, 4), sharey=True)
     # Plot for Non-Stratified Split
     labels, counts = np.unique(y_train_ns, return_counts=True)
     axs[0].bar(labels, counts, width=0.4, align='center', label='Train', color='skyblue')
@@ -462,9 +469,14 @@ def plot_combined_distribution(y_train_ns, y_test_ns, y_train_s, y_test_s):
 
 # Call the function to plot the combined distribution
 plot_combined_distribution(y_train_ns, y_test_ns, y_train_s, y_test_s)
+
 ```
 
+Here, we can visualize the difference between an unstratified and a stratified train-test split. If we were to train our model on the unstratified data, it would have less data on Iris Setosa to train with and more to test with, leading to an imbalance. This imbalance could cause the model to perform well on certain classes while underperforming on others, resulting in biased predictions. By using stratification, we ensure that each class is adequately represented in both the training and testing sets, leading to a more balanced and fair evaluation of the model’s performance.
+
 ## Training the Models!
+
+Now that our data is ready, let’s train several supervised machine learning models and evaluate their performance. We'll be using the [scikit-learn Python library](https://scikit-learn.org/stable/index.html), which provides a wide range of tools for building and evaluating models. For a complete list of all the supervised models that scikit-learn supports, [click here](https://scikit-learn.org/stable/supervised_learning.html).
 
 ```{python}
 #| label: load-data-again 
@@ -481,114 +493,150 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, stratif
 ```{python}
 #| label: model-training
 #| echo: true
-#| code-line-numbers: "2-9|13|14|15"
 
 # Instantiate the classifiers
-classifiers = [
-    SVC(kernel='linear', random_state=42),
-    SVC(kernel='rbf', random_state=42),
-    DecisionTreeClassifier(random_state=42),
-    RandomForestClassifier(random_state=42),
-    KNeighborsClassifier(),
-    LogisticRegression(random_state=42, max_iter=1000)
+classifiers = [                                     # Makes a list of classifier objects:
+    SVC(kernel='linear', random_state=42),             # Linear Support-Vector Machine (SVM)
+    SVC(kernel='rbf', random_state=42),                # RBF Support-Vector Machine (SVM)
+    DecisionTreeClassifier(random_state=42),           # Decision Tree 
+    RandomForestClassifier(random_state=42),           # Random Forest 
+    KNeighborsClassifier(),                            # K-nearest Neighbours 
+    LogisticRegression(random_state=42, max_iter=1000) # Logistic Regression
 ]
 
 # Train the classifiers
-for clf in classifiers:
-    clf.fit(X_train, y_train)
-    y_pred = clf.predict(X_test)
-    accuracy = accuracy_score(y_test, y_pred)
-    print(f"Accuracy of {clf.__class__.__name__}: {accuracy:.2f}")
+for clf in classifiers:          # Loop iterates through the list of classifiers
+    clf.fit(X_train, y_train)    # Trains with the X (input) and Y (output) training data
+    y_pred = clf.predict(X_test) # Fits the X test data; trained model returns predictions
+    accuracy = accuracy_score(y_test, y_pred) # Calculates accuracy of the model
+    print(f"Accuracy of {clf.__class__.__name__}: {accuracy:.2f}") # Prints the accuracy score
 ```
+
+Here, we get accuracy scores ranging from around 0.90 to 1.00 for each classifier. But what does this mean? That’s a great question! We’ll dive into the significance of these accuracy scores and how to properly evaluate the performance of machine learning models in the next section.
 
 ## Visualizing Machine Learning!
 
+Let’s take a closer look at how well the trained models differentiate between the different iris species by visualizing their decision boundaries.
+
+To make this possible, I applied Principal Component Analysis (PCA) to reduce our 4-dimensional data into 2 dimensions before training the models. This dimensionality reduction allows us to clearly visualize the decision boundaries each model establishes.
+
+In the visualization, you can observe how each model draws boundaries that separate the iris species into distinct regions. For instance, if a new data point —say, an Iris Setosa— falls within the blue region, the model predicts that this iris is indeed an Iris Setosa. This approach helps us understand how the models make predictions based on the learned patterns in the data. However, if an Iris Virginica were incorrectly placed in another region, it would result in a misclassification. Such errors could prompt the machine learning model to adjust and refine its decision boundaries to improve accuracy.
+
 ![](images/combined_PCA_decision_boundaries_with_accuracy2.png){fig-align="center"}
+
 
 ## Evaluating Model Performance
 
-<br>
+### Accuracy Score
 
-There are many potential evaluation metrics, but [Accuracy]{.highlight1} is the most common.
-
-::: {.fragment .fade-in}
+Evaluation metrics are crucial for understanding how well your model is performing. The most commonly used metric is [Accuracy]{.highlight1}, which is defined as the number of correct predictions over the total number of predictions:
 $$
 \text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}
 $$
 
-Accuracy is usually fine - there are some casses when it's not great.
-:::
+Do you recall the accuracy scores of the models we trained earlier? Since we tested each trained model on 45 unseen cases (the testing set), we can evaluate how well each model performed!
 
-## Evaluating Model Performance {.smaller}
+<details>
+<summary> <span class=dropdown1> Click Here if You Forgot! </span> </summary>
 
-::: {.fragment .fade-in}
+```{python}
+#| label: print-accuracy-scores
+#| echo: false
+#| warning: false
+ 
+# Train the classifiers
+for clf in classifiers:          # Loop iterates through the list of classifiers
+    clf.fit(X_train, y_train)    # Trains with the X (input) and Y (output) training data
+    y_pred = clf.predict(X_test) # Fits the X test data; trained model returns predictions
+    accuracy = accuracy_score(y_test, y_pred) # Calculates accuracy of the model
+    print(f"Accuracy of {clf.__class__.__name__}: {accuracy:.2f}") # Prints the accuracy score
+```
+</details>
+
+For example, the Support Vector Classifier (SVC) had an accuracy of 1.00, meaning it correctly classified all 45 test inputs. On the other hand, the Random Forest Classifier had an accuracy score of 0.89. If we do some math, we can calculate the exact number of correctly classified cases for the Random Forest model:
 $$
-\scriptsize{\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}}
+\text{Number of Correct Predictions} = \text{Accuracy} \times \text{Total Number of Test Cases}
 $$
-:::
+
+$$
+\text{Number of Correct Predictions} = 0.89 \times 45 \approx 40
+$$
+
+This means that out of 45 test cases, the Random Forest Classifier correctly classified 40 of them, with the remaining 5 cases being misclassified—which is still quite good!
+
+### Confusion Matrices
+
+A [confusion matrix]{.highlight1} is an excellent tool for visualizing your model's performance by providing a detailed breakdown of its predictions. Each row of the matrix represents the actual class, while each column represents the predicted class. The diagonal elements show correct predictions, while off-diagonal elements indicate misclassifications. Unlike accuracy alone, a confusion matrix shows how well your model distinguishes between different classes by displaying the counts of true positives, true negatives, false positives, and false negatives.
+
+<details>
+<summary> <span class=dropdown1> Click Here for a Breakdown of Error Types </span> </summary>
+
+- **True Positives (TP):** These are cases where the model correctly predicted the positive class. For example, if the model predicts "Iris Setosa" and it’s actually "Iris Setosa," that’s a true positive.
+- **True Negatives (TN):** These are cases where the model correctly predicted the negative class. For example, if the model predicts "Not Iris Setosa" and it’s indeed not "Iris Setosa," that’s a true negative.
+- **False Positives (FP):** Also known as Type I errors, these occur when the model incorrectly predicts the positive class. For instance, if the model predicts "Iris Setosa" when it’s actually a different species, that’s a false positive.
+- **False Negatives (FN):** Also known as Type II errors, these occur when the model incorrectly predicts the negative class. For example, if the model fails to predict "Iris Setosa" and instead predicts another species when it is actually "Iris Setosa," that’s a false negative.
+
+This detailed breakdown is crucial for understanding the types of errors your model is making. In the context of a BCI-controlled wheelchair, false negatives could mean failing to detect the user's command to move, which might be more critical than a false positive. For example, if the system fails to recognize a user's intention to move the wheelchair forward, it could leave the user stranded or unable to navigate effectively. On the other hand, a false positive might cause the wheelchair to move unintentionally, which could be disorienting or even dangerous, depending on the situation.
+</details>
 
 :::::::: columns
 :::: {.column width="50%"}
 ![](images/Linear_SVM_CM.png)
 
-::: {.fragment .fade-in}
 45 Correct Predictions / 45 Total Prediction = 1.00
-:::
 ::::
 
 ::::: {.column width="50%"}
-::: {.fragment .fade-in}
 ![](images/DecisionTree_CM.png)
-:::
 
-::: {.fragment .fade-in}
 43 Correct Predictions / 45 Total Prediction = 0.95
-:::
+
 :::::
 ::::::::
 
-## When is Accuracy Sub-optimal? {.smaller}
+For example, in the case of the Iris dataset, the confusion matrix reveals not just the overall accuracy but also whether your model is prone to specific errors, such as predicting one species of iris when it’s actually another (false positives) or failing to correctly identify a species when it’s present (false negatives). This detailed view helps you understand how well your model distinguishes between the three iris species—Setosa, Versicolor, and Virginica.
 
-<br>
+This level of detail is particularly valuable when dealing with imbalanced datasets, where one class may be much more prevalent than the other. In such cases, a high accuracy might be misleading, while the confusion matrix reveals the true performance of your model across all classes.
 
-If you have an [imbalanced classes]{.highlight1} in your data, accuracy can be misleading.
+By analyzing the confusion matrix, you can gain deeper insights into the strengths and weaknesses of your model, guiding you toward improvements, such as tweaking the model, adjusting thresholds, or selecting different metrics like Precision, Recall, or F1 Score for a more comprehensive evaluation.
+
+Overall, accuracy is a valuable metric for evaluating how well your model predicts or classifies data. It can also provide guidance on which model may work best for your specific dataset. However, while accuracy is useful, it’s not always the best metric, especially in cases where the classes are imbalanced.
+
+## When is Accuracy Sub-optimal?
+
+In cases of [imbalanced classes]{.highlight1}, accuracy can be misleading. Let’s explore why this is the case.
+
+Imagine we have a trained model that we want to test with new data. Suppose this new dataset has 100 observations: 80 are of Iris Setosa, and 20 are of Iris Versicolor.
 
 ::::::: columns
-::: {.column width="50%"}
+::: {.column width="45%"}
 ![](images/imbalanced-dataset2.png){fig-align="center"}
 :::
 
-::::: {.column width="50%"}
-Say there are 100 observations: 80 Setosa, and 20 Versicolor.
+::: {.column width="5%"}
+:::
 
-::: {.fragment .fade-in}
+::::: {.column width="50%"}
+
 If the classifier predicted 'Setosa' for all 100 observations, what would the accuracy be?
 
 $$
 \scriptsize{\text{Accuracy} = \frac{\text{Number of Correct Predictions}}{\text{Total Number of Predictions}}}
 $$
-:::
 
-::: {.fragment .fade-in}
 80 Correct Predictions / 100 Total Predictions = 0.80
 
--   Metrics like F1 score, Precision, & Recall(sensitivity) can give a more informative picture
-:::
+So, even though the accuracy score is a respectable 80%, the model isn’t actually distinguishing between the two classes at all!
+
 :::::
 :::::::
 
-## Summary:
+In situations where there is an imbalance of classes, accuracy does not provide a fully informative picture of the model's performance, as illustrated in the example above. Metrics like F1 Score, Precision, and Recall (Sensitivity) can offer a more comprehensive assessment by considering the balance between different types of errors.
 
-<br>
+## Summary
 
-::: incremental
--   Labelled data (used in supervised ML) is particularly powerful for classification tasks
--   Choosing informative features is critical
--   Train-test-split is important to avoid data-leakage
--   Stratification of classes avoids inflated performance
--   Accuracy is great unless you have unbalanced classes
-:::
-
-## Thanks for Listening {.center-h2}
-
-![](https://gifdb.com/images/high/thank-you-emoji-giving-two-thumbs-ups-6ud8p4up69m7w8tz.gif){fig-align="center"}
+- **Labeled Data:** Supervised machine learning relies on labeled data, which is particularly effective for classification tasks, allowing models to learn and make accurate predictions.
+- **Feature Selection:** Choosing the right features is crucial for model success. Informative and discriminative features help the model make reliable predictions.
+- **Train-Test Split:** Splitting your data into training and testing sets is essential to prevent data leakage and ensure that your model's performance is evaluated on unseen data.
+- **Stratification:** Stratifying your data during the train-test split ensures that each class is proportionally represented, leading to more balanced and accurate model evaluations.
+- **Accuracy as a Metric:** While accuracy is a valuable metric, it may not always be sufficient, particularly in cases of imbalanced classes. Complementary metrics like F1 Score, Precision, and Recall provide a more comprehensive assessment of model performance.

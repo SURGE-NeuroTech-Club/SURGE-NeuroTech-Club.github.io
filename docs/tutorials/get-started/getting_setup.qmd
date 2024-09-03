@@ -1,13 +1,12 @@
 ---
 title: "Getting Setup"
+abstract:  "This document will teach you how to setup your computer with GitHub, VSCode and a Virtual Environment so you can start working on python projects!"
 image: images/getting-setup.webp
 format: 
     html:
         toc: true
         link-external-newwindow: true
 ---
-
-This document will teach you how to setup your computer with GitHub, VSCode and a Virtual Environment so you can start working on python projects!
 
 ## Step 1: Setting up Visual Studio Code
 
