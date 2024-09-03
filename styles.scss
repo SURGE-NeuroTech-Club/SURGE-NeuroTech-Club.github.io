@@ -37,6 +37,15 @@
     color: green;
 }
 
+.notice {
+    background-color: #ffcc00; /* Yellow background */
+    color: #000; /* Black text */
+    padding: 10px;
+    border: 2px solid #000; /* Black border */
+    font-size: 1.5em; /* Larger font size */
+    text-align: center; /* Centered text */
+    margin-bottom: 20px; /* Space below the notice */
+}
 
 .centered h1,
 .centered h2,

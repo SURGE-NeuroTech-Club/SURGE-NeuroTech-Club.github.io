@@ -23,10 +23,16 @@ about:
 
 <!-- ![](images/logos/new_logo_transparent.png){.banner-image} -->
 
+
+<div class="notice">
+  **Important Notice:** The club now meets on **Wednesdays 3-5 pm**.
+</div>
+
+
 ### Welcome to the NeuroTech Club Website! 
 We are a community of neuro-enthusiasts dedicated to exploring, understanding, and innovating in the field of neurotechnology. Join us as we delve into this exciting frontier!
 
-We meet every <span class='highlight1'>**Thursday 3-5 pm**</span> in the SURGE room ([LSC, Room O2660](who_we_are.qmd#directions)). If you can't make the full time, no worries - feel free to drop by and check it out!
+We meet every <span class='highlight1'>**Wednesdays 3-5 pm**</span> in the SURGE room ([LSC, Room O2660](who_we_are.qmd#directions)). If you can't make the full time, no worries - feel free to drop by and check it out!
 
 If you're new to the club and don't know where to begin, you can click on [*Get Started*](docs/tutorials/index.qmd) or, just ask one of the SURGE folks!
 

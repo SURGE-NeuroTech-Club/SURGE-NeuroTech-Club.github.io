@@ -105,7 +105,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
+
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -242,7 +245,7 @@ window.Quarto = {
   <li><a href="#confusion-matrices" id="toc-confusion-matrices" class="nav-link" data-scroll-target="#confusion-matrices">Confusion Matrices</a></li>
   </ul></li>
   <li><a href="#when-is-accuracy-sub-optimal" id="toc-when-is-accuracy-sub-optimal" class="nav-link" data-scroll-target="#when-is-accuracy-sub-optimal">When is Accuracy Sub-optimal?</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary:</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -446,7 +449,7 @@ window.Quarto = {
 </section>
 <section id="misclassification" class="level3">
 <h3 class="anchored" data-anchor-id="misclassification">Misclassification?</h3>
-<p>Interestingly, the Seek App identified the iris I found as a Versicolor, but two experts later claimed it was a Setosa. This discrepancy highlights a critical aspect of machine learning: the selection of features.</p>
+<p>Interestingly, the Seek App identified the iris I found as a Versicolor, but two experts later claimed it was a Setosa. This discrepancy highlights a critical aspect of machine learning: the <span class="highlight1">selection of features</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/inaturalist_pic.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></p>
@@ -456,7 +459,7 @@ window.Quarto = {
 </section>
 <section id="choosing-the-right-features-is-important" class="level2">
 <h2 class="anchored" data-anchor-id="choosing-the-right-features-is-important">Choosing (the right) Features is Important!</h2>
-<p>A <span class="highlight1">Feature</span> is “an individual measurable property or characteristic of a phenomenon”.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> In the context of machine learning, selecting the right features is critical to the success of your model.</p>
+<p>A <span class="highlight1">feature</span> is “an individual measurable property or characteristic of a phenomenon”.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> In the context of machine learning, selecting the right features is critical to the success of your model.</p>
 <p>Using informative, discriminative, and independent features is essential for building effective classification algorithms. The features you choose can significantly influence the model’s ability to learn accurately from the data and make reliable predictions. In the case of our iris example, perhaps the app’s algorithm relied on certain features that led it to misclassify the species.</p>
 </section>
 <section id="the-iris-dataset" class="level2">
@@ -610,7 +613,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="reducing-dimentionality">Reducing Dimentionality</h3>
 <p>Dimensionality reduction techniques, like Principal Component Analysis (PCA), help us simplify complex datasets. By translating our 4-dimensional data into two dimensions, we can better visualize the differences between species.</p>
 <p>Here, we can see how each species is relatively clustered when visualized with PCA.</p>
-<div id="7e986308" class="cell" data-execution_count="4">
+<div id="bcf17861" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="fl">5.5</span>))</span>
@@ -717,20 +720,20 @@ The target (y/dependent) variables are of shape: (150,)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">34</td>
-<td>setosa</td>
+<td data-quarto-table-cell-role="th">111</td>
+<td>virginica</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">17</td>
-<td>setosa</td>
+<td data-quarto-table-cell-role="th">74</td>
+<td>versicolor</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">25</td>
 <td>setosa</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">109</td>
-<td>virginica</td>
+<td data-quarto-table-cell-role="th">43</td>
+<td>setosa</td>
 </tr>
 </tbody>
 </table>
@@ -931,7 +934,7 @@ This detailed breakdown is crucial for understanding the types of errors your mo
 <p>In situations where there is an imbalance of classes, accuracy does not provide a fully informative picture of the model’s performance, as illustrated in the example above. Metrics like F1 Score, Precision, and Recall (Sensitivity) can offer a more comprehensive assessment by considering the balance between different types of errors.</p>
 </section>
 <section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary:</h2>
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
 <ul>
 <li><strong>Labeled Data:</strong> Supervised machine learning relies on labeled data, which is particularly effective for classification tasks, allowing models to learn and make accurate predictions.</li>
 <li><strong>Feature Selection:</strong> Choosing the right features is crucial for model success. Informative and discriminative features help the model make reliable predictions.</li>

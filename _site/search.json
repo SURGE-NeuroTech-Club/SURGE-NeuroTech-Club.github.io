@@ -4,7 +4,7 @@
     "href": "who_we_are.html",
     "title": "Who We Are",
     "section": "",
-    "text": "We are the Dalhousie/SURGE NeuroTech Club! The goal of the club is to help students with any level of neuroscience or coding experience get engaged and excited about NeuroTechnology!\nThe club is drop-in and completely free to attend! It runs once a week from 3-5pm on Thursdays in the LSC, Oceanography - Room O2660"
+    "text": "Important Notice: The club now meets on Wednesdays 3-5 pm.\nWe are the Dalhousie/SURGE NeuroTech Club! The goal of the club is to help students with any level of neuroscience or coding experience get engaged and excited about NeuroTechnology!\nThe club is drop-in and completely free to attend! It runs once a week from 3-5pm on Wednesdays in the LSC, Oceanography - Room O2660"
   },
   {
     "objectID": "who_we_are.html#directions",
@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "SURGE NeuroTech Club",
     "section": "",
-    "text": "We are a community of neuro-enthusiasts dedicated to exploring, understanding, and innovating in the field of neurotechnology. Join us as we delve into this exciting frontier!\nWe meet every Thursday 3-5 pm in the SURGE room (LSC, Room O2660). If you can’t make the full time, no worries - feel free to drop by and check it out!\nIf you’re new to the club and don’t know where to begin, you can click on Get Started or, just ask one of the SURGE folks!"
+    "text": "Important Notice: The club now meets on Wednesdays 3-5 pm."
   },
   {
     "objectID": "index.html#contact",
@@ -88,7 +88,7 @@
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#choosing-the-right-features-is-important",
     "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Choosing (the right) Features is Important!",
-    "text": "Choosing (the right) Features is Important!\nA Feature is “an individual measurable property or characteristic of a phenomenon”.1 In the context of machine learning, selecting the right features is critical to the success of your model.\nUsing informative, discriminative, and independent features is essential for building effective classification algorithms. The features you choose can significantly influence the model’s ability to learn accurately from the data and make reliable predictions. In the case of our iris example, perhaps the app’s algorithm relied on certain features that led it to misclassify the species."
+    "text": "Choosing (the right) Features is Important!\nA feature is “an individual measurable property or characteristic of a phenomenon”.1 In the context of machine learning, selecting the right features is critical to the success of your model.\nUsing informative, discriminative, and independent features is essential for building effective classification algorithms. The features you choose can significantly influence the model’s ability to learn accurately from the data and make reliable predictions. In the case of our iris example, perhaps the app’s algorithm relied on certain features that led it to misclassify the species."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#the-iris-dataset",
@@ -116,7 +116,7 @@
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#seperating-our-dependent-and-independent-variables",
     "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
     "section": "Seperating Our Dependent and Independent Variables",
-    "text": "Seperating Our Dependent and Independent Variables\nNext, let’s separate our dataset into independent (X/Input) and dependent (y/Output) variables. This is a crucial step before training our model, as it ensures that the model learns the relationships between the input features and the output labels without being biased by the answers themselves. We don’t want our model to use the labels (answers) during training, as that would defeat the purpose of learning from the data.\nHere, we take our original dataset of 150 observations, each with 4 features (petal & sepal length and width), and split them into independent variables (X), which the model will use to make predictions, and dependent variables (y), which represent the correct species classification for each observation (labels). This separation is essential for supervised learning because it allows the model to understand how different combinations of features correspond to specific outcomes.\n\n\n\n\nShow the code\nX = data.drop(['species_id', 'species'], axis=1)\ny = data['species']\n\n\n\n\n\n\nThe feature (X/independent) variables are of shape: (150, 4)\nThe target (y/dependent) variables are of shape: (150,)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndependent Vars\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n34\nsetosa\n\n\n17\nsetosa\n\n\n25\nsetosa\n\n\n109\nvirginica"
+    "text": "Seperating Our Dependent and Independent Variables\nNext, let’s separate our dataset into independent (X/Input) and dependent (y/Output) variables. This is a crucial step before training our model, as it ensures that the model learns the relationships between the input features and the output labels without being biased by the answers themselves. We don’t want our model to use the labels (answers) during training, as that would defeat the purpose of learning from the data.\nHere, we take our original dataset of 150 observations, each with 4 features (petal & sepal length and width), and split them into independent variables (X), which the model will use to make predictions, and dependent variables (y), which represent the correct species classification for each observation (labels). This separation is essential for supervised learning because it allows the model to understand how different combinations of features correspond to specific outcomes.\n\n\n\n\nShow the code\nX = data.drop(['species_id', 'species'], axis=1)\ny = data['species']\n\n\n\n\n\n\nThe feature (X/independent) variables are of shape: (150, 4)\nThe target (y/dependent) variables are of shape: (150,)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndependent Vars\n\n\n\n\n0\nsepal_length\n\n\n1\nsepal_width\n\n\n2\npetal_length\n\n\n3\npetal_width\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\n\n\n\n\n111\nvirginica\n\n\n74\nversicolor\n\n\n25\nsetosa\n\n\n43\nsetosa"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#train-test-split",
@@ -164,8 +164,8 @@
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#summary",
     "href": "docs/tutorials/machine-learning/intro_to_ml.html#summary",
     "title": "A Beginner’s Guide to Machine Learning Concepts and Applications",
-    "section": "Summary:",
-    "text": "Summary:\n\nLabeled Data: Supervised machine learning relies on labeled data, which is particularly effective for classification tasks, allowing models to learn and make accurate predictions.\nFeature Selection: Choosing the right features is crucial for model success. Informative and discriminative features help the model make reliable predictions.\nTrain-Test Split: Splitting your data into training and testing sets is essential to prevent data leakage and ensure that your model’s performance is evaluated on unseen data.\nStratification: Stratifying your data during the train-test split ensures that each class is proportionally represented, leading to more balanced and accurate model evaluations.\nAccuracy as a Metric: While accuracy is a valuable metric, it may not always be sufficient, particularly in cases of imbalanced classes. Complementary metrics like F1 Score, Precision, and Recall provide a more comprehensive assessment of model performance."
+    "section": "Summary",
+    "text": "Summary\n\nLabeled Data: Supervised machine learning relies on labeled data, which is particularly effective for classification tasks, allowing models to learn and make accurate predictions.\nFeature Selection: Choosing the right features is crucial for model success. Informative and discriminative features help the model make reliable predictions.\nTrain-Test Split: Splitting your data into training and testing sets is essential to prevent data leakage and ensure that your model’s performance is evaluated on unseen data.\nStratification: Stratifying your data during the train-test split ensures that each class is proportionally represented, leading to more balanced and accurate model evaluations.\nAccuracy as a Metric: While accuracy is a valuable metric, it may not always be sufficient, particularly in cases of imbalanced classes. Complementary metrics like F1 Score, Precision, and Recall provide a more comprehensive assessment of model performance."
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html#footnotes",
