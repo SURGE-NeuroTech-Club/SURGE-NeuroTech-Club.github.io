@@ -20,15 +20,22 @@ From the main entrance: go down the stairs and continue past the tim hortons unt
 
 ![](/images/maps_location1.PNG){fig-align="center"}
 
+## Our Team
 
-<!-- ## Our Team
+::: {.team-container}
 
-:::: {.columns}
+:::: {.team-photo-role}
+### Max Mascini {#max}
+![](images/Max_SURGE_pic.jpg){.team-photo} <br>
+[**NeuroTech Programming Specialist**]{.team-role}
+::::
 
-::: {.column width=50%}
+:::: {.team-bio}
+<br>
+[Max is a dedicated Neurotech Programming Specialist at SURGE, where he utilizes his extensive research experience with brain-computer interfaces (BCIs) to engage students in learning, ideating, and creating innovative neurotechnology solutions. With a background in both neuroscience and computer science, and a passion for merging these fields, Max plays a crucial role in fostering student involvement with neurotechnology in an interactive and supportive environment. His efforts ensure that students not only gain technical skills but also cultivate a genuine interest and enthusiasm for advancing neurotech innovations.
+<br>
+Feel free to reach out to Max with any questions at [Mascini.Max@dal.ca](mailto:mascini.max@dal.ca)]{.team-bio}
+:::: 
+
 :::
 
-::: {.column width=50%}
-:::
-
-:::: -->
