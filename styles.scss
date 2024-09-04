@@ -25,6 +25,7 @@
 // $code-bg: $cream; // inline code background color
 // $code-color: $purple; // inline code text color
 
+
 .banner-image {
     display: block;
     margin-left: auto;
@@ -61,11 +62,50 @@
     color: orange;
 }
 
-// .centered {
-//     display: block;
-//     margin-left: auto;
-//     margin-right: auto;
-// }
+/* Container for the single team member */
+.team-container {
+    display: flex;
+    justify-content: center; /* Centers the entire layout horizontally */
+    align-items: center; /* Aligns items vertically in the container */
+    gap: 40px; /* Space between the image and bio */
+    margin-top: 10px; /* Optional top margin */
+    padding: 20px; /* Optional padding */
+}
+
+/* Left-side: Team member image and role */
+.team-photo-role {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers image and role together */
+}
+
+/* Team member rectangular image */
+.team-photo {
+    width: 300px; /* Set width of rectangle */
+    height: 200px; /* Set height of rectangle */
+    object-fit: cover; /* Ensures the image covers the entire area */
+    // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; /* Space between the image and the role */
+}
+
+/* Role styling */
+.team-role {
+    font-size: 1.2em;
+    color: #FDF6F6;
+    text-align: center;
+}
+
+/* Right-side: Bio section */
+.team-bio {
+    font-size: 1em;
+    color: #FDF6F6;
+    line-height: 1.5em;
+    max-width: 400px; /* Limits the bio width */
+    text-align: left; /* Aligns bio text to the left */
+}
+
+
+
 
 body {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;

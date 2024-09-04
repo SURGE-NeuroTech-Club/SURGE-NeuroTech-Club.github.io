@@ -11,7 +11,7 @@
     "href": "index.html#contact",
     "title": "SURGE NeuroTech Club",
     "section": "Contact:",
-    "text": "Contact:\nFor general inquiries, email us at: bciclub@dal.ca\nFor specific neurotech questions, please reach out to our programming specialists: Brynn or Max"
+    "text": "Contact:\nFor general inquiries, email us at: bciclub@dal.ca\nFor specific neurotech questions, please reach out to our programming specialist, Max"
   },
   {
     "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html",
@@ -116,7 +116,7 @@
     "href": "docs/tutorials/open-bci/open_bci_setup.html",
     "title": "Getting Started with OpenBCI",
     "section": "",
-    "text": "This tutorial will take you through the steps of getting you OpenBCI board up and streaming EEG signals!"
+    "text": "This page is not yet complete.\nThis tutorial will take you through the steps of getting you OpenBCI board up and streaming EEG signals!"
   },
   {
     "objectID": "docs/tutorials/open-bci/open_bci_setup.html#installing-the-software",
@@ -159,6 +159,13 @@
     "title": "Who We Are",
     "section": "Directions",
     "text": "Directions\nLife Sciences Building, Oceanography wing - Room O2660\nFrom the main entrance: go down the stairs and continue past the tim hortons until you see doors leading outside on your right. Go through them and enter the building directly across. Continue straight down the hallway until you see the bathrooms on your left, or the SURGE A-frame sign - then it’s the doors on your right!"
+  },
+  {
+    "objectID": "who_we_are.html#our-team",
+    "href": "who_we_are.html#our-team",
+    "title": "Who We Are",
+    "section": "Our Team",
+    "text": "Our Team\n\n\nMax Mascini\n  NeuroTech Programming Specialist\n\n\n Max is a dedicated Neurotech Programming Specialist at SURGE, where he utilizes his extensive research experience with brain-computer interfaces (BCIs) to engage students in learning, ideating, and creating innovative neurotechnology solutions. With a background in both neuroscience and computer science, and a passion for merging these fields, Max plays a crucial role in fostering student involvement with neurotechnology in an interactive and supportive environment. His efforts ensure that students not only gain technical skills but also cultivate a genuine interest and enthusiasm for advancing neurotech innovations.  Feel free to reach out to Max with any questions at Mascini.Max@dal.ca"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html",
