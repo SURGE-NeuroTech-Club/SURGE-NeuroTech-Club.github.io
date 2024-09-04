@@ -7,6 +7,10 @@ format:
         link-external-newwindow: true
 ---
 
+<div class="notice">
+  **This page is not yet complete.**
+</div>
+
 This tutorial will take you through the steps of getting you OpenBCI board up and streaming EEG signals!
 
 ## Installing The Software
