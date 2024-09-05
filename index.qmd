@@ -38,7 +38,7 @@ If you're new to the club and don't know where to begin, you can click on [*Get 
 
 ## Contact:
 
-For general inquiries, email us at: [bciclub@dal.ca](mailto:bciclub@dal.ca)
+For general inquiries, email us at: [bciclub@dal.ca](mailto:neurotechclub@dal.ca)
 
 For specific neurotech questions, please reach out to our programming specialist, [Max](who_we_are.qmd#max)
 
