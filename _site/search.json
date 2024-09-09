@@ -10,8 +10,8 @@
     "objectID": "who_we_are.html#directions",
     "href": "who_we_are.html#directions",
     "title": "Who We Are",
-    "section": "Directions",
-    "text": "Directions\nLife Sciences Building, Oceanography wing - Room O2660\nFrom the main entrance: go down the stairs and continue past the tim hortons until you see doors leading outside on your right. Go through them and enter the building directly across. Continue straight down the hallway until you see the bathrooms on your left, or the SURGE A-frame sign - then it’s the doors on your right!"
+    "section": "How to find us!",
+    "text": "How to find us!\nWe are located in the Life Sciences Building, Oceanography wing - Room O2660\nFrom the main entrance of the LSC: go down the stairs on the right and continue past the tim hortons until you see doors leading outside on your right. Go through them and enter the building directly across. Continue straight down the hallway until you see the bathrooms on your left, or the SURGE A-frame sign - then it’s the doors on your right!"
   },
   {
     "objectID": "who_we_are.html#our-team",
@@ -32,7 +32,7 @@
     "href": "index.html#contact",
     "title": "SURGE NeuroTech Club",
     "section": "Contact:",
-    "text": "Contact:\nFor general inquiries, email us at: bciclub@dal.ca\nFor specific neurotech questions, please reach out to our programming specialist, Max"
+    "text": "Contact:\nFor general inquiries, email us at: NeuroTechClub@dal.ca\nFor specific neurotech questions, please reach out to our programming specialist, Max"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html",
@@ -284,7 +284,7 @@
     "href": "contact_us.html",
     "title": "Contact Us",
     "section": "",
-    "text": "Email us at: bciclub@dal.ca"
+    "text": "Email us at: NeuroTechClub@dal.ca"
   },
   {
     "objectID": "docs/tutorials/get-started/getting_setup.html",

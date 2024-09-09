@@ -2,6 +2,8 @@
 title: "Contact Us"
 ---
 
+Email us at: [NeuroTechClub@dal.ca](mailto:neurotechclub@dal.ca)
 
-Email us at: [bciclub@dal.ca](mailto:neurotechclub@dal.ca)
+<br>
 
+<script async src="https://eocampaign1.com/form/ab7c0556-6eb8-11ef-aafd-8163d09bdb0b.js" data-form="ab7c0556-6eb8-11ef-aafd-8163d09bdb0b"></script>
