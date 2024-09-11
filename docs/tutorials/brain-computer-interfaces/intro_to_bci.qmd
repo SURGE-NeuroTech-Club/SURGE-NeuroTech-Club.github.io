@@ -66,7 +66,7 @@ By continuously adapting to user inputs, machine learning enhances the accuracy 
 
 ERPs are brain responses time-locked to specific events. They consist of components like the commonly-used P300, which occur about 300 milliseconds after an infrequent or important stimulus. In ERP-based BCIs, users focus on stimuli, and the system detects the P300 responses to determine which stimulus the user is looking at, and therefore which command to execute.
 
-![Example Event-Related Potentials](images/ERPs_1.png){width="300" fig-align="center" fig-alt="By Original: Choms Vector: Mononomic - Own work based on: Constudevent.gif, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=5543904"}
+![Example Event-Related Potentials - Tamara Bonaci, CC BY-ND](images/ERPs_new.png){width="300" fig-align="center" fig-alt="Tamara Bonaci, CC BY-ND"}
 
 <details>
 <summary> <span class=dropdown1> Diving into ERP Components and Their Significance </span> </summary>
