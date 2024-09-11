@@ -223,9 +223,9 @@ Machine learning algorithms process the EEG data, identifying patterns associate
 <summary>
 <span class="dropdown1"> Exploring Machine Learning in BCIs </span>
 </summary>
-<p><br> Machine learning algorithms in BCIs analyze EEG data to identify patterns (like event-related potentials or steady-state visually-evoked potentials) corresponding to user intentions (such as attending to a certain stimulus). These algorithms are trained on labeled datasets to distinguish between when random noise and when the user is attending a stimulus.</p>
+<p>Machine learning algorithms in BCIs analyze EEG data to identify patterns (like event-related potentials or steady-state visually-evoked potentials) corresponding to user intentions (such as attending to a certain stimulus). These algorithms are trained on labeled datasets to distinguish between when random noise and when the user is attending a stimulus.</p>
 <p>The most common technique is supervised learning, where models learn from labeled examples. Other techniques can be successfully used such as unsupervised learning, which identifies hidden patterns without explicit labels, and deep learning, a subset of machine learning, employs neural networks to extract complex features from EEG signals.</p>
-By continuously adapting to user inputs, machine learning enhances the accuracy and responsiveness of BCIs, enabling seamless interaction between the brain and external devices.
+<p>By continuously adapting to user inputs, machine learning enhances the accuracy and responsiveness of BCIs, enabling seamless interaction between the brain and external devices. <br></p>
 </details>
 </section>
 </section>
@@ -236,21 +236,21 @@ By continuously adapting to user inputs, machine learning enhances the accuracy 
 <p>ERPs are brain responses time-locked to specific events. They consist of components like the commonly-used P300, which occur about 300 milliseconds after an infrequent or important stimulus. In ERP-based BCIs, users focus on stimuli, and the system detects the P300 responses to determine which stimulus the user is looking at, and therefore which command to execute.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/ERPs_1.png" class="img-fluid figure-img" alt="By Original: Choms Vector: Mononomic - Own work based on: Constudevent.gif, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=5543904" width="300"></p>
-<figcaption>Example Event-Related Potentials</figcaption>
+<p><img src="images/ERPs_new.png" class="img-fluid figure-img" alt="Tamara Bonaci, CC BY-ND" width="300"></p>
+<figcaption>Example Event-Related Potentials - Tamara Bonaci, CC BY-ND</figcaption>
 </figure>
 </div>
 <details>
 <summary>
 <span class="dropdown1"> Diving into ERP Components and Their Significance </span>
 </summary>
-<p><br> ERP components are labeled based on their polarity (positive or negative) and timing. Key components include:</p>
+<p>ERP components are labeled based on their polarity (positive or negative) and timing. Key components include:</p>
 <ul>
 <li><strong>P300:</strong> A positive deflection occurring around 300 milliseconds after an infrequent or significant stimulus. In BCIs, the P300 is used to detect when a user is focusing on a particular stimulus, such as a specific letter in a matrix. The system then translates this detection into a command, enabling the user to select that letter or perform an action.</li>
 <li><strong>N200:</strong> A negative deflection associated with response inhibition and conflict detection. In BCIs, the N200 can be used to monitor error detection or user responses to conflicting stimuli, which can be integrated into more sophisticated control systems.</li>
 <li><strong>N400:</strong> Related to language processing and semantic incongruence. While less commonly used in BCIs, the N400 could assist in applications involving language or communication tasks by detecting how users process and respond to language-based stimuli.</li>
 </ul>
-ERPs provide insights into cognitive processes and brain responses, making them valuable for understanding attention, perception, and decision-making.
+ERPs provide insights into cognitive processes and brain responses, making them valuable for understanding attention, perception, and decision-making. <br>
 </details>
 </section>
 <section id="steady-state-visual-evoked-potentials-ssveps" class="level3">
@@ -260,9 +260,9 @@ ERPs provide insights into cognitive processes and brain responses, making them 
 <summary>
 <span class="dropdown1"> Delving into SSVEPs and Frequency Analysis </span>
 </summary>
-<p><br> SSVEPs are generated when the visual cortex responds to stimuli flickering at specific frequencies. The brain’s response frequency matches the stimulus frequency, enabling reliable detection with EEG.</p>
+<p>SSVEPs are generated when the visual cortex responds to stimuli flickering at specific frequencies. The brain’s response frequency matches the stimulus frequency, enabling reliable detection with EEG.</p>
 <p>In SSVEP-based BCIs, users focus on one of several flickering stimuli, each associated with a distinct command. The system identifies the frequency of the brain’s response to determine user intent. (For example, if the user attends to a stimulus flickering at 10 Hz, the resulting EEG signals would show a 10 Hz oscillation, and the machine learning algorithm would perform the command corresponding to the stimulus flickering at 10 Hz)</p>
-Frequency analysis involves decomposing EEG signals into their frequency components. Techniques such as Fourier Transform and Wavelet Transform help isolate SSVEP frequencies for accurate interpretation.
+Frequency analysis involves decomposing EEG signals into their frequency components. Techniques such as Fourier Transform and Wavelet Transform help isolate SSVEP frequencies for accurate interpretation. <br>
 </details>
 </section>
 <section id="comparison-and-considerations" class="level3">
@@ -281,8 +281,7 @@ Frequency analysis involves decomposing EEG signals into their frequency compone
 <summary>
 <span class="dropdown1"> Advantages and Applications of Hybrid BCIs </span>
 </summary>
-<p><br></p>
-<strong>Advantages:</strong> - <strong>Improved Accuracy:</strong> The combination of multiple neural signals reduces the likelihood of errors by cross-referencing different types of brain activity. - <strong>Greater Flexibility:</strong> Users can perform a broader range of actions, as the system can interpret more diverse types of commands. - <strong>Resilience:</strong> Hybrid BCIs can maintain functionality even if one type of signal is compromised, making them more reliable in real-world applications.
+<strong>Advantages:</strong> - <strong>Improved Accuracy:</strong> The combination of multiple neural signals reduces the likelihood of errors by cross-referencing different types of brain activity. - <strong>Greater Flexibility:</strong> Users can perform a broader range of actions, as the system can interpret more diverse types of commands. - <strong>Resilience:</strong> Hybrid BCIs can maintain functionality even if one type of signal is compromised, making them more reliable in real-world applications. <br>
 </details>
 <p>Hybrid BCIs represent an exciting frontier in brain-computer interface technology, combining the best of multiple approaches to create more effective and user-friendly systems. As research and development continue, hybrid BCIs are likely to become increasingly prominent in both clinical and non-clinical applications.</p>
 </section>
@@ -300,12 +299,11 @@ Frequency analysis involves decomposing EEG signals into their frequency compone
 <summary>
 <span class="dropdown1"> Exploring BCI Applications in More Detail </span>
 </summary>
-<p><br></p>
 <ul>
 <li><strong>Medical Applications:</strong> BCIs restore independence for individuals with mobility impairments, enabling them to control assistive devices through thought alone. For example, BCIs can be integrated with robotic prosthetics to facilitate movement for amputees or individuals with paralysis.</li>
 <li><strong>Communication:</strong> BCIs enable individuals with communication disorders to express themselves by converting brain signals into text or speech, enhancing social interaction and quality of life.</li>
 <li><strong>Gaming and Entertainment:</strong> BCIs offer unique gaming experiences, where players control in-game actions using their thoughts, creating a more immersive and interactive environment.</li>
-<li><strong>Research:</strong> BCIs facilitate research into brain function and cognitive processes, providing insights into neural mechanisms underlying behavior and aiding the development of treatments for neurological disorders.</li>
+<li><strong>Research:</strong> BCIs facilitate research into brain function and cognitive processes, providing insights into neural mechanisms underlying behavior and aiding the development of treatments for neurological disorders. <br></li>
 </ul>
 </details>
 </section>
@@ -316,12 +314,11 @@ Frequency analysis involves decomposing EEG signals into their frequency compone
 <summary>
 <span class="dropdown1"> Innovations and Future Directions in BCIs </span>
 </summary>
-<p><br></p>
 <ul>
 <li><strong>Improved Accessibility:</strong> Researchers are working on developing affordable and easy-to-use BCI systems, making them accessible to a wider population.</li>
 <li><strong>Enhanced Signal Quality:</strong> Advances in signal processing and electrode technology aim to improve the quality and reliability of EEG signals, enhancing BCI performance.</li>
 <li><strong>Integration with AI:</strong> Combining BCIs with artificial intelligence allows for more sophisticated interpretation of brain signals, improving the accuracy and speed of communication and control.</li>
-<li><strong>Wearable BCIs:</strong> Future BCIs may be integrated into wearable devices, offering seamless and unobtrusive interaction with technology in everyday life.</li>
+<li><strong>Wearable BCIs:</strong> Future BCIs may be integrated into wearable devices, offering seamless and unobtrusive interaction with technology in everyday life. <br></li>
 </ul>
 </details>
 </section>
