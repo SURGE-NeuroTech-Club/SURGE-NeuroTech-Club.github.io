@@ -18,7 +18,26 @@ We are located in the **Life Sciences Building, Oceanography wing - Room O2660**
 From the main entrance of the LSC: go down the stairs on the right and continue past the tim hortons until you see doors leading outside on your right. Go through them and enter the building directly across. Continue straight down the hallway until you see the bathrooms on your left, or the SURGE A-frame sign - then it's the doors on your right!
 <br> 
 
+:::: columns
+::: {.column width="65%"}
+
 ![](/images/maps_location1.PNG){fig-align="center"}
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+
+{{< video images/How_to_find_NTC_Video.mp4
+    title="How to find NeuroTech Club!"
+    aspect-ratio="9x16" 
+    width="300" 
+>}}
+
+:::
+::::
 
 ## Our Team
 
