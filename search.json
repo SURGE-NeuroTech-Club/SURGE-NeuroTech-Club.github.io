@@ -1,17 +1,31 @@
 [
   {
-    "objectID": "contact_us.html",
-    "href": "contact_us.html",
-    "title": "Contact Us",
+    "objectID": "docs/tutorials/open-bci/open_bci_setup.html",
+    "href": "docs/tutorials/open-bci/open_bci_setup.html",
+    "title": "Getting Started with OpenBCI",
     "section": "",
-    "text": "Email us at: NeuroTechClub@dal.ca"
+    "text": "This page is not yet complete.\nThis tutorial will take you through the steps of getting you OpenBCI board up and streaming EEG signals!"
   },
   {
-    "objectID": "docs/tutorials/index.html",
-    "href": "docs/tutorials/index.html",
-    "title": "Welcome to the Get Started Landing Page!",
-    "section": "",
-    "text": "Welcome to the Get Started Landing Page!\n\nIf you’re brand new and want to get your computer setup to start working on projects, head over to Getting Setup.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Beginner’s Guide to Machine Learning Concepts and Applications\n\n\nThis tutorial introduces the fundamentals of machine learning, covering key concepts such as supervised and unsupervised learning, data labeling, and model evaluation.\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Setup\n\n\nThis document will teach you how to setup your computer with GitHub, VSCode and a Virtual Environment so you can start working on python projects!\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with OpenBCI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Brain-Computer Interfaces\n\n\nThis tutorial will teach you about the basics of what Brain-Computer Interfaces are, and how they work!\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub\n\n\nThis guide will give you a basic introduction to GitHub and how to effectively use it!\n\n\n\n\n\n\n\nNo matching items"
+    "objectID": "docs/tutorials/open-bci/open_bci_setup.html#installing-the-software",
+    "href": "docs/tutorials/open-bci/open_bci_setup.html#installing-the-software",
+    "title": "Getting Started with OpenBCI",
+    "section": "Installing The Software",
+    "text": "Installing The Software\nFirst, you will have to download the latest version of the OpenBCI GUI (graphical user interface) Make sure to download the correct version for your machine! (windows, mac, or linux).\nOne you have downloaded it, unzip it and move the folder somewhere you will remember! &gt; The GUI doesn’t ‘install’ so you will have to open the folder to start the program\nOnce you open the application OpenBCI_GUI, you should see something like this: \nIf you see the red bar at the bottom that reads ‘This Application is Not being run with Admin Access…’, close it and restart it as an administrator (right click &gt; Run As Administrator &gt; Yes)\nIf you run into trouble or errors not mentioned here, check out the official GUI documentation (or ask one of the SURGE folks!)"
+  },
+  {
+    "objectID": "docs/tutorials/open-bci/open_bci_setup.html#connecting-to-your-board",
+    "href": "docs/tutorials/open-bci/open_bci_setup.html#connecting-to-your-board",
+    "title": "Getting Started with OpenBCI",
+    "section": "Connecting To Your Board",
+    "text": "Connecting To Your Board\nIf at any point something doesn’t work or make sense - check out the official documentation on getting your cyton board setup!\nMake sure you have your Cyton Board, Dongle, and Battery Pack with 4 AA batteries. \nThere is a tiny switch on the side of the cyton board:  - make sure it is in the ‘off’ position (middle) before pluggin in the battery.\nOnce the switch is set to ‘off’, you may plug in the battery pack  and change the switch position to ‘PC’. If you do not see a blue light on the board once you switch it to ‘PC’, the batteries need to be replaced.\nNext, look for the switch on the USB dongle and **make sure the switch is on ‘GPIO 6’ - towards the plug-end before pluggin it into your computer."
+  },
+  {
+    "objectID": "docs/tutorials/open-bci/open_bci_setup.html#more-information-references",
+    "href": "docs/tutorials/open-bci/open_bci_setup.html#more-information-references",
+    "title": "Getting Started with OpenBCI",
+    "section": "More Information & References",
+    "text": "More Information & References\nOpenBCI GUI Reference"
   },
   {
     "objectID": "docs/tutorials/get-started/getting_setup.html",
@@ -47,69 +61,6 @@
     "title": "Getting Setup",
     "section": "Additional Resources",
     "text": "Additional Resources\nThe NCIL Lab Handbook has many great resources - Data Science Tools\nVSCode:\n\nIntroduction to VSCode\n\nGitHub:\n\nIntroduction to GitHub\nNCIL Introduction to GitHub"
-  },
-  {
-    "objectID": "docs/tutorials/open-bci/open_bci_setup.html",
-    "href": "docs/tutorials/open-bci/open_bci_setup.html",
-    "title": "Getting Started with OpenBCI",
-    "section": "",
-    "text": "This page is not yet complete.\nThis tutorial will take you through the steps of getting you OpenBCI board up and streaming EEG signals!"
-  },
-  {
-    "objectID": "docs/tutorials/open-bci/open_bci_setup.html#installing-the-software",
-    "href": "docs/tutorials/open-bci/open_bci_setup.html#installing-the-software",
-    "title": "Getting Started with OpenBCI",
-    "section": "Installing The Software",
-    "text": "Installing The Software\nFirst, you will have to download the latest version of the OpenBCI GUI (graphical user interface) Make sure to download the correct version for your machine! (windows, mac, or linux).\nOne you have downloaded it, unzip it and move the folder somewhere you will remember! &gt; The GUI doesn’t ‘install’ so you will have to open the folder to start the program\nOnce you open the application OpenBCI_GUI, you should see something like this: \nIf you see the red bar at the bottom that reads ‘This Application is Not being run with Admin Access…’, close it and restart it as an administrator (right click &gt; Run As Administrator &gt; Yes)\nIf you run into trouble or errors not mentioned here, check out the official GUI documentation (or ask one of the SURGE folks!)"
-  },
-  {
-    "objectID": "docs/tutorials/open-bci/open_bci_setup.html#connecting-to-your-board",
-    "href": "docs/tutorials/open-bci/open_bci_setup.html#connecting-to-your-board",
-    "title": "Getting Started with OpenBCI",
-    "section": "Connecting To Your Board",
-    "text": "Connecting To Your Board\nIf at any point something doesn’t work or make sense - check out the official documentation on getting your cyton board setup!\nMake sure you have your Cyton Board, Dongle, and Battery Pack with 4 AA batteries. \nThere is a tiny switch on the side of the cyton board:  - make sure it is in the ‘off’ position (middle) before pluggin in the battery.\nOnce the switch is set to ‘off’, you may plug in the battery pack  and change the switch position to ‘PC’. If you do not see a blue light on the board once you switch it to ‘PC’, the batteries need to be replaced.\nNext, look for the switch on the USB dongle and **make sure the switch is on ‘GPIO 6’ - towards the plug-end before pluggin it into your computer."
-  },
-  {
-    "objectID": "docs/tutorials/open-bci/open_bci_setup.html#more-information-references",
-    "href": "docs/tutorials/open-bci/open_bci_setup.html#more-information-references",
-    "title": "Getting Started with OpenBCI",
-    "section": "More Information & References",
-    "text": "More Information & References\nOpenBCI GUI Reference"
-  },
-  {
-    "objectID": "who_we_are.html",
-    "href": "who_we_are.html",
-    "title": "Who We Are",
-    "section": "",
-    "text": "Important Notice: The club now meets on Wednesdays 3-5 pm.\nWe are the Dalhousie/SURGE NeuroTech Club! The goal of the club is to help students with any level of neuroscience or coding experience get engaged and excited about NeuroTechnology!\nThe club is drop-in and completely free to attend! It runs once a week from 3-5pm on Wednesdays in the LSC, Oceanography - Room O2660"
-  },
-  {
-    "objectID": "who_we_are.html#directions",
-    "href": "who_we_are.html#directions",
-    "title": "Who We Are",
-    "section": "How to find us!",
-    "text": "How to find us!\nWe are located in the Life Sciences Building, Oceanography wing - Room O2660\nFrom the main entrance of the LSC: go down the stairs on the right and continue past the tim hortons until you see doors leading outside on your right. Go through them and enter the building directly across. Continue straight down the hallway until you see the bathrooms on your left, or the SURGE A-frame sign - then it’s the doors on your right!"
-  },
-  {
-    "objectID": "who_we_are.html#our-team",
-    "href": "who_we_are.html#our-team",
-    "title": "Who We Are",
-    "section": "Our Team",
-    "text": "Our Team\n\n\nMax Mascini\n  NeuroTech Programming Specialist\n\n\n Max is a dedicated Neurotech Programming Specialist at SURGE, where he utilizes his extensive research experience with brain-computer interfaces (BCIs) to engage students in learning, ideating, and creating innovative neurotechnology solutions. With a background in both neuroscience and computer science, and a passion for merging these fields, Max plays a crucial role in fostering student involvement with neurotechnology in an interactive and supportive environment. His efforts ensure that students not only gain technical skills but also cultivate a genuine interest and enthusiasm for advancing neurotech innovations.  Feel free to reach out to Max with any questions at Mascini.Max@dal.ca"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "SURGE NeuroTech Club",
-    "section": "",
-    "text": "Important Notice: The club now meets on Wednesdays 3-5 pm."
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "SURGE NeuroTech Club",
-    "section": "Contact:",
-    "text": "Contact:\nFor general inquiries, email us at: NeuroTechClub@dal.ca\nFor specific neurotech questions, please reach out to our programming specialist, Max"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html",
@@ -259,6 +210,62 @@
     "text": "Footnotes\n\n\nBishop, Christopher (2006). Pattern recognition and machine learning↩︎"
   },
   {
+    "objectID": "site_info.html",
+    "href": "site_info.html",
+    "title": "Official Website of SURGE Innovation’s NeuroTech Club",
+    "section": "",
+    "text": "This is the official website of SURGE Innovation’s NeuroTech Club hosted by Dalhousie University\nWebsite made using Quarto & hosted via Github pages"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SURGE NeuroTech Club",
+    "section": "",
+    "text": "Important Notice: The club now meets on Wednesdays 3-5 pm."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "SURGE NeuroTech Club",
+    "section": "Contact:",
+    "text": "Contact:\nFor general inquiries, email us at: NeuroTechClub@dal.ca\nFor specific neurotech questions, please reach out to our programming specialist, Max"
+  },
+  {
+    "objectID": "contact_us.html",
+    "href": "contact_us.html",
+    "title": "Contact Us",
+    "section": "",
+    "text": "Email us at: NeuroTechClub@dal.ca"
+  },
+  {
+    "objectID": "who_we_are.html",
+    "href": "who_we_are.html",
+    "title": "Who We Are",
+    "section": "",
+    "text": "Important Notice: The club now meets on Wednesdays 3-5 pm.\nWe are the Dalhousie/SURGE NeuroTech Club! The goal of the club is to help students with any level of neuroscience or coding experience get engaged and excited about NeuroTechnology!\nThe club is drop-in and completely free to attend! It runs once a week from 3-5pm on Wednesdays in the LSC, Oceanography - Room O2660"
+  },
+  {
+    "objectID": "who_we_are.html#directions",
+    "href": "who_we_are.html#directions",
+    "title": "Who We Are",
+    "section": "How to find us!",
+    "text": "How to find us!\nWe are located in the Life Sciences Building, Oceanography wing - Room O2660\nFrom the main entrance of the LSC: go down the stairs on the right and continue past the tim hortons until you see doors leading outside on your right. Go through them and enter the building directly across. Continue straight down the hallway until you see the bathrooms on your left, or the SURGE A-frame sign - then it’s the doors on your right!"
+  },
+  {
+    "objectID": "who_we_are.html#our-team",
+    "href": "who_we_are.html#our-team",
+    "title": "Who We Are",
+    "section": "Our Team",
+    "text": "Our Team\n\n\nMax Mascini\n  NeuroTech Programming Specialist\n\n\n Max is a dedicated Neurotech Programming Specialist at SURGE, where he utilizes his extensive research experience with brain-computer interfaces (BCIs) to engage students in learning, ideating, and creating innovative neurotechnology solutions. With a background in both neuroscience and computer science, and a passion for merging these fields, Max plays a crucial role in fostering student involvement with neurotechnology in an interactive and supportive environment. His efforts ensure that students not only gain technical skills but also cultivate a genuine interest and enthusiasm for advancing neurotech innovations.  Feel free to reach out to Max with any questions at Mascini.Max@dal.ca"
+  },
+  {
+    "objectID": "docs/tutorials/index.html",
+    "href": "docs/tutorials/index.html",
+    "title": "Welcome to the Get Started Landing Page!",
+    "section": "",
+    "text": "Welcome to the Get Started Landing Page!\n\nIf you’re brand new and want to get your computer setup to start working on projects, head over to Getting Setup.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Beginner’s Guide to Machine Learning Concepts and Applications\n\n\nThis tutorial introduces the fundamentals of machine learning, covering key concepts such as supervised and unsupervised learning, data labeling, and model evaluation.\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Setup\n\n\nThis document will teach you how to setup your computer with GitHub, VSCode and a Virtual Environment so you can start working on python projects!\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with OpenBCI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Brain-Computer Interfaces\n\n\nThis tutorial will teach you about the basics of what Brain-Computer Interfaces are, and how they work!\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub\n\n\nThis guide will give you a basic introduction to GitHub and how to effectively use it!\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "docs/tutorials/get-started/github_intro.html",
     "href": "docs/tutorials/get-started/github_intro.html",
     "title": "Introduction to GitHub",
@@ -355,12 +362,5 @@
     "title": "Introduction to Brain-Computer Interfaces",
     "section": "References",
     "text": "References"
-  },
-  {
-    "objectID": "site_info.html",
-    "href": "site_info.html",
-    "title": "Official Website of SURGE Innovation’s NeuroTech Club",
-    "section": "",
-    "text": "This is the official website of SURGE Innovation’s NeuroTech Club hosted by Dalhousie University\nWebsite made using Quarto & hosted via Github pages"
   }
 ]
