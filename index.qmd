@@ -21,13 +21,10 @@ about:
 #   fields: [image, title, description]
 ---
 
-<!-- ![](images/logos/new_logo_transparent.png){.banner-image} -->
-
-
+<!-- 
 <div class="notice">
   **Important Notice:** Club is **CANCELLED** today, October 2nd.
-</div>
-
+</div> -->
 
 ### Welcome to the NeuroTech Club Website! 
 We are a community of neuro-enthusiasts dedicated to exploring, understanding, and innovating in the field of neurotechnology. Join us as we delve into this exciting frontier!
