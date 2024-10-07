@@ -4,6 +4,12 @@ project:
 
 website:
   title: "SURGE NeuroTech Club"
+  google-analytics: 
+    tracking-id: G-KW75ZEEZEM
+    anonymize-ip: true
+  cookie-consent:
+    type: implied
+    palette: dark
   image: images/logo.png
   favicon: images/logos/logo_favicon_transparent.png
   # favicon: images/logos/new_favicon.webp
