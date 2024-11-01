@@ -6,8 +6,9 @@ css: ../../../index.scss
 
 listing: # https://quarto.org/docs/websites/website-listings.html
   contents: 
-    # - getting-setup/*.qmd
-    - ../tutorials/*/*.qmd
+    - ../tutorials/get-started/*.qmd
+    - ../tutorials/brain-computer-interfaces/*.qmd
+    - ../tutorials/machine-learning/*.qmd
   type: grid
   image-align: left 
   fields: [image, title, description]
