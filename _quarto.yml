@@ -29,7 +29,7 @@ website:
         href: https://github.com/orgs/SURGE-NeuroTech-Club
         target: _blank
     left:
-      - text: "Get Started"
+      - text: "Tutorials"
         href: docs/tutorials/index.qmd
       # - text: "Get Started"
       #   menu:

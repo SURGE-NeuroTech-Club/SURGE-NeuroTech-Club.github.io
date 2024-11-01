@@ -11,7 +11,7 @@
     "href": "who_we_are.html#directions",
     "title": "Who We Are",
     "section": "How to find us!",
-    "text": "How to find us!\nWe are located in the Life Sciences Building, Oceanography wing - Room O2660\nFrom the main entrance of the LSC: go down the stairs on the right and continue past the tim hortons until you see doors leading outside on your right. Go through them and enter the building directly across. Continue straight down the hallway until you see the bathrooms on your left, or the SURGE A-frame sign - then it’s the doors on your right!"
+    "text": "How to find us!\nWe are located in the Life Sciences Building, Oceanography wing - Room O2660\nFrom the main entrance of the LSC: take the stairs on the right, walk past Tim Hortons, and exit through the doors on your right. Enter the building across from you, walk straight down the hallway until you see the bathrooms on your left or the SURGE A-frame sign, then head through the doors on your right.\nFor wheelchair access to SURGE: start at Wickwire Field and walk beside the Life Sciences Centre (LSC) toward Oxford Street, passing between the LSC and Shirreff Hall. After the playground, LSC courtyard, and bike locks on your right, you’ll see the ramp just beyond the bike locks."
   },
   {
     "objectID": "who_we_are.html#our-team",
@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "SURGE NeuroTech Club",
     "section": "",
-    "text": "We are a community of neuro-enthusiasts dedicated to exploring, understanding, and innovating in the field of neurotechnology. Join us as we delve into this exciting frontier!\nWe meet every Wednesdays 3-5 pm in the SURGE room LSC, Room O2660. If you can’t make the full time, no worries - feel free to drop by and check it out!\nIf you’re new to the club and don’t know where to begin, you can click on Get Started or, just ask one of the SURGE folks!"
+    "text": "We are a community of neuro-enthusiasts dedicated to exploring, understanding, and innovating in the field of neurotechnology. Join us as we delve into this exciting frontier!\nWe meet every Wednesdays 3-5 pm in the SURGE room LSC, Room O2660. If you can’t make the full time, no worries - feel free to drop by and check it out!\nIf you’re new to the club and don’t know where to begin, you can click on Tutorials to learn more, or just ask one of the SURGE folks!"
   },
   {
     "objectID": "index.html#contact",
@@ -326,7 +326,7 @@
     "href": "docs/tutorials/index.html",
     "title": "Welcome to the Get Started Landing Page!",
     "section": "",
-    "text": "Welcome to the Get Started Landing Page!\n\nIf you’re brand new and want to get your computer setup to start working on projects, head over to Getting Setup.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Beginner’s Guide to Machine Learning Concepts and Applications\n\n\nThis tutorial introduces the fundamentals of machine learning, covering key concepts such as supervised and unsupervised learning, data labeling, and model evaluation.\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Setup\n\n\nThis document will teach you how to setup your computer with GitHub, VSCode and a Virtual Environment so you can start working on python projects!\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with OpenBCI\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Brain-Computer Interfaces\n\n\nThis tutorial will teach you about the basics of what Brain-Computer Interfaces are, and how they work!\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub\n\n\nThis guide will give you a basic introduction to GitHub and how to effectively use it!\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to the Get Started Landing Page!\n\nIf you’re brand new and want to get your computer setup to start working on projects, head over to Getting Setup.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Beginner’s Guide to Machine Learning Concepts and Applications\n\n\nThis tutorial introduces the fundamentals of machine learning, covering key concepts such as supervised and unsupervised learning, data labeling, and model evaluation.\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Setup\n\n\nThis document will teach you how to setup your computer with GitHub, VSCode and a Virtual Environment so you can start working on python projects!\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Brain-Computer Interfaces\n\n\nThis tutorial will teach you about the basics of what Brain-Computer Interfaces are, and how they work!\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub\n\n\nThis guide will give you a basic introduction to GitHub and how to effectively use it!\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "docs/tutorials/open-bci/open_bci_setup.html",
