@@ -23,7 +23,7 @@ We are located in the **Life Sciences Building, Oceanography wing - Room O2660**
 :::: columns
 ::: {.column width="65%"}
 
-![](images/how_to_find_us_map_small.PNG)
+![](images/how_to_find_us_map_small.jpg)
 
 :::
 
