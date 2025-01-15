@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "who_we_are.html",
-    "href": "who_we_are.html",
-    "title": "Who We Are",
-    "section": "",
-    "text": "We are the Dalhousie/SURGE NeuroTech Club! The goal of the club is to help students with any level of neuroscience or coding experience get engaged and excited about NeuroTechnology!\nThe club is drop-in and completely free to attend! It runs once a week from 3-5pm on Wednesdays in the LSC, Oceanography - Room O2660"
-  },
-  {
-    "objectID": "who_we_are.html#directions",
-    "href": "who_we_are.html#directions",
-    "title": "Who We Are",
-    "section": "How to find us!",
-    "text": "How to find us!\nWe are located in the Life Sciences Building, Oceanography wing - Room O2660\nFrom the main entrance of the LSC: take the stairs on the right, walk past Tim Hortons, and exit through the doors on your right. Enter the building across from you, walk straight down the hallway until you see the bathrooms on your left or the SURGE A-frame sign, then head through the doors on your right.\nFor wheelchair access to SURGE: start at Wickwire Field and walk beside the Life Sciences Centre (LSC) toward Oxford Street, passing between the LSC and Shirreff Hall. After the playground, LSC courtyard, and bike locks on your right, you’ll see the ramp just beyond the bike locks."
-  },
-  {
-    "objectID": "who_we_are.html#our-team",
-    "href": "who_we_are.html#our-team",
-    "title": "Who We Are",
-    "section": "Our Team",
-    "text": "Our Team\n\n\nMax Mascini\n  NeuroTech Programming Specialist\n\n\n Max is a dedicated Neurotech Programming Specialist at SURGE, where he utilizes his extensive research experience with brain-computer interfaces (BCIs) to engage students in learning, ideating, and creating innovative neurotechnology solutions. With a background in both neuroscience and computer science, and a passion for merging these fields, Max plays a crucial role in fostering student involvement with neurotechnology in an interactive and supportive environment. His efforts ensure that students not only gain technical skills but also cultivate a genuine interest and enthusiasm for advancing neurotech innovations.  Feel free to reach out to Max with any questions at Mascini.Max@dal.ca"
-  },
-  {
     "objectID": "site_info.html",
     "href": "site_info.html",
     "title": "Official Website of SURGE Innovation’s NeuroTech Club",
@@ -28,53 +7,18 @@
     "text": "This is the official website of SURGE Innovation’s NeuroTech Club hosted by Dalhousie University\nWebsite made using Quarto & hosted via Github pages"
   },
   {
-    "objectID": "contact_us.html",
-    "href": "contact_us.html",
-    "title": "Contact Us",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SURGE NeuroTech Club",
     "section": "",
-    "text": "Email us at: NeuroTechClub@dal.ca"
+    "text": "Important Notice: Club Resumes on January 22nd for the Winter Semester!"
   },
   {
-    "objectID": "docs/tutorials/get-started/github_intro.html",
-    "href": "docs/tutorials/get-started/github_intro.html",
-    "title": "Introduction to GitHub",
-    "section": "",
-    "text": "GitHub is a web-based platform for version control and collaboration that allows developers to host and manage their code. It uses Git, a distributed version control system, to track changes in source code during software development. GitHub provides a range of features including issue tracking, project management, and code review tools."
-  },
-  {
-    "objectID": "docs/tutorials/get-started/github_intro.html#what-is-github",
-    "href": "docs/tutorials/get-started/github_intro.html#what-is-github",
-    "title": "Introduction to GitHub",
-    "section": "",
-    "text": "GitHub is a web-based platform for version control and collaboration that allows developers to host and manage their code. It uses Git, a distributed version control system, to track changes in source code during software development. GitHub provides a range of features including issue tracking, project management, and code review tools."
-  },
-  {
-    "objectID": "docs/tutorials/get-started/github_intro.html#key-features-of-github",
-    "href": "docs/tutorials/get-started/github_intro.html#key-features-of-github",
-    "title": "Introduction to GitHub",
-    "section": "Key Features of GitHub",
-    "text": "Key Features of GitHub\n\nRepositories: Storage spaces where your project files and their revision history are kept.\nCommits: Saved changes to files in a repository, allowing you to track modifications.\nBranches: Separate lines of development within a repository, useful for working on different features simultaneously.\nPull Requests: Proposals to merge changes from one branch to another, often used for code reviews and collaboration.\nIssues: Tools for tracking tasks, enhancements, and bugs in your projects."
-  },
-  {
-    "objectID": "docs/tutorials/get-started/github_intro.html#getting-started-with-github",
-    "href": "docs/tutorials/get-started/github_intro.html#getting-started-with-github",
-    "title": "Introduction to GitHub",
-    "section": "Getting Started with GitHub",
-    "text": "Getting Started with GitHub\nBefore you get started here, make sure you already have a GitHub account setup. If you don’t head over to Getting Setup for instructions!\n\n1. Installing GitHub Desktop\n\nDownload GitHub Desktop from desktop.github.com if you don’t already have it installed.\nInstall GitHub Desktop following the instructions for your operating system.\n\n\n\n2. Cloning a Repository\nTo work on your project locally, clone the repository to your computer using GitHub Desktop.\n\nOpen GitHub Desktop.\nClick File &gt; Clone repository.\nSelect the repository you want to clone from the list or enter the URL of the repository.\nChoose the local path where you want to save the repository and click Clone.\n\nExplanation: Cloning a repository means creating a local copy of the repository on your computer, allowing you to work on it offline and sync your changes with the remote repository later.\n\n\n3. Creating a Branch\n99% of the time, you’ll want to work on a Branch. This effectively copies the code from main and allows you to work on it separately. This is great for a few reasons: - It avoids conflicts with overwriting which can happen when multiple people work on the same code in the same branch. - If you seriously break something and can’t figure out how to get it back - you can just pull from main!\nTo create a branch:\n\nSelect the repository you want to make a branch of.\nClick Current Branch &gt; New Branch.\nName the branch whatever you want (make sure to remember it!).\nSelect where you want the code to copy from (Main is the default branch, but you can copy the code from someone else’s branch too).\nClick Create Branch.\nMake sure the branch you just made is selected under Current Branch.\n\nExplanation: Branches allow you to develop features, fix bugs, or safely experiment with new ideas in isolation from the main codebase.\n\n\n4. Making Changes and Committing\n\nOpen the cloned repository in your preferred code editor and make changes to your files.\nGo back to GitHub Desktop. You will see your changes listed under Changes.\nAdd a summary and description for your commit in the Summary and Description fields.\nClick Commit to main (or your branch name if you are using a different one).\n\nExplanation: Committing saves your changes to the local repository, with a message describing what you did. This helps in keeping track of different versions of your code.\n\n\n5. Pushing Changes to GitHub\n\nAfter committing your changes, click Push origin at the top of GitHub Desktop to upload your commits to GitHub.\n\nExplanation: Pushing sends your committed changes to the remote repository on GitHub, making them available to others.\n\n\n6. Creating a Pull Request\nA pull request is a proposal to merge changes from one branch to another. It’s used for code review and collaboration before integrating changes into the main branch. Once you feel like you’ve implemented what you intended, you can make a pull request to merge your changes with the main (or another) branch.\n\nNavigate to your repository on GitHub.\nClick on the Pull requests tab.\nClick New pull request.\nSelect the branch you want to merge from and to.\nAdd a title and description for your pull request.\nClick Create pull request.\n\nExplanation: Pull requests facilitate discussion about your changes before they are merged into the main branch, ensuring code quality and collaboration."
-  },
-  {
-    "objectID": "docs/tutorials/get-started/github_intro.html#conclusion",
-    "href": "docs/tutorials/get-started/github_intro.html#conclusion",
-    "title": "Introduction to GitHub",
-    "section": "Conclusion",
-    "text": "Conclusion\nGitHub is a powerful platform for version control and collaboration, enabling developers to work together on projects effectively. By creating repositories, making commits, and managing pull requests with GitHub Desktop, you can maintain a smooth and organized workflow.\nAnother great resource to check out is the NCIL Handbook’s section on GitHub"
-  },
-  {
-    "objectID": "docs/tutorials/index.html",
-    "href": "docs/tutorials/index.html",
-    "title": "Welcome to the Get Started Landing Page!",
-    "section": "",
-    "text": "Welcome to the Get Started Landing Page!\n\nIf you’re brand new and want to get your computer setup to start working on projects, head over to Getting Setup.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Beginner’s Guide to Machine Learning Concepts and Applications\n\n\nThis tutorial introduces the fundamentals of machine learning, covering key concepts such as supervised and unsupervised learning, data labeling, and model evaluation.\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Setup\n\n\nThis document will teach you how to setup your computer with GitHub, VSCode and a Virtual Environment so you can start working on python projects!\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Brain-Computer Interfaces\n\n\nThis tutorial will teach you about the basics of what Brain-Computer Interfaces are, and how they work!\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub\n\n\nThis guide will give you a basic introduction to GitHub and how to effectively use it!\n\n\n\n\n\n\n\nNo matching items"
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "SURGE NeuroTech Club",
+    "section": "Contact:",
+    "text": "Contact:\nFor general inquiries, email us at: NeuroTechClub@dal.ca\nFor specific neurotech questions, please reach out to our programming specialist, Max"
   },
   {
     "objectID": "docs/tutorials/brain-computer-interfaces/intro_to_bci.html",
@@ -138,6 +82,41 @@
     "title": "Introduction to Brain-Computer Interfaces",
     "section": "References",
     "text": "References"
+  },
+  {
+    "objectID": "docs/tutorials/get-started/github_intro.html",
+    "href": "docs/tutorials/get-started/github_intro.html",
+    "title": "Introduction to GitHub",
+    "section": "",
+    "text": "GitHub is a web-based platform for version control and collaboration that allows developers to host and manage their code. It uses Git, a distributed version control system, to track changes in source code during software development. GitHub provides a range of features including issue tracking, project management, and code review tools."
+  },
+  {
+    "objectID": "docs/tutorials/get-started/github_intro.html#what-is-github",
+    "href": "docs/tutorials/get-started/github_intro.html#what-is-github",
+    "title": "Introduction to GitHub",
+    "section": "",
+    "text": "GitHub is a web-based platform for version control and collaboration that allows developers to host and manage their code. It uses Git, a distributed version control system, to track changes in source code during software development. GitHub provides a range of features including issue tracking, project management, and code review tools."
+  },
+  {
+    "objectID": "docs/tutorials/get-started/github_intro.html#key-features-of-github",
+    "href": "docs/tutorials/get-started/github_intro.html#key-features-of-github",
+    "title": "Introduction to GitHub",
+    "section": "Key Features of GitHub",
+    "text": "Key Features of GitHub\n\nRepositories: Storage spaces where your project files and their revision history are kept.\nCommits: Saved changes to files in a repository, allowing you to track modifications.\nBranches: Separate lines of development within a repository, useful for working on different features simultaneously.\nPull Requests: Proposals to merge changes from one branch to another, often used for code reviews and collaboration.\nIssues: Tools for tracking tasks, enhancements, and bugs in your projects."
+  },
+  {
+    "objectID": "docs/tutorials/get-started/github_intro.html#getting-started-with-github",
+    "href": "docs/tutorials/get-started/github_intro.html#getting-started-with-github",
+    "title": "Introduction to GitHub",
+    "section": "Getting Started with GitHub",
+    "text": "Getting Started with GitHub\nBefore you get started here, make sure you already have a GitHub account setup. If you don’t head over to Getting Setup for instructions!\n\n1. Installing GitHub Desktop\n\nDownload GitHub Desktop from desktop.github.com if you don’t already have it installed.\nInstall GitHub Desktop following the instructions for your operating system.\n\n\n\n2. Cloning a Repository\nTo work on your project locally, clone the repository to your computer using GitHub Desktop.\n\nOpen GitHub Desktop.\nClick File &gt; Clone repository.\nSelect the repository you want to clone from the list or enter the URL of the repository.\nChoose the local path where you want to save the repository and click Clone.\n\nExplanation: Cloning a repository means creating a local copy of the repository on your computer, allowing you to work on it offline and sync your changes with the remote repository later.\n\n\n3. Creating a Branch\n99% of the time, you’ll want to work on a Branch. This effectively copies the code from main and allows you to work on it separately. This is great for a few reasons: - It avoids conflicts with overwriting which can happen when multiple people work on the same code in the same branch. - If you seriously break something and can’t figure out how to get it back - you can just pull from main!\nTo create a branch:\n\nSelect the repository you want to make a branch of.\nClick Current Branch &gt; New Branch.\nName the branch whatever you want (make sure to remember it!).\nSelect where you want the code to copy from (Main is the default branch, but you can copy the code from someone else’s branch too).\nClick Create Branch.\nMake sure the branch you just made is selected under Current Branch.\n\nExplanation: Branches allow you to develop features, fix bugs, or safely experiment with new ideas in isolation from the main codebase.\n\n\n4. Making Changes and Committing\n\nOpen the cloned repository in your preferred code editor and make changes to your files.\nGo back to GitHub Desktop. You will see your changes listed under Changes.\nAdd a summary and description for your commit in the Summary and Description fields.\nClick Commit to main (or your branch name if you are using a different one).\n\nExplanation: Committing saves your changes to the local repository, with a message describing what you did. This helps in keeping track of different versions of your code.\n\n\n5. Pushing Changes to GitHub\n\nAfter committing your changes, click Push origin at the top of GitHub Desktop to upload your commits to GitHub.\n\nExplanation: Pushing sends your committed changes to the remote repository on GitHub, making them available to others.\n\n\n6. Creating a Pull Request\nA pull request is a proposal to merge changes from one branch to another. It’s used for code review and collaboration before integrating changes into the main branch. Once you feel like you’ve implemented what you intended, you can make a pull request to merge your changes with the main (or another) branch.\n\nNavigate to your repository on GitHub.\nClick on the Pull requests tab.\nClick New pull request.\nSelect the branch you want to merge from and to.\nAdd a title and description for your pull request.\nClick Create pull request.\n\nExplanation: Pull requests facilitate discussion about your changes before they are merged into the main branch, ensuring code quality and collaboration."
+  },
+  {
+    "objectID": "docs/tutorials/get-started/github_intro.html#conclusion",
+    "href": "docs/tutorials/get-started/github_intro.html#conclusion",
+    "title": "Introduction to GitHub",
+    "section": "Conclusion",
+    "text": "Conclusion\nGitHub is a powerful platform for version control and collaboration, enabling developers to work together on projects effectively. By creating repositories, making commits, and managing pull requests with GitHub Desktop, you can maintain a smooth and organized workflow.\nAnother great resource to check out is the NCIL Handbook’s section on GitHub"
   },
   {
     "objectID": "docs/tutorials/machine-learning/intro_to_ml.html",
@@ -287,6 +266,27 @@
     "text": "Footnotes\n\n\nBishop, Christopher (2006). Pattern recognition and machine learning↩︎"
   },
   {
+    "objectID": "who_we_are.html",
+    "href": "who_we_are.html",
+    "title": "Who We Are",
+    "section": "",
+    "text": "We are the Dalhousie/SURGE NeuroTech Club! The goal of the club is to help students with any level of neuroscience or coding experience get engaged and excited about NeuroTechnology!\nThe club is drop-in and completely free to attend! It runs once a week from 3-5pm on Wednesdays in the LSC, Oceanography - Room O2660"
+  },
+  {
+    "objectID": "who_we_are.html#directions",
+    "href": "who_we_are.html#directions",
+    "title": "Who We Are",
+    "section": "How to find us!",
+    "text": "How to find us!\nWe are located in the Life Sciences Building, Oceanography wing - Room O2660\nFrom the main entrance of the LSC: take the stairs on the right, walk past Tim Hortons, and exit through the doors on your right. Enter the building across from you, walk straight down the hallway until you see the bathrooms on your left or the SURGE A-frame sign, then head through the doors on your right.\nFor wheelchair access to SURGE: start at Wickwire Field and walk beside the Life Sciences Centre (LSC) toward Oxford Street, passing between the LSC and Shirreff Hall. After the playground, LSC courtyard, and bike locks on your right, you’ll see the ramp just beyond the bike locks."
+  },
+  {
+    "objectID": "who_we_are.html#our-team",
+    "href": "who_we_are.html#our-team",
+    "title": "Who We Are",
+    "section": "Our Team",
+    "text": "Our Team\n\n\nMax Mascini\n  NeuroTech Programming Specialist\n\n\n Max is a dedicated Neurotech Programming Specialist at SURGE, where he utilizes his extensive research experience with brain-computer interfaces (BCIs) to engage students in learning, ideating, and creating innovative neurotechnology solutions. With a background in both neuroscience and computer science, and a passion for merging these fields, Max plays a crucial role in fostering student involvement with neurotechnology in an interactive and supportive environment. His efforts ensure that students not only gain technical skills but also cultivate a genuine interest and enthusiasm for advancing neurotech innovations.  Feel free to reach out to Max with any questions at Mascini.Max@dal.ca"
+  },
+  {
     "objectID": "docs/tutorials/open-bci/open_bci_setup.html",
     "href": "docs/tutorials/open-bci/open_bci_setup.html",
     "title": "Getting Started with OpenBCI",
@@ -313,6 +313,13 @@
     "title": "Getting Started with OpenBCI",
     "section": "More Information & References",
     "text": "More Information & References\nOpenBCI GUI Reference"
+  },
+  {
+    "objectID": "docs/tutorials/index.html",
+    "href": "docs/tutorials/index.html",
+    "title": "Welcome to the Get Started Landing Page!",
+    "section": "",
+    "text": "If you’re brand new and want to get your computer setup to start working on projects, head over to Getting Setup.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Beginner’s Guide to Machine Learning Concepts and Applications\n\n\nThis tutorial introduces the fundamentals of machine learning, covering key concepts such as supervised and unsupervised learning, data labeling, and model evaluation.\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Setup\n\n\nThis document will teach you how to setup your computer with GitHub, VSCode and a Virtual Environment so you can start working on python projects!\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Brain-Computer Interfaces\n\n\nThis tutorial will teach you about the basics of what Brain-Computer Interfaces are, and how they work!\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub\n\n\nThis guide will give you a basic introduction to GitHub and how to effectively use it!\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "docs/tutorials/get-started/getting_setup.html",
@@ -350,17 +357,10 @@
     "text": "Additional Resources\nThe NCIL Lab Handbook has many great resources - Data Science Tools\nVSCode:\n\nIntroduction to VSCode\n\nGitHub:\n\nIntroduction to GitHub\nNCIL Introduction to GitHub"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "SURGE NeuroTech Club",
+    "objectID": "contact_us.html",
+    "href": "contact_us.html",
+    "title": "Contact Us",
     "section": "",
-    "text": "We are a community of neuro-enthusiasts dedicated to exploring, understanding, and innovating in the field of neurotechnology. Join us as we delve into this exciting frontier!\nWe meet every Wednesdays 3-5 pm in the SURGE room LSC, Room O2660. If you can’t make the full time, no worries - feel free to drop by and check it out!\nIf you’re new to the club and don’t know where to begin, you can click on Tutorials to learn more, or just ask one of the SURGE folks!"
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "SURGE NeuroTech Club",
-    "section": "Contact:",
-    "text": "Contact:\nFor general inquiries, email us at: NeuroTechClub@dal.ca\nFor specific neurotech questions, please reach out to our programming specialist, Max"
+    "text": "Email us at: NeuroTechClub@dal.ca"
   }
 ]
