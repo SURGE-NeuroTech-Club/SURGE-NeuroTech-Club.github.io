@@ -21,10 +21,9 @@ about:
 #   fields: [image, title, description]
 ---
 
-<!-- 
 <div class="notice">
-  **Important Notice:** Club is **CANCELLED** today, October 2nd.
-</div> -->
+  **Important Notice:** Club Resumes on January 22nd for the Winter Semester!
+</div>
 
 ### Welcome to the NeuroTech Club Website! 
 We are a community of neuro-enthusiasts dedicated to exploring, understanding, and innovating in the field of neurotechnology. Join us as we delve into this exciting frontier!
