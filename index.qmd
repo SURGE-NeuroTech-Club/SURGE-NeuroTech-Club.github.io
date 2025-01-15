@@ -21,7 +21,6 @@ about:
 #   fields: [image, title, description]
 ---
 
-
 <div class="notice">
   **Important Notice:** Club Resumes on January 22nd for the Winter Semester!
 </div>
