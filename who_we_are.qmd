@@ -12,6 +12,7 @@ We are the Dalhousie/SURGE NeuroTech Club! The goal of the club is to help stude
 The club is drop-in and completely free to attend! It runs once a week from <span class='highlight1'>**{{< meta club-hours >}} on Wednesdays**</span> in the LSC, Oceanography - Room O2660 <br>
 
 
+
 ## How to find us! {#directions}
 
 We are located in the **Life Sciences Building, Oceanography wing - Room O2660**
