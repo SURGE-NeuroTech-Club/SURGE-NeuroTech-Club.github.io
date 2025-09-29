@@ -2,6 +2,9 @@ project:
   type: website
   output-dir: _site
 
+metadata:
+  club-hours: "4 - 6 PM"
+
 website:
   title: "SURGE NeuroTech Club"
   google-analytics: 
