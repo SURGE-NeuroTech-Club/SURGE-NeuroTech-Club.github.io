@@ -23,8 +23,7 @@ about:
 
 
 <div class="notice">
-  **Important Notice:** No club this Wednesday, Oct 1st! 
-  Club resumes on the 8th.
+  **Important Notice:** Club hours have changed to {{< meta club-hours >}}!
 </div>
 
 
