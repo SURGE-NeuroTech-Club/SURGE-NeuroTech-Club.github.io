@@ -23,7 +23,7 @@ about:
 
 
 <div class="notice">
-  **Important Notice:** Club hours have changed to {{< meta club-hours >}}!
+  **Important Notice:** {{< meta notice-message >}}!
 </div>
 
 
