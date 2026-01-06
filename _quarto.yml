@@ -3,8 +3,8 @@ project:
   output-dir: _site
 
 metadata:
-  club-hours: "3 - 5 PM"
-  notice-message: "Club has Finished for Fall 2025! \n Club Will Resume Jan 7th. \n Happy Holidays!"
+  club-hours: "Thursdays 3 - 5 PM"
+  notice-message: "Club has Finished for Fall 2025! \n Club Will Resume Jan 8th. \n Happy Holidays!"
 
 website:
   title: "SURGE NeuroTech Club"
