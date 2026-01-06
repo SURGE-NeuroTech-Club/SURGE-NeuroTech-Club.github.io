@@ -4,7 +4,8 @@ project:
 
 metadata:
   club-hours: "3 - 5 PM"
-  notice-message: "Club has Finished for Fall 2025! \n Club Will Resume Jan 7th. \n Happy Holidays!"
+  club-day: "Thursday"
+  notice-message: "Happy new years! \n Club Will Resume Jan 8th."
 
 website:
   title: "SURGE NeuroTech Club"

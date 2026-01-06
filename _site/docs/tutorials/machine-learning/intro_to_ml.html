@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,14 +70,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-748b535e376f14d4692bf2b2e5fd6380.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-e72dfb35e2d2d8d7cbc3972c80437720.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-c00fc6ac3a69db0ba9810554ebfadc5e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -155,7 +156,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -186,7 +187,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../images/logos/logo_transparent.png" alt="" class="navbar-logo">
+    <img src="../../../images/logos/logo_transparent.png" alt="" class="navbar-logo light-content">
+    <img src="../../../images/logos/logo_transparent.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">SURGE NeuroTech Club</span>
@@ -542,7 +544,7 @@ window.Quarto = {
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -551,27 +553,27 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>sepal_length</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>sepal_width</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>petal_length</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>petal_width</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>species</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
+<th data-quarto-table-cell-role="th">5</th>
 <td># Observations: 150</td>
 </tr>
 </tbody>
@@ -604,7 +606,7 @@ window.Quarto = {
 <div id="cell-CorrPlot" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>plt.style.use(<span class="st">"dark_background"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>plt.style.use(<span class="st">"dark_background"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="co"># Making a correlation plot of all variables except 'Id'</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a>corr_plot <span class="op">=</span> sns.pairplot(data.iloc[:, <span class="dv">0</span>:<span class="dv">5</span>], </span>
@@ -622,7 +624,7 @@ window.Quarto = {
 <span id="cb1-16"><a href="#cb1-16"></a>corr_plot.fig.set_size_inches(<span class="dv">10</span>, <span class="fl">5.5</span>)</span>
 <span id="cb1-17"><a href="#cb1-17"></a></span>
 <span id="cb1-18"><a href="#cb1-18"></a><span class="co"># Show the plot</span></span>
-<span id="cb1-19"><a href="#cb1-19"></a>corr_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-19"><a href="#cb1-19"></a>corr_plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -641,7 +643,7 @@ window.Quarto = {
 <div id="bcf17861" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="fl">5.5</span>))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="fl">5.5</span>))</span>
 <span id="cb2-2"><a href="#cb2-2"></a></span>
 <span id="cb2-3"><a href="#cb2-3"></a>df <span class="op">=</span> px.data.iris()</span>
 <span id="cb2-4"><a href="#cb2-4"></a>X <span class="op">=</span> df[[<span class="st">'sepal_length'</span>, <span class="st">'sepal_width'</span>, <span class="st">'petal_length'</span>, <span class="st">'petal_width'</span>]]</span>
@@ -654,7 +656,7 @@ window.Quarto = {
 <span id="cb2-11"><a href="#cb2-11"></a>pca_df[<span class="st">'species'</span>] <span class="op">=</span> df[<span class="st">'species'</span>]</span>
 <span id="cb2-12"><a href="#cb2-12"></a></span>
 <span id="cb2-13"><a href="#cb2-13"></a><span class="co"># Plot the PCA results</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a>pca2d <span class="op">=</span> sns.scatterplot(data<span class="op">=</span>pca_df, x<span class="op">=</span><span class="st">'PCA1'</span>, y<span class="op">=</span><span class="st">'PCA2'</span>, hue<span class="op">=</span><span class="st">'species'</span>, palette<span class="op">=</span><span class="st">"Set2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-14"><a href="#cb2-14"></a>pca2d <span class="op">=</span> sns.scatterplot(data<span class="op">=</span>pca_df, x<span class="op">=</span><span class="st">'PCA1'</span>, y<span class="op">=</span><span class="st">'PCA2'</span>, hue<span class="op">=</span><span class="st">'species'</span>, palette<span class="op">=</span><span class="st">"Set2"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -675,8 +677,8 @@ window.Quarto = {
 <div id="ind-dep1" class="cell panel-center" data-execution_count="5">
 <details class="code-fold">
 <summary>Show the code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>X <span class="op">=</span> data.drop([<span class="st">'species_id'</span>, <span class="st">'species'</span>], axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb3-2"><a href="#cb3-2"></a>y <span class="op">=</span> data[<span class="st">'species'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>X <span class="op">=</span> data.drop([<span class="st">'species_id'</span>, <span class="st">'species'</span>], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>y <span class="op">=</span> data[<span class="st">'species'</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </div>
@@ -696,7 +698,7 @@ The target (y/dependent) variables are of shape: (150,)</code></pre>
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -705,19 +707,19 @@ The target (y/dependent) variables are of shape: (150,)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>sepal_length</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>sepal_width</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>petal_length</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>petal_width</td>
 </tr>
 </tbody>
@@ -736,7 +738,7 @@ The target (y/dependent) variables are of shape: (150,)</code></pre>
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -745,19 +747,19 @@ The target (y/dependent) variables are of shape: (150,)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">111</td>
+<th data-quarto-table-cell-role="th">111</th>
 <td>virginica</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">74</td>
+<th data-quarto-table-cell-role="th">74</th>
 <td>versicolor</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">25</td>
+<th data-quarto-table-cell-role="th">25</th>
 <td>setosa</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">43</td>
+<th data-quarto-table-cell-role="th">43</th>
 <td>setosa</td>
 </tr>
 </tbody>
@@ -785,10 +787,10 @@ The target (y/dependent) variables are of shape: (150,)</code></pre>
 <h3 class="anchored" data-anchor-id="making-the-train-test-split">Making the Train-Test Split</h3>
 <p>Let’s proceed with the train-test split, keeping 30% of the data for testing and ensuring the class distribution remains consistent through <span class="highlight1">stratification</span>. - <strong>Test size</strong>: 30% of the data is reserved for testing the model. - <strong>Stratify</strong>: Preserves the class ratios (33% of each iris species).</p>
 <div id="train-test-split1" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, <span class="co"># Input our seperated X and y data</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, <span class="co"># Input our seperated X and y data</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a>                                                    test_size<span class="op">=</span><span class="fl">0.3</span>, <span class="co"># Select the test size of 30%</span></span>
 <span id="cb5-3"><a href="#cb5-3"></a>                                                    stratify<span class="op">=</span>y, <span class="co"># Stratify the split by y (species/dependent)</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>                                                    random_state<span class="op">=</span><span class="dv">42</span>) <span class="co"># Select a random state for reproducability</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-4"><a href="#cb5-4"></a>                                                    random_state<span class="op">=</span><span class="dv">42</span>) <span class="co"># Select a random state for reproducability</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>This outputs:</p>
 <ul>
@@ -835,7 +837,7 @@ y_test shape is: (45,)</code></pre>
 <h2 class="anchored" data-anchor-id="training-the-models">Training the Models!</h2>
 <p>Now that our data is ready, let’s train several supervised machine learning models and evaluate their performance. We’ll be using the <a href="https://scikit-learn.org/stable/index.html">scikit-learn Python library</a>, which provides a wide range of tools for building and evaluating models. For a complete list of all the supervised models that scikit-learn supports, <a href="https://scikit-learn.org/stable/supervised_learning.html">click here</a>.</p>
 <div id="model-training" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Instantiate the classifiers</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Instantiate the classifiers</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a>classifiers <span class="op">=</span> [                                     <span class="co"># Makes a list of classifier objects:</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a>    SVC(kernel<span class="op">=</span><span class="st">'linear'</span>, random_state<span class="op">=</span><span class="dv">42</span>),             <span class="co"># Linear Support-Vector Machine (SVM)</span></span>
 <span id="cb7-4"><a href="#cb7-4"></a>    SVC(kernel<span class="op">=</span><span class="st">'rbf'</span>, random_state<span class="op">=</span><span class="dv">42</span>),                <span class="co"># RBF Support-Vector Machine (SVM)</span></span>
@@ -850,7 +852,7 @@ y_test shape is: (45,)</code></pre>
 <span id="cb7-13"><a href="#cb7-13"></a>    clf.fit(X_train, y_train)    <span class="co"># Trains with the X (input) and Y (output) training data</span></span>
 <span id="cb7-14"><a href="#cb7-14"></a>    y_pred <span class="op">=</span> clf.predict(X_test) <span class="co"># Fits the X test data; trained model returns predictions</span></span>
 <span id="cb7-15"><a href="#cb7-15"></a>    accuracy <span class="op">=</span> accuracy_score(y_test, y_pred) <span class="co"># Calculates accuracy of the model</span></span>
-<span id="cb7-16"><a href="#cb7-16"></a>    <span class="bu">print</span>(<span class="ss">f"Accuracy of </span><span class="sc">{</span>clf<span class="sc">.</span><span class="va">__class__</span><span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>accuracy<span class="sc">:.2f}</span><span class="ss">"</span>) <span class="co"># Prints the accuracy score</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-16"><a href="#cb7-16"></a>    <span class="bu">print</span>(<span class="ss">f"Accuracy of </span><span class="sc">{</span>clf<span class="sc">.</span><span class="va">__class__</span><span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>accuracy<span class="sc">:.2f}</span><span class="ss">"</span>) <span class="co"># Prints the accuracy score</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy of SVC: 1.00
 Accuracy of SVC: 0.96
@@ -1030,13 +1032,14 @@ This detailed breakdown is crucial for understanding the types of errors your mo
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
