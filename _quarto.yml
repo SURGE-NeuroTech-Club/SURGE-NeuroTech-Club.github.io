@@ -3,8 +3,8 @@ project:
   output-dir: _site
 
 metadata:
-  club-hours: "3 - 5 PM"
-  club-day: "Thursday"
+  club-hours: "12 - 2 PM"
+  club-day: "Friday"
   notice-message: "Happy new years! \n Club Will Resume Jan 8th."
 
 website:
