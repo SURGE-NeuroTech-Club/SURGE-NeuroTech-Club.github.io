@@ -23,7 +23,7 @@ about:
 
 
 <div class="notice">
-  **Important Notice:** {{< meta notice-message >}}!
+  **Important Notice:** {{< meta notice-message >}}
 </div>
 
 
