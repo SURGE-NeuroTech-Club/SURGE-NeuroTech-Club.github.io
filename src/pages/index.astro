@@ -77,39 +77,42 @@ import CalendarEmbed from '../components/CalendarEmbed.astro';
           </div>
         </div>
 
-        <div>
-          <h3 style="margin-bottom: 1.25rem; font-size: 1.1rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">How to Find Us</h3>
-          <div style="margin-bottom: 1.25rem;">
-            <img
-              src="/images/maps_location1.PNG"
-              alt="Map showing location of SURGE NeuroTech Club in the Life Sciences Centre"
-              style="border-radius: 12px; border: 1px solid var(--color-border);"
-            />
-          </div>
-          <p style="font-size:0.9rem; color: var(--color-text-muted); margin-bottom: 0.75rem;">
-            <strong style="color: var(--color-heading);">From the main LSC entrance:</strong>
-            Take the stairs on the right, walk past Tim Hortons, exit through the doors on your right.
-            Enter the building across from you, walk straight until you see bathrooms on your left or
-            the SURGE A-frame sign, then head through the doors on your right.
-          </p>
-          <p style="font-size:0.9rem; color: var(--color-text-muted);">
-            <strong style="color: var(--color-heading);">Wheelchair access:</strong>
-            Start at Wickwire Field and walk beside the LSC toward Oxford Street,
-            passing between the LSC and Shirreff Hall. The ramp is just beyond the
-            bike locks, after the playground and LSC courtyard.
-          </p>
+        <div class="about-text">
+          <h2>How to Find Us</h2>
 
-          <div style="margin-top: 1.5rem;" class="location-video">
-            <video
-              controls
-              muted
-              playsinline
-              title="How to find NeuroTech Club"
-              style="border-radius: 12px; width: 100%; max-width: 280px;"
-            >
-              <source src="/images/How_to_find_NTC_Video.mp4" type="video/mp4" />
-            </video>
-            <p style="font-size:0.8rem; color: var(--color-text-muted); margin-top: 0.5rem; text-align:center;">Video: How to find us</p>
+          <img
+            src="/images/maps_location1.PNG"
+            alt="Map showing location of SURGE NeuroTech Club in the Life Sciences Centre"
+            style="border-radius: 12px; border: 1px solid var(--color-border); width: 100%; margin: 1.25rem 0;"
+          />
+
+          <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+            <div style="flex: 1; min-width: 0;">
+              <p style="margin-bottom: 0.75rem;">
+                <strong>From the main LSC entrance:</strong>
+                Take the stairs on the right, walk past Tim Hortons, exit through the doors on your right.
+                Enter the building across from you, walk straight until you see bathrooms on your left or
+                the SURGE A-frame sign, then head through the doors on your right.
+              </p>
+              <p style="margin: 0;">
+                <strong>Wheelchair access:</strong>
+                Start at Wickwire Field and walk beside the LSC toward Oxford Street,
+                passing between the LSC and Shirreff Hall. The ramp is just beyond the
+                bike locks, after the playground and LSC courtyard.
+              </p>
+            </div>
+            <div style="flex-shrink: 0; width: 180px; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+              <video
+                controls
+                muted
+                playsinline
+                title="How to find NeuroTech Club"
+                style="border-radius: 10px; width: 100%;"
+              >
+                <source src="/images/How_to_find_NTC_Video.mp4" type="video/mp4" />
+              </video>
+              <p style="font-size: 0.8rem; text-align: center; margin: 0;">How to find us</p>
+            </div>
           </div>
         </div>
       </div>
