@@ -10,8 +10,8 @@
   --color-accent-hover: #3ab4d4;
   --color-accent-dim: rgba(44, 154, 183, 0.15);
   --color-orange: #e07b39;
-  --color-text: #d4dae8;
-  --color-text-muted: #8892a8;
+  --color-text: #e8ecf4;
+  --color-text-muted: #c2cce0;
   --color-heading: #eef1f8;
   --color-code-bg: #141820;
   --font-sans: 'Inter', 'Lato', system-ui, -apple-system, sans-serif;
@@ -498,7 +498,7 @@ pre code {
 }
 
 .about-text p {
-  color: var(--color-text-muted);
+  color: var(--color-text);
 }
 
 .about-text .highlight {
