@@ -1,0 +1,24 @@
+---
+// Google Calendar embed URL
+// To update: go to Google Calendar → Settings → [your calendar] → Integrate calendar → copy the embed URL
+// mode=MONTH shows a full-month grid with event titles on each date.
+// To change the view: replace MONTH with WEEK for a 7-day grid, or AGENDA for a list.
+const calendarSrc =
+  'https://calendar.google.com/calendar/embed' +
+  '?src=166e17bb8c23405f6db9eb5001f755c54f0e146dab05431e226a502213c161b6%40group.calendar.google.com' +
+  '&src=en.canadian.official%23holiday%40group.v.calendar.google.com' +
+  '&ctz=America%2FHalifax&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&mode=MONTH';
+---
+
+<div class="calendar-wrapper">
+  <iframe
+    src={calendarSrc}
+    style="border:0"
+    width="100%"
+    height="600"
+    frameborder="0"
+    scrolling="no"
+    title="SURGE NeuroTech Club Calendar"
+    loading="lazy"
+  ></iframe>
+</div>

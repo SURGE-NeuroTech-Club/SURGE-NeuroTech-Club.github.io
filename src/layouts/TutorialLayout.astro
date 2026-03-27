@@ -1,0 +1,61 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  headings?: { depth: number; slug: string; text: string }[];
+  prev?: { title: string; slug: string } | null;
+  next?: { title: string; slug: string } | null;
+}
+
+const { title, description, headings = [], prev, next } = Astro.props;
+
+const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+
+<BaseLayout title={`${title} — NeuroTech Club`} description={description}>
+  <div class="tutorial-layout">
+    {tocHeadings.length > 0 && (
+      <aside class="tutorial-toc">
+        <h4>On this page</h4>
+        <ul>
+          {tocHeadings.map((h) => (
+            <li style={h.depth === 3 ? 'padding-left: 1rem' : ''}>
+              <a href={`#${h.slug}`}>{h.text}</a>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    )}
+
+    <article class="tutorial-content">
+      <header class="tutorial-header">
+        <a href="/tutorials" style="font-size:0.85rem; color: var(--color-text-muted); display:inline-flex; align-items:center; gap:0.3rem; margin-bottom:1rem;">
+          ← All tutorials
+        </a>
+        <h1>{title}</h1>
+        <p>{description}</p>
+      </header>
+
+      <div class="tutorial-body">
+        <slot />
+      </div>
+
+      <nav class="tutorial-nav" aria-label="Tutorial navigation">
+        {prev ? (
+          <a href={`/tutorials/${prev.slug}`}>
+            <span class="nav-label">← Previous</span>
+            <span class="nav-title">{prev.title}</span>
+          </a>
+        ) : <span />}
+        {next && (
+          <a href={`/tutorials/${next.slug}`} class="next">
+            <span class="nav-label">Next →</span>
+            <span class="nav-title">{next.title}</span>
+          </a>
+        )}
+      </nav>
+    </article>
+  </div>
+</BaseLayout>
