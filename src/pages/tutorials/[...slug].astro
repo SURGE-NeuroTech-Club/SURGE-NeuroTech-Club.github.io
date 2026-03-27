@@ -1,31 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import TutorialLayout from '../../layouts/TutorialLayout.astro';
 
 export async function getStaticPaths() {
   const tutorials = await getCollection('tutorials');
-  const sorted = tutorials.sort((a, b) => a.data.order - b.data.order);
-
-  return sorted.map((tutorial, index) => ({
+  return tutorials.map((tutorial) => ({
     params: { slug: tutorial.slug },
-    props: {
-      tutorial,
-      prev: index > 0 ? { title: sorted[index - 1].data.title, slug: sorted[index - 1].slug } : null,
-      next: index < sorted.length - 1 ? { title: sorted[index + 1].data.title, slug: sorted[index + 1].slug } : null,
-    },
   }));
 }
-
-const { tutorial, prev, next } = Astro.props;
-const { Content, headings } = await tutorial.render();
 ---
 
-<TutorialLayout
-  title={tutorial.data.title}
-  description={tutorial.data.description}
-  headings={headings}
-  prev={prev}
-  next={next}
->
-  <Content />
-</TutorialLayout>
+<meta http-equiv="refresh" content="0; url=/tutorials" />
