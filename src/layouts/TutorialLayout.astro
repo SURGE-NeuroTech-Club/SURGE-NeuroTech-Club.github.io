@@ -14,7 +14,7 @@ const { title, description, headings = [], prev, next } = Astro.props;
 const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
 ---
 
-<BaseLayout title={`${title} — NeuroTech Club`} description={description}>
+<BaseLayout title={`${title} — SURGE NeuroTech Club`} description={description}>
   <div class="tutorial-layout">
     {tocHeadings.length > 0 && (
       <aside class="tutorial-toc">

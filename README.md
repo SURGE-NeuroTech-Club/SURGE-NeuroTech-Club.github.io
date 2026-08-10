@@ -4,31 +4,38 @@ Website repository for SURGE/Dalhousie NeuroTech Club.
 
 ### How to contribute
 
-This website is build from scratch using [Quarto](https://quarto.org/).
-Feel free to create a branch and when you're ready, a pull request!
+This website is built using [Astro](https://astro.build). Feel free to create a branch and when you're ready, open a pull request!
+
+```bash
+npm install
+npm run dev       # Start dev server at http://localhost:4321
+npm run build     # Build to dist/
+npm run preview   # Preview the production build locally
+```
 
 <details>
 <summary>Useful Tips for Contributing</summary>
 <br>
-If you're new to Quarto and making websites, check out the references below! Generally, the only files you'll need to edit are the .qmd files and maybe the .scss files (theme) - and the _quarto.yml occasionally.
-Once you've made edits to any .qmd file you can type `quarto render` in the terminal to see how the changes will look once the site is built. There is also a workflow that renders the entire website once you make a pull request if you'd like. <br>
 
-- index.qmd is the main page
-- _quarto.yml is the configuration file for the website (layout, top-level theme (SCSS), etc.)
-- /docs contains sub-folders and .qmd files for all sub-pages
+Generally, the only files you'll need to edit are files in `src/`.
+
+- `src/pages/` — file-based routing (`index.astro` = homepage, `tutorials/[...slug].astro` = dynamic tutorial pages)
+- `src/content/tutorials/` — Markdown files for tutorial pages (Astro content collections)
+- `src/layouts/` — `BaseLayout.astro` (HTML shell with nav/footer) and `TutorialLayout.astro` (adds TOC sidebar + prev/next nav)
+- `src/components/` — `Navbar.astro`, `Footer.astro`, `CalendarEmbed.astro`
+- `src/styles/global.css` — all styles via CSS custom properties; no framework
+- `public/images/` — static images served at `/images/...`; tutorial images live in `public/images/tutorials/`
+
+To add a new tutorial, create `src/content/tutorials/my-tutorial.md` with frontmatter (`title`, `description`, `order`, optional `image`/`draft`), and it will automatically appear in the listing at `/tutorials`.
+
 </details>
 
-
-##### Helpful Quarto References
-- https://quarto.org/docs/websites/
-- https://quarto.org/docs/reference/projects/websites.html
-- https://quarto.org/docs/gallery/#websites
-
-
+##### Helpful Astro References
+- https://docs.astro.build/en/getting-started/
+- https://docs.astro.build/en/guides/content-collections/
 
 ### Workflows
 
-`deploy.yml`: Builds the website on pushes to main and then deploys the website to the gh-pages branch where it becomes live
+`deploy.yml`: Builds the website (`npm run build`) on pushes to `main` and deploys it via GitHub Pages (`actions/deploy-pages`).
 
-`build_previews.yml`: Build the website on pull requests to preview site changes before merging to main
-Click link to the preview in the pull request page!
+**Note:** In the GitHub repo settings, the Pages source must be set to **"GitHub Actions"** (not "Deploy from branch").

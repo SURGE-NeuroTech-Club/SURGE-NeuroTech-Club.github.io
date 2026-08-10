@@ -2,13 +2,15 @@
    CSS Custom Properties
    ============================================================ */
 :root {
-  --color-bg: #1a1f2e;
-  --color-bg-secondary: #242a3d;
-  --color-bg-card: #1e2435;
-  --color-border: #2e3650;
-  --color-accent: #2c9ab7;
-  --color-accent-hover: #3ab4d4;
-  --color-accent-dim: rgba(44, 154, 183, 0.15);
+  --color-bg: #10131c;
+  --color-bg-secondary: #181d2b;
+  --color-bg-card: #141826;
+  --color-border: #262c40;
+  --color-accent: #38bdf8;
+  --color-accent-hover: #7dd3fc;
+  --color-accent-dim: rgba(56, 189, 248, 0.15);
+  --gradient-aurora: linear-gradient(90deg, #38bdf8, #8b5cf6, #f472b6);
+  --shadow-aurora: rgba(167, 139, 250, 0.4);
   --color-orange: #e07b39;
   --color-text: #e8ecf4;
   --color-text-muted: #c2cce0;
@@ -144,7 +146,7 @@ pre code {
   top: 0;
   z-index: 100;
   height: var(--nav-height);
-  background: rgba(26, 31, 46, 0.92);
+  background: rgba(16, 19, 28, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
@@ -287,7 +289,10 @@ pre code {
 .hero {
   padding: 6rem 0 4rem;
   text-align: center;
-  background: radial-gradient(ellipse at 50% 0%, rgba(44, 154, 183, 0.08) 0%, transparent 70%);
+  background:
+    radial-gradient(ellipse 700px 400px at 20% -5%, rgba(56, 189, 248, 0.08), transparent 70%),
+    radial-gradient(ellipse 700px 400px at 80% -5%, rgba(244, 114, 182, 0.08), transparent 70%),
+    radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.06) 0%, transparent 70%);
 }
 
 .hero-eyebrow {
@@ -322,7 +327,10 @@ pre code {
 }
 
 .hero h1 span {
-  color: var(--color-accent);
+  background: var(--gradient-aurora);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero-sub {
@@ -337,12 +345,12 @@ pre code {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--color-accent-dim);
-  border: 1px solid rgba(44, 154, 183, 0.3);
-  color: var(--color-accent);
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0.5rem 1.25rem;
+  background: rgba(74, 222, 128, 0.14);
+  border: 1px solid rgba(74, 222, 128, 0.4);
+  color: #4ade80;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.65rem 1.5rem;
   border-radius: 100px;
   margin-bottom: 2.5rem;
 }
@@ -372,15 +380,13 @@ pre code {
 }
 
 .btn-primary {
-  background: var(--color-accent);
+  background: var(--gradient-aurora);
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: var(--color-accent-hover);
-  color: #fff;
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(44, 154, 183, 0.35);
+  box-shadow: 0 4px 20px var(--shadow-aurora);
 }
 
 .btn-ghost {
@@ -609,16 +615,31 @@ pre code {
 }
 
 .calendar-wrapper {
+  position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--color-border);
   background: var(--color-bg-card);
+  padding: 1rem;
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.5);
+}
+
+.calendar-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-aurora);
 }
 
 .calendar-wrapper iframe {
   display: block;
   width: 100%;
   border: none;
+  border-radius: var(--radius);
+  filter: invert(95%) hue-rotate(180deg) contrast(95%) brightness(1.05);
 }
 
 /* ============================================================
@@ -877,14 +898,16 @@ pre code {
    Notice Banner
    ============================================================ */
 .notice-banner {
-  background: rgba(224, 123, 57, 0.12);
-  border: 1px solid rgba(224, 123, 57, 0.3);
+  background: rgba(224, 123, 57, 0.16);
+  border: 2px solid rgba(224, 123, 57, 0.5);
   border-radius: var(--radius);
-  padding: 0.75rem 1.25rem;
+  padding: 1rem 1.5rem;
   margin-bottom: 1.5rem;
-  color: #f0c080;
-  font-size: 0.9rem;
+  color: #f5c98f;
+  font-size: 1.1rem;
+  font-weight: 700;
   text-align: center;
+  box-shadow: 0 0 24px rgba(224, 123, 57, 0.15);
 }
 
 /* ============================================================
