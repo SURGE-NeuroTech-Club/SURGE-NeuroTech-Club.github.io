@@ -6,11 +6,11 @@
   --color-bg-secondary: #181d2b;
   --color-bg-card: #141826;
   --color-border: #262c40;
-  --color-accent: #38bdf8;
-  --color-accent-hover: #7dd3fc;
-  --color-accent-dim: rgba(56, 189, 248, 0.15);
+  --color-accent: #7dd3fc;
+  --color-accent-hover: #bae6fd;
+  --color-accent-dim: rgba(125, 211, 252, 0.15);
   --gradient-aurora: linear-gradient(90deg, #38bdf8, #8b5cf6, #f472b6);
-  --shadow-aurora: rgba(167, 139, 250, 0.4);
+  --shadow-aurora: rgba(125, 211, 252, 0.4);
   --color-orange: #e07b39;
   --color-text: #e8ecf4;
   --color-text-muted: #c2cce0;
@@ -191,21 +191,39 @@ pre code {
 }
 
 .navbar-links a {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.4rem;
   padding: 0.5rem 0.875rem;
-  border-radius: var(--radius);
   color: var(--color-text);
   font-size: 0.9rem;
   font-weight: 500;
-  transition: background var(--transition), color var(--transition);
+  transition: color var(--transition);
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  left: 0.875rem;
+  right: 0.875rem;
+  bottom: 0.2rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gradient-aurora);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--transition);
 }
 
 .navbar-links a:hover,
 .navbar-links a.active {
-  background: var(--color-accent-dim);
-  color: var(--color-accent);
+  color: var(--color-heading);
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
+  transform: scaleX(1);
 }
 
 .navbar-links a svg {
@@ -400,6 +418,23 @@ pre code {
   background: var(--color-bg-card);
   color: var(--color-heading);
   border-color: var(--color-accent);
+}
+
+.btn-accent {
+  background:
+    linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
+    var(--gradient-aurora) border-box;
+  border: 2px solid transparent;
+  color: var(--color-heading);
+  padding: calc(0.625rem - 1px) calc(1.375rem - 1px);
+}
+
+.btn-accent:hover {
+  background:
+    linear-gradient(var(--color-bg-card), var(--color-bg-card)) padding-box,
+    var(--gradient-aurora) border-box;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px var(--shadow-aurora);
 }
 
 /* ============================================================
