@@ -381,7 +381,8 @@ pre code {
 
 .btn-primary {
   background: var(--gradient-aurora);
-  color: #fff;
+  color: var(--color-bg);
+  font-weight: 700;
 }
 
 .btn-primary:hover {
