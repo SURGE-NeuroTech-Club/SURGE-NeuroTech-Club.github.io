@@ -1,6 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CalendarEmbed from '../components/CalendarEmbed.astro';
+import { getNextMeeting } from '../lib/nextMeeting';
+
+const nextMeeting = await getNextMeeting();
+const MEETING_LOCATION = 'LSC Room O2660';
+
+function toGCalDate(d: Date): string {
+  return d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+}
+
+const addToCalendarUrl = nextMeeting
+  ? 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+    `&text=${encodeURIComponent('SURGE NeuroTech Club Meeting')}` +
+    `&dates=${toGCalDate(nextMeeting.start)}/${toGCalDate(nextMeeting.end)}` +
+    `&location=${encodeURIComponent(MEETING_LOCATION)}` +
+    `&details=${encodeURIComponent('SURGE NeuroTech Club weekly meeting.')}`
+  : '';
 ---
 
 <BaseLayout>
@@ -15,11 +31,41 @@ import CalendarEmbed from '../components/CalendarEmbed.astro';
         A community of neuro-enthusiasts dedicated to exploring, understanding,
         and innovating in the field of neurotechnology.
       </p>
-      <div class="notice-banner">
-        The club is on pause for the summer and will return in September with a new schedule.
-      </div>
-      <div class="hero-meta">
-        📅&nbsp; Starting September &nbsp;&bull;&nbsp; Mondays&nbsp;2:30&ndash;4:00&nbsp;PM &amp; Thursdays&nbsp;12:30&ndash;2:00&nbsp;PM &nbsp;&bull;&nbsp; LSC Room O2660
+      <div class="hero-cards">
+        <div class="notice-card">
+          <span class="notice-eyebrow"><span class="notice-dot"></span>On Pause</span>
+          <p>The club is on pause for the summer and will return in September with a new schedule.</p>
+        </div>
+        {nextMeeting ? (
+          <div class="meeting-card">
+            <div class="meeting-card-top">
+              <span class="meeting-eyebrow"><span class="pulse-dot"></span>Next Meeting</span>
+              <span class="countdown-badge">{nextMeeting.countdown}</span>
+            </div>
+            <div class="meeting-card-body">
+              <div class="meeting-date-block">
+                <div class="month">{nextMeeting.month}</div>
+                <div class="day">{nextMeeting.day}</div>
+              </div>
+              <div class="meeting-info">
+                <div class="weekday-time">{nextMeeting.weekday} &middot; {nextMeeting.timeLabel}</div>
+                <div class="loc">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  {MEETING_LOCATION}
+                </div>
+              </div>
+            </div>
+            <a class="meeting-add-btn" href={addToCalendarUrl} target="_blank" rel="noopener noreferrer">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="12" y1="14" x2="12" y2="19"/><line x1="9.5" y1="16.5" x2="14.5" y2="16.5"/></svg>
+              Add to Calendar
+            </a>
+          </div>
+        ) : (
+          <div class="meeting-card meeting-card-empty">
+            <div class="meeting-eyebrow"><span class="pulse-dot"></span>Next Meeting</div>
+            <div class="meeting-info">New schedule coming soon &mdash; check the calendar below</div>
+          </div>
+        )}
       </div>
       <div class="hero-actions">
         <a href="#calendar" class="btn btn-accent">
@@ -27,7 +73,7 @@ import CalendarEmbed from '../components/CalendarEmbed.astro';
             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
           </svg>
-          Find Our Next Meeting
+          See Full Schedule
         </a>
         <a href="https://form.typeform.com/to/lImdjPTV?typeform-source=www.surgeinnovation.ca" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -102,13 +148,13 @@ import CalendarEmbed from '../components/CalendarEmbed.astro';
           <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
             <div style="flex: 1; min-width: 0;">
               <p style="margin-bottom: 0.75rem;">
-                <strong>From the main LSC entrance:</strong>
+                <strong>From the main LSC entrance: </strong>
                 Take the stairs on the right, walk past Tim Hortons, exit through the doors on your right.
                 Enter the building across from you, walk straight until you see bathrooms on your left or
                 the SURGE A-frame sign, then head through the doors on your right.
               </p>
               <p style="margin: 0;">
-                <strong>Wheelchair access:</strong>
+                <strong>Wheelchair access: </strong>
                 Start at Wickwire Field and walk beside the LSC toward Oxford Street,
                 passing between the LSC and Shirreff Hall. The ramp is just beyond the
                 bike locks, after the playground and LSC courtyard.
@@ -135,11 +181,10 @@ import CalendarEmbed from '../components/CalendarEmbed.astro';
   <!-- ============================================================
        Calendar
        ============================================================ -->
-  <section id="calendar" class="section calendar-section" style="background: var(--color-bg-secondary); scroll-margin-top: var(--nav-height);">
+  <section id="calendar" class="section-sm calendar-section" style="background: var(--color-bg-secondary); scroll-margin-top: var(--nav-height);">
     <div class="container">
       <div class="section-heading">
-        <h2>Upcoming Events</h2>
-        <p>Stay up to date with club meetings, workshops, and events</p>
+        <h2>Full Neurotech Club Schedule</h2>
       </div>
       <CalendarEmbed />
     </div>

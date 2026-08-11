@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # Rebuild daily so the hero "next meeting" bar stays in sync with Google Calendar.
+    - cron: '0 8 * * *'
 
 permissions:
   contents: read
