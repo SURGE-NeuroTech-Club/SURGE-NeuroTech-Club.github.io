@@ -5,8 +5,11 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    # Rebuild daily so the hero "next meeting" bar stays in sync with Google Calendar.
-    - cron: '0 8 * * *'
+    # Rebuild twice daily (~10am/10pm America/Halifax) so the hero "next meeting"
+    # card stays in sync with Google Calendar. Times are in UTC and don't shift for
+    # DST, so actual local time drifts by an hour between ADT and AST.
+    - cron: '0 13 * * *'
+    - cron: '0 1 * * *'
 
 permissions:
   contents: read
