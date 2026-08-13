@@ -38,13 +38,13 @@ function halifaxDateKey(d: Date): string {
   }).format(d);
 }
 
-function daysUntil(now: Date, target: Date): number {
+export function daysUntil(now: Date, target: Date): number {
   const a = new Date(`${halifaxDateKey(now)}T00:00:00Z`).getTime();
   const b = new Date(`${halifaxDateKey(target)}T00:00:00Z`).getTime();
   return Math.round((b - a) / 86_400_000);
 }
 
-function formatCountdown(days: number): string {
+export function formatCountdown(days: number): string {
   if (days <= 0) return 'Today';
   if (days === 1) return 'Tomorrow';
   return `In ${days} days`;

@@ -1,10 +1,24 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CalendarEmbed from '../components/CalendarEmbed.astro';
-import { getNextMeeting } from '../lib/nextMeeting';
+import { getNextMeeting, daysUntil, formatCountdown } from '../lib/nextMeeting';
 
 const nextMeeting = await getNextMeeting();
 const MEETING_LOCATION = 'LSC Room O2660';
+
+const HACKATHON_START = new Date('2026-09-18T12:00:00Z');
+const HACKATHON_END = new Date('2026-09-20T12:00:00Z');
+const now = new Date();
+const daysToHackathonStart = daysUntil(now, HACKATHON_START);
+const daysToHackathonEnd = daysUntil(now, HACKATHON_END);
+const hackathonCountdown =
+  daysToHackathonEnd < 0
+    ? 'Hackathon Ended'
+    : daysToHackathonStart > 0
+      ? formatCountdown(daysToHackathonStart)
+      : daysToHackathonStart === 0
+        ? 'Today'
+        : 'Happening Now';
 
 function toGCalDate(d: Date): string {
   return d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
@@ -39,17 +53,23 @@ const addToCalendarUrl = nextMeeting
         <div class="hackathon-card">
           <div class="hackathon-card-top">
             <span class="hackathon-eyebrow"><span class="hackathon-dot"></span>Neuro Hackathon</span>
-            <span class="hackathon-prize-badge">$500+ Prizes</span>
+            <span class="countdown-badge">{hackathonCountdown}</span>
           </div>
           <div class="hackathon-card-body">
             <div class="hackathon-date-block">
               <div class="month">SEP</div>
               <div class="day">18&ndash;20</div>
             </div>
-            <div class="hackathon-streams">
-              <span class="hackathon-stream-pill">Machine Learning</span>
-              <span class="hackathon-stream-pill">Applications</span>
-              <span class="hackathon-stream-pill">Hardware</span>
+            <div class="hackathon-info">
+              <div class="hackathon-streams">
+                <span class="hackathon-stream-pill">Machine Learning</span>
+                <span class="hackathon-stream-pill">Applications</span>
+                <span class="hackathon-stream-pill">Hardware</span>
+              </div>
+              <div class="hackathon-prize-line">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 4h3a2 2 0 0 1 2 2v1a4 4 0 0 1-4 4"/><path d="M7 4H4a2 2 0 0 0-2 2v1a4 4 0 0 0 4 4"/></svg>
+                $500+ in prizes
+              </div>
             </div>
           </div>
           <a class="hackathon-cta" href="/hackathon">
