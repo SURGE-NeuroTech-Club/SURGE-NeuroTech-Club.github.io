@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const EVENTBRITE_URL = 'https://www.eventbrite.ca/e/neuro-hackathon-tickets-1997153371496';
+---
+
+<BaseLayout
+  title="Neuro Hackathon — SURGE NeuroTech Club"
+  description="Join the Neuro Hackathon, September 18-20, 2026 at Dalhousie's Life Sciences Centre. $500+ in prizes across Machine Learning, Applications, and Hardware challenge streams."
+>
+  <section class="hackathon-hero">
+    <div class="container">
+      <p class="hero-eyebrow">SURGE NeuroTech Club</p>
+      <h1>Neuro Hackathon</h1>
+      <p class="hero-sub">
+        Three days of building, learning, and competing across machine learning,
+        applications, and hardware &mdash; open to everyone, no experience required.
+      </p>
+      <a href={EVENTBRITE_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        Register on Eventbrite
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="hackathon-info-grid">
+        <div class="info-card">
+          <div class="info-card-label">Dates</div>
+          <div class="info-card-value">September 18&ndash;20, 2026</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Location</div>
+          <div class="info-card-value">Life Sciences Centre, Room O2660</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Prizes</div>
+          <div class="info-card-value">$500+ across all streams</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-label">Eligibility</div>
+          <div class="info-card-value">Open to everyone, free to attend</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Challenge Streams</h2>
+        <p>Pick a track and build something new</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-body" style="text-align: center;">
+            <svg class="hackathon-stream-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <h3 class="card-title">Machine Learning</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body" style="text-align: center;">
+            <svg class="hackathon-stream-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            <h3 class="card-title">Applications</h3>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body" style="text-align: center;">
+            <svg class="hackathon-stream-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M20 9h2M20 15h2M2 9h2M2 15h2"/></svg>
+            <h3 class="card-title">Hardware</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="container">
+      <div class="hackathon-coming-soon">
+        <p class="coming-soon-label">More Coming Soon</p>
+        <p>Full schedule, rules, and judging criteria will be published closer to the event.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="container" style="text-align: center;">
+      <a href={EVENTBRITE_URL} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        Register on Eventbrite
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hackathon-hero {
+    padding: 5rem 0 3rem;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 700px 400px at 30% -5%, rgba(244, 114, 182, 0.1), transparent 70%),
+      radial-gradient(ellipse 700px 400px at 70% -5%, rgba(56, 189, 248, 0.08), transparent 70%);
+  }
+
+  .hackathon-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+  }
+
+  .hackathon-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .hackathon-info-grid .info-card {
+    margin-bottom: 0;
+  }
+
+  .hackathon-stream-icon {
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .hackathon-coming-soon {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+  }
+
+  .hackathon-coming-soon .coming-soon-label {
+    display: inline-block;
+    background: var(--color-accent-dim);
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.3em 0.8em;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+  }
+</style>
