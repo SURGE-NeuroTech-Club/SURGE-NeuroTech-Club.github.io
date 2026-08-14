@@ -6,6 +6,7 @@ const ICS_URL =
 const HALIFAX_TZ = 'America/Halifax';
 const LOOKAHEAD_DAYS = 180;
 const CANCELLED_PREFIX = /^no\b/i;
+const CLUB_KEYWORD = /\bclub\b/i;
 
 export interface NextMeeting {
   month: string;
@@ -86,7 +87,12 @@ export async function getNextMeeting(): Promise<NextMeeting | null> {
       ...events.map((e: any) => ({ start: e.startDate.toJSDate(), end: e.endDate.toJSDate(), summary: e.summary as string })),
       ...occurrences.map((o: any) => ({ start: o.startDate.toJSDate(), end: o.endDate.toJSDate(), summary: o.item.summary as string })),
     ]
-      .filter((e) => e.start.getTime() >= now.getTime() && !CANCELLED_PREFIX.test(e.summary ?? ''))
+      .filter(
+        (e) =>
+          e.start.getTime() >= now.getTime() &&
+          !CANCELLED_PREFIX.test(e.summary ?? '') &&
+          CLUB_KEYWORD.test(e.summary ?? '')
+      )
       .sort((a, b) => a.start.getTime() - b.start.getTime());
 
     const next = candidates[0];
