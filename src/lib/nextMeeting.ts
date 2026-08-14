@@ -6,6 +6,7 @@ const ICS_URL =
 const HALIFAX_TZ = 'America/Halifax';
 const LOOKAHEAD_DAYS = 180;
 const CANCELLED_PREFIX = /^no\b/i;
+const CLUB_KEYWORD = /\bclub\b/i;
 
 export interface NextMeeting {
   month: string;
@@ -38,13 +39,13 @@ function halifaxDateKey(d: Date): string {
   }).format(d);
 }
 
-function daysUntil(now: Date, target: Date): number {
+export function daysUntil(now: Date, target: Date): number {
   const a = new Date(`${halifaxDateKey(now)}T00:00:00Z`).getTime();
   const b = new Date(`${halifaxDateKey(target)}T00:00:00Z`).getTime();
   return Math.round((b - a) / 86_400_000);
 }
 
-function formatCountdown(days: number): string {
+export function formatCountdown(days: number): string {
   if (days <= 0) return 'Today';
   if (days === 1) return 'Tomorrow';
   return `In ${days} days`;
@@ -86,7 +87,12 @@ export async function getNextMeeting(): Promise<NextMeeting | null> {
       ...events.map((e: any) => ({ start: e.startDate.toJSDate(), end: e.endDate.toJSDate(), summary: e.summary as string })),
       ...occurrences.map((o: any) => ({ start: o.startDate.toJSDate(), end: o.endDate.toJSDate(), summary: o.item.summary as string })),
     ]
-      .filter((e) => e.start.getTime() >= now.getTime() && !CANCELLED_PREFIX.test(e.summary ?? ''))
+      .filter(
+        (e) =>
+          e.start.getTime() >= now.getTime() &&
+          !CANCELLED_PREFIX.test(e.summary ?? '') &&
+          CLUB_KEYWORD.test(e.summary ?? '')
+      )
       .sort((a, b) => a.start.getTime() - b.start.getTime());
 
     const next = candidates[0];

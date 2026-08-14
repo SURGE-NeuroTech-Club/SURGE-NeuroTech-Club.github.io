@@ -232,6 +232,25 @@ pre code {
   flex-shrink: 0;
 }
 
+.navbar-links a.navbar-cta {
+  color: #f9a8d4;
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.18), rgba(139, 92, 246, 0.14));
+  border: 1px solid rgba(244, 114, 182, 0.5);
+  border-radius: 100px;
+  padding: 0.45rem 0.95rem;
+}
+
+.navbar-links a.navbar-cta::after {
+  content: none;
+}
+
+.navbar-links a.navbar-cta:hover,
+.navbar-links a.navbar-cta.active {
+  color: var(--color-heading);
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.3), rgba(139, 92, 246, 0.24));
+  border-color: rgba(244, 114, 182, 0.85);
+}
+
 /* mobile nav */
 .navbar-toggle {
   display: none;
@@ -316,7 +335,7 @@ pre code {
    Hero Section
    ============================================================ */
 .hero {
-  padding: 6rem 0 4rem;
+  padding: 2.5rem 0 2.5rem;
   text-align: center;
   background:
     radial-gradient(ellipse 700px 400px at 20% -5%, rgba(56, 189, 248, 0.08), transparent 70%),
@@ -379,9 +398,12 @@ pre code {
   margin-bottom: 2.5rem;
 }
 
-.meeting-card {
+/* ============================================================
+   Homepage Feature Cards (shared chrome)
+   ============================================================ */
+.feature-card {
   position: relative;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   gap: 0.85rem;
   text-align: left;
@@ -389,17 +411,12 @@ pre code {
   width: 100%;
   padding: 1.1rem 1.35rem 1.25rem;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(125, 211, 252, 0.35);
-  background:
-    linear-gradient(135deg, rgba(56, 189, 248, 0.12), rgba(139, 92, 246, 0.1) 45%, rgba(244, 114, 182, 0.1)),
-    rgba(20, 24, 38, 0.55);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 24px 60px -20px rgba(56, 189, 248, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   overflow: hidden;
 }
 
-.meeting-card::before {
+.feature-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -409,28 +426,92 @@ pre code {
   background: var(--gradient-aurora);
 }
 
-.meeting-card-top {
+.feature-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.85rem;
+}
+
+.feature-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
 }
 
-.meeting-eyebrow {
+.feature-eyebrow {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+}
+
+.feature-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.countdown-badge {
+  background: var(--gradient-aurora);
+  color: #0b0d14;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.feature-card-body {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 1rem;
+}
+
+.feature-date-block {
+  flex-shrink: 0;
+  border-radius: var(--radius);
+  padding: 0.4rem 0.85rem;
+  text-align: center;
+  min-width: 60px;
+}
+
+.feature-date-block .month {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.feature-date-block .day {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--color-heading);
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   Next Club Meeting Card
+   ============================================================ */
+.meeting-card {
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  background:
+    linear-gradient(135deg, rgba(56, 189, 248, 0.12), rgba(139, 92, 246, 0.1) 45%, rgba(244, 114, 182, 0.1)),
+    rgba(20, 24, 38, 0.55);
+  box-shadow: 0 24px 60px -20px rgba(56, 189, 248, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.meeting-eyebrow {
   color: var(--color-accent);
 }
 
 .pulse-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
   background: var(--color-accent);
   box-shadow: 0 0 0 0 rgba(125, 211, 252, 0.6);
   animation: meeting-pulse 2s infinite;
@@ -446,60 +527,29 @@ pre code {
   100% { box-shadow: 0 0 0 0 rgba(125, 211, 252, 0); }
 }
 
-.countdown-badge {
-  background: var(--gradient-aurora);
-  color: #0b0d14;
-  font-weight: 800;
-  font-size: 0.72rem;
-  padding: 0.25rem 0.65rem;
-  border-radius: 100px;
-  white-space: nowrap;
-}
-
-.meeting-card-body {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
 .meeting-date-block {
-  flex-shrink: 0;
   background: rgba(125, 211, 252, 0.12);
   border: 1px solid rgba(125, 211, 252, 0.4);
-  border-radius: var(--radius);
-  padding: 0.4rem 0.85rem;
-  text-align: center;
-  min-width: 60px;
 }
 
 .meeting-date-block .month {
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--color-accent);
 }
 
-.meeting-date-block .day {
-  font-size: 1.65rem;
-  font-weight: 800;
-  color: var(--color-heading);
-  line-height: 1.05;
-  font-variant-numeric: tabular-nums;
-}
-
 .meeting-info .weekday-time {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
+  line-height: 1.25;
   color: var(--color-heading);
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.25rem;
 }
 
 .meeting-info .loc {
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.83rem;
+  font-size: 0.92rem;
+  line-height: 1.3;
   color: var(--color-text-muted);
   font-weight: 500;
 }
@@ -514,13 +564,13 @@ pre code {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 0 -1.35rem -1.25rem;
-  padding: 0.7rem 1.35rem;
+  margin: auto -1.35rem -1.25rem;
+  padding: 0.75rem 1.35rem;
   border-top: 1px solid rgba(125, 211, 252, 0.22);
   border-radius: 0 0 calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px);
   background: var(--color-accent-dim);
   color: var(--color-accent-hover);
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
   transition: all var(--transition);
@@ -542,12 +592,13 @@ pre code {
 
 .meeting-card-empty {
   align-items: center;
+  justify-content: center;
 }
 
 .meeting-card-empty .meeting-info {
   color: var(--color-text-muted);
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.96rem;
 }
 
 .hero-actions {
@@ -555,6 +606,106 @@ pre code {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* ============================================================
+   Hackathon Card
+   ============================================================ */
+.hackathon-card {
+  border: 1px solid rgba(244, 114, 182, 0.4);
+  background:
+    linear-gradient(135deg, rgba(244, 114, 182, 0.14), rgba(139, 92, 246, 0.1)),
+    rgba(20, 24, 38, 0.55);
+  box-shadow: 0 24px 60px -20px rgba(244, 114, 182, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.hackathon-eyebrow {
+  color: #f9a8d4;
+}
+
+.hackathon-dot {
+  background: #f472b6;
+}
+
+.hackathon-date-block {
+  background: rgba(244, 114, 182, 0.12);
+  border: 1px solid rgba(244, 114, 182, 0.4);
+}
+
+.hackathon-date-block .month {
+  color: #f9a8d4;
+}
+
+.hackathon-streams {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.hackathon-stream-pill {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  padding: 0.2rem 0.55rem;
+  border-radius: 100px;
+}
+
+.hackathon-prize-line {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.hackathon-prize-line svg {
+  color: #f9a8d4;
+  flex-shrink: 0;
+}
+
+.hackathon-cta-row {
+  display: flex;
+  margin: auto -1.35rem -1.25rem;
+  border-top: 1px solid rgba(244, 114, 182, 0.22);
+  border-radius: 0 0 calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px);
+  overflow: hidden;
+}
+
+.hackathon-cta {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.hackathon-cta-ghost {
+  color: var(--color-text-muted);
+  border-right: 1px solid rgba(244, 114, 182, 0.22);
+}
+
+.hackathon-cta-ghost:hover {
+  color: var(--color-heading);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.hackathon-cta-primary {
+  background: rgba(244, 114, 182, 0.14);
+  color: #f9a8d4;
+}
+
+.hackathon-cta-primary:hover {
+  background: rgba(244, 114, 182, 0.24);
+  color: var(--color-heading);
 }
 
 /* ============================================================
@@ -1114,61 +1265,69 @@ pre code {
 /* ============================================================
    Notice Banner
    ============================================================ */
-.notice-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.85rem;
-  text-align: left;
-  max-width: 380px;
-  width: 100%;
-  padding: 1.1rem 1.35rem 1.25rem;
-  border-radius: var(--radius-lg);
-  border: 1.5px solid rgba(224, 123, 57, 0.7);
-  background:
-    linear-gradient(135deg, rgba(224, 123, 57, 0.18), rgba(224, 123, 57, 0.08)),
-    rgba(20, 24, 38, 0.55);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 0 0 1px rgba(224, 123, 57, 0.2), 0 0 40px rgba(224, 123, 57, 0.22), 0 24px 70px -16px rgba(224, 123, 57, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  overflow: hidden;
-}
-
-.notice-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--color-orange);
-}
-
-.notice-eyebrow {
+.notice-banner {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: #f5c98f;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.65rem 3rem 0.65rem 1.5rem;
+  position: relative;
+  background: linear-gradient(135deg, rgba(224, 123, 57, 0.18), rgba(224, 123, 57, 0.07));
+  border-bottom: 1px solid rgba(224, 123, 57, 0.35);
+  text-align: center;
+  overflow: hidden;
+  transition: max-height 0.32s ease, opacity 0.22s ease, padding 0.32s ease, border-color 0.32s ease;
 }
 
-.notice-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-orange);
+.notice-banner.is-closing {
+  opacity: 0;
+  max-height: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom-color: transparent;
 }
 
-.notice-card p {
-  margin: 0;
-  font-size: 1rem;
+@media (prefers-reduced-motion: reduce) {
+  .notice-banner {
+    transition: none;
+  }
+}
+
+.notice-banner-msg {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #f5c98f;
-  line-height: 1.4;
+}
+
+.notice-banner-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-orange);
+  flex-shrink: 0;
+}
+
+.notice-banner-close {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #f5c98f;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem;
+  opacity: 0.75;
+  transition: opacity var(--transition);
+}
+
+.notice-banner-close:hover {
+  opacity: 1;
 }
 
 /* ============================================================
