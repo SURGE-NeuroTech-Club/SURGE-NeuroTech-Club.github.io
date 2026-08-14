@@ -5,6 +5,7 @@ import { getNextMeeting, daysUntil, formatCountdown } from '../lib/nextMeeting';
 
 const nextMeeting = await getNextMeeting();
 const MEETING_LOCATION = 'LSC Room O2660';
+const EVENTBRITE_URL = 'https://www.eventbrite.ca/e/neuro-hackathon-tickets-1997153371496';
 
 const HACKATHON_START = new Date('2026-09-18T12:00:00Z');
 const HACKATHON_END = new Date('2026-09-20T12:00:00Z');
@@ -72,10 +73,15 @@ const addToCalendarUrl = nextMeeting
               </div>
             </div>
           </div>
-          <a class="hackathon-cta" href="/hackathon">
-            Learn More
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
+          <div class="hackathon-cta-row">
+            <a class="hackathon-cta hackathon-cta-ghost" href="/hackathon">
+              Learn More
+            </a>
+            <a class="hackathon-cta hackathon-cta-primary" href={EVENTBRITE_URL} target="_blank" rel="noopener noreferrer">
+              Sign Up Now
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
         </div>
         {nextMeeting ? (
           <div class="meeting-card">

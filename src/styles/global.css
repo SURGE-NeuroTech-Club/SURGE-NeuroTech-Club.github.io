@@ -694,24 +694,43 @@ pre code {
   flex-shrink: 0;
 }
 
+.hackathon-cta-row {
+  display: flex;
+  margin: 0 -1.35rem -1.25rem;
+  border-top: 1px solid rgba(244, 114, 182, 0.22);
+  border-radius: 0 0 calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px);
+  overflow: hidden;
+}
+
 .hackathon-cta {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 0 -1.35rem -1.25rem;
-  padding: 0.7rem 1.35rem;
-  border-top: 1px solid rgba(244, 114, 182, 0.22);
-  border-radius: 0 0 calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px);
-  background: rgba(244, 114, 182, 0.14);
-  color: #f9a8d4;
+  padding: 0.7rem 1.1rem;
   font-size: 0.82rem;
   font-weight: 700;
   text-decoration: none;
   transition: all var(--transition);
 }
 
-.hackathon-cta:hover {
+.hackathon-cta-ghost {
+  color: var(--color-text-muted);
+  border-right: 1px solid rgba(244, 114, 182, 0.22);
+}
+
+.hackathon-cta-ghost:hover {
+  color: var(--color-heading);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.hackathon-cta-primary {
+  background: rgba(244, 114, 182, 0.14);
+  color: #f9a8d4;
+}
+
+.hackathon-cta-primary:hover {
   background: rgba(244, 114, 182, 0.24);
   color: var(--color-heading);
 }
