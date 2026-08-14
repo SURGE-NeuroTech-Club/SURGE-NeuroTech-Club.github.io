@@ -335,7 +335,7 @@ pre code {
    Hero Section
    ============================================================ */
 .hero {
-  padding: 6rem 0 4rem;
+  padding: 2.5rem 0 2.5rem;
   text-align: center;
   background:
     radial-gradient(ellipse 700px 400px at 20% -5%, rgba(56, 189, 248, 0.08), transparent 70%),
@@ -428,6 +428,13 @@ pre code {
   background: var(--gradient-aurora);
 }
 
+.meeting-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.85rem;
+}
+
 .meeting-card-top {
   display: flex;
   align-items: center;
@@ -439,7 +446,7 @@ pre code {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -469,7 +476,7 @@ pre code {
   background: var(--gradient-aurora);
   color: #0b0d14;
   font-weight: 800;
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   padding: 0.25rem 0.65rem;
   border-radius: 100px;
   white-space: nowrap;
@@ -478,6 +485,7 @@ pre code {
 .meeting-card-body {
   display: flex;
   align-items: center;
+  flex: 1;
   gap: 1rem;
 }
 
@@ -492,7 +500,7 @@ pre code {
 }
 
 .meeting-date-block .month {
-  font-size: 0.66rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -500,7 +508,7 @@ pre code {
 }
 
 .meeting-date-block .day {
-  font-size: 1.65rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color: var(--color-heading);
   line-height: 1.05;
@@ -508,17 +516,19 @@ pre code {
 }
 
 .meeting-info .weekday-time {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
+  line-height: 1.25;
   color: var(--color-heading);
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.25rem;
 }
 
 .meeting-info .loc {
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.83rem;
+  font-size: 0.92rem;
+  line-height: 1.3;
   color: var(--color-text-muted);
   font-weight: 500;
 }
@@ -533,13 +543,13 @@ pre code {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 0 -1.35rem -1.25rem;
-  padding: 0.7rem 1.35rem;
+  margin: auto -1.35rem -1.25rem;
+  padding: 0.75rem 1.35rem;
   border-top: 1px solid rgba(125, 211, 252, 0.22);
   border-radius: 0 0 calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px);
   background: var(--color-accent-dim);
   color: var(--color-accent-hover);
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
   transition: all var(--transition);
@@ -561,12 +571,13 @@ pre code {
 
 .meeting-card-empty {
   align-items: center;
+  justify-content: center;
 }
 
 .meeting-card-empty .meeting-info {
   color: var(--color-text-muted);
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.96rem;
 }
 
 .hero-actions {
@@ -606,6 +617,13 @@ pre code {
   background: var(--gradient-aurora);
 }
 
+.hackathon-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.85rem;
+}
+
 .hackathon-card-top {
   display: flex;
   align-items: center;
@@ -617,7 +635,7 @@ pre code {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -634,6 +652,7 @@ pre code {
 .hackathon-card-body {
   display: flex;
   align-items: center;
+  flex: 1;
   gap: 1rem;
 }
 
@@ -648,7 +667,7 @@ pre code {
 }
 
 .hackathon-date-block .month {
-  font-size: 0.66rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -656,7 +675,7 @@ pre code {
 }
 
 .hackathon-date-block .day {
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   font-weight: 800;
   color: var(--color-heading);
   line-height: 1.05;
@@ -671,7 +690,7 @@ pre code {
 }
 
 .hackathon-stream-pill {
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--color-text-muted);
   background: rgba(255, 255, 255, 0.05);
@@ -684,7 +703,7 @@ pre code {
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.83rem;
+  font-size: 0.92rem;
   color: var(--color-text-muted);
   font-weight: 500;
 }
@@ -696,7 +715,7 @@ pre code {
 
 .hackathon-cta-row {
   display: flex;
-  margin: 0 -1.35rem -1.25rem;
+  margin: auto -1.35rem -1.25rem;
   border-top: 1px solid rgba(244, 114, 182, 0.22);
   border-radius: 0 0 calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px);
   overflow: hidden;
@@ -709,7 +728,7 @@ pre code {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.7rem 1.1rem;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
   transition: all var(--transition);
@@ -1292,61 +1311,69 @@ pre code {
 /* ============================================================
    Notice Banner
    ============================================================ */
-.notice-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.85rem;
-  text-align: left;
-  max-width: 380px;
-  width: 100%;
-  padding: 1.1rem 1.35rem 1.25rem;
-  border-radius: var(--radius-lg);
-  border: 1.5px solid rgba(224, 123, 57, 0.7);
-  background:
-    linear-gradient(135deg, rgba(224, 123, 57, 0.18), rgba(224, 123, 57, 0.08)),
-    rgba(20, 24, 38, 0.55);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 0 0 1px rgba(224, 123, 57, 0.2), 0 0 40px rgba(224, 123, 57, 0.22), 0 24px 70px -16px rgba(224, 123, 57, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  overflow: hidden;
-}
-
-.notice-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--color-orange);
-}
-
-.notice-eyebrow {
+.notice-banner {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.65rem 3rem 0.65rem 1.5rem;
+  position: relative;
+  background: linear-gradient(135deg, rgba(224, 123, 57, 0.18), rgba(224, 123, 57, 0.07));
+  border-bottom: 1px solid rgba(224, 123, 57, 0.35);
+  text-align: center;
+  overflow: hidden;
+  transition: max-height 0.32s ease, opacity 0.22s ease, padding 0.32s ease, border-color 0.32s ease;
+}
+
+.notice-banner.is-closing {
+  opacity: 0;
+  max-height: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .notice-banner {
+    transition: none;
+  }
+}
+
+.notice-banner-msg {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  font-weight: 600;
   color: #f5c98f;
 }
 
-.notice-dot {
+.notice-banner-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: var(--color-orange);
+  flex-shrink: 0;
 }
 
-.notice-card p {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 600;
+.notice-banner-close {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
   color: #f5c98f;
-  line-height: 1.4;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem;
+  opacity: 0.75;
+  transition: opacity var(--transition);
+}
+
+.notice-banner-close:hover {
+  opacity: 1;
 }
 
 /* ============================================================
