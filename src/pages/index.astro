@@ -79,14 +79,14 @@ const addToCalendarUrl = nextMeeting
         and innovating in the field of neurotechnology.
       </p>
       <div class="hero-cards">
-        <div class="hackathon-card">
-          <div class="hackathon-card-content">
-            <div class="hackathon-card-top">
-              <span class="hackathon-eyebrow"><span class="hackathon-dot"></span>Neuro Hackathon</span>
+        <div class="feature-card hackathon-card">
+          <div class="feature-card-content">
+            <div class="feature-card-top">
+              <span class="feature-eyebrow hackathon-eyebrow"><span class="feature-dot hackathon-dot"></span>Neuro Hackathon</span>
               <span class="countdown-badge">{hackathonCountdown}</span>
             </div>
-            <div class="hackathon-card-body">
-              <div class="hackathon-date-block">
+            <div class="feature-card-body">
+              <div class="feature-date-block hackathon-date-block">
                 <div class="month">SEP</div>
                 <div class="day">18&ndash;20</div>
               </div>
@@ -114,14 +114,14 @@ const addToCalendarUrl = nextMeeting
           </div>
         </div>
         {nextMeeting ? (
-          <div class="meeting-card">
-            <div class="meeting-card-content">
-              <div class="meeting-card-top">
-                <span class="meeting-eyebrow"><span class="pulse-dot"></span>Next Club Meeting</span>
+          <div class="feature-card meeting-card">
+            <div class="feature-card-content">
+              <div class="feature-card-top">
+                <span class="feature-eyebrow meeting-eyebrow"><span class="feature-dot pulse-dot"></span>Next Club Meeting</span>
                 <span class="countdown-badge">{nextMeeting.countdown}</span>
               </div>
-              <div class="meeting-card-body">
-                <div class="meeting-date-block">
+              <div class="feature-card-body">
+                <div class="feature-date-block meeting-date-block">
                   <div class="month">{nextMeeting.month}</div>
                   <div class="day">{nextMeeting.day}</div>
                 </div>
@@ -140,8 +140,8 @@ const addToCalendarUrl = nextMeeting
             </a>
           </div>
         ) : (
-          <div class="meeting-card meeting-card-empty">
-            <div class="meeting-eyebrow"><span class="pulse-dot"></span>Next Club Meeting</div>
+          <div class="feature-card meeting-card meeting-card-empty">
+            <div class="feature-eyebrow meeting-eyebrow"><span class="feature-dot pulse-dot"></span>Next Club Meeting</div>
             <div class="meeting-info">New schedule coming soon &mdash; check the calendar below</div>
           </div>
         )}
