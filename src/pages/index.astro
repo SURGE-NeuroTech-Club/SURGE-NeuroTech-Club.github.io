@@ -1,25 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CalendarEmbed from '../components/CalendarEmbed.astro';
-import { getNextMeeting, daysUntil, formatCountdown } from '../lib/nextMeeting';
+import { getNextMeeting } from '../lib/nextMeeting';
 
 const nextMeeting = await getNextMeeting();
 const MEETING_LOCATION = 'LSC Room O2660';
-const EVENTBRITE_URL = 'https://www.eventbrite.ca/e/neuro-hackathon-tickets-1997153371496';
-
-const HACKATHON_START = new Date('2026-09-18T12:00:00Z');
-const HACKATHON_END = new Date('2026-09-20T12:00:00Z');
-const now = new Date();
-const daysToHackathonStart = daysUntil(now, HACKATHON_START);
-const daysToHackathonEnd = daysUntil(now, HACKATHON_END);
-const hackathonCountdown =
-  daysToHackathonEnd < 0
-    ? 'Hackathon Ended'
-    : daysToHackathonStart > 0
-      ? formatCountdown(daysToHackathonStart)
-      : daysToHackathonStart === 0
-        ? 'Today'
-        : 'Happening Now';
 
 function toGCalDate(d: Date): string {
   return d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
@@ -35,38 +20,6 @@ const addToCalendarUrl = nextMeeting
 ---
 
 <BaseLayout>
-  <div class="notice-banner" id="notice-banner">
-    <span class="notice-banner-msg">
-      <span class="notice-banner-dot"></span>
-      The club is on pause for the summer and will return in September with a new schedule.
-    </span>
-    <button class="notice-banner-close" id="notice-banner-close" type="button" aria-label="Dismiss notice">&times;</button>
-  </div>
-  <script is:inline>
-    (function () {
-      var banner = document.getElementById('notice-banner');
-      var closeBtn = document.getElementById('notice-banner-close');
-      if (!banner || !closeBtn) return;
-
-      closeBtn.addEventListener('click', function () {
-        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (reduceMotion) {
-          banner.remove();
-          return;
-        }
-        banner.style.maxHeight = banner.offsetHeight + 'px';
-        banner.offsetHeight; // force reflow so the starting height is registered
-        requestAnimationFrame(function () {
-          banner.classList.add('is-closing');
-        });
-        banner.addEventListener('transitionend', function handler(e) {
-          if (e.propertyName === 'max-height') {
-            banner.remove();
-          }
-        });
-      });
-    })();
-  </script>
   <!-- ============================================================
        Hero
        ============================================================ -->
@@ -79,40 +32,6 @@ const addToCalendarUrl = nextMeeting
         and innovating in the field of neurotechnology.
       </p>
       <div class="hero-cards">
-        <div class="feature-card hackathon-card">
-          <div class="feature-card-content">
-            <div class="feature-card-top">
-              <span class="feature-eyebrow hackathon-eyebrow"><span class="feature-dot hackathon-dot"></span>Neuro Hackathon</span>
-              <span class="countdown-badge">{hackathonCountdown}</span>
-            </div>
-            <div class="feature-card-body">
-              <div class="feature-date-block hackathon-date-block">
-                <div class="month">SEP</div>
-                <div class="day">18&ndash;20</div>
-              </div>
-              <div class="hackathon-info">
-                <div class="hackathon-streams">
-                  <span class="hackathon-stream-pill">Machine Learning</span>
-                  <span class="hackathon-stream-pill">Applications</span>
-                  <span class="hackathon-stream-pill">Hardware</span>
-                </div>
-                <div class="hackathon-prize-line">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 4h3a2 2 0 0 1 2 2v1a4 4 0 0 1-4 4"/><path d="M7 4H4a2 2 0 0 0-2 2v1a4 4 0 0 0 4 4"/></svg>
-                  $500+ in prizes
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="hackathon-cta-row">
-            <a class="hackathon-cta hackathon-cta-ghost" href="/hackathon">
-              Learn More
-            </a>
-            <a class="hackathon-cta hackathon-cta-primary" href={EVENTBRITE_URL} target="_blank" rel="noopener noreferrer">
-              Sign Up Now
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-          </div>
-        </div>
         {nextMeeting ? (
           <div class="feature-card meeting-card">
             <div class="feature-card-content">
@@ -200,8 +119,7 @@ const addToCalendarUrl = nextMeeting
             <div class="info-card">
               <div class="info-card-label">When</div>
               <div class="info-card-value">
-                On pause until September.<br />
-                Starting September: Mondays 2:30&ndash;4:00&nbsp;PM &amp; Thursdays 12:30&ndash;2:00&nbsp;PM
+                Mondays 2:30&ndash;4:00&nbsp;PM &amp; Thursdays 12:30&ndash;2:00&nbsp;PM
               </div>
             </div>
             <div class="info-card">
